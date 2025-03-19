@@ -14,6 +14,7 @@ pip install -U ghp-import
 ```
 
 ### Create Template Book
+
     ・ jupyter-book create book-for-repo
     ・ create a repository on GitHub
     ・ git clone book-repo
@@ -28,6 +29,7 @@ pip install -U ghp-import
 cd book-repo
 jupyter-book build .
 ```
+
     ・ commit in VS Code
     ・ sync with GitHub in VS Code
 
