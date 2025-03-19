@@ -1,14 +1,14 @@
 # Documentation
 
 ```{warning}
-This page is in preparation to be publicly available in April, 2025.
+This page is in preparation to be publicly available in May, 2025.
 ```
 
 ## Documents to be maintained
 
 We have the following documents to maintain.
 
-|No |   Document Name           |    Tool    |
+|No |   Document Name           | Used Tool |
 |:-:|:--------------------------|:-----------|
 | 1 |[Molass Legacy Reference](https://freesemt.github.io/molass-legacy/)|Sphinx      |
 | 2 |[Molass Libray Reference](https://freesemt.github.io/molass-library/)|Sphinx      |
