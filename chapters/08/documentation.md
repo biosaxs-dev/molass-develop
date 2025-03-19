@@ -22,6 +22,8 @@ For the first two reference books, we use [Sphinx](https://github.com/sphinx-doc
 
 ### Tool Package Installation
 
+We use the following two packages.
+
 ```
 pip install -U jupyter-book
 pip install -U ghp-import
@@ -29,10 +31,10 @@ pip install -U ghp-import
 
 ### Create Template Book
 
-    ・ jupyter-book create book-for-repo
+    ・ jupyter-book create template-repo
     ・ create a repository on GitHub
     ・ git clone book-repo
-    ・ copy the contents of book-for-repo to book-repo
+    ・ copy the contents of template-repo to book-repo
 
 ### Edit Manually
 
