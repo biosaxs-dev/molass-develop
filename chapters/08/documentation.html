@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -455,6 +455,7 @@ document.write(`
 <h2><span class="section-number">8.2. </span>How to use Jupyter Book<a class="headerlink" href="#how-to-use-jupyter-book" title="Link to this heading">#</a></h2>
 <section id="tool-package-installation">
 <h3><span class="section-number">8.2.1. </span>Tool Package Installation<a class="headerlink" href="#tool-package-installation" title="Link to this heading">#</a></h3>
+<p>We use the following two packages.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">U</span> <span class="n">jupyter</span><span class="o">-</span><span class="n">book</span>
 <span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">U</span> <span class="n">ghp</span><span class="o">-</span><span class="kn">import</span>
 </pre></div>
@@ -462,10 +463,10 @@ document.write(`
 </section>
 <section id="create-template-book">
 <h3><span class="section-number">8.2.2. </span>Create Template Book<a class="headerlink" href="#create-template-book" title="Link to this heading">#</a></h3>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>・ jupyter-book create book-for-repo
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>・ jupyter-book create template-repo
 ・ create a repository on GitHub
 ・ git clone book-repo
-・ copy the contents of book-for-repo to book-repo
+・ copy the contents of template-repo to book-repo
 </pre></div>
 </div>
 </section>
