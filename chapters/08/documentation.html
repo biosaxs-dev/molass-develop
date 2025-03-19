@@ -387,15 +387,14 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use-jupyter-book">8.2. How to use Jupyter Book</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tool-package-installation">8.2.1. Tool Package Installation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-template-book">8.2.2. Create Template Book</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-manually">8.2.3. Edit Manually</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deployment">8.2.4. Deployment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#update-cycle">8.2.3. Update Cycle</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use-sphinx">8.3. How to use Sphinx</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">8.3.1. Tool Package Installation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gererate-function-documents">8.3.2. Gererate Function Documents</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">8.3.3. Edit Manually</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">8.3.4. Deployment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-manually">8.3.3. Edit Manually</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deployment">8.3.4. Deployment</a></li>
 </ul>
 </li>
 </ul>
@@ -470,19 +469,27 @@ document.write(`
 </pre></div>
 </div>
 </section>
-<section id="edit-manually">
-<h3><span class="section-number">8.2.3. </span>Edit Manually<a class="headerlink" href="#edit-manually" title="Link to this heading">#</a></h3>
-</section>
-<section id="deployment">
-<h3><span class="section-number">8.2.4. </span>Deployment<a class="headerlink" href="#deployment" title="Link to this heading">#</a></h3>
+<section id="update-cycle">
+<h3><span class="section-number">8.2.3. </span>Update Cycle<a class="headerlink" href="#update-cycle" title="Link to this heading">#</a></h3>
+<p>We repeat the following cycle to update.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>・ edit manually
+・ generate locally
+・ synchronize (master branch)
+・ deploy (gh-pages branch)
+</pre></div>
+</div>
+<p>After manual edit, generation will be achieved as follows in Command Prompt:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cd book-repo
 jupyter-book build .
 </pre></div>
 </div>
+<p>After generation, check the local output in _build/html with the browser.</p>
+<p>Synchronization of master branch will be achieved as follows in VS Code:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>・ commit in VS Code
-・ sync with GitHub in VS Code
+・ synchronize with GitHub in VS Code
 </pre></div>
 </div>
+<p>Update and deployment of gh-pages branch will be achienved as follows in in Command Prompt:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ghp-import -n -p -f _build/html
 </pre></div>
 </div>
@@ -506,11 +513,11 @@ sphinx-apidoc --output-dir docs molass --separate
 </pre></div>
 </div>
 </section>
-<section id="id2">
-<h3><span class="section-number">8.3.3. </span>Edit Manually<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<section id="edit-manually">
+<h3><span class="section-number">8.3.3. </span>Edit Manually<a class="headerlink" href="#edit-manually" title="Link to this heading">#</a></h3>
 </section>
-<section id="id3">
-<h3><span class="section-number">8.3.4. </span>Deployment<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<section id="deployment">
+<h3><span class="section-number">8.3.4. </span>Deployment<a class="headerlink" href="#deployment" title="Link to this heading">#</a></h3>
 <p>At docs:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>make html
 ghp-import -n -p -f _build/html
@@ -580,15 +587,14 @@ ghp-import -n -p -f _build/html
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use-jupyter-book">8.2. How to use Jupyter Book</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tool-package-installation">8.2.1. Tool Package Installation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-template-book">8.2.2. Create Template Book</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-manually">8.2.3. Edit Manually</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deployment">8.2.4. Deployment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#update-cycle">8.2.3. Update Cycle</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use-sphinx">8.3. How to use Sphinx</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">8.3.1. Tool Package Installation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gererate-function-documents">8.3.2. Gererate Function Documents</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">8.3.3. Edit Manually</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">8.3.4. Deployment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-manually">8.3.3. Edit Manually</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deployment">8.3.4. Deployment</a></li>
 </ul>
 </li>
 </ul>

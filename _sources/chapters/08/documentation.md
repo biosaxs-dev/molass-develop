@@ -36,18 +36,30 @@ pip install -U ghp-import
     ・ git clone book-repo
     ・ copy the contents of template-repo to book-repo
 
-### Edit Manually
+### Update Cycle
 
+We repeat the following cycle to update.
 
-### Deployment
+    ・ edit manually
+    ・ generate locally
+    ・ synchronize (master branch)
+    ・ deploy (gh-pages branch)
+
+After manual edit, generation will be achieved as follows in Command Prompt:
 
 ```none
 cd book-repo
 jupyter-book build .
 ```
 
+After generation, check the local output in _build/html with the browser.
+
+Synchronization of master branch will be achieved as follows in VS Code:
+
     ・ commit in VS Code
-    ・ sync with GitHub in VS Code
+    ・ synchronize with GitHub in VS Code
+
+Update and deployment of gh-pages branch will be achienved as follows in in Command Prompt:
 
 ```none
 ghp-import -n -p -f _build/html
