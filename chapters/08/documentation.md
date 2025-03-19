@@ -6,7 +6,7 @@ This page is in preparation to be publicly available in April, 2025.
 
 ## Documents to be maintained
 
-We have the following documents to be maintained.
+We have the following documents to maintain.
 
 |No |   Document Name           |    Tool    |
 |:-:|:--------------------------|:-----------|
