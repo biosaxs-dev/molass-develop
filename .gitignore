@@ -1,0 +1,5 @@
+# Ignore build artifacts
+_build/
+
+# Ignore the evironment file which defines PYTHONPATH
+.env

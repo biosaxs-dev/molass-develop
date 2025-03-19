@@ -1,0 +1,24 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: chapters/intro
+options:
+  numbered: 3
+chapters:
+- file: chapters/01/coding_env
+  title: Coding Environment
+- file: chapters/02/python_env
+  title: Python Environment
+- file: chapters/03/jupyter_env
+  title: Jupyter Environment
+- file: chapters/04/git_env
+  title: Git Environment
+- file: chapters/05/coding_style
+  title: Coding Style
+- file: chapters/06/testing
+  title: Testing
+- file: chapters/07/release
+  title: Package Release
+- file: chapters/08/documentation
+  title: Documentation
