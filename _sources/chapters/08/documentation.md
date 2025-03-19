@@ -29,12 +29,18 @@ pip install -U jupyter-book
 pip install -U ghp-import
 ```
 
-### Create Template Book
+### Initial Book
+
+The initial book was created as follows.
 
     ・ jupyter-book create template-repo
     ・ create a repository on GitHub
     ・ git clone book-repo
     ・ copy the contents of template-repo to book-repo
+
+```{note}
+You need this procedure only when you create a new book.
+```
 
 ### Update Cycle
 
