@@ -16,7 +16,7 @@ After installation, start Jupyter Lab from the command prompt as follows.
 jupyter lab
 ```
 
-This will open a JUpyter Lab page on your browser.
+This will open a Jupyter Lab page on your browser.
 
 ## VS Code Jupyter Extension
 
