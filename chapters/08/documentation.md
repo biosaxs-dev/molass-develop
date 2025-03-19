@@ -53,6 +53,8 @@ jupyter-book build .
 ghp-import -n -p -f _build/html
 ```
 
+The web page will be updated in a few minutes.
+
 ## How to use Sphinx
 
 ### Tool Package Installation
@@ -83,3 +85,5 @@ At docs:
 make html
 ghp-import -n -p -f _build/html
 ```
+
+The web page will be updated in a few minutes.
