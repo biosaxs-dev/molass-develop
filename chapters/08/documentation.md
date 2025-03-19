@@ -29,12 +29,18 @@ pip install -U jupyter-book
 pip install -U ghp-import
 ```
 
-### Create Template Book
+### Initial Book
+
+The initial book was created as follows.
 
     ・ jupyter-book create template-repo
     ・ create a repository on GitHub
     ・ git clone book-repo
     ・ copy the contents of template-repo to book-repo
+
+```{note}
+You need this procedure only when you create a new book.
+```
 
 ### Update Cycle
 
@@ -42,8 +48,12 @@ We repeat the following cycle to update.
 
     ・ edit manually
     ・ generate locally
-    ・ synchronize (master branch)
-    ・ deploy (gh-pages branch)
+    ・ synchronize master branch
+    ・ deploy gh-pages branch
+
+```{note}
+For the maintenance of the web page, the two branches, namely master branch and gh-pages branch, are involved. The former keeps the source and the latter the generated target.
+```
 
 After manual edit, generation will be achieved as follows in Command Prompt:
 
@@ -54,12 +64,12 @@ jupyter-book build .
 
 After generation, check the local output in _build/html with the browser.
 
-Synchronization of master branch will be achieved as follows in VS Code:
+Synchronization of the master branch will be achieved as follows in VS Code:
 
     ・ commit in VS Code
     ・ synchronize with GitHub in VS Code
 
-Update and deployment of gh-pages branch will be achienved as follows in in Command Prompt:
+Update and deployment of the gh-pages branch will be achienved as follows in Command Prompt:
 
 ```none
 ghp-import -n -p -f _build/html
