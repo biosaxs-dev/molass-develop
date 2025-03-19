@@ -4,7 +4,21 @@
 This page is in preparation to be publicly available in April, 2025.
 ```
 
-## Jupyter Book
+## Documents to be maintained
+
+We have the following documents to be maintained.
+
+|No |   Document Name           |    Tool    |
+|:-:|:--------------------------|:-----------|
+| 1 |Molass Legacy Reference    |Sphinx      |
+| 2 |Molass Libray Reference    |Sphinx      |
+| 3 |Molass Libray Essense      |Jupyter Book|
+| 4 |Molass Libray Tutorial     |Jupyter Book|
+| 5 |Molass Developpers Handbook|Jupyter Book|
+
+For the first two reference books, we use Sphinx directly to generate function documents from their docstrings. For others, Jupyter Book is used.
+
+## How to use Jupyter Book
 
 ### Tool Package Installation
 
@@ -37,7 +51,7 @@ jupyter-book build .
 ghp-import -n -p -f _build/html
 ```
 
-## SPhinx
+## How to use SPhinx
 
 ### Tool Package Installation
 
