@@ -10,13 +10,13 @@ We have the following documents to be maintained.
 
 |No |   Document Name           |    Tool    |
 |:-:|:--------------------------|:-----------|
-| 1 |Molass Legacy Reference    |Sphinx      |
-| 2 |Molass Libray Reference    |Sphinx      |
-| 3 |Molass Libray Essense      |Jupyter Book|
-| 4 |Molass Libray Tutorial     |Jupyter Book|
-| 5 |Molass Developpers Handbook|Jupyter Book|
+| 1 |[Molass Legacy Reference](https://freesemt.github.io/molass-legacy/)|Sphinx      |
+| 2 |[Molass Libray Reference](https://freesemt.github.io/molass-library/)|Sphinx      |
+| 3 |[Molass Libray Essense](https://freesemt.github.io/molass-essense/)      |Jupyter Book|
+| 4 |[Molass Libray Tutorial](https://freesemt.github.io/molass-tutorial/)     |Jupyter Book|
+| 5 |[Molass Developpers Handbook](https://freesemt.github.io/molass-develop/)|Jupyter Book|
 
-For the first two reference books, we use Sphinx directly to generate function documents from their docstrings. For others, Jupyter Book is used.
+For the first two reference books, we use [Sphinx](https://github.com/sphinx-doc/sphinx) directly to generate function documents from their docstrings. For others, [Jupyter Book](https://github.com/jupyter-book/jupyter-book) is used.
 
 ## How to use Jupyter Book
 
@@ -51,7 +51,7 @@ jupyter-book build .
 ghp-import -n -p -f _build/html
 ```
 
-## How to use SPhinx
+## How to use Sphinx
 
 ### Tool Package Installation
 
