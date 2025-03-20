@@ -1,4 +1,4 @@
-# Molass Developers Handbook
+# Molass Developer's Handbook
 
 ```{warning}
 This book is in preparation to be publicly available in May, 2025.
