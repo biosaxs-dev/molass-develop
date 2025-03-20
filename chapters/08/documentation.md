@@ -14,7 +14,7 @@ We have the following documents, including this book, to maintain.
 | 2 |[Molass Libray Reference](https://freesemt.github.io/molass-library/)|Sphinx      |
 | 3 |[Molass Libray Essense](https://freesemt.github.io/molass-essense/)      |Jupyter Book|
 | 4 |[Molass Libray Tutorial](https://freesemt.github.io/molass-tutorial/)     |Jupyter Book|
-| 5 |[Molass Developpers Handbook](https://freesemt.github.io/molass-develop/)|Jupyter Book|
+| 5 |[Molass Developer's Handbook](https://freesemt.github.io/molass-develop/)|Jupyter Book|
 
 For the first two reference books, we use [Sphinx](https://github.com/sphinx-doc/sphinx) directly to generate function documents from their [docstrings](https://peps.python.org/pep-0257/). For others, [Jupyter Book](https://github.com/jupyter-book/jupyter-book), which depends on Sphinx, is used.
 
