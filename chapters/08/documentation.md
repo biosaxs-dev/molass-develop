@@ -49,7 +49,7 @@ When you edit the source files manually, first files to attend are the following
     ・ _config.yml
     ・ _toc.yml
 
-Compare them with those of an existing book, then you should begin to know how to edit.
+These files are usually placed either at the root of the repository or the docs sub folder. Compare them with those of an existing book, then you should begin to know how to edit.
 
 See also as you proceed:
 
