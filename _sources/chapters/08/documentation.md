@@ -31,7 +31,7 @@ pip install -U ghp-import
 
 ### Initial Book
 
-The initial book was created as follows.
+Each initial book was created as follows.
 
     ・ jupyter-book create template-repo
     ・ create a repository on GitHub
