@@ -22,7 +22,7 @@ For the first two reference books, we use [Sphinx](https://github.com/sphinx-doc
 
 ### Tool Package Installation
 
-We use the following two packages.
+To use Jupyter Book, you need to install the following two packages.
 
 ```
 pip install -U jupyter-book
