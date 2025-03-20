@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: Molass Developpers Handbook
-author: The Molass Community
+author: The Molass Community powered by <a href="https://jupyterbook.org">Jupyter Book</a>
 copyright: "2025"
 logo: images/molamola.png
 exclude_patterns: ["README.md"]
