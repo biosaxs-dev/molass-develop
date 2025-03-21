@@ -24,7 +24,7 @@ For large files > 50MB, it is recommended to use Git Large File Storage (LFD).
 
 ### Install Git LFS
 
-The git lfs install command needs to be run once per machine. This sets up Git LFS hooks globally.
+This install command, which sets up Git LFS hooks globally, needs to be run once per machine.
 
 ```none
 git lfs install
@@ -40,8 +40,13 @@ Add track info in Command Prompt:
 git lfs track "sec_simulation.ipynb"
 ```
 
+If ".gitattributes" is not yet added,
+
 ```none
 git add .gitattributes
+```
+
+```none
 git add chapters\81\sec_simulation.ipynb
 ```
 

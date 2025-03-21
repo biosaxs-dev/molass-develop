@@ -426,7 +426,7 @@ git config --global user.email johndoe@example.com
 <p>For large files &gt; 50MB, it is recommended to use Git Large File Storage (LFD).</p>
 <section id="install-git-lfs">
 <h3><span class="section-number">4.3.1. </span>Install Git LFS<a class="headerlink" href="#install-git-lfs" title="Link to this heading">#</a></h3>
-<p>The git lfs install command needs to be run once per machine. This sets up Git LFS hooks globally.</p>
+<p>This install command, which sets up Git LFS hooks globally, needs to be run once per machine.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git lfs install
 </pre></div>
 </div>
@@ -438,8 +438,11 @@ git config --global user.email johndoe@example.com
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git lfs track &quot;sec_simulation.ipynb&quot;
 </pre></div>
 </div>
+<p>If “.gitattributes” is not yet added,</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git add .gitattributes
-git add chapters\81\sec_simulation.ipynb
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git add chapters\81\sec_simulation.ipynb
 </pre></div>
 </div>
 <p>Synchronize in Command Prompt:</p>
