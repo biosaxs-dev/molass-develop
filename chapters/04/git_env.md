@@ -17,3 +17,39 @@ git config --global user.email johndoe@example.com
 
 See also:
 * <a href="https://code.visualstudio.com/docs/sourcecontrol/overview">Using Git source control in VS Code</a>
+
+## Git Large File Storage
+
+For large files > 50MB, it is recommended to use Git Large File Storage (LFD). 
+
+### Install Git LFS
+
+The git lfs install command needs to be run once per machine. This sets up Git LFS hooks globally.
+
+```none
+git lfs install
+```
+
+The following steps are required to track files in a repository.
+
+### Track Settings
+
+Add track info in Command Prompt:
+
+```none
+git lfs track "sec_simulation.ipynb"
+```
+
+```none
+git add .gitattributes
+git add chapters\81\sec_simulation.ipynb
+```
+
+Synchronize in Command Prompt:
+
+```none
+git commit -m "Track sec_simulation.ipynb with Git LFS"
+git push origin main
+```
+
+Or do it in VS Code.
