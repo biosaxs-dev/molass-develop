@@ -34,7 +34,7 @@ The following steps are required to track files in a repository.
 
 ### Track Settings
 
-Add track info in Command Prompt:
+Add tracking info in Command Prompt:
 
 ```none
 git lfs track "sec_simulation.ipynb"
