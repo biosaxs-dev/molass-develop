@@ -40,13 +40,8 @@ Add track info in Command Prompt:
 git lfs track "sec_simulation.ipynb"
 ```
 
-If ".gitattributes" is not yet added,
-
 ```none
 git add .gitattributes
-```
-
-```none
 git add chapters\81\sec_simulation.ipynb
 ```
 
