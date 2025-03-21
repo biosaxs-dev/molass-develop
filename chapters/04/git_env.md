@@ -20,7 +20,7 @@ See also:
 
 ## Git Large File Storage
 
-For large files > 50MB, it is recommended to use Git Large File Storage (LFD). 
+For large files larger than 50MB, it is recommended to use Git Large File Storage (LFS). 
 
 ### Install Git LFS
 
