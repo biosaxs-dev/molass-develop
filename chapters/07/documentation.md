@@ -8,7 +8,7 @@ This page is in preparation to be publicly available in May, 2025.
 
 We have the following documents, including this book, to maintain.
 
-|No |   Document Name           | License | Used Tool |
+|No |   Document Name           | Source License | Used Tool |
 |:-:|:--------------------------|:--------|:-----------|
 | 1 |[Molass Legacy Reference](https://freesemt.github.io/molass-legacy/) |GPL-3.0 |Sphinx |
 | 2 |[Molass Libray Reference](https://freesemt.github.io/molass-library/)|GPL-3.0 |Sphinx |
