@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>7. Package Release &#8212; Molass Developpers Handbook</title>
+    <title>7. Documentation &#8212; Molass Developpers Handbook</title>
   
   
   
@@ -57,11 +57,11 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/07/release';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/07/documentation';</script>
     <link rel="icon" href="../../_static/molamola.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="8. Documentation" href="../08/documentation.html" />
+    <link rel="next" title="8. Package Release" href="../08/release.html" />
     <link rel="prev" title="6. Testing" href="../06/testing.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -187,8 +187,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../04/git_env.html">4. Git Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../05/coding_style.html">5. Coding Style</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../06/testing.html">6. Testing</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">7. Package Release</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../08/documentation.html">8. Documentation</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">7. Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/release.html">8. Package Release</a></li>
 </ul>
 
     </div>
@@ -260,7 +260,7 @@
       
       
       
-      <li><a href="https://github.com/freesemt/molass-develop/issues/new?title=Issue%20on%20page%20%2Fchapters/07/release.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/freesemt/molass-develop/issues/new?title=Issue%20on%20page%20%2Fchapters/07/documentation.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -290,7 +290,7 @@
       
       
       
-      <li><a href="../../_sources/chapters/07/release.md" target="_blank"
+      <li><a href="../../_sources/chapters/07/documentation.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -374,7 +374,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Package Release</h1>
+    <h1>Documentation</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -384,9 +384,21 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pypi-account">7.1. PyPI Account</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pypi-api-token">7.2. PyPI API Token</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pypi-upload">7.3. PyPI Upload</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#documents-to-be-maintained">7.1. Documents to be maintained</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use-jupyter-book">7.2. How to use Jupyter Book</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tool-package-installation">7.2.1. Tool Package Installation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-book">7.2.2. Initial Book</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#manual-edit">7.2.3. Manual Edit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#update-cycle">7.2.4. Update Cycle</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use-sphinx">7.3. How to use Sphinx</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">7.3.1. Tool Package Installation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gererate-function-documents">7.3.2. Gererate Function Documents</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-manually">7.3.3. Edit Manually</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deployment">7.3.4. Deployment</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -398,28 +410,146 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="package-release">
-<h1><span class="section-number">7. </span>Package Release<a class="headerlink" href="#package-release" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="documentation">
+<h1><span class="section-number">7. </span>Documentation<a class="headerlink" href="#documentation" title="Link to this heading">#</a></h1>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This page is in preparation to be publicly available in April, 2025.</p>
+<p>This page is in preparation to be publicly available in May, 2025.</p>
 </div>
-<section id="pypi-account">
-<h2><span class="section-number">7.1. </span>PyPI Account<a class="headerlink" href="#pypi-account" title="Link to this heading">#</a></h2>
+<section id="documents-to-be-maintained">
+<h2><span class="section-number">7.1. </span>Documents to be maintained<a class="headerlink" href="#documents-to-be-maintained" title="Link to this heading">#</a></h2>
+<p>We have the following documents, including this book, to maintain.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>No</p></th>
+<th class="head text-left"><p>Document Name</p></th>
+<th class="head text-left"><p>Used Tool</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-left"><p><a class="reference external" href="https://freesemt.github.io/molass-legacy/">Molass Legacy Reference</a></p></td>
+<td class="text-left"><p>Sphinx</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
+<td class="text-left"><p><a class="reference external" href="https://freesemt.github.io/molass-library/">Molass Libray Reference</a></p></td>
+<td class="text-left"><p>Sphinx</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>3</p></td>
+<td class="text-left"><p><a class="reference external" href="https://freesemt.github.io/molass-essense/">Molass Libray Essense</a></p></td>
+<td class="text-left"><p>Jupyter Book</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>4</p></td>
+<td class="text-left"><p><a class="reference external" href="https://freesemt.github.io/molass-tutorial/">Molass Libray Tutorial</a></p></td>
+<td class="text-left"><p>Jupyter Book</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>5</p></td>
+<td class="text-left"><p><a class="reference external" href="https://freesemt.github.io/molass-develop/">Molass Developer’s Handbook</a></p></td>
+<td class="text-left"><p>Jupyter Book</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>For the first two reference books, we use <a class="reference external" href="https://github.com/sphinx-doc/sphinx">Sphinx</a> directly to generate function documents from their <a class="reference external" href="https://peps.python.org/pep-0257/">docstrings</a>. For others, <a class="reference external" href="https://github.com/jupyter-book/jupyter-book">Jupyter Book</a>, which depends on Sphinx, is used.</p>
 </section>
-<section id="pypi-api-token">
-<h2><span class="section-number">7.2. </span>PyPI API Token<a class="headerlink" href="#pypi-api-token" title="Link to this heading">#</a></h2>
-</section>
-<section id="pypi-upload">
-<h2><span class="section-number">7.3. </span>PyPI Upload<a class="headerlink" href="#pypi-upload" title="Link to this heading">#</a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>python -m build
-twine upload dist/*
+<section id="how-to-use-jupyter-book">
+<h2><span class="section-number">7.2. </span>How to use Jupyter Book<a class="headerlink" href="#how-to-use-jupyter-book" title="Link to this heading">#</a></h2>
+<section id="tool-package-installation">
+<h3><span class="section-number">7.2.1. </span>Tool Package Installation<a class="headerlink" href="#tool-package-installation" title="Link to this heading">#</a></h3>
+<p>To use Jupyter Book, you need to install the following two packages.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">U</span> <span class="n">jupyter</span><span class="o">-</span><span class="n">book</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">U</span> <span class="n">ghp</span><span class="o">-</span><span class="kn">import</span>
 </pre></div>
 </div>
-<p>See also:</p>
+</section>
+<section id="initial-book">
+<h3><span class="section-number">7.2.2. </span>Initial Book<a class="headerlink" href="#initial-book" title="Link to this heading">#</a></h3>
+<p>Each initial book was created as follows.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>・ jupyter-book create template-repo
+・ create a repository on GitHub
+・ git clone book-repo
+・ copy the contents of template-repo to book-repo
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You need this procedure only when you create a new book.</p>
+</div>
+</section>
+<section id="manual-edit">
+<h3><span class="section-number">7.2.3. </span>Manual Edit<a class="headerlink" href="#manual-edit" title="Link to this heading">#</a></h3>
+<p>When you edit the source files manually, first files to attend are the following two.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>・ _config.yml
+・ _toc.yml
+</pre></div>
+</div>
+<p>These files are usually placed either at the root of the repository or the docs sub folder. Compare them with those of an existing book, then you should begin to know how to edit.</p>
+<p>See also as you proceed:</p>
 <ul class="simple">
-<li><p><a href="https://twine.readthedocs.io/en/stable/">Twine</a></p></li>
+<li><p><a class="reference external" href="https://jupyterbook.org/en/stable/start/your-first-book">Create your first book</a></p></li>
+<li><p><a class="reference external" href="https://jupyterbook.org/en/stable/reference/cheatsheet.html">MyST syntax cheat sheet</a></p></li>
 </ul>
+</section>
+<section id="update-cycle">
+<h3><span class="section-number">7.2.4. </span>Update Cycle<a class="headerlink" href="#update-cycle" title="Link to this heading">#</a></h3>
+<p>We repeat the following cycle to update.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>・ edit manually
+・ generate locally
+・ synchronize master branch
+・ deploy gh-pages branch
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For maintenance of the web page, the two branches, namely master and gh-pages, are involved. The former keeps the source and the latter the generated target.</p>
+</div>
+<p>After manual edit, generation will be achieved as follows in Command Prompt:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cd book-repo
+jupyter-book build .
+</pre></div>
+</div>
+<p>After generation, check the generated local output in _build/html with the browser. Re-edit as needed until you are satisfied.</p>
+<p>Synchronization of the master branch will be achieved as follows in VS Code:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>・ commit in VS Code
+・ synchronize with GitHub in VS Code
+</pre></div>
+</div>
+<p>Update and deployment of the gh-pages branch will be achienved as follows in Command Prompt:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ghp-import -n -p -f _build/html
+</pre></div>
+</div>
+<p>The web page will be updated in a few minutes.</p>
+</section>
+</section>
+<section id="how-to-use-sphinx">
+<h2><span class="section-number">7.3. </span>How to use Sphinx<a class="headerlink" href="#how-to-use-sphinx" title="Link to this heading">#</a></h2>
+<section id="id1">
+<h3><span class="section-number">7.3.1. </span>Tool Package Installation<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>pip install sphinx~=7.0 
+pip install sphinx-book-theme
+</pre></div>
+</div>
+</section>
+<section id="gererate-function-documents">
+<h3><span class="section-number">7.3.2. </span>Gererate Function Documents<a class="headerlink" href="#gererate-function-documents" title="Link to this heading">#</a></h3>
+<p>At the repository root:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>mkdir docs
+sphinx-apidoc --output-dir docs molass --separate
+</pre></div>
+</div>
+</section>
+<section id="edit-manually">
+<h3><span class="section-number">7.3.3. </span>Edit Manually<a class="headerlink" href="#edit-manually" title="Link to this heading">#</a></h3>
+</section>
+<section id="deployment">
+<h3><span class="section-number">7.3.4. </span>Deployment<a class="headerlink" href="#deployment" title="Link to this heading">#</a></h3>
+<p>At docs:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>make html
+ghp-import -n -p -f _build/html
+</pre></div>
+</div>
+<p>The web page will be updated in a few minutes.</p>
+</section>
 </section>
 </section>
 
@@ -463,11 +593,11 @@ twine upload dist/*
       </div>
     </a>
     <a class="right-next"
-       href="../08/documentation.html"
+       href="../08/release.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">8. </span>Documentation</p>
+        <p class="prev-next-title"><span class="section-number">8. </span>Package Release</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -487,9 +617,21 @@ twine upload dist/*
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pypi-account">7.1. PyPI Account</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pypi-api-token">7.2. PyPI API Token</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pypi-upload">7.3. PyPI Upload</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#documents-to-be-maintained">7.1. Documents to be maintained</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use-jupyter-book">7.2. How to use Jupyter Book</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tool-package-installation">7.2.1. Tool Package Installation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-book">7.2.2. Initial Book</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#manual-edit">7.2.3. Manual Edit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#update-cycle">7.2.4. Update Cycle</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use-sphinx">7.3. How to use Sphinx</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">7.3.1. Tool Package Installation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gererate-function-documents">7.3.2. Gererate Function Documents</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-manually">7.3.3. Edit Manually</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deployment">7.3.4. Deployment</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
