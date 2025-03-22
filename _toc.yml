@@ -18,7 +18,7 @@ chapters:
   title: Coding Style
 - file: chapters/06/testing
   title: Testing
-- file: chapters/07/release
-  title: Package Release
-- file: chapters/08/documentation
+- file: chapters/07/documentation
   title: Documentation
+- file: chapters/08/release
+  title: Package Release
