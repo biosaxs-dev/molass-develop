@@ -12,7 +12,7 @@ We have the following documents, including this book, to maintain.
 |:-:|:--------------------------|:--------|:-----------|
 | 1 |[Molass Legacy Reference](https://freesemt.github.io/molass-legacy/) |GPL-3.0 |Sphinx |
 | 2 |[Molass Libray Reference](https://freesemt.github.io/molass-library/)|GPL-3.0 |Sphinx |
-| 3 |[Molass Libray Essense](https://freesemt.github.io/molass-essense/)  |CC BY 4.0|Jupyter Book|
+| 3 |[Molass Libray Essence](https://freesemt.github.io/molass-essence/)  |CC BY 4.0|Jupyter Book|
 | 4 |[Molass Libray Tutorial](https://freesemt.github.io/molass-tutorial/)|CC BY 4.0|Jupyter Book|
 | 5 |[Molass Developer's Handbook](https://freesemt.github.io/molass-develop/)|CC BY 4.0|Jupyter Book|
 
