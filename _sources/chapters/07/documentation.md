@@ -37,10 +37,10 @@ pip install -U ghp-import
 
 Each initial book was created as follows.
 
-    ・ jupyter-book create template-repo
-    ・ create a repository on GitHub
+    ・ jupyter-book create example-repo
+    ・ create an empty repository for book-repo on GitHub
     ・ git clone book-repo
-    ・ copy the contents of template-repo to book-repo
+    ・ copy the contents of example-repo to book-repo
 
 ```{note}
 You need this procedure only when you create a new book.
