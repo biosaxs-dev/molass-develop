@@ -53,7 +53,7 @@ When you edit the source files manually, first files to be attended are the foll
     ・ _config.yml
     ・ _toc.yml
 
-These files are usually placed either at the root of the repository or the docs sub folder. Compare them with those of an existing book you already know, then you should begin to know how to edit.
+These files are usually placed either at the root of the repository or the docs sub folder. Compare them with those of an existing book you already know, then you should begin to know which source file to edit. To edit the source file, which is either a markdown text file or a Jupyter notebook, you should be well informed on the syntax summarized in [MyST syntax cheat sheet](https://jupyterbook.org/en/stable/reference/cheatsheet.html).
 
 See also as you proceed:
 
