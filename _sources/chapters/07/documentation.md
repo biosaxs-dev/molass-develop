@@ -46,7 +46,7 @@ Each initial book was created as follows.
 You need this procedure only when you create a new book.
 ```
 
-### Manual Edit
+### Manual Book Edit
 
 When you edit the source files manually, first files to attend are the following two.
 
@@ -60,7 +60,7 @@ See also as you proceed:
 * [Create your first book](https://jupyterbook.org/en/stable/start/your-first-book)
 * [MyST syntax cheat sheet](https://jupyterbook.org/en/stable/reference/cheatsheet.html)
 
-### Update Cycle
+### Book Update Cycle
 
 We repeat the following cycle to update.
 
