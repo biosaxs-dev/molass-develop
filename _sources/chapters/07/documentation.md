@@ -91,13 +91,14 @@ Synchronization of the master branches, local and remote, will be achieved as fo
     ・ commit in VS Code
     ・ synchronize with GitHub in VS Code
 
-Update and deployment of the gh-pages branch will be achienved as follows in Command Prompt:
+(Re)creation and synchronization of the gh-pages branches, local and remote, will be achienved as follows in Command Prompt:
 
 ```none
 ghp-import -n -p -f _build/html
 ```
 
-The web page will be updated in a few minutes.
+The web page will be updated in a few minutes, after the automatic deployment of GitHub Pages.
+If you are interested in details of this step, see the [README](https://github.com/c-w/ghp-import) of ghp-import.
 
 ## How to use Sphinx
 
