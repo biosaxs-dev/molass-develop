@@ -53,7 +53,7 @@ When you edit the source files manually, first files to be attended are the foll
     ・ _config.yml
     ・ _toc.yml
 
-These files are usually placed either at the root of the repository or the docs sub folder. Compare them with those of an existing book, then you should begin to know how to edit.
+These files are usually placed either at the root of the repository or the docs sub folder. Compare them with those of an existing book you already know, then you should begin to know how to edit.
 
 See also as you proceed:
 
