@@ -97,7 +97,7 @@ Synchronization of the master branches, local and remote, should be achieved as 
 ghp-import -n -p -f _build/html
 ```
 
-The web page will be updated in a few minutes, after the automatic deployment of GitHub Pages.
+The web page will be updated in a few minutes, as a result of automatic deployment of GitHub Pages.
 If you are interested in details of this step, see the [README](https://github.com/c-w/ghp-import) of ghp-import.
 
 ## How to use Sphinx
