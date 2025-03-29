@@ -77,7 +77,7 @@ We repeat the following cycle to update, brief descriptions of which will follow
 For maintenance of the web page, the two branches, namely master and gh-pages, are involved. The former keeps the source and the latter the generated target.
 ```
 
-After manual edit, local generation will be achieved as follows in Command Prompt:
+After manual edit, local generation should be achieved as follows in Command Prompt:
 
 ```none
 cd book-repo
@@ -86,12 +86,12 @@ jupyter-book build .
 
 After generation, check the generated local output in _build/html with the browser. Re-edit as needed until you are satisfied.
 
-Synchronization of the master branches, local and remote, will be achieved as follows in VS Code:
+Synchronization of the master branches, local and remote, should be achieved as follows in VS Code:
 
     ・ commit in VS Code
     ・ synchronize with GitHub in VS Code
 
-(Re)creation and synchronization of the gh-pages branches, local and remote, will be achienved as follows in Command Prompt:
+(Re)creation and synchronization of the gh-pages branches, local and remote, should be achienved as follows in Command Prompt:
 
 ```none
 ghp-import -n -p -f _build/html
