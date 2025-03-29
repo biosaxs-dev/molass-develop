@@ -48,7 +48,7 @@ You need this procedure only when you create a new book.
 
 ### Manual Book Edit
 
-When you edit the source files manually, first files to attend are the following two.
+When you edit the source files manually, first files to be attended are the following two.
 
     ・ _config.yml
     ・ _toc.yml
