@@ -66,7 +66,7 @@ See also as you proceed:
 
 ### Book Update Cycle
 
-We repeat the following cycle to update.
+We repeat the following cycle to update, brief descriptions of which follow below.
 
     ・ edit manually
     ・ generate locally
