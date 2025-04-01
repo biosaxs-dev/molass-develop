@@ -22,10 +22,6 @@ See also:
 
 For large files larger than 50MB, it is recommended to use Git Large File Storage (LFS). 
 
-```{note}
-Skip this section unless you need or plan to inculde large files.
-```
-
 ### Install Git LFS
 
 This install command, which sets up Git LFS hooks globally, needs to be run once per machine.
