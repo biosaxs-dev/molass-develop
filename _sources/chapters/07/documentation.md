@@ -43,7 +43,7 @@ Each initial book was created as follows.
     ・ copy the contents of example-repo to book-repo
 
 ```{note}
-You need this procedure only when you create a new book.
+You need this procedure only when you create a new book. In case of need, see [Create your first book](https://jupyterbook.org/en/stable/start/your-first-book.html) for details.
 ```
 
 ### Manual Book Edit
