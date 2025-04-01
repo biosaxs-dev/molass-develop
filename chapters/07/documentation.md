@@ -76,7 +76,7 @@ cd book-repo
 jupyter-book build .
 ```
 
-After generation, check the generated local output in _build/html with the browser. Re-edit as needed until you are satisfied.
+After generation, check the generated local output in _build/html with your browser. Re-edit as needed until you are satisfied.
 
 Synchronization of the master branch will be achieved as follows in VS Code:
 
