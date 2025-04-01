@@ -86,6 +86,17 @@ jupyter-book build .
 
 After generation, check the generated local output in _build/html with your browser. Re-edit as needed until you are satisfied.
 
+:::{admonition} A note on page caching
+:class: tip
+Sometimes, you may need `--all` option. That is,
+
+```none
+jupyter-book --all build .
+```
+
+See [a note on page caching](https://jupyterbook.org/en/stable/start/build.html#aside-source-vs-build-files) for details.
+:::
+
 Synchronization of the master branches, local and remote, should be achieved as follows in VS Code:
 
     ・ commit in VS Code
