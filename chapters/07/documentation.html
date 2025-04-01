@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -526,6 +526,14 @@ jupyter-book build .
 </pre></div>
 </div>
 <p>After generation, check the generated local output in _build/html with your browser. Re-edit as needed until you are satisfied.</p>
+<div class="tip admonition">
+<p class="admonition-title">A note on page caching</p>
+<p>Sometimes, you may need <code class="docutils literal notranslate"><span class="pre">--all</span></code> option. That is,</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>jupyter-book --all build .
+</pre></div>
+</div>
+<p>See <a class="reference external" href="https://jupyterbook.org/en/stable/start/build.html#aside-source-vs-build-files">a note on page caching</a> for details.</p>
+</div>
 <p>Synchronization of the master branches, local and remote, should be achieved as follows in VS Code:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>・ commit in VS Code
 ・ synchronize with GitHub in VS Code
