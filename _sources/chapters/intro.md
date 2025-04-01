@@ -8,4 +8,4 @@ The Molass Comunity welcomes anyone interested in SEC-SAXS data analysis. Feel f
 
 This book is intended to help contributors to the project.
 
-Skilled programmers should skip first four chapters on environments, for those are simple orientations attended to beginners.
+Skilled programmers should skip the first chapter on environments, for those are simple orientations attended to beginners.

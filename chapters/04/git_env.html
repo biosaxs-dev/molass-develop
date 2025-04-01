@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>4. Git Environment &#8212; Molass Developpers Handbook</title>
+    <title>1.4. Git Environment &#8212; Molass Developpers Handbook</title>
   
   
   
@@ -61,8 +61,8 @@
     <link rel="icon" href="../../_static/molamola.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="5. Coding Style" href="../05/coding_style.html" />
-    <link rel="prev" title="3. Jupyter Environment" href="../03/jupyter_env.html" />
+    <link rel="next" title="2. Coding Style" href="../05/coding_style.html" />
+    <link rel="prev" title="1.3. Jupyter Environment" href="../03/jupyter_env.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -181,14 +181,17 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../01/coding_env.html">1. Coding Environment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../02/python_env.html">2. Python Environment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../03/jupyter_env.html">3. Jupyter Environment</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">4. Git Environment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../05/coding_style.html">5. Coding Style</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../06/testing.html">6. Testing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../07/documentation.html">7. Documentation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../08/release.html">8. Package Release</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../01/environments.html">1. Environments</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../01/coding_env.html">1.1. Coding Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02/python_env.html">1.2. Python Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03/jupyter_env.html">1.3. Jupyter Environment</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">1.4. Git Environment</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/coding_style.html">2. Coding Style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/testing.html">3. Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../07/documentation.html">4. Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/release.html">5. Package Release</a></li>
 </ul>
 
     </div>
@@ -384,11 +387,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github">4.1. GitHub</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#git">4.2. Git</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#git-large-file-storage">4.3. Git Large File Storage</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-git-lfs">4.3.1. Install Git LFS</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#track-settings">4.3.2. Track Settings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github">1.4.1. GitHub</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#git">1.4.2. Git</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#git-large-file-storage">1.4.3. Git Large File Storage</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-git-lfs">Install Git LFS</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#track-settings">Track Settings</a></li>
 </ul>
 </li>
 </ul>
@@ -403,13 +406,13 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="git-environment">
-<h1><span class="section-number">4. </span>Git Environment<a class="headerlink" href="#git-environment" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">1.4. </span>Git Environment<a class="headerlink" href="#git-environment" title="Link to this heading">#</a></h1>
 <section id="github">
-<h2><span class="section-number">4.1. </span>GitHub<a class="headerlink" href="#github" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.4.1. </span>GitHub<a class="headerlink" href="#github" title="Link to this heading">#</a></h2>
 <p>If not yet, create an account at <a href="https://github.com/signup">Sign up to GitHub</a>.</p>
 </section>
 <section id="git">
-<h2><span class="section-number">4.2. </span>Git<a class="headerlink" href="#git" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.4.2. </span>Git<a class="headerlink" href="#git" title="Link to this heading">#</a></h2>
 <p>If not yet, install git with “64-bit Git for Windows Setup” from <a href="https://git-scm.com/downloads/win">Download for Windows</a>.</p>
 <p>And set your account info as like follows.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git config --global user.name &quot;John Doe&quot;
@@ -422,10 +425,14 @@ git config --global user.email johndoe@example.com
 </ul>
 </section>
 <section id="git-large-file-storage">
-<h2><span class="section-number">4.3. </span>Git Large File Storage<a class="headerlink" href="#git-large-file-storage" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.4.3. </span>Git Large File Storage<a class="headerlink" href="#git-large-file-storage" title="Link to this heading">#</a></h2>
 <p>For large files larger than 50MB, it is recommended to use Git Large File Storage (LFS).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Skip this section unless you need or plan to inculde large files.</p>
+</div>
 <section id="install-git-lfs">
-<h3><span class="section-number">4.3.1. </span>Install Git LFS<a class="headerlink" href="#install-git-lfs" title="Link to this heading">#</a></h3>
+<h3>Install Git LFS<a class="headerlink" href="#install-git-lfs" title="Link to this heading">#</a></h3>
 <p>This install command, which sets up Git LFS hooks globally, needs to be run once per machine.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git lfs install
 </pre></div>
@@ -433,7 +440,7 @@ git config --global user.email johndoe@example.com
 <p>The following steps are required to track files in a repository.</p>
 </section>
 <section id="track-settings">
-<h3><span class="section-number">4.3.2. </span>Track Settings<a class="headerlink" href="#track-settings" title="Link to this heading">#</a></h3>
+<h3>Track Settings<a class="headerlink" href="#track-settings" title="Link to this heading">#</a></h3>
 <p>Add tracking info in Command Prompt:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git lfs track &quot;sec_simulation.ipynb&quot;
 </pre></div>
@@ -488,7 +495,7 @@ git push origin main
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">3. </span>Jupyter Environment</p>
+        <p class="prev-next-title"><span class="section-number">1.3. </span>Jupyter Environment</p>
       </div>
     </a>
     <a class="right-next"
@@ -496,7 +503,7 @@ git push origin main
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">5. </span>Coding Style</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Coding Style</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -516,11 +523,11 @@ git push origin main
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github">4.1. GitHub</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#git">4.2. Git</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#git-large-file-storage">4.3. Git Large File Storage</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-git-lfs">4.3.1. Install Git LFS</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#track-settings">4.3.2. Track Settings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github">1.4.1. GitHub</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#git">1.4.2. Git</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#git-large-file-storage">1.4.3. Git Large File Storage</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-git-lfs">Install Git LFS</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#track-settings">Track Settings</a></li>
 </ul>
 </li>
 </ul>
