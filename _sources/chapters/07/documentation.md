@@ -74,7 +74,7 @@ We repeat the following cycle to update, brief descriptions of which will follow
     ・ deploy gh-pages branch
 
 ```{note}
-For maintenance of the web page, the two branches, namely master and gh-pages, are involved. The former keeps the source and the latter the generated target.
+For maintenance of the web page, the two branches, namely master and gh-pages, are involved. The former keeps the source and the latter the generated target. The word "master" might be "main" depending on how the repository was built.
 ```
 
 After manual edit, local generation should be achieved as follows in Command Prompt:
