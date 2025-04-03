@@ -1,7 +1,7 @@
 # Package Release
 
 ```{warning}
-This page is in preparation to be publicly available in April, 2025.
+This page is in preparation to be publicly available in May, 2025.
 ```
 
 ## PyPI Account
