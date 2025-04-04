@@ -138,8 +138,8 @@ sphinx-quickstart
 ```
 
 Reply minimally, i.e. defaults or none, to queries from the last command except the following two. 
-* Project name: Molass Library
-* Author name(s): Molass Community
+* Project name: `Molass Library`
+* Author name(s): `Molass Community`
 
 The command will gerenate several files, among which you should edit the follow two. 
 
