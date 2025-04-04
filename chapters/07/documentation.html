@@ -398,7 +398,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use-sphinx">4.3. How to use Sphinx</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">4.3.1. Tool Package Installation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-example-generation">4.3.2. Initial Example Generation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#customization-for-our-use">4.3.3. Customization for Our Use</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#customize-conf-py">4.3.3. Customize <code class="docutils literal notranslate"><span class="pre">conf.py</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gererate-function-documents">4.3.4. Gererate Function Documents</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#make-html-files">4.3.5. Make HTML files</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deployment">4.3.6. Deployment</a></li>
@@ -573,13 +573,17 @@ sphinx-quickstart
 </ul>
 <p>The command will gerenate several files, among which you should edit the follow two.</p>
 <ul class="simple">
-<li><p><a class="reference external" href="http://conf.py">conf.py</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">conf.py</span></code></p></li>
 <li><p>index.rst</p></li>
 </ul>
 </section>
-<section id="customization-for-our-use">
-<h3><span class="section-number">4.3.3. </span>Customization for Our Use<a class="headerlink" href="#customization-for-our-use" title="Link to this heading">#</a></h3>
-<p>…</p>
+<section id="customize-conf-py">
+<h3><span class="section-number">4.3.3. </span>Customize <code class="docutils literal notranslate"><span class="pre">conf.py</span></code><a class="headerlink" href="#customize-conf-py" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Add the root directory to the system path to ensure the documentation of the current state</p></li>
+<li><p>Add extensions</p></li>
+<li><p>Set sphinx_book_theme</p></li>
+</ul>
 </section>
 <section id="gererate-function-documents">
 <h3><span class="section-number">4.3.4. </span>Gererate Function Documents<a class="headerlink" href="#gererate-function-documents" title="Link to this heading">#</a></h3>
@@ -684,7 +688,7 @@ sphinx-quickstart
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use-sphinx">4.3. How to use Sphinx</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">4.3.1. Tool Package Installation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-example-generation">4.3.2. Initial Example Generation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#customization-for-our-use">4.3.3. Customization for Our Use</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#customize-conf-py">4.3.3. Customize <code class="docutils literal notranslate"><span class="pre">conf.py</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gererate-function-documents">4.3.4. Gererate Function Documents</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#make-html-files">4.3.5. Make HTML files</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deployment">4.3.6. Deployment</a></li>
