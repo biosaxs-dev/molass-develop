@@ -144,7 +144,7 @@ Reply minimally, i.e. defaults or none, to queries from the last command except 
 The command will gerenate several files, among which you should edit the follow two. 
 
 * `conf.py`
-* index.rst
+* `index.rst`
 
 ### Customize `conf.py`
 
@@ -160,7 +160,9 @@ In the repository root.
 sphinx-apidoc --output-dir docs molass --separate
 ```
 
-* edit index.rst
+### Edit `index.rst`
+
+* edti `index.rst`
 
 ### Make HTML files
 
