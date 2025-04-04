@@ -115,9 +115,15 @@ If you are interested in details of this step, see the [README](https://github.c
 
 ### Tool Package Installation
 
+To use Sphinx, you need to install the following two packages, which should have been installed if you have already installed packages for Jupyter Book as stated above.
+
 ```none
 pip install sphinx~=7.0 
 pip install sphinx-book-theme
+```
+
+```{note}
+The version specification ~=7.0 to shpinx comes from Jupyter Book's dependecy constraints. Later versions than this would cause troubles with Jupyter Book.
 ```
 
 ### Initial Example Generation
