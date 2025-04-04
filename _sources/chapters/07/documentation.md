@@ -152,7 +152,7 @@ The command will gerenate several files, among which you should edit the follow 
 * Add extensions
 * Set sphinx_book_theme
 
-### Gererate Function Documents
+### Gererate *.rst files
 
 In the repository root.
 
