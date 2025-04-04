@@ -127,7 +127,7 @@ pip install sphinx-book-theme
 The version specification ~=7.0 to shpinx comes from Jupyter Book's dependecy constraints. Later versions than this would cause troubles with Jupyter Book as of April, 2025.
 ```
 
-### Initial Example Generation
+### Initial Generation
 
 To generate a set of initial examples, execute commands as follows in the repository root.
 
