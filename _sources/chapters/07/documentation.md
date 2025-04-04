@@ -66,7 +66,8 @@ See also as you proceed:
 
 ### Book Update Cycle
 
-We repeat the following cycle to update, brief descriptions of which will follow below.
+So far, we have described the intial procudure required only once when you create a new book. Atfer that,
+we repeat the following cycle to update, brief descriptions of which will follow below.
 
     ・ edit manually
     ・ generate locally
