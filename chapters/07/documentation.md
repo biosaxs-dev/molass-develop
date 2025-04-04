@@ -120,25 +120,52 @@ pip install sphinx~=7.0
 pip install sphinx-book-theme
 ```
 
-### Gererate Function Documents
+### Initial Example Generation
 
-At the repository root:
+To generate a set of initial examples, execute commands as follows in the repository root.
 
 ```none
 mkdir docs
+cd docs
+sphinx-quickstart
+```
+
+Reply minimally, i.e. defaults or none, to queries from the last command except the following two. 
+* Project name: Molass Library
+* Author name(s): Molass Community
+
+The command will gerenate several files, among which you should edit the follow two. 
+
+* conf.py
+* index.rst
+
+### Customization for Our Use
+
+...
+
+### Gererate Function Documents
+
+In the repository root.
+
+```none
 sphinx-apidoc --output-dir docs molass --separate
 ```
 
-### Edit Manually
+* edit index.rst
 
+### Make HTML files
 
-
-### Deployment
-
-At docs:
+In docs:
 
 ```none
 make html
+```
+
+### Deployment
+
+In docs:
+
+```none
 ghp-import -n -p -f _build/html
 ```
 
