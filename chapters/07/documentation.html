@@ -397,9 +397,11 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use-sphinx">4.3. How to use Sphinx</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">4.3.1. Tool Package Installation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gererate-function-documents">4.3.2. Gererate Function Documents</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-manually">4.3.3. Edit Manually</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deployment">4.3.4. Deployment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-example-generation">4.3.2. Initial Example Generation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#customization-for-our-use">4.3.3. Customization for Our Use</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gererate-function-documents">4.3.4. Gererate Function Documents</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#make-html-files">4.3.5. Make HTML files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deployment">4.3.6. Deployment</a></li>
 </ul>
 </li>
 </ul>
@@ -556,22 +558,50 @@ pip install sphinx-book-theme
 </pre></div>
 </div>
 </section>
-<section id="gererate-function-documents">
-<h3><span class="section-number">4.3.2. </span>Gererate Function Documents<a class="headerlink" href="#gererate-function-documents" title="Link to this heading">#</a></h3>
-<p>At the repository root:</p>
+<section id="initial-example-generation">
+<h3><span class="section-number">4.3.2. </span>Initial Example Generation<a class="headerlink" href="#initial-example-generation" title="Link to this heading">#</a></h3>
+<p>To generate a set of initial examples, execute commands as follows in the repository root.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>mkdir docs
-sphinx-apidoc --output-dir docs molass --separate
+cd docs
+sphinx-quickstart
+</pre></div>
+</div>
+<p>Reply minimally, i.e. defaults or none, to queries from the last command except the following two.</p>
+<ul class="simple">
+<li><p>Project name: Molass Library</p></li>
+<li><p>Author name(s): Molass Community</p></li>
+</ul>
+<p>The command will gerenate several files, among which you should edit the follow two.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://conf.py">conf.py</a></p></li>
+<li><p>index.rst</p></li>
+</ul>
+</section>
+<section id="customization-for-our-use">
+<h3><span class="section-number">4.3.3. </span>Customization for Our Use<a class="headerlink" href="#customization-for-our-use" title="Link to this heading">#</a></h3>
+<p>…</p>
+</section>
+<section id="gererate-function-documents">
+<h3><span class="section-number">4.3.4. </span>Gererate Function Documents<a class="headerlink" href="#gererate-function-documents" title="Link to this heading">#</a></h3>
+<p>In the repository root.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>sphinx-apidoc --output-dir docs molass --separate
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>edit index.rst</p></li>
+</ul>
+</section>
+<section id="make-html-files">
+<h3><span class="section-number">4.3.5. </span>Make HTML files<a class="headerlink" href="#make-html-files" title="Link to this heading">#</a></h3>
+<p>In docs:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>make html
 </pre></div>
 </div>
 </section>
-<section id="edit-manually">
-<h3><span class="section-number">4.3.3. </span>Edit Manually<a class="headerlink" href="#edit-manually" title="Link to this heading">#</a></h3>
-</section>
 <section id="deployment">
-<h3><span class="section-number">4.3.4. </span>Deployment<a class="headerlink" href="#deployment" title="Link to this heading">#</a></h3>
-<p>At docs:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>make html
-ghp-import -n -p -f _build/html
+<h3><span class="section-number">4.3.6. </span>Deployment<a class="headerlink" href="#deployment" title="Link to this heading">#</a></h3>
+<p>In docs:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ghp-import -n -p -f _build/html
 </pre></div>
 </div>
 <p>The web page will be updated in a few minutes.</p>
@@ -653,9 +683,11 @@ ghp-import -n -p -f _build/html
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use-sphinx">4.3. How to use Sphinx</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">4.3.1. Tool Package Installation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gererate-function-documents">4.3.2. Gererate Function Documents</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-manually">4.3.3. Edit Manually</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deployment">4.3.4. Deployment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-example-generation">4.3.2. Initial Example Generation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#customization-for-our-use">4.3.3. Customization for Our Use</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gererate-function-documents">4.3.4. Gererate Function Documents</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#make-html-files">4.3.5. Make HTML files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deployment">4.3.6. Deployment</a></li>
 </ul>
 </li>
 </ul>
