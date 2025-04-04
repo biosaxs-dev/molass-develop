@@ -123,7 +123,7 @@ pip install sphinx-book-theme
 ```
 
 ```{note}
-The version specification ~=7.0 to shpinx comes from Jupyter Book's dependecy constraints. Later versions than this would cause troubles with Jupyter Book.
+The version specification ~=7.0 to shpinx comes from Jupyter Book's dependecy constraints. Later versions than this would cause troubles with Jupyter Book as of April, 2025.
 ```
 
 ### Initial Example Generation
