@@ -53,7 +53,7 @@ When you begin to edit source files manually, to be attended first are the follo
     ・ _config.yml
     ・ _toc.yml
 
-These files are usually placed either at the root of repository or a sub folder named like "docs". Compare them with those of an existing book you already have, then you should get to know which source file to edit. As you edit the source file, which is either a markdown text file like "coding_style.md" or a Jupyter notebook like "prepare.ipynb", you should be well acquainted on the syntax summarized in [MyST syntax cheat sheet](https://jupyterbook.org/en/stable/reference/cheatsheet.html).
+These files are usually placed either at the root of repository or a sub folder named like "docs". Compare them with those of an existing book you already have, then you will get to know which source files to edit. As you edit the source file, which is either a markdown text file like "coding_style.md" or a Jupyter notebook like "prepare.ipynb", you should be well acquainted with the syntax summarized in [MyST syntax cheat sheet](https://jupyterbook.org/en/stable/reference/cheatsheet.html).
 
 ```{note}
 Syntaxes of markdown texts differ slightly denending on the tools they are processed with. Be sure to follow the `MyST syntax` here. On the other hand for GitHub texts like `README.md`, follow [Basic writing and formatting syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
