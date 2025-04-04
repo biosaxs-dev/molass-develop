@@ -400,8 +400,9 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-generation">4.3.2. Initial Generation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#customize-conf-py">4.3.3. Customize <code class="docutils literal notranslate"><span class="pre">conf.py</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gererate-function-documents">4.3.4. Gererate Function Documents</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#make-html-files">4.3.5. Make HTML files</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deployment">4.3.6. Deployment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-index-rst">4.3.5. Edit <code class="docutils literal notranslate"><span class="pre">index.rst</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#make-html-files">4.3.6. Make HTML files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deployment">4.3.7. Deployment</a></li>
 </ul>
 </li>
 </ul>
@@ -580,7 +581,7 @@ sphinx-quickstart
 <p>The command will gerenate several files, among which you should edit the follow two.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">conf.py</span></code></p></li>
-<li><p>index.rst</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">index.rst</span></code></p></li>
 </ul>
 </section>
 <section id="customize-conf-py">
@@ -597,19 +598,22 @@ sphinx-quickstart
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>sphinx-apidoc --output-dir docs molass --separate
 </pre></div>
 </div>
+</section>
+<section id="edit-index-rst">
+<h3><span class="section-number">4.3.5. </span>Edit <code class="docutils literal notranslate"><span class="pre">index.rst</span></code><a class="headerlink" href="#edit-index-rst" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>edit index.rst</p></li>
+<li><p>edti <code class="docutils literal notranslate"><span class="pre">index.rst</span></code></p></li>
 </ul>
 </section>
 <section id="make-html-files">
-<h3><span class="section-number">4.3.5. </span>Make HTML files<a class="headerlink" href="#make-html-files" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">4.3.6. </span>Make HTML files<a class="headerlink" href="#make-html-files" title="Link to this heading">#</a></h3>
 <p>In docs:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>make html
 </pre></div>
 </div>
 </section>
 <section id="deployment">
-<h3><span class="section-number">4.3.6. </span>Deployment<a class="headerlink" href="#deployment" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">4.3.7. </span>Deployment<a class="headerlink" href="#deployment" title="Link to this heading">#</a></h3>
 <p>In docs:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ghp-import -n -p -f _build/html
 </pre></div>
@@ -696,8 +700,9 @@ sphinx-quickstart
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-generation">4.3.2. Initial Generation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#customize-conf-py">4.3.3. Customize <code class="docutils literal notranslate"><span class="pre">conf.py</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gererate-function-documents">4.3.4. Gererate Function Documents</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#make-html-files">4.3.5. Make HTML files</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deployment">4.3.6. Deployment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-index-rst">4.3.5. Edit <code class="docutils literal notranslate"><span class="pre">index.rst</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#make-html-files">4.3.6. Make HTML files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deployment">4.3.7. Deployment</a></li>
 </ul>
 </li>
 </ul>
