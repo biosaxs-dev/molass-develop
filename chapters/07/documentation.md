@@ -136,12 +136,14 @@ Reply minimally, i.e. defaults or none, to queries from the last command except 
 
 The command will gerenate several files, among which you should edit the follow two. 
 
-* conf.py
+* `conf.py`
 * index.rst
 
-### Customization for Our Use
+### Customize `conf.py`
 
-...
+* Add the root directory to the system path to ensure the documentation of the current state
+* Add extensions
+* Set sphinx_book_theme
 
 ### Gererate Function Documents
 
