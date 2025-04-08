@@ -91,7 +91,7 @@ After generation, check the generated local output in _build/html with your brow
 Sometimes, you may need `--all` option. That is,
 
 ```none
-jupyter-book --all build .
+jupyter-book build --all .
 ```
 
 See [a note on page caching](https://jupyterbook.org/en/stable/start/build.html#aside-source-vs-build-files) for details.
