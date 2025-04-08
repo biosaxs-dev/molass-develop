@@ -53,7 +53,7 @@ When you begin to edit source files manually, to be attended first are the follo
     ・ _config.yml
     ・ _toc.yml
 
-These files are usually placed either at the root of repository or a sub folder named like "docs". Compare them with those of an existing book you already have, then you should get to know which source file to edit. As you edit the source file, which is either a markdown text file like "coding_style.md" or a Jupyter notebook like "prepare.ipynb", you should be well acquainted on the syntax summarized in [MyST syntax cheat sheet](https://jupyterbook.org/en/stable/reference/cheatsheet.html).
+These files are usually placed either at the root of repository or a sub folder named like "docs". Compare them with those of an existing book you already have, then you will get to know which source files to edit. As you edit the source file, which is either a markdown text file like "coding_style.md" or a Jupyter notebook like "prepare.ipynb", you should be well acquainted with the syntax summarized in [MyST syntax cheat sheet](https://jupyterbook.org/en/stable/reference/cheatsheet.html).
 
 ```{note}
 Syntaxes of markdown texts differ slightly denending on the tools they are processed with. Be sure to follow the `MyST syntax` here. On the other hand for GitHub texts like `README.md`, follow [Basic writing and formatting syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
@@ -66,15 +66,16 @@ See also as you proceed:
 
 ### Book Update Cycle
 
-We repeat the following cycle to update, brief descriptions of which will follow below.
+So far, we have described the intial procudure required only once when you create a new book. Atfer that,
+we repeat the following cycle to update, brief descriptions of which will follow below.
 
     ・ edit manually
     ・ generate locally
-    ・ synchronize master branch
+    ・ synchronize master (or main) branch
     ・ deploy gh-pages branch
 
 ```{note}
-For maintenance of the web page, the two branches, namely master and gh-pages, are involved. The former keeps the source and the latter the generated target. Instead of the word "master", "main" might be used depending on how the repository was built. Anycase, be sure to use the word consistently.
+For maintenance of the web page, the two branches, namely master and gh-pages, are involved. The former keeps the source and the latter the generated target. Instead of the word "master", "main" might be used depending on how the repository was created. Anycase, be sure to use the word consistently. We use the name "master" here in this chapter.
 ```
 
 After manual edit, local generation should be achieved as follows in Command Prompt:
@@ -126,7 +127,7 @@ pip install sphinx-book-theme
 The version specification ~=7.0 to shpinx comes from Jupyter Book's dependecy constraints. Later versions than this would cause troubles with Jupyter Book as of April, 2025.
 ```
 
-### Initial Example Generation
+### Initial Generation
 
 To generate a set of initial examples, execute commands as follows in the repository root.
 
@@ -137,13 +138,13 @@ sphinx-quickstart
 ```
 
 Reply minimally, i.e. defaults or none, to queries from the last command except the following two. 
-* Project name: Molass Library
-* Author name(s): Molass Community
+* Project name: `Molass Library`
+* Author name(s): `Molass Community`
 
 The command will gerenate several files, among which you should edit the follow two. 
 
 * `conf.py`
-* index.rst
+* `index.rst`
 
 ### Customize `conf.py`
 
@@ -151,7 +152,7 @@ The command will gerenate several files, among which you should edit the follow 
 * Add extensions
 * Set sphinx_book_theme
 
-### Gererate Function Documents
+### Gererate *.rst files
 
 In the repository root.
 
@@ -159,7 +160,9 @@ In the repository root.
 sphinx-apidoc --output-dir docs molass --separate
 ```
 
-* edit index.rst
+### Edit `index.rst`
+
+* edti `index.rst`
 
 ### Make HTML files
 
