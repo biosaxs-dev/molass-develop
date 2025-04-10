@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>3. Testing &#8212; Molass Developpers Handbook</title>
+    <title>3. Testing Convention &#8212; Molass Developpers Handbook</title>
   
   
   
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -364,7 +364,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -375,11 +377,21 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Testing</h1>
+    <h1>Testing Convention</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-tools">3.1. Test Tools</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-scripts-naming-and-locations">3.2. Test Scripts Naming and Locations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-tests">3.3. Running Tests</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -389,12 +401,49 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="testing">
-<h1><span class="section-number">3. </span>Testing<a class="headerlink" href="#testing" title="Link to this heading">#</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This page is in preparation to be publicly available in May, 2025.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="testing-convention">
+<h1><span class="section-number">3. </span>Testing Convention<a class="headerlink" href="#testing-convention" title="Link to this heading">#</a></h1>
+<section id="test-tools">
+<h2><span class="section-number">3.1. </span>Test Tools<a class="headerlink" href="#test-tools" title="Link to this heading">#</a></h2>
+<p>We use pytest with coverage reports. Install the following packages for testing.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">U</span> <span class="n">pytest</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">U</span> <span class="n">pytest</span><span class="o">-</span><span class="n">cov</span>
+</pre></div>
 </div>
+</section>
+<section id="test-scripts-naming-and-locations">
+<h2><span class="section-number">3.2. </span>Test Scripts Naming and Locations<a class="headerlink" href="#test-scripts-naming-and-locations" title="Link to this heading">#</a></h2>
+<p>Test scripts should be named and placed like suggested in the following way.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">molass</span><span class="o">-</span><span class="n">library</span><span class="o">/</span>
+    <span class="n">tests</span><span class="o">/</span>
+        <span class="mi">010</span><span class="n">_DataObjects</span><span class="o">/</span>
+            <span class="n">test_010_SSD</span><span class="o">.</span><span class="n">py</span>
+            <span class="n">test_020_Curve</span><span class="o">.</span><span class="n">py</span>
+            <span class="o">...</span>
+        <span class="mi">020</span><span class="n">_DataUtils</span><span class="o">/</span>
+            <span class="o">...</span>
+        
+</pre></div>
+</div>
+</section>
+<section id="running-tests">
+<h2><span class="section-number">3.3. </span>Running Tests<a class="headerlink" href="#running-tests" title="Link to this heading">#</a></h2>
+<p>To run the tests, do as follows in command prompt:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">tests</span>
+<span class="n">pytest</span> <span class="o">--</span><span class="n">cov</span><span class="o">=</span><span class="n">molass</span>
+</pre></div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">A note on python path of this pytest execution</p>
+<p>Python path in this execution is ensured to be set as the current reporitoy root by the following setting in the pyproject.toml.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[tool.pytest.ini_options]
+pythonpath = [
+  &quot;.&quot;
+]
+</pre></div>
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -451,6 +500,23 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-tools">3.1. Test Tools</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-scripts-naming-and-locations">3.2. Test Scripts Naming and Locations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-tests">3.3. Running Tests</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
