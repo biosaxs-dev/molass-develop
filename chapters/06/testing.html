@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>3. Testing Convention &#8212; Molass Developpers Handbook</title>
+    <title>3. Testing Conventions &#8212; Molass Developpers Handbook</title>
   
   
   
@@ -189,7 +189,7 @@
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../05/coding_style.html">2. Coding Style</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Testing Convention</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Testing Conventions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../07/documentation.html">4. Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../08/release.html">5. Package Release</a></li>
 </ul>
@@ -377,7 +377,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Testing Convention</h1>
+    <h1>Testing Conventions</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -401,8 +401,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="testing-convention">
-<h1><span class="section-number">3. </span>Testing Convention<a class="headerlink" href="#testing-convention" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="testing-conventions">
+<h1><span class="section-number">3. </span>Testing Conventions<a class="headerlink" href="#testing-conventions" title="Link to this heading">#</a></h1>
 <section id="test-tools">
 <h2><span class="section-number">3.1. </span>Test Tools<a class="headerlink" href="#test-tools" title="Link to this heading">#</a></h2>
 <p>We use pytest with coverage reports. Install the following packages for testing.</p>
@@ -435,7 +435,7 @@ document.write(`
 </div>
 <div class="tip admonition">
 <p class="admonition-title">A note on the python path of this pytest execution</p>
-<p>The python path in this execution is ensured to be set as the current repositoy root by the following setting in pyproject.toml.</p>
+<p>The python path in this execution is ensured to be set as the current repositoy root by the following specification in pyproject.toml.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[tool.pytest.ini_options]
 pythonpath = [
   &quot;.&quot;
