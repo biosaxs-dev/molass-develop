@@ -46,3 +46,11 @@ pythonpath = [
 ]
 ```
 :::
+
+For detailed tests coverage, execute as follows:
+
+```
+pytest --cov=molass --cov-report=html
+```
+
+and check the results in tests/htmlcov/index.html with your browser.
