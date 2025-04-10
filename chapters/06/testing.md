@@ -1,5 +1,48 @@
-# Testing
+# Testing Convention
 
-```{warning}
-This page is in preparation to be publicly available in May, 2025.
+## Test Tools
+
+We use pytest with coverage reports. Install the following packages for testing.
+
 ```
+pip install -U pytest
+pip install -U pytest-cov
+```
+
+## Test Scripts Naming and Locations
+
+Test scripts should be named and placed like suggested in the following way.
+
+```
+molass-library/
+    tests/
+        010_DataObjects/
+            test_010_SSD.py
+            test_020_Curve.py
+            ...
+        020_DataUtils/
+            ...
+        
+```
+
+## Running Tests
+
+To run the tests, do as follows in command prompt:
+
+```
+cd tests
+pytest --cov=molass
+```
+
+:::{admonition} A note on python path of this pytest execution
+:class: tip
+
+Python path in this execution is ensured to be set as the current reporitoy root by the following setting in the pyproject.toml.
+
+```none
+[tool.pytest.ini_options]
+pythonpath = [
+  "."
+]
+```
+:::
