@@ -34,10 +34,10 @@ cd tests
 pytest --cov=molass
 ```
 
-:::{admonition} A note on python path of this pytest execution
+:::{admonition} A note on the python path of this pytest execution
 :class: tip
 
-Python path in this execution is ensured to be set as the current reporitoy root by the following setting in the pyproject.toml.
+The python path in this execution is ensured to be set as the current repositoy root by the following setting in pyproject.toml.
 
 ```none
 [tool.pytest.ini_options]
