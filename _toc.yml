@@ -20,7 +20,7 @@ chapters:
 - file: chapters/05/coding_style
   title: Coding Style
 - file: chapters/06/testing
-  title: Testing Convention
+  title: Testing Conventions
 - file: chapters/07/documentation
   title: Documentation
 - file: chapters/08/release

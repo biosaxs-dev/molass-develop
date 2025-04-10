@@ -1,4 +1,4 @@
-# Testing Convention
+# Testing Conventions
 
 ## Test Tools
 
