@@ -21,8 +21,8 @@ molass-library/
             test_020_Curve.py
             ...
         020_DataUtils/
+            test_010_DataUtils.py
             ...
-        
 ```
 
 ## Running Tests
