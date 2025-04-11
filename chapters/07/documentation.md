@@ -80,7 +80,7 @@ For maintenance of the web page, the two branches, namely master and gh-pages, a
 
 After manual edit, local generation should be achieved as follows in Command Prompt:
 
-```none
+```
 cd book-repo
 jupyter-book build .
 ```
@@ -91,7 +91,7 @@ After generation, check the generated local output in _build/html with your brow
 :class: tip
 Sometimes, you may need `--all` option. That is,
 
-```none
+```
 jupyter-book build --all .
 ```
 
@@ -105,7 +105,7 @@ Synchronization of the master branches, local and remote, should be achieved as 
 
 (Re)creation and synchronization of the gh-pages branches, local and remote, should be achienved as follows in Command Prompt:
 
-```none
+```
 ghp-import -n -p -f _build/html
 ```
 
@@ -118,7 +118,7 @@ If you are interested in details of this step, see the [README](https://github.c
 
 To use Sphinx, you need to install the following two packages, which should have been installed if you have already installed packages for Jupyter Book as stated above.
 
-```none
+```
 pip install sphinx~=7.0 
 pip install sphinx-book-theme
 ```
@@ -131,7 +131,7 @@ The version specification ~=7.0 to shpinx comes from Jupyter Book's dependecy co
 
 To generate a set of initial examples, execute commands as follows in the repository root.
 
-```none
+```
 mkdir docs
 cd docs
 sphinx-quickstart
@@ -156,7 +156,7 @@ The command will gerenate several files, among which you should edit the follow 
 
 In the repository root.
 
-```none
+```
 sphinx-apidoc --output-dir docs molass --separate
 ```
 
@@ -168,7 +168,7 @@ sphinx-apidoc --output-dir docs molass --separate
 
 In docs:
 
-```none
+```
 make html
 ```
 
@@ -176,7 +176,7 @@ make html
 
 In docs:
 
-```none
+```
 ghp-import -n -p -f _build/html
 ```
 
