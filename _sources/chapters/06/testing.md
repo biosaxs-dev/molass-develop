@@ -25,6 +25,14 @@ molass-library/
             ...
 ```
 
+```{note}
+Three-digit numbers are just for ordering in the following sense.
+
+* ease for glancing over roughly in created (or logical) order
+* order or test execution
+
+```
+
 ## Running Tests
 
 To run the tests, do as follows in command prompt:
@@ -39,7 +47,7 @@ pytest --cov=molass
 
 The python path in this execution is ensured to be set as the current repositoy root by the following specification in pyproject.toml.
 
-```none
+```
 [tool.pytest.ini_options]
 pythonpath = [
   "."

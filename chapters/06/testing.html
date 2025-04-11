@@ -425,6 +425,14 @@ document.write(`
             <span class="o">...</span>
 </pre></div>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Three-digit numbers are just for ordering in the following sense.</p>
+<ul class="simple">
+<li><p>ease for glancing over roughly in created (or logical) order</p></li>
+<li><p>order or test execution</p></li>
+</ul>
+</div>
 </section>
 <section id="running-tests">
 <h2><span class="section-number">3.3. </span>Running Tests<a class="headerlink" href="#running-tests" title="Link to this heading">#</a></h2>
@@ -436,10 +444,10 @@ document.write(`
 <div class="tip admonition">
 <p class="admonition-title">A note on the python path of this pytest execution</p>
 <p>The python path in this execution is ensured to be set as the current repositoy root by the following specification in pyproject.toml.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[tool.pytest.ini_options]
-pythonpath = [
-  &quot;.&quot;
-]
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">tool</span><span class="o">.</span><span class="n">pytest</span><span class="o">.</span><span class="n">ini_options</span><span class="p">]</span>
+<span class="n">pythonpath</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="s2">&quot;.&quot;</span>
+<span class="p">]</span>
 </pre></div>
 </div>
 </div>

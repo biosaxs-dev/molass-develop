@@ -525,15 +525,15 @@ we repeat the following cycle to update, brief descriptions of which will follow
 <p>For maintenance of the web page, the two branches, namely master and gh-pages, are involved. The former keeps the source and the latter the generated target. Instead of the word “master”, “main” might be used depending on how the repository was created. Anycase, be sure to use the word consistently. We use the name “master” here in this chapter.</p>
 </div>
 <p>After manual edit, local generation should be achieved as follows in Command Prompt:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cd book-repo
-jupyter-book build .
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">book</span><span class="o">-</span><span class="n">repo</span>
+<span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">build</span> <span class="o">.</span>
 </pre></div>
 </div>
 <p>After generation, check the generated local output in _build/html with your browser. Re-edit as needed until you are satisfied.</p>
 <div class="tip admonition">
 <p class="admonition-title">A note on page caching</p>
 <p>Sometimes, you may need <code class="docutils literal notranslate"><span class="pre">--all</span></code> option. That is,</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>jupyter-book build --all .
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">build</span> <span class="o">--</span><span class="nb">all</span> <span class="o">.</span>
 </pre></div>
 </div>
 <p>See <a class="reference external" href="https://jupyterbook.org/en/stable/start/build.html#aside-source-vs-build-files">a note on page caching</a> for details.</p>
@@ -544,7 +544,7 @@ jupyter-book build .
 </pre></div>
 </div>
 <p>(Re)creation and synchronization of the gh-pages branches, local and remote, should be achienved as follows in Command Prompt:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ghp-import -n -p -f _build/html
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ghp</span><span class="o">-</span><span class="kn">import</span> <span class="o">-</span><span class="n">n</span> <span class="o">-</span><span class="n">p</span> <span class="o">-</span><span class="n">f</span> <span class="n">_build</span><span class="o">/</span><span class="n">html</span>
 </pre></div>
 </div>
 <p>The web page will be updated in a few minutes, as a result of automatic deployment of GitHub Pages.
@@ -556,8 +556,8 @@ If you are interested in details of this step, see the <a class="reference exter
 <section id="id1">
 <h3><span class="section-number">4.3.1. </span>Tool Package Installation<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <p>To use Sphinx, you need to install the following two packages, which should have been installed if you have already installed packages for Jupyter Book as stated above.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>pip install sphinx~=7.0 
-pip install sphinx-book-theme
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">sphinx</span><span class="o">~=</span><span class="mf">7.0</span> 
+<span class="n">pip</span> <span class="n">install</span> <span class="n">sphinx</span><span class="o">-</span><span class="n">book</span><span class="o">-</span><span class="n">theme</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -568,9 +568,9 @@ pip install sphinx-book-theme
 <section id="initial-generation">
 <h3><span class="section-number">4.3.2. </span>Initial Generation<a class="headerlink" href="#initial-generation" title="Link to this heading">#</a></h3>
 <p>To generate a set of initial examples, execute commands as follows in the repository root.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>mkdir docs
-cd docs
-sphinx-quickstart
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">docs</span>
+<span class="n">cd</span> <span class="n">docs</span>
+<span class="n">sphinx</span><span class="o">-</span><span class="n">quickstart</span>
 </pre></div>
 </div>
 <p>Reply minimally, i.e. defaults or none, to queries from the last command except the following two.</p>
@@ -595,7 +595,7 @@ sphinx-quickstart
 <section id="gererate-rst-files">
 <h3><span class="section-number">4.3.4. </span>Gererate *.rst files<a class="headerlink" href="#gererate-rst-files" title="Link to this heading">#</a></h3>
 <p>In the repository root.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>sphinx-apidoc --output-dir docs molass --separate
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sphinx</span><span class="o">-</span><span class="n">apidoc</span> <span class="o">--</span><span class="n">output</span><span class="o">-</span><span class="nb">dir</span> <span class="n">docs</span> <span class="n">molass</span> <span class="o">--</span><span class="n">separate</span>
 </pre></div>
 </div>
 </section>
@@ -608,14 +608,14 @@ sphinx-quickstart
 <section id="make-html-files">
 <h3><span class="section-number">4.3.6. </span>Make HTML files<a class="headerlink" href="#make-html-files" title="Link to this heading">#</a></h3>
 <p>In docs:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>make html
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">html</span>
 </pre></div>
 </div>
 </section>
 <section id="deployment">
 <h3><span class="section-number">4.3.7. </span>Deployment<a class="headerlink" href="#deployment" title="Link to this heading">#</a></h3>
 <p>In docs:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ghp-import -n -p -f _build/html
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ghp</span><span class="o">-</span><span class="kn">import</span> <span class="o">-</span><span class="n">n</span> <span class="o">-</span><span class="n">p</span> <span class="o">-</span><span class="n">f</span> <span class="n">_build</span><span class="o">/</span><span class="n">html</span>
 </pre></div>
 </div>
 <p>The web page will be updated in a few minutes.</p>
