@@ -27,9 +27,8 @@ molass-library/
 
 ```{note}
 Three-digit numbers are just for ordering in the following sense.
-
 * ease for glancing over roughly in created (or logical) order
-* order or test execution
+* order of test execution
 
 ```
 
