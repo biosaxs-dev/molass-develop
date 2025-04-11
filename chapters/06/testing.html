@@ -189,7 +189,7 @@
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../05/coding_style.html">2. Coding Style</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Testing Conventions</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Testing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../07/documentation.html">4. Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../08/release.html">5. Package Release</a></li>
 </ul>
@@ -416,15 +416,25 @@ document.write(`
 <p>Test scripts should be named and placed like suggested in the following way.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">molass</span><span class="o">-</span><span class="n">library</span><span class="o">/</span>
     <span class="n">tests</span><span class="o">/</span>
-        <span class="mi">010</span><span class="n">_DataObjects</span><span class="o">/</span>
-            <span class="n">test_010_SSD</span><span class="o">.</span><span class="n">py</span>
-            <span class="n">test_020_Curve</span><span class="o">.</span><span class="n">py</span>
-            <span class="o">...</span>
-        <span class="mi">020</span><span class="n">_DataUtils</span><span class="o">/</span>
-            <span class="n">test_010_DataUtils</span><span class="o">.</span><span class="n">py</span>
-            <span class="o">...</span>
+        <span class="n">generic</span><span class="o">/</span>
+            <span class="mi">010</span><span class="n">_DataObjects</span><span class="o">/</span>
+                <span class="n">test_010_SSD</span><span class="o">.</span><span class="n">py</span>
+                <span class="n">test_020_Curve</span><span class="o">.</span><span class="n">py</span>
+                <span class="o">...</span>
+            <span class="mi">020</span><span class="n">_DataUtils</span><span class="o">/</span>
+                <span class="n">test_010_DataUtils</span><span class="o">.</span><span class="n">py</span>
+                <span class="o">...</span>
+        <span class="n">specific</span><span class="o">/</span>
+            <span class="mi">010</span><span class="n">_Geometric</span><span class="o">/</span>
+                <span class="n">test_010_Peaklike</span><span class="o">.</span><span class="n">py</span>
+                <span class="o">...</span>
+            <span class="mi">020</span><span class="n">_FlowChange</span><span class="o">/</span>
+                <span class="n">test_010_FlowChange</span><span class="o">.</span><span class="n">py</span>
+
 </pre></div>
 </div>
+<p>One reason for dividing tests into the two categories, namely “generic” and “specific”, is as follows.</p>
+<p>The generic folder should be kept relatively simple by excluding site-specific tests such as “FlowChange”, which arises only from unique experiment practice in Photon Factory, Japan and often includes complex factors.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Three-digit numbers are just for ordering in the following sense.</p>

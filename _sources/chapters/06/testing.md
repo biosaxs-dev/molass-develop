@@ -16,14 +16,26 @@ Test scripts should be named and placed like suggested in the following way.
 ```
 molass-library/
     tests/
-        010_DataObjects/
-            test_010_SSD.py
-            test_020_Curve.py
-            ...
-        020_DataUtils/
-            test_010_DataUtils.py
-            ...
+        generic/
+            010_DataObjects/
+                test_010_SSD.py
+                test_020_Curve.py
+                ...
+            020_DataUtils/
+                test_010_DataUtils.py
+                ...
+        specific/
+            010_Geometric/
+                test_010_Peaklike.py
+                ...
+            020_FlowChange/
+                test_010_FlowChange.py
+
 ```
+
+One reason for dividing tests into the two categories, namely "generic" and "specific", is as follows.
+
+The generic folder should be kept relatively simple by excluding site-specific tests such as "FlowChange", which arises only from unique experiment practice in Photon Factory, Japan and often includes complex factors.
 
 ```{note}
 Three-digit numbers are just for ordering in the following sense.
