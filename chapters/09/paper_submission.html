@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>3. Testing Conventions &#8212; Molass Developpers Handbook</title>
+    <title>6. Paper Submission &#8212; Molass Developpers Handbook</title>
   
   
   
@@ -57,12 +57,11 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/06/testing';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/09/paper_submission';</script>
     <link rel="icon" href="../../_static/molamola.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="4. Documentation" href="../07/documentation.html" />
-    <link rel="prev" title="2. Coding Style" href="../05/coding_style.html" />
+    <link rel="prev" title="5. Package Release" href="../08/release.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -189,10 +188,10 @@
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../05/coding_style.html">2. Coding Style</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Testing Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/testing.html">3. Testing Conventions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../07/documentation.html">4. Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../08/release.html">5. Package Release</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../09/paper_submission.html">6. Paper Submission</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">6. Paper Submission</a></li>
 </ul>
 
     </div>
@@ -264,7 +263,7 @@
       
       
       
-      <li><a href="https://github.com/freesemt/molass-develop/issues/new?title=Issue%20on%20page%20%2Fchapters/06/testing.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/freesemt/molass-develop/issues/new?title=Issue%20on%20page%20%2Fchapters/09/paper_submission.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -294,7 +293,7 @@
       
       
       
-      <li><a href="../../_sources/chapters/06/testing.md" target="_blank"
+      <li><a href="../../_sources/chapters/09/paper_submission.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -365,9 +364,7 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -378,25 +375,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Testing Conventions</h1>
+    <h1>Paper Submission</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-tools">3.1. Test Tools</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-scripts-organizing">3.2. Test Scripts Organizing</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-tests">3.3. Running Tests</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-data-settings">3.3.1. Test Data Settings</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#command-lines">3.3.2. Command Lines</a></li>
-</ul>
-</li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -406,126 +389,12 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="testing-conventions">
-<h1><span class="section-number">3. </span>Testing Conventions<a class="headerlink" href="#testing-conventions" title="Link to this heading">#</a></h1>
-<section id="test-tools">
-<h2><span class="section-number">3.1. </span>Test Tools<a class="headerlink" href="#test-tools" title="Link to this heading">#</a></h2>
-<p>We use pytest with coverage reports. Install the following packages for testing.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">U</span> <span class="n">pytest</span>
-<span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">U</span> <span class="n">pytest</span><span class="o">-</span><span class="n">cov</span>
-</pre></div>
+  <section class="tex2jax_ignore mathjax_ignore" id="paper-submission">
+<h1><span class="section-number">6. </span>Paper Submission<a class="headerlink" href="#paper-submission" title="Link to this heading">#</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This chapter is in preparation.</p>
 </div>
-</section>
-<section id="test-scripts-organizing">
-<h2><span class="section-number">3.2. </span>Test Scripts Organizing<a class="headerlink" href="#test-scripts-organizing" title="Link to this heading">#</a></h2>
-<p>Test scripts should be named and placed as suggested in the following way.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">molass</span><span class="o">-</span><span class="n">library</span><span class="o">/</span>
-    <span class="n">tests</span><span class="o">/</span>
-        <span class="n">generic</span><span class="o">/</span>
-            <span class="mi">010</span><span class="n">_DataObjects</span><span class="o">/</span>
-                <span class="n">test_010_SSD</span><span class="o">.</span><span class="n">py</span>
-                <span class="n">test_020_Curve</span><span class="o">.</span><span class="n">py</span>
-                <span class="o">...</span>
-            <span class="mi">020</span><span class="n">_DataUtils</span><span class="o">/</span>
-                <span class="n">test_010_DataUtils</span><span class="o">.</span><span class="n">py</span>
-                <span class="o">...</span>
-        <span class="n">specific</span><span class="o">/</span>
-            <span class="mi">010</span><span class="n">_Geometric</span><span class="o">/</span>
-                <span class="n">test_010_Peaklike</span><span class="o">.</span><span class="n">py</span>
-                <span class="o">...</span>
-            <span class="mi">020</span><span class="n">_FlowChange</span><span class="o">/</span>
-                <span class="n">test_010_FlowChange</span><span class="o">.</span><span class="n">py</span>
-
-</pre></div>
-</div>
-<p>One reason for dividing tests into the two categories, namely “generic” and “specific”, is as follows.</p>
-<p>The generic folder should be kept relatively simple by excluding site-specific tests such as “FlowChange”, which arises only from unique experiment practice at some SAXS beamlines in <a class="reference external" href="https://www2.kek.jp/imss/pf/eng/">Photon Factory</a>, Japan and often includes complex issues irrelevant to generic cases.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Three-digit numbers are just for ordering in the following sense.</p>
-<ul class="simple">
-<li><p>ease for glancing over roughly in created (or logical) order</p></li>
-<li><p>order of test execution</p></li>
-</ul>
-</div>
-</section>
-<section id="running-tests">
-<h2><span class="section-number">3.3. </span>Running Tests<a class="headerlink" href="#running-tests" title="Link to this heading">#</a></h2>
-<section id="test-data-settings">
-<h3><span class="section-number">3.3.1. </span>Test Data Settings<a class="headerlink" href="#test-data-settings" title="Link to this heading">#</a></h3>
-<p>Depending on the category, used data will vary as shown below.</p>
-<div class="pst-scrollable-table-container"><table class="table table-center" id="id1">
-<caption><span class="caption-number">Table 3.1 </span><span class="caption-text">Data Usage depending on Test Category</span><a class="headerlink" href="#id1" title="Link to this table">#</a></caption>
-<thead>
-<tr class="row-odd"><th class="head text-left"><p>Data Name / test folder</p></th>
-<th class="head text-center"><p>basic tests usage</p></th>
-<th class="head text-center"><p>specific tests usage</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-left"><p>ORIGINAL_DATA</p></td>
-<td class="text-center"><p>Yes</p></td>
-<td class="text-center"><p>Yes</p></td>
-</tr>
-<tr class="row-odd"><td class="text-left"><p>TUTORIAL_DATA</p></td>
-<td class="text-center"><p>Yes</p></td>
-<td class="text-center"><p>Yes</p></td>
-</tr>
-<tr class="row-even"><td class="text-left"><p>DATA_ROOT_FOLDER</p></td>
-<td class="text-center"><p>No</p></td>
-<td class="text-center"><p>Yes</p></td>
-</tr>
-<tr class="row-odd"><td class="text-left"><p>test folder</p></td>
-<td class="text-center"><p>tests/basic</p></td>
-<td class="text-center"><p>tests/specific</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>The data names above are partly the name as those referenced in <a class="reference external" href="https://freesemt.github.io/molass-tutorial/chapters/00/prepare.html#local-settings">Local Settings</a> of the <a class="reference external" href="https://freesemt.github.io/molass-tutorial/">Tutorial</a>, the locations of which you should specify in the <code class="docutils literal notranslate"><span class="pre">local_settings.py</span></code> script as stated there. It would look something like the following code.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">LocalSettings</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
-    <span class="n">TUTORIAL_DATA</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;D:\MolassData\tutorial_data&quot;</span><span class="p">,</span>
-    <span class="n">ORIGINAL_DATA</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;D:\MolassData\original_data&quot;</span><span class="p">,</span>
-    <span class="n">DATA_ROOT_FOLDER</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;D:\AllExperimentData&quot;</span><span class="p">,</span>
-<span class="p">)</span>
-</pre></div>
-</div>
-<p>Data sets for <code class="docutils literal notranslate"><span class="pre">DATA_ROOT_FOLDER</span></code> is currently not provided for download from the book pages. Let us know by opening an issue using the <img alt="github icon" src="../../_images/github.svg" /> button at upper right corner of this page.</p>
-</section>
-<section id="command-lines">
-<h3><span class="section-number">3.3.2. </span>Command Lines<a class="headerlink" href="#command-lines" title="Link to this heading">#</a></h3>
-<p>To run basic tests only, do as follows in command prompt:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">tests</span><span class="o">/</span><span class="n">basic</span>
-<span class="n">pytest</span> <span class="o">--</span><span class="n">cov</span><span class="o">=</span><span class="n">molass</span>
-</pre></div>
-</div>
-<p>To run specic tests only, do as follows in command prompt:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">tests</span><span class="o">/</span><span class="n">specific</span>
-<span class="n">pytest</span> <span class="o">--</span><span class="n">cov</span><span class="o">=</span><span class="n">molass</span>
-</pre></div>
-</div>
-<p>To run all tests, do as follows in command prompt:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">tests</span>
-<span class="n">pytest</span> <span class="o">--</span><span class="n">cov</span><span class="o">=</span><span class="n">molass</span>
-</pre></div>
-</div>
-<div class="tip admonition">
-<p class="admonition-title">A note on the python path of this pytest execution</p>
-<p>The python path in this execution is ensured to be set as the current repositoy root by the following specification in pyproject.toml.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">tool</span><span class="o">.</span><span class="n">pytest</span><span class="o">.</span><span class="n">ini_options</span><span class="p">]</span>
-<span class="n">pythonpath</span> <span class="o">=</span> <span class="p">[</span>
-  <span class="s2">&quot;.&quot;</span>
-<span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<p>For detailed tests coverage, execute as follows:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pytest</span> <span class="o">--</span><span class="n">cov</span><span class="o">=</span><span class="n">molass</span> <span class="o">--</span><span class="n">cov</span><span class="o">-</span><span class="n">report</span><span class="o">=</span><span class="n">html</span>
-</pre></div>
-</div>
-<p>and check the results in <code class="docutils literal notranslate"><span class="pre">test_folder/htmlcov/index.html</span></code> with your browser, where <code class="docutils literal notranslate"><span class="pre">test_folder</span></code> is one of <code class="docutils literal notranslate"><span class="pre">tests/basic</span></code>, <code class="docutils literal notranslate"><span class="pre">tests/specific</span></code> or <code class="docutils literal notranslate"><span class="pre">tests</span></code> depending on how you ran the tests.</p>
-</section>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -541,7 +410,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./chapters\06"
+            path: "./chapters\09"
         },
         predefinedOutput: true
     }
@@ -559,22 +428,13 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../05/coding_style.html"
+       href="../08/release.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">2. </span>Coding Style</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>Package Release</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="../07/documentation.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4. </span>Documentation</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -582,27 +442,6 @@ document.write(`
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-tools">3.1. Test Tools</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-scripts-organizing">3.2. Test Scripts Organizing</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-tests">3.3. Running Tests</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-data-settings">3.3.1. Test Data Settings</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#command-lines">3.3.2. Command Lines</a></li>
-</ul>
-</li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
