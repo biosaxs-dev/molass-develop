@@ -54,11 +54,23 @@ Depending on the category, used data will vary as shown below.
 :align: center
 
 | Data Name| basic tests usage | specific tests usage |
-| :--- |:---:|:---:|
-| ORIGINAL_DATA    |  Yes   |  Yes    |
-| TUTORIAL_DATA    |  Yes   |  Yes   |
-| DATA_ROOT_FOLDER    |  No   |  Yes   |
+| :---             |:---:|:---:|
+| ORIGINAL_DATA    | Yes | Yes |
+| TUTORIAL_DATA    | Yes | Yes |
+| DATA_ROOT_FOLDER | No  | Yes |
 :::
+
+The data names above are partly the name as those referenced in [Local Settings](https://freesemt.github.io/molass-tutorial/chapters/00/prepare.html#local-settings) of the [Tutorial](https://freesemt.github.io/molass-tutorial/), the locations of which you should specify in the `local_settings.py` script as stated there. It would look something like the following code.
+
+```python
+LocalSettings = dict(
+    TUTORIAL_DATA=r"D:\MolassData\tutorial_data",
+    ORIGINAL_DATA=r"D:\MolassData\original_data",
+    DATA_ROOT_FOLDER=r"D:\AllExperimentData",
+)
+```
+
+The data sets for `DATA_ROOT_FOLDER` is currently not provided for download. Let us know by opening an issue using the ![github icon](../../images/github.svg) button at upper right corner of this page.
 
 ### Command Lines
 To run the tests, do as follows in command prompt:
