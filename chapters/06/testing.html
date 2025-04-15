@@ -477,6 +477,15 @@ document.write(`
 </tbody>
 </table>
 </div>
+<p>The data names above are partly the name as those referenced in <a class="reference external" href="https://freesemt.github.io/molass-tutorial/chapters/00/prepare.html#local-settings">Local Settings</a> of the <a class="reference external" href="https://freesemt.github.io/molass-tutorial/">Tutorial</a>, the locations of which you should specify in the <code class="docutils literal notranslate"><span class="pre">local_settings.py</span></code> script as stated there. It would look something like the following code.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">LocalSettings</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+    <span class="n">TUTORIAL_DATA</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;D:\MolassData\tutorial_data&quot;</span><span class="p">,</span>
+    <span class="n">ORIGINAL_DATA</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;D:\MolassData\original_data&quot;</span><span class="p">,</span>
+    <span class="n">DATA_ROOT_FOLDER</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;D:\AllExperimentData&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>The data sets for <code class="docutils literal notranslate"><span class="pre">DATA_ROOT_FOLDER</span></code> is currently not provided for download. Let us know by opening an issue using the <img alt="github icon" src="../../_images/github.svg" /> button at upper right corner of this page.</p>
 </section>
 <section id="command-lines">
 <h3><span class="section-number">3.3.2. </span>Command Lines<a class="headerlink" href="#command-lines" title="Link to this heading">#</a></h3>
