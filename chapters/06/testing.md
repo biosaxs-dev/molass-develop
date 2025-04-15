@@ -53,7 +53,7 @@ Depending on the category, used data will vary as shown below.
 :widths: auto
 :align: center
 
-| Data Name| basic usage | specific usage |
+| Data Name| basic tests usage | specific tests usage |
 | :--- |:---:|:---:|
 | ORIGINAL_DATA    |  Yes   |  Yes    |
 | TUTORIAL_DATA    |  Yes   |  Yes   |
