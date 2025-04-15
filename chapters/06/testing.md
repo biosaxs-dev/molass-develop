@@ -47,7 +47,7 @@ Three-digit numbers are just for ordering in the following sense.
 ## Running Tests
 ### Test Data Settings
 
-Depending on the category, used data will be as shown below.
+Depending on the category, used data will vary as shown below.
 
 :::{table} Data Usage depending on Test Category
 :widths: auto
