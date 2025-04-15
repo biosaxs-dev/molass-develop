@@ -11,7 +11,7 @@ pip install -U pytest-cov
 
 ## Test Scripts Naming and Locations
 
-Test scripts should be named and placed like suggested in the following way.
+Test scripts should be named and placed as suggested in the following way.
 
 ```
 molass-library/
