@@ -456,7 +456,7 @@ document.write(`
 <div class="pst-scrollable-table-container"><table class="table table-center" id="id1">
 <caption><span class="caption-number">Table 3.1 </span><span class="caption-text">Data Usage depending on Test Category</span><a class="headerlink" href="#id1" title="Link to this table">#</a></caption>
 <thead>
-<tr class="row-odd"><th class="head text-left"><p>Data Name</p></th>
+<tr class="row-odd"><th class="head text-left"><p>Data Name / test folder</p></th>
 <th class="head text-center"><p>basic tests usage</p></th>
 <th class="head text-center"><p>specific tests usage</p></th>
 </tr>
@@ -474,6 +474,10 @@ document.write(`
 <td class="text-center"><p>No</p></td>
 <td class="text-center"><p>Yes</p></td>
 </tr>
+<tr class="row-odd"><td class="text-left"><p>test folder</p></td>
+<td class="text-center"><p>tests/basic</p></td>
+<td class="text-center"><p>tests/specific</p></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -489,7 +493,17 @@ document.write(`
 </section>
 <section id="command-lines">
 <h3><span class="section-number">3.3.2. </span>Command Lines<a class="headerlink" href="#command-lines" title="Link to this heading">#</a></h3>
-<p>To run the tests, do as follows in command prompt:</p>
+<p>To run basic tests only, do as follows in command prompt:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">tests</span><span class="o">/</span><span class="n">basic</span>
+<span class="n">pytest</span> <span class="o">--</span><span class="n">cov</span><span class="o">=</span><span class="n">molass</span>
+</pre></div>
+</div>
+<p>To run specic tests only, do as follows in command prompt:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">tests</span><span class="o">/</span><span class="n">specific</span>
+<span class="n">pytest</span> <span class="o">--</span><span class="n">cov</span><span class="o">=</span><span class="n">molass</span>
+</pre></div>
+</div>
+<p>To run all tests, do as follows in command prompt:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">tests</span>
 <span class="n">pytest</span> <span class="o">--</span><span class="n">cov</span><span class="o">=</span><span class="n">molass</span>
 </pre></div>
@@ -508,7 +522,7 @@ document.write(`
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pytest</span> <span class="o">--</span><span class="n">cov</span><span class="o">=</span><span class="n">molass</span> <span class="o">--</span><span class="n">cov</span><span class="o">-</span><span class="n">report</span><span class="o">=</span><span class="n">html</span>
 </pre></div>
 </div>
-<p>and check the results in <code class="docutils literal notranslate"><span class="pre">tests/htmlcov/index.html</span></code> with your browser.</p>
+<p>and check the results in <code class="docutils literal notranslate"><span class="pre">test_folder/htmlcov/index.html</span></code> with your browser, where <code class="docutils literal notranslate"><span class="pre">test_folder</span></code> is one of <code class="docutils literal notranslate"><span class="pre">tests/basic</span></code>, <code class="docutils literal notranslate"><span class="pre">tests/specific</span></code> or <code class="docutils literal notranslate"><span class="pre">tests</span></code> depending on how you ran the tests.</p>
 </section>
 </section>
 </section>
