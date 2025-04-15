@@ -35,7 +35,7 @@ molass-library/
 
 One reason for dividing tests into the two categories, namely "generic" and "specific", is as follows.
 
-The generic folder should be kept relatively simple by excluding site-specific tests such as "FlowChange", which arises only from unique experiment practice at some SAXS beamlines in [Photon Factory](https://www2.kek.jp/imss/pf/eng/), Japan and often includes complex issues irrelevant to generic cases.
+The generic folder should be kept relatively simple by excluding site-specific tests such as "FlowChange", which arises only from unique experiment practice in Photon Factory, Japan and often includes complex factors.
 
 ```{note}
 Three-digit numbers are just for ordering in the following sense.
@@ -45,7 +45,22 @@ Three-digit numbers are just for ordering in the following sense.
 ```
 
 ## Running Tests
+### Test Data Settings
 
+Depending on the category, used data will be as shown below.
+
+:::{table} Data Usage depending on Test Category
+:widths: auto
+:align: center
+
+| Data Name| basic usage | specific usage |
+| :--- |:---:|:---:|
+| ORIGINAL_DATA    |  Yes   |  Yes    |
+| TUTORIAL_DATA    |  Yes   |  Yes   |
+| DATA_ROOT_FOLDER    |  No   |  Yes   |
+:::
+
+### Command Lines
 To run the tests, do as follows in command prompt:
 
 ```
