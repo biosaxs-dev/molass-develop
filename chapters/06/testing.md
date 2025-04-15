@@ -45,7 +45,22 @@ Three-digit numbers are just for ordering in the following sense.
 ```
 
 ## Running Tests
+### Test Data Settings
 
+Depending on the category, used data will be as shown below.
+
+:::{table} Data Usage depending on Test Category
+:widths: auto
+:align: center
+
+| Data Name| basic usage | specific usage |
+| :--- |:---:|:---:|
+| ORIGINAL_DATA    |  Yes   |  Yes    |
+| TUTORIAL_DATA    |  Yes   |  Yes   |
+| DATA_ROOT_FOLDER    |  No   |  Yes   |
+:::
+
+### Command Lines
 To run the tests, do as follows in command prompt:
 
 ```
