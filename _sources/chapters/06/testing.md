@@ -9,7 +9,7 @@ pip install -U pytest
 pip install -U pytest-cov
 ```
 
-## Test Scripts Naming and Locations
+## Test Scripts Organizing
 
 Test scripts should be named and placed as suggested in the following way.
 
