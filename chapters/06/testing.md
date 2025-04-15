@@ -35,7 +35,7 @@ molass-library/
 
 One reason for dividing tests into the two categories, namely "generic" and "specific", is as follows.
 
-The generic folder should be kept relatively simple by excluding site-specific tests such as "FlowChange", which arises only from unique experiment practice in Photon Factory, Japan and often includes complex factors.
+The generic folder should be kept relatively simple by excluding site-specific tests such as "FlowChange", which arises only from unique experiment practice at some SAXS beamlines in [Photon Factory](https://www2.kek.jp/imss/pf/eng/), Japan and often includes complex issues irrelevant to generic cases.
 
 ```{note}
 Three-digit numbers are just for ordering in the following sense.
