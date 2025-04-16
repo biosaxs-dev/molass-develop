@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -476,7 +476,7 @@ document.write(`
 <td class="text-center"><p>Yes</p></td>
 </tr>
 <tr class="row-odd"><td class="text-left"><p>test folder</p></td>
-<td class="text-center"><p>tests/basic</p></td>
+<td class="text-center"><p>tests/generic</p></td>
 <td class="text-center"><p>tests/specific</p></td>
 </tr>
 </tbody>
@@ -494,8 +494,8 @@ document.write(`
 </section>
 <section id="command-lines">
 <h3><span class="section-number">3.3.2. </span>Command Lines<a class="headerlink" href="#command-lines" title="Link to this heading">#</a></h3>
-<p>To run basic tests only, do as follows in command prompt:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">tests</span><span class="o">/</span><span class="n">basic</span>
+<p>To run generic tests only, do as follows in command prompt:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">tests</span><span class="o">/</span><span class="n">generic</span>
 <span class="n">pytest</span> <span class="o">--</span><span class="n">cov</span><span class="o">=</span><span class="n">molass</span>
 </pre></div>
 </div>
@@ -523,7 +523,7 @@ document.write(`
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pytest</span> <span class="o">--</span><span class="n">cov</span><span class="o">=</span><span class="n">molass</span> <span class="o">--</span><span class="n">cov</span><span class="o">-</span><span class="n">report</span><span class="o">=</span><span class="n">html</span>
 </pre></div>
 </div>
-<p>and check the results in <code class="docutils literal notranslate"><span class="pre">test_folder/htmlcov/index.html</span></code> with your browser, where <code class="docutils literal notranslate"><span class="pre">test_folder</span></code> is one of <code class="docutils literal notranslate"><span class="pre">tests/basic</span></code>, <code class="docutils literal notranslate"><span class="pre">tests/specific</span></code> or <code class="docutils literal notranslate"><span class="pre">tests</span></code> depending on how you ran the tests.</p>
+<p>and check the results in <code class="docutils literal notranslate"><span class="pre">test_folder/htmlcov/index.html</span></code> with your browser, where <code class="docutils literal notranslate"><span class="pre">test_folder</span></code> is one of <code class="docutils literal notranslate"><span class="pre">tests/generic</span></code>, <code class="docutils literal notranslate"><span class="pre">tests/specific</span></code> or <code class="docutils literal notranslate"><span class="pre">tests</span></code> depending on how you ran the tests.</p>
 </section>
 </section>
 </section>
