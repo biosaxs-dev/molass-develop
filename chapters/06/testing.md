@@ -58,7 +58,7 @@ Depending on the category, used data will vary as shown below.
 | ORIGINAL_DATA    | Yes | Yes |
 | TUTORIAL_DATA    | Yes | Yes |
 | DATA_ROOT_FOLDER | No  | Yes |
-| test folder      | tests/basic | tests/specific |
+| test folder      | tests/generic | tests/specific |
 :::
 
 The data names above are partly the name as those referenced in [Local Settings](https://freesemt.github.io/molass-tutorial/chapters/00/prepare.html#local-settings) of the [Tutorial](https://freesemt.github.io/molass-tutorial/), the locations of which you should specify in the `local_settings.py` script as stated there. It would look something like the following code.
@@ -74,10 +74,10 @@ LocalSettings = dict(
 Data sets for `DATA_ROOT_FOLDER` is currently not provided for download from the book pages. Let us know by opening an issue using the ![github icon](../../images/github.svg) button at upper right corner of this page.
 
 ### Command Lines
-To run basic tests only, do as follows in command prompt:
+To run generic tests only, do as follows in command prompt:
 
 ```
-cd tests/basic
+cd tests/generic
 pytest --cov=molass
 ```
 
@@ -114,4 +114,4 @@ For detailed tests coverage, execute as follows:
 pytest --cov=molass --cov-report=html
 ```
 
-and check the results in `test_folder/htmlcov/index.html` with your browser, where `test_folder` is one of `tests/basic`, `tests/specific` or `tests` depending on how you ran the tests.
+and check the results in `test_folder/htmlcov/index.html` with your browser, where `test_folder` is one of `tests/generic`, `tests/specific` or `tests` depending on how you ran the tests.
