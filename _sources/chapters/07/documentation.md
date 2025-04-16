@@ -10,11 +10,11 @@ We have the following documents, including this book, to maintain.
 
 |No |   Book Name           | Book License | Used Tool |
 |:-:|:--------------------------|:--------|:-----------|
-| 1 |[Molass Legacy Reference](https://freesemt.github.io/molass-legacy/) |GPL-3.0 |Sphinx |
-| 2 |[Molass Libray Reference](https://freesemt.github.io/molass-library/)|GPL-3.0 |Sphinx |
-| 3 |[Molass Libray Essence](https://freesemt.github.io/molass-essence/)  |CC BY 4.0|Jupyter Book|
-| 4 |[Molass Libray Tutorial](https://freesemt.github.io/molass-tutorial/)|CC BY 4.0|Jupyter Book|
-| 5 |[Molass Developer's Handbook](https://freesemt.github.io/molass-develop/)|CC BY 4.0|Jupyter Book|
+| 1 |[Molass Legacy Reference](https://nshimizu0721.github.io/molass-legacy/) |GPL-3.0 |Sphinx |
+| 2 |[Molass Libray Reference](https://nshimizu0721.github.io/molass-library/)|GPL-3.0 |Sphinx |
+| 3 |[Molass Libray Essence](https://nshimizu0721.github.io/molass-essence/)  |CC BY 4.0|Jupyter Book|
+| 4 |[Molass Libray Tutorial](https://nshimizu0721.github.io/molass-tutorial/)|CC BY 4.0|Jupyter Book|
+| 5 |[Molass Developer's Handbook](https://nshimizu0721.github.io/molass-develop/)|CC BY 4.0|Jupyter Book|
 
 For the first two reference books, we use [Sphinx](https://github.com/sphinx-doc/sphinx) directly to generate function documents from their [docstrings](https://peps.python.org/pep-0257/). For others, [Jupyter Book](https://github.com/jupyter-book/jupyter-book), which depends on Sphinx, is used.
 
@@ -75,7 +75,7 @@ we repeat the following cycle to update, brief descriptions of which will follow
     ・ deploy gh-pages branch
 
 ```{note}
-For maintenance of the web page, the two branches, namely master and gh-pages, are involved. The former keeps the source and the latter the generated target. Instead of the word "master", "main" might be used depending on how the repository was created. Anycase, be sure to use the word consistently. We use the name "master" here in this chapter.
+For maintenance of the web book, the two branches, namely master and gh-pages, are involved. The former keeps the source and the latter the generated book. Instead of the word "master", "main" might be used depending on how the repository was created. Anycase, be sure to use the word consistently. We use the name "master" here in this chapter.
 ```
 
 After manual edit, local generation should be achieved as follows in Command Prompt:
