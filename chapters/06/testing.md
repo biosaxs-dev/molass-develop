@@ -61,7 +61,7 @@ Depending on the category, used data will vary as shown below.
 | test folder      | tests/generic | tests/specific |
 :::
 
-The data names above are partly the name as those referenced in [Local Settings](https://freesemt.github.io/molass-tutorial/chapters/00/prepare.html#local-settings) of the [Tutorial](https://freesemt.github.io/molass-tutorial/), the locations of which you should specify in the `local_settings.py` script as stated there. It would look something like the following code.
+The data names above are partly the same as those referenced in [Local Settings](https://freesemt.github.io/molass-tutorial/chapters/00/prepare.html#local-settings) of the [Tutorial](https://freesemt.github.io/molass-tutorial/), the locations of which you should specify in the `local_settings.py` script as stated there. It would look something like the following code.
 
 ```python
 LocalSettings = dict(
