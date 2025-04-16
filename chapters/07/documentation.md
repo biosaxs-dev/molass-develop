@@ -184,4 +184,4 @@ In docs:
 ghp-import -n -p -f _build/html
 ```
 
-The web page will be updated in a few minutes.
+This (re)creates the gh-pages branch both in local and remote repositories, and the web book will be updated in a few minutes.
