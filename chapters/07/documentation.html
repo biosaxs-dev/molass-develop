@@ -400,8 +400,8 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">4.3.1. Tool Package Installation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-generation">4.3.2. Initial Generation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#customize-conf-py">4.3.3. Customize <code class="docutils literal notranslate"><span class="pre">conf.py</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gererate-rst-files">4.3.4. Gererate *.rst files</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-index-rst">4.3.5. Edit <code class="docutils literal notranslate"><span class="pre">index.rst</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-index-rst">4.3.4. Edit <code class="docutils literal notranslate"><span class="pre">index.rst</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gererate-rst-files">4.3.5. Gererate *.rst files</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#make-html-files">4.3.6. Make HTML files</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deployment">4.3.7. Deployment</a></li>
 </ul>
@@ -568,6 +568,7 @@ If you are interested in details of this step, see the <a class="reference exter
 </section>
 <section id="initial-generation">
 <h3><span class="section-number">4.3.2. </span>Initial Generation<a class="headerlink" href="#initial-generation" title="Link to this heading">#</a></h3>
+<p>When you are updating, skip to <a class="reference internal" href="#generate-rst-files"><span class="std std-ref">Gererate *.rst files</span></a>.</p>
 <p>To generate a set of initial examples, execute commands as follows in the repository root.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">docs</span>
 <span class="n">cd</span> <span class="n">docs</span>
@@ -593,18 +594,18 @@ If you are interested in details of this step, see the <a class="reference exter
 <li><p>Set sphinx_book_theme</p></li>
 </ul>
 </section>
+<section id="edit-index-rst">
+<h3><span class="section-number">4.3.4. </span>Edit <code class="docutils literal notranslate"><span class="pre">index.rst</span></code><a class="headerlink" href="#edit-index-rst" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>edit <code class="docutils literal notranslate"><span class="pre">index.rst</span></code></p></li>
+</ul>
+</section>
 <section id="gererate-rst-files">
-<h3><span class="section-number">4.3.4. </span>Gererate *.rst files<a class="headerlink" href="#gererate-rst-files" title="Link to this heading">#</a></h3>
+<span id="generate-rst-files"></span><h3><span class="section-number">4.3.5. </span>Gererate *.rst files<a class="headerlink" href="#gererate-rst-files" title="Link to this heading">#</a></h3>
 <p>In the repository root.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sphinx</span><span class="o">-</span><span class="n">apidoc</span> <span class="o">--</span><span class="n">output</span><span class="o">-</span><span class="nb">dir</span> <span class="n">docs</span> <span class="n">molass</span> <span class="o">--</span><span class="n">separate</span>
 </pre></div>
 </div>
-</section>
-<section id="edit-index-rst">
-<h3><span class="section-number">4.3.5. </span>Edit <code class="docutils literal notranslate"><span class="pre">index.rst</span></code><a class="headerlink" href="#edit-index-rst" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>edti <code class="docutils literal notranslate"><span class="pre">index.rst</span></code></p></li>
-</ul>
 </section>
 <section id="make-html-files">
 <h3><span class="section-number">4.3.6. </span>Make HTML files<a class="headerlink" href="#make-html-files" title="Link to this heading">#</a></h3>
@@ -700,8 +701,8 @@ If you are interested in details of this step, see the <a class="reference exter
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">4.3.1. Tool Package Installation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-generation">4.3.2. Initial Generation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#customize-conf-py">4.3.3. Customize <code class="docutils literal notranslate"><span class="pre">conf.py</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gererate-rst-files">4.3.4. Gererate *.rst files</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-index-rst">4.3.5. Edit <code class="docutils literal notranslate"><span class="pre">index.rst</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-index-rst">4.3.4. Edit <code class="docutils literal notranslate"><span class="pre">index.rst</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gererate-rst-files">4.3.5. Gererate *.rst files</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#make-html-files">4.3.6. Make HTML files</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deployment">4.3.7. Deployment</a></li>
 </ul>

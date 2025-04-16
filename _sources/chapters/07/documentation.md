@@ -129,6 +129,8 @@ The version specification ~=7.0 to shpinx comes from Jupyter Book's dependecy co
 
 ### Initial Generation
 
+When you are updating, skip to [Gererate *.rst files](generate_rst_files).
+
 To generate a set of initial examples, execute commands as follows in the repository root.
 
 ```
@@ -152,6 +154,12 @@ The command will gerenate several files, among which you should edit the follow 
 * Add extensions
 * Set sphinx_book_theme
 
+
+### Edit `index.rst`
+
+* edit `index.rst`
+
+(generate_rst_files)=
 ### Gererate *.rst files
 
 In the repository root.
@@ -159,10 +167,6 @@ In the repository root.
 ```
 sphinx-apidoc --output-dir docs molass --separate
 ```
-
-### Edit `index.rst`
-
-* edti `index.rst`
 
 ### Make HTML files
 
