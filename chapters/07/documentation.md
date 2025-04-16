@@ -10,11 +10,11 @@ We have the following documents, including this book, to maintain.
 
 |No |   Book Name           | Book License | Used Tool |
 |:-:|:--------------------------|:--------|:-----------|
-| 1 |[Molass Legacy Reference](https://freesemt.github.io/molass-legacy/) |GPL-3.0 |Sphinx |
-| 2 |[Molass Libray Reference](https://freesemt.github.io/molass-library/)|GPL-3.0 |Sphinx |
-| 3 |[Molass Libray Essence](https://freesemt.github.io/molass-essence/)  |CC BY 4.0|Jupyter Book|
-| 4 |[Molass Libray Tutorial](https://freesemt.github.io/molass-tutorial/)|CC BY 4.0|Jupyter Book|
-| 5 |[Molass Developer's Handbook](https://freesemt.github.io/molass-develop/)|CC BY 4.0|Jupyter Book|
+| 1 |[Molass Legacy Reference](https://nshimizu0721.github.io/molass-legacy/) |GPL-3.0 |Sphinx |
+| 2 |[Molass Libray Reference](https://nshimizu0721.github.io/molass-library/)|GPL-3.0 |Sphinx |
+| 3 |[Molass Libray Essence](https://nshimizu0721.github.io/molass-essence/)  |CC BY 4.0|Jupyter Book|
+| 4 |[Molass Libray Tutorial](https://nshimizu0721.github.io/molass-tutorial/)|CC BY 4.0|Jupyter Book|
+| 5 |[Molass Developer's Handbook](https://nshimizu0721.github.io/molass-develop/)|CC BY 4.0|Jupyter Book|
 
 For the first two reference books, we use [Sphinx](https://github.com/sphinx-doc/sphinx) directly to generate function documents from their [docstrings](https://peps.python.org/pep-0257/). For others, [Jupyter Book](https://github.com/jupyter-book/jupyter-book), which depends on Sphinx, is used.
 
