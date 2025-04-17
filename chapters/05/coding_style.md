@@ -37,7 +37,7 @@ Some other questions to ask GitHub Copilot:
 
 `Molass Author`: Do you have any other advice for making our coding style researcher-friendly?
 
-`Molass Author`: I mean researcher-friendly here that you should be aware of the fact that the developers or maintainers are mainly researchers, and not professional programmers. In this sense, I think we should avoid some advanced language features. Do you agree? If so, I would appreciate it if you could give a few examples of such features to avoid.
+`Molass Author`: I mean researcher-friendly here that you should be aware of the fact that the developers or maintainers may be researchers, and not necessarily professional programmers. In this sense, I think we should avoid some advanced language features. Do you agree? If so, I would appreciate it if you could give a few examples of such features to avoid.
 
 To the above, `GitHub Copilot` will give several more suggestions, which we omit here.
 
