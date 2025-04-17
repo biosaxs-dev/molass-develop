@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -365,7 +365,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -381,6 +383,15 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#points">2.1. Points</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elaboration-with-github-copilot">2.2. Elaboration with GitHub Copilot</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -392,10 +403,43 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="coding-style">
 <h1><span class="section-number">2. </span>Coding Style<a class="headerlink" href="#coding-style" title="Link to this heading">#</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This page is in preparation to be publicly available in May, 2025.</p>
+<section id="points">
+<h2><span class="section-number">2.1. </span>Points<a class="headerlink" href="#points" title="Link to this heading">#</a></h2>
+<p>The points are:</p>
+<ul class="simple">
+<li><p>Be researcher friendly</p></li>
+<li><p>Namely for example, avoid certain advanced language features</p></li>
+<li><p>Why-oriented docstring documentation</p></li>
+</ul>
+</section>
+<section id="elaboration-with-github-copilot">
+<h2><span class="section-number">2.2. </span>Elaboration with GitHub Copilot<a class="headerlink" href="#elaboration-with-github-copilot" title="Link to this heading">#</a></h2>
+<p>Here are some hints from chats with GitHub Copilot.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Molass</span> <span class="pre">Author</span></code>: If I say “Why-oriented docstring documentation” to suggest our coding style, does that make any sense to you?</p>
+<p><code class="docutils literal notranslate"><span class="pre">GitHub</span> <span class="pre">Copilot</span></code>: Yes, “Why-oriented docstring documentation” makes sense as a coding style concept. It suggests that your docstrings should focus on explaining why a piece of code exists or behaves a certain way, rather than just describing what it does or how it works. This approach can be particularly helpful for researchers or developers who need to understand the reasoning behind decisions in the code, which is often more valuable than just understanding the mechanics.</p>
+<p>Example: Linear Search Instead of Binary Search</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">find_element</span><span class="p">(</span><span class="n">elements</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Finds the index of the target element in the list using linear search.</span>
+
+<span class="sd">    This function uses linear search instead of binary search because the input</span>
+<span class="sd">    list is expected to be small and unsorted. Sorting the list for binary search</span>
+<span class="sd">    would add unnecessary overhead in this specific use case.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">element</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">elements</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">element</span> <span class="o">==</span> <span class="n">target</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">i</span>
+    <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+</pre></div>
 </div>
+<p>This approach provides context and rationale, making the code more understandable and maintainable.</p>
+<p>Some other questions to ask GitHub Copilot:</p>
+<p><code class="docutils literal notranslate"><span class="pre">Molass</span> <span class="pre">Author</span></code>: Do you have any other advice for making our coding style researcher-friendly?</p>
+<p><code class="docutils literal notranslate"><span class="pre">Molass</span> <span class="pre">Author</span></code>: I mean researcher-friendly here that you should be aware of the fact that the developers or maintainers are mainly researchers, and not professional programmers. In this sense, I think we should avoid some advanced language features. Do you agree? If so, I would appreciate it if you could give a few examples of such features to avoid.</p>
+<p>To the above, <code class="docutils literal notranslate"><span class="pre">GitHub</span> <span class="pre">Copilot</span></code> will give several more suggestions, which we omit here.</p>
+<p>Acknowledgement to:
+Suggestions provided by GitHub Copilot, an AI programming assistant.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -452,6 +496,22 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#points">2.1. Points</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elaboration-with-github-copilot">2.2. Elaboration with GitHub Copilot</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
