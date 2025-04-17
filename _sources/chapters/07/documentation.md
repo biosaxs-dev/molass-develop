@@ -10,7 +10,7 @@ We have the following documents, including this book, to maintain.
 
 |No |   Book Name           | Book License | Used Tool |
 |:-:|:--------------------------|:--------|:-----------|
-| 1 |[Molass Legacy Reference](xxx) |GPL-3.0 |Sphinx |
+| 1 |[Molass Legacy Reference](https://freesemt.github.io/molass-legacy/) |GPL-3.0 |Sphinx |
 | 2 |[Molass Libray Reference](https://nshimizu0721.github.io/molass-library/)|GPL-3.0 |Sphinx |
 | 3 |[Molass Libray Essence](https://nshimizu0721.github.io/molass-essence/)  |CC BY 4.0|Jupyter Book|
 | 4 |[Molass Libray Tutorial](https://nshimizu0721.github.io/molass-tutorial/)|CC BY 4.0|Jupyter Book|
