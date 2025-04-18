@@ -34,7 +34,7 @@ def find_element(elements, target):
 
 This approach provides context and rationale, making the code more understandable and maintainable.
 
-Some other questions to ask GitHub Copilot:
+End of quote. Some other questions to ask GitHub Copilot:
 
 `Molass Author`: Do you have any other advice for making our coding style researcher-friendly?
 
