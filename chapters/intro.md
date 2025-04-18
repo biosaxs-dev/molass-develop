@@ -18,7 +18,7 @@ As we wrote this book, we realized the importance of fully utilizing `GitHub Cop
 
 This section serves as a general assertion and will not be repeated verbosely throughout the book, except in cases where its significance needs to be emphasized.
 
-[^1]: Or any other asissitant of your choice.
+[^1]: Or any other assistant of your choice.
 
 [^2]: "Leave the descriptive work" specifically means we do not need to include such details in this book. Instead, it will suffice to add a description that is as simple as possible without risking the loss of clarity, and leave further details to the AI assistant, which can be employed as needed.
 
