@@ -6,7 +6,7 @@ This book is in preparation to be publicly available in July, 2025.
 
 ## Introduction
 
-The Molass Comunity welcomes anyone interested in SEC-SAXS data analysis. Feel free to open issues in the GitHub repository using the button at the upper right corner of any page.
+The Molass Comunity welcomes anyone interested in SEC-SAXS data analysis. Feel free to let us know by opening issues in the GitHub repository using the button at the upper right corner of any page.
 
 This book is intended to help contributors to the project.
 
