@@ -20,6 +20,6 @@ This section serves as a general assertion and will not be repeated verbosely th
 
 [^1]: Or any other assistant of your choice.
 
-[^2]: "Leave the descriptive work" specifically means we do not need to include such details in this book. Instead, it will suffice to state only the key points and provide minimal description to avoid the loss of clarity. Assisted with hints about what to ask or how to ask, which we do intend to provide in this book, further details can be left to the AI assistant, which can be employed as needed.
+[^2]: "Leave the descriptive work" specifically means we do not need to include such details in this book. Instead, it will suffice to state only the key points and provide minimal description to avoid the loss of clarity. Assisted with some hints about what to ask or how to ask, which we do not intend to omit, further details can be left to the AI assistant, which can be employed as needed.
 
 [^3]: See [Coding Style](coding_style) for such style of description.
