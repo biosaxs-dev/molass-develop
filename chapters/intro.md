@@ -22,4 +22,4 @@ This section serves as a general assertion and will not be repeated verbosely th
 
 [^2]: "Leave the descriptive work" specifically means we do not need to include such details in this book. Instead, it will suffice to add a description that is as simple as possible without risking the loss of clarity, and leave further details to the AI assistant, which can be employed as needed.
 
-[^3]: See [Coding Style](coding_style) for further details.
+[^3]: See [Coding Style](coding_style) for such style of description.
