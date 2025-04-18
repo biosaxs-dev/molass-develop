@@ -1,7 +1,7 @@
 (coding_style)=
 # Coding Style
 
-## Points
+## Key Points
 We state here what style, we believe, is desirable in coding `Molass Library`. Stated in mottos:
 
 * Be researcher friendly
