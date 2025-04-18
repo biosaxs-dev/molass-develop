@@ -14,7 +14,7 @@ Skilled programmers should skip the first chapter on environments, for those are
 
 ## Acknowledging GitHub Copilot
 
-As we wrote this book, we realized the importance of fully utilizing `GitHub Copilot`[^1], the AI programming assistant. Specifically, we don't need to describe in detail what GitHub Copilot can do. Instead, by assuming its assistance, it may be more effective or sufficient to focus on what to ask and leave the descriptive work[^2] to GitHub Copilot, which can handle certain (potentially tedious) tasks more efficiently.[^3]
+As we wrote this book, we realized the importance of fully utilizing `GitHub Copilot`[^1], the AI programming assistant. Specifically, we don't need to describe in detail what GitHub Copilot can do. Instead, by assuming its assistance, it may be more effective or sufficient to focus on what to ask and leave the descriptive work[^2] to `GitHub Copilot`, which can handle certain (potentially tedious) tasks more efficiently.[^3]
 
 This section serves as a general assertion and will not be repeated verbosely throughout the book, except in cases where its significance needs to be emphasized.
 
