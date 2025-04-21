@@ -162,10 +162,18 @@ The command will gerenate several files, among which you should edit the follow 
 (generate_rst_files)=
 ### Gererate *.rst files
 
-In the repository root.
+In docs:
 
 ```
-sphinx-apidoc --output-dir docs molass --separate
+sphinx-apidoc --output-dir source ../molass --separate --module-first
+```
+
+### Modify *.rst files
+
+In docs:
+
+```
+python tools/edit-rst.py
 ```
 
 ### Make HTML files
