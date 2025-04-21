@@ -20,6 +20,6 @@ This section serves as a general assertion and will not be repeated verbosely th
 
 [^1]: Or any other assistant of your choice.
 
-[^2]: That is, we do not need to include such details in this book. Instead, it will suffice to state only the key points, supported by minimal description to avoid the loss of clarity. With some hints on what to ask or how to ask, which we will not omit, further details, which we will omit, can be left to the assistant, who can help in your need.
+[^2]: That is, we do not need to include such details in this book. Instead, it will suffice to state only the key points, without omitting a minimal description to avoid the loss of clarity. With some hints on what to ask or how to ask, which we will not omit, further details, which we will omit, can be left to the assistant, who can help in your need.
 
 [^3]: See [Coding Style](coding_style) for such style of description.
