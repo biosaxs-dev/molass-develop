@@ -402,8 +402,9 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#customize-conf-py">4.3.3. Customize <code class="docutils literal notranslate"><span class="pre">conf.py</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-index-rst">4.3.4. Edit <code class="docutils literal notranslate"><span class="pre">index.rst</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gererate-rst-files">4.3.5. Gererate *.rst files</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#make-html-files">4.3.6. Make HTML files</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deployment">4.3.7. Deployment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modify-rst-files">4.3.6. Modify *.rst files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#make-html-files">4.3.7. Make HTML files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deployment">4.3.8. Deployment</a></li>
 </ul>
 </li>
 </ul>
@@ -602,20 +603,27 @@ If you are interested in details of this step, see the <a class="reference exter
 </section>
 <section id="gererate-rst-files">
 <span id="generate-rst-files"></span><h3><span class="section-number">4.3.5. </span>Gererate *.rst files<a class="headerlink" href="#gererate-rst-files" title="Link to this heading">#</a></h3>
-<p>In the repository root.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sphinx</span><span class="o">-</span><span class="n">apidoc</span> <span class="o">--</span><span class="n">output</span><span class="o">-</span><span class="nb">dir</span> <span class="n">docs</span> <span class="n">molass</span> <span class="o">--</span><span class="n">separate</span>
+<p>In docs:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sphinx</span><span class="o">-</span><span class="n">apidoc</span> <span class="o">--</span><span class="n">output</span><span class="o">-</span><span class="nb">dir</span> <span class="n">source</span> <span class="o">../</span><span class="n">molass</span> <span class="o">--</span><span class="n">separate</span> <span class="o">--</span><span class="n">module</span><span class="o">-</span><span class="n">first</span>
+</pre></div>
+</div>
+</section>
+<section id="modify-rst-files">
+<h3><span class="section-number">4.3.6. </span>Modify *.rst files<a class="headerlink" href="#modify-rst-files" title="Link to this heading">#</a></h3>
+<p>In docs:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">tools</span><span class="o">/</span><span class="n">edit</span><span class="o">-</span><span class="n">rst</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
 </section>
 <section id="make-html-files">
-<h3><span class="section-number">4.3.6. </span>Make HTML files<a class="headerlink" href="#make-html-files" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">4.3.7. </span>Make HTML files<a class="headerlink" href="#make-html-files" title="Link to this heading">#</a></h3>
 <p>In docs:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">html</span>
 </pre></div>
 </div>
 </section>
 <section id="deployment">
-<h3><span class="section-number">4.3.7. </span>Deployment<a class="headerlink" href="#deployment" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">4.3.8. </span>Deployment<a class="headerlink" href="#deployment" title="Link to this heading">#</a></h3>
 <p>In docs:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ghp</span><span class="o">-</span><span class="kn">import</span> <span class="o">-</span><span class="n">n</span> <span class="o">-</span><span class="n">p</span> <span class="o">-</span><span class="n">f</span> <span class="n">_build</span><span class="o">/</span><span class="n">html</span>
 </pre></div>
@@ -703,8 +711,9 @@ If you are interested in details of this step, see the <a class="reference exter
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#customize-conf-py">4.3.3. Customize <code class="docutils literal notranslate"><span class="pre">conf.py</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-index-rst">4.3.4. Edit <code class="docutils literal notranslate"><span class="pre">index.rst</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gererate-rst-files">4.3.5. Gererate *.rst files</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#make-html-files">4.3.6. Make HTML files</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deployment">4.3.7. Deployment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modify-rst-files">4.3.6. Modify *.rst files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#make-html-files">4.3.7. Make HTML files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deployment">4.3.8. Deployment</a></li>
 </ul>
 </li>
 </ul>
