@@ -18,7 +18,7 @@ As we wrote this book, we realized the importance of fully utilizing `GitHub Cop
 
 This section serves as a general assertion and will not be repeated verbosely throughout the book, except in cases where its significance needs to be emphasized.
 
-[^1]: Or any other assistant of your choice.
+[^1]: Or any other assistant of your choice. However, `fully` in this context can be misleading. We should be also fully are of its weaknesses at this very low-level of `inteligence`, such as verbosity, lack of concentration, know-all attitude, risk-avoiding execuses, etc., completely far from human general inteligence.
 
 [^2]: That is, we do not need to include such details in this book. Instead, it will suffice to state only the key points, without omitting a minimal description to avoid the loss of clarity. With some hints on what to ask or how to ask, which we will not omit, further details, which we will omit, can be left to the assistant, who can help in your need.
 
