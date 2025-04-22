@@ -9,7 +9,7 @@ We state here what style, we believe, is desirable in coding `Molass Library`. S
 * Why-oriented docstring documentation
 
 ## Elaboration with GitHub Copilot
-Here are some hints from chats with GitHub Copilot.
+Here are some hints to explain above points from chats with GitHub Copilot.
 
 `Molass Author`: If I say "why-oriented docstring documentation" to suggest our coding style, does that make any sense to you?
 
