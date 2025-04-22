@@ -148,6 +148,8 @@ The command will gerenate several files, among which you should edit the follow 
 * `conf.py`
 * `index.rst`
 
+We will give some hints on edition later.
+
 ### Customize `conf.py`
 
 * Add the root directory to the system path to ensure the documentation of the current state
