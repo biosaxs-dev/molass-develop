@@ -181,7 +181,7 @@ After this generation, the folder tree will look as follows.
         molass/
 ```
 
-We confined *.rst files into the "source" subfolder to make it clear that they should be generated from the python source code in "molass" folder, and as such, they should be ignored in version control of Git. (See `.gitignore` to confirm this)
+We confined *.rst files into the "source" subfolder to make it clear that they should be generated from the python source codes in "molass" folder, and as such, they should be ignored in version control of Git. (See `.gitignore` to confirm this)
 
 ```{note}
 For [Molass Legacy Reference](https://freesemt.github.io/molass-legacy/), replace `molass` with `molass_legacy`.
