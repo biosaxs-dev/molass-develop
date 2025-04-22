@@ -71,7 +71,7 @@ LocalSettings = dict(
 )
 ```
 
-Data sets for `DATA_ROOT_FOLDER` is currently not provided for download from the book pages. Let us know by opening an issue using the ![github icon](../../images/github.svg) button at upper right corner of this page.
+Data sets for `DATA_ROOT_FOLDER` is currently not provided for download from the book pages. If you need them, let us know by opening an issue using the ![github icon](../../images/mark-github.svg) button at upper right corner of this page.
 
 ### Command Lines
 To run generic tests only, do as follows in command prompt:
