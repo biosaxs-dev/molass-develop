@@ -183,6 +183,10 @@ After this generation, the folder tree will look as follows.
 
 We confined *.rst files into the "source" subfolder to make it clear that they should be generated from the python source code in "molass" folder, and as such, they should be ignored in version control of Git. (See `.gitignore` to confirm this)
 
+```{note}
+For [Molass Legacy Reference](https://freesemt.github.io/molass-legacy/), replace `molass` with `molass_legacy`.
+```
+
 ### Edit `index.rst`
 
 The *.rst files can be made into HTML files only if referenced. In oeder to be referenced, we must initiate the reference chain of HTML files in `index.rst`
