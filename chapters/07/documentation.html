@@ -400,8 +400,8 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">4.3.1. Tool Package Installation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-generation">4.3.2. Initial Generation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#customize-conf-py">4.3.3. Customize <code class="docutils literal notranslate"><span class="pre">conf.py</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-index-rst">4.3.4. Edit <code class="docutils literal notranslate"><span class="pre">index.rst</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gererate-rst-files">4.3.5. Gererate *.rst files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gererate-rst-files">4.3.4. Gererate *.rst files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-index-rst">4.3.5. Edit <code class="docutils literal notranslate"><span class="pre">index.rst</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modify-rst-files">4.3.6. Modify *.rst files</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#make-html-files">4.3.7. Make HTML files</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deployment">4.3.8. Deployment</a></li>
@@ -595,35 +595,57 @@ If you are interested in details of this step, see the <a class="reference exter
 <li><p>Set sphinx_book_theme</p></li>
 </ul>
 </section>
-<section id="edit-index-rst">
-<h3><span class="section-number">4.3.4. </span>Edit <code class="docutils literal notranslate"><span class="pre">index.rst</span></code><a class="headerlink" href="#edit-index-rst" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>edit <code class="docutils literal notranslate"><span class="pre">index.rst</span></code></p></li>
-</ul>
-</section>
 <section id="gererate-rst-files">
-<span id="generate-rst-files"></span><h3><span class="section-number">4.3.5. </span>Gererate *.rst files<a class="headerlink" href="#gererate-rst-files" title="Link to this heading">#</a></h3>
-<p>In docs:</p>
+<span id="generate-rst-files"></span><h3><span class="section-number">4.3.4. </span>Gererate *.rst files<a class="headerlink" href="#gererate-rst-files" title="Link to this heading">#</a></h3>
+<p>The following command line will generate *.rst files from Python source codes in ../molass folder.
+Namely in docs:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sphinx</span><span class="o">-</span><span class="n">apidoc</span> <span class="o">--</span><span class="n">output</span><span class="o">-</span><span class="nb">dir</span> <span class="n">source</span> <span class="o">../</span><span class="n">molass</span> <span class="o">--</span><span class="n">separate</span> <span class="o">--</span><span class="n">module</span><span class="o">-</span><span class="n">first</span>
 </pre></div>
 </div>
+<p>After this generation, the folder tree will look as follows.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">molass</span><span class="o">-</span><span class="n">library</span><span class="o">/</span>
+        <span class="n">docs</span><span class="o">/</span>
+            <span class="n">_static</span><span class="o">/</span>
+            <span class="n">source</span><span class="o">/</span>
+            <span class="n">tools</span><span class="o">/</span>
+            <span class="n">make</span><span class="o">.</span><span class="n">bat</span>
+            <span class="n">Makefile</span>
+            <span class="n">conf</span><span class="o">.</span><span class="n">py</span>
+            <span class="n">index</span><span class="o">.</span><span class="n">rst</span>
+        <span class="n">molass</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>We confined *.rst files into the “source” subfolder to make it clear that they should be generated from the python source code in “molass” folder, and as such, they should be ignored in version control of Git. (See <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> to confirm this)</p>
+</section>
+<section id="edit-index-rst">
+<h3><span class="section-number">4.3.5. </span>Edit <code class="docutils literal notranslate"><span class="pre">index.rst</span></code><a class="headerlink" href="#edit-index-rst" title="Link to this heading">#</a></h3>
+<p>The *.rst files can be made into HTML files only if referenced. In oeder to be referenced, we must initiate the reference chain of HTML files in <code class="docutils literal notranslate"><span class="pre">index.rst</span></code></p>
+<ul class="simple">
+<li><p>edit <code class="docutils literal notranslate"><span class="pre">index.rst</span></code></p></li>
+</ul>
+<p>That is, if the HMTL generator <code class="docutils literal notranslate"><span class="pre">sphinx-build</span></code>, invoked later in a <code class="docutils literal notranslate"><span class="pre">make</span></code> command line, finds <code class="docutils literal notranslate"><span class="pre">source/molass.Baseline</span></code> in the <code class="docutils literal notranslate"><span class="pre">index.rst</span></code>, thenn it looks into it and finds a next reference, and so on.</p>
 </section>
 <section id="modify-rst-files">
 <h3><span class="section-number">4.3.6. </span>Modify *.rst files<a class="headerlink" href="#modify-rst-files" title="Link to this heading">#</a></h3>
+<p>Unfortunately, we have to modify the first *.rst files generated by <code class="docutils literal notranslate"><span class="pre">sphinx-apidoc</span></code> in the above step because they include redundantly repeated names with <code class="docutils literal notranslate"><span class="pre">molass.</span></code>, <code class="docutils literal notranslate"><span class="pre">package</span></code> or <code class="docutils literal notranslate"><span class="pre">module</span></code>, which we will remove by the following command line.</p>
 <p>In docs:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">tools</span><span class="o">/</span><span class="n">edit</span><span class="o">-</span><span class="n">rst</span><span class="o">.</span><span class="n">py</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">tools</span><span class="o">/</span><span class="n">EditTool</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
+<p>This script edits all .rst files in the “docs/source” directory to update the title lines.</p>
 </section>
 <section id="make-html-files">
 <h3><span class="section-number">4.3.7. </span>Make HTML files<a class="headerlink" href="#make-html-files" title="Link to this heading">#</a></h3>
+<p>Now we are ready to invoke <code class="docutils literal notranslate"><span class="pre">sphinx-build</span></code> by the following command line.</p>
 <p>In docs:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">html</span>
 </pre></div>
 </div>
+<p>This will produce HTML files in “_build” subfolder.</p>
 </section>
 <section id="deployment">
 <h3><span class="section-number">4.3.8. </span>Deployment<a class="headerlink" href="#deployment" title="Link to this heading">#</a></h3>
+<p>The following command line will deploy them as we did with <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Book</span></code> above.</p>
 <p>In docs:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ghp</span><span class="o">-</span><span class="kn">import</span> <span class="o">-</span><span class="n">n</span> <span class="o">-</span><span class="n">p</span> <span class="o">-</span><span class="n">f</span> <span class="n">_build</span><span class="o">/</span><span class="n">html</span>
 </pre></div>
@@ -709,8 +731,8 @@ If you are interested in details of this step, see the <a class="reference exter
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">4.3.1. Tool Package Installation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-generation">4.3.2. Initial Generation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#customize-conf-py">4.3.3. Customize <code class="docutils literal notranslate"><span class="pre">conf.py</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-index-rst">4.3.4. Edit <code class="docutils literal notranslate"><span class="pre">index.rst</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gererate-rst-files">4.3.5. Gererate *.rst files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gererate-rst-files">4.3.4. Gererate *.rst files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-index-rst">4.3.5. Edit <code class="docutils literal notranslate"><span class="pre">index.rst</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modify-rst-files">4.3.6. Modify *.rst files</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#make-html-files">4.3.7. Make HTML files</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deployment">4.3.8. Deployment</a></li>
