@@ -27,3 +27,5 @@ chapters:
   title: Package Release
 - file: chapters/09/paper_submission
   title: Paper Submission
+- file: chapters/10/howto_contribute
+  title: How to Contribute
