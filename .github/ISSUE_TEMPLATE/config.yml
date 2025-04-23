@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Community Support
+    url: https://github.com/nshimizu0721/molass-develop/discussions
+    about: Ask questions or get help from the community.

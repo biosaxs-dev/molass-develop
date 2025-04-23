@@ -29,10 +29,3 @@ html:
   favicon : "images/molamola.png"
   use_issues_button: true
   use_repository_button: true
-
-# Add a discussions link to your book's GitHub repository
-blank_issues_enabled: true
-contact_links:
-  - name: Community Support
-    url: https://github.com/nshimizu0721/molass-develop/discussions
-    about: Ask questions or get help from the community.
