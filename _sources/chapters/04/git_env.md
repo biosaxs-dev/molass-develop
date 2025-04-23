@@ -8,7 +8,7 @@ If not yet, create an account at <a href="https://github.com/signup">Sign up to 
 
 If not yet, install git with "64-bit Git for Windows Setup" from <a href="https://git-scm.com/downloads/win">Download for Windows</a>.
 
-And set your account info as like follows.
+And set your account info like this.
 
 ```none
 git config --global user.name "John Doe"
