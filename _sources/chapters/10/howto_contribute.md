@@ -11,20 +11,60 @@ If you encounter a bug, have a question, or want to suggest a new feature, you c
    - Search the existing issues to see if someone else has already reported the same problem or made a similar suggestion.
 
 3. **Create a New Issue:**
-   - If no similar issue exists, click the **New Issue** button and select the appropriate template (e.g., Bug Report, Feature Request).
+   - If no similar issue exists, click the **New Issue** button and select the appropriate template (e.g., Bug Report, Feature Request) or other options listed below.
 
-4. **Fill Out the Template:**
-   - Provide the required details in the template fields. The template will guide you on what information to include.
+|Menu Item| Menu Action |
+|:---------|:------ |
+| Bug Report | Open an issue with template |
+| Feature Request | Open an issue with template | 
+| Blank issue | Open a blank issue |
+| Community Support | Navigate to the Discussion Forum |
+
+4. **Describe the Issue:**
+   - For issue templates, provide the required details in the template fields. The template will guide you on what information to include.
+   - For a blank issue, describe it freely.
+   - In the forum, ask support or anything to the community.
 
 7. **Submit the Issue:**
-   - Once you've filled out the details, click **Submit New Issue**.
+   - Once you've described the issue, click **Submit New Issue**.
 
 ## Create a Pull Request
 
 
 
-
 ## Exercise: Reviewing and Merging a Pull Request
 
-This section is addressed to collaborators who have stonger privileges over contirbutors (narrow sense).
+This section is addressed to collaborators who have stonger privileges over contirbutors (in the narrow sense).
 
+As a collaborator, your role includes reviewing and merging pull requests from contributors. Follow these steps to practice:
+
+1. Review the Pull Request:
+   - Open a pull request submitted by a contributor.
+   - Check the code for:
+      - Functionality: Does the code work as intended?
+      - Style: Does it follow the project's coding standards?
+      - Clarity: Is the code easy to understand and well-documented?
+      - "Impact: Does it introduce any bugs or conflicts?
+2. Request Changes (if needed):
+   - If you find issues, leave constructive comments on specific lines of code.
+   - Suggest improvements or ask for clarification where necessary.
+3. Test the Code:
+   - Pull the contributor's branch to your local machine:
+```
+git fetch origin <branch-name>
+git checkout <branch-name>
+```
+   - Run the tests or manually verify the functionality.
+
+4. Merge the Pull Request:
+   - If the code meets all requirements, approve the pull request.
+   - Merge it into the main branch using the GitHub interface or the command line:
+
+```
+git checkout main
+git merge <branch-name>
+git push origin main
+```
+
+5. Provide Feedback:
+   - Leave a comment thanking the contributor and summarizing the changes.

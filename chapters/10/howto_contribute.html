@@ -420,17 +420,43 @@ document.write(`
 </li>
 <li><p><strong>Create a New Issue:</strong></p>
 <ul class="simple">
-<li><p>If no similar issue exists, click the <strong>New Issue</strong> button and select the appropriate template (e.g., Bug Report, Feature Request).</p></li>
+<li><p>If no similar issue exists, click the <strong>New Issue</strong> button and select the appropriate template (e.g., Bug Report, Feature Request) or other options listed below.</p></li>
 </ul>
 </li>
-<li><p><strong>Fill Out the Template:</strong></p>
+</ol>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Menu Item</p></th>
+<th class="head text-left"><p>Menu Action</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>Bug Report</p></td>
+<td class="text-left"><p>Open an issue with template</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Feature Request</p></td>
+<td class="text-left"><p>Open an issue with template</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Blank issue</p></td>
+<td class="text-left"><p>Open a blank issue</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Community Support</p></td>
+<td class="text-left"><p>Navigate to the Discussion Forum</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<ol class="arabic simple" start="4">
+<li><p><strong>Describe the Issue:</strong></p>
 <ul class="simple">
-<li><p>Provide the required details in the template fields. The template will guide you on what information to include.</p></li>
+<li><p>For issue templates, provide the required details in the template fields. The template will guide you on what information to include.</p></li>
+<li><p>For a blank issue, describe it freely.</p></li>
+<li><p>In the forum, ask support or anything to the community.</p></li>
 </ul>
 </li>
 <li><p><strong>Submit the Issue:</strong></p>
 <ul class="simple">
-<li><p>Once you’ve filled out the details, click <strong>Submit New Issue</strong>.</p></li>
+<li><p>Once you’ve described the issue, click <strong>Submit New Issue</strong>.</p></li>
 </ul>
 </li>
 </ol>
@@ -440,7 +466,61 @@ document.write(`
 </section>
 <section id="exercise-reviewing-and-merging-a-pull-request">
 <h2><span class="section-number">7.3. </span>Exercise: Reviewing and Merging a Pull Request<a class="headerlink" href="#exercise-reviewing-and-merging-a-pull-request" title="Link to this heading">#</a></h2>
-<p>This section is addressed to collaborators who have stonger privileges over contirbutors (narrow sense).</p>
+<p>This section is addressed to collaborators who have stonger privileges over contirbutors (in the narrow sense).</p>
+<p>As a collaborator, your role includes reviewing and merging pull requests from contributors. Follow these steps to practice:</p>
+<ol class="arabic simple">
+<li><p>Review the Pull Request:</p>
+<ul class="simple">
+<li><p>Open a pull request submitted by a contributor.</p></li>
+<li><p>Check the code for:</p>
+<ul>
+<li><p>Functionality: Does the code work as intended?</p></li>
+<li><p>Style: Does it follow the project’s coding standards?</p></li>
+<li><p>Clarity: Is the code easy to understand and well-documented?</p></li>
+<li><p>“Impact: Does it introduce any bugs or conflicts?</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Request Changes (if needed):</p>
+<ul class="simple">
+<li><p>If you find issues, leave constructive comments on specific lines of code.</p></li>
+<li><p>Suggest improvements or ask for clarification where necessary.</p></li>
+</ul>
+</li>
+<li><p>Test the Code:</p>
+<ul class="simple">
+<li><p>Pull the contributor’s branch to your local machine:</p></li>
+</ul>
+</li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">fetch</span> <span class="n">origin</span> <span class="o">&lt;</span><span class="n">branch</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="o">&lt;</span><span class="n">branch</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Run the tests or manually verify the functionality.</p></li>
+</ul>
+<ol class="arabic simple" start="4">
+<li><p>Merge the Pull Request:</p>
+<ul class="simple">
+<li><p>If the code meets all requirements, approve the pull request.</p></li>
+<li><p>Merge it into the main branch using the GitHub interface or the command line:</p></li>
+</ul>
+</li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">main</span>
+<span class="n">git</span> <span class="n">merge</span> <span class="o">&lt;</span><span class="n">branch</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span>
+<span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">main</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Provide Feedback:</p>
+<ul class="simple">
+<li><p>Leave a comment thanking the contributor and summarizing the changes.</p></li>
+</ul>
+</li>
+</ol>
 </section>
 </section>
 
