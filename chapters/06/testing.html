@@ -532,6 +532,7 @@ document.write(`
 <h3><span class="section-number">3.3.3. </span>Efficient Testing During Development<a class="headerlink" href="#efficient-testing-during-development" title="Link to this heading">#</a></h3>
 <p>When developing new features, running all tests can be time-consuming. For quick checks, you can simply run a specific test file or function using pytest. For example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pytest</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">test_file</span><span class="o">.</span><span class="n">py</span>
+<span class="n">pytest</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">test_file</span><span class="o">.</span><span class="n">py</span><span class="p">::</span><span class="n">test_function_name</span>
 </pre></div>
 </div>
 <p>More broadly, you can ask <code class="docutils literal notranslate"><span class="pre">GitHub</span> <span class="pre">Copilot</span></code>:</p>
