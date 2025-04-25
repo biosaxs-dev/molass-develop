@@ -115,3 +115,19 @@ pytest --cov=molass --cov-report=html
 ```
 
 and check the results in `test_folder/htmlcov/index.html` with your browser, where `test_folder` is one of `tests/generic`, `tests/specific` or `tests` depending on how you ran the tests.
+
+### Efficient Testing During Development
+
+When developing new features, running all tests can be time-consuming. For quick checks, you can simply run a specific test file or function using pytest. For example:
+
+```
+pytest path/to/test_file.py
+```
+
+More broadly, you can ask `GitHub Copilot`:
+
+"I use pytest to run all tests, which is great for checking overall software quality. But when developing a new feature, I need quick checks for specific parts of the code. Any advice on how to do this efficiently?
+
+### Attribution
+
+Some of the insights and suggestions in this chapter were generated with the assistance of `GitHub Copilot`, an AI programming assistant. Its contributions helped refine the content and provide practical examples for testing workflows.
