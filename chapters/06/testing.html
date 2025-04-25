@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -394,6 +394,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-tests">3.3. Running Tests</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-data-settings">3.3.1. Test Data Settings</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#command-lines">3.3.2. Command Lines</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#efficient-testing-during-development">3.3.3. Efficient Testing During Development</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attribution">3.3.4. Attribution</a></li>
 </ul>
 </li>
 </ul>
@@ -526,6 +528,19 @@ document.write(`
 </div>
 <p>and check the results in <code class="docutils literal notranslate"><span class="pre">test_folder/htmlcov/index.html</span></code> with your browser, where <code class="docutils literal notranslate"><span class="pre">test_folder</span></code> is one of <code class="docutils literal notranslate"><span class="pre">tests/generic</span></code>, <code class="docutils literal notranslate"><span class="pre">tests/specific</span></code> or <code class="docutils literal notranslate"><span class="pre">tests</span></code> depending on how you ran the tests.</p>
 </section>
+<section id="efficient-testing-during-development">
+<h3><span class="section-number">3.3.3. </span>Efficient Testing During Development<a class="headerlink" href="#efficient-testing-during-development" title="Link to this heading">#</a></h3>
+<p>When developing new features, running all tests can be time-consuming. For quick checks, you can simply run a specific test file or function using pytest. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pytest</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">test_file</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>More broadly, you can ask <code class="docutils literal notranslate"><span class="pre">GitHub</span> <span class="pre">Copilot</span></code>:</p>
+<p>“I use pytest to run all tests, which is great for checking overall software quality. But when developing a new feature, I need quick checks for specific parts of the code. Any advice on how to do this efficiently?</p>
+</section>
+<section id="attribution">
+<h3><span class="section-number">3.3.4. </span>Attribution<a class="headerlink" href="#attribution" title="Link to this heading">#</a></h3>
+<p>Some of the insights and suggestions in this chapter were generated with the assistance of <code class="docutils literal notranslate"><span class="pre">GitHub</span> <span class="pre">Copilot</span></code>, an AI programming assistant. Its contributions helped refine the content and provide practical examples for testing workflows.</p>
+</section>
 </section>
 </section>
 
@@ -598,6 +613,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-tests">3.3. Running Tests</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-data-settings">3.3.1. Test Data Settings</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#command-lines">3.3.2. Command Lines</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#efficient-testing-during-development">3.3.3. Efficient Testing During Development</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attribution">3.3.4. Attribution</a></li>
 </ul>
 </li>
 </ul>
