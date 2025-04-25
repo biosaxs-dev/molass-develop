@@ -127,7 +127,7 @@ pytest path/to/test_file.py::test_function_name
 
 More broadly, you can ask `GitHub Copilot`:
 
-"I use pytest to run all tests, which is great for checking overall software quality. But when developing a new feature, I need quick checks for specific parts of the code. Any advice on how to do this efficiently?
+"I use pytest to run all tests, which is great for checking overall software quality. But when developing a new feature, I need quick checks for specific parts of the code. Any advice on how to do this efficiently?"
 
 ### Attribution
 
