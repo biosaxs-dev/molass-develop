@@ -122,6 +122,7 @@ When developing new features, running all tests can be time-consuming. For quick
 
 ```
 pytest path/to/test_file.py
+pytest path/to/test_file.py::test_function_name
 ```
 
 More broadly, you can ask `GitHub Copilot`:
