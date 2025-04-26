@@ -131,4 +131,4 @@ More broadly, you can ask `GitHub Copilot`:
 
 ### Attribution
 
-Some of the insights and suggestions in the previous section were generated with the assistance of `GitHub Copilot`, an AI programming assistant. Its contributions helped refine the content and provide practical examples for testing workflows.
+Some of the insights and suggestions in this chapter were generated with the assistance of `GitHub Copilot`, an AI programming assistant. Its contributions helped refine the content and provide practical examples for testing workflows.
