@@ -5,7 +5,11 @@
 If you encounter a bug, have a question, or want to suggest a new feature, you can open an issue using the provided templates. Follow these steps:
 
 1. **Go to the Issues Tab:**
-   - Navigate to the GitHub repository and click on the **Issues** tab.
+   - Navigate to one of the GitHub repositories below and click on the **Issues** tab.
+      - [molass-library](https://github.com/nshimizu0721/molass-library) for the library codes or their function reference,
+      - [molass-develop](https://github.com/nshimizu0721/molass-develop) for the contents of this book,
+      - [molass-tutorial](https://github.com/nshimizu0721/molass-tutorial) for the contents of its book,  
+      - [molass-esence](https://github.com/nshimizu0721/molass-essence) for the contents of its book.
 
 2. **Check for Existing Issues:**
    - Search the existing issues to see if someone else has already reported the same problem or made a similar suggestion.
