@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -391,7 +391,7 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pypi-account">5.1. PyPI Account</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pypi-api-token">5.2. PyPI API Token</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pypi-upload">5.3. PyPI Upload</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pypi-upload-1">5.3. PyPI Upload </a></li>
 </ul>
             </nav>
         </div>
@@ -415,16 +415,32 @@ document.write(`
 <section id="pypi-api-token">
 <h2><span class="section-number">5.2. </span>PyPI API Token<a class="headerlink" href="#pypi-api-token" title="Link to this heading">#</a></h2>
 </section>
-<section id="pypi-upload">
-<h2><span class="section-number">5.3. </span>PyPI Upload<a class="headerlink" href="#pypi-upload" title="Link to this heading">#</a></h2>
+<section id="pypi-upload-1">
+<h2><span class="section-number">5.3. </span>PyPI Upload <a class="footnote-reference brackets" href="#id3" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a><a class="headerlink" href="#pypi-upload-1" title="Link to this heading">#</a></h2>
+<p>To build required files, do as follows in the repository root folder.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>python -m build
-twine upload dist/*
+</pre></div>
+</div>
+<p>which produces the files in “dist” subfolder.</p>
+<p>To upload them to PyPI, you will be asked to give an API token <a class="footnote-reference brackets" href="#id4" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> to the twine command invoked as follows.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>twine upload dist/*
 </pre></div>
 </div>
 <p>See also:</p>
 <ul class="simple">
 <li><p><a href="https://twine.readthedocs.io/en/stable/">Twine</a></p></li>
 </ul>
+<hr class="footnotes docutils" />
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id3" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>This step is planned to be automated using GitHub Actions.</p>
+</aside>
+<aside class="footnote brackets" id="id4" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+<p>The API token should be kept safely somewhere.</p>
+</aside>
+</aside>
 </section>
 </section>
 
@@ -494,7 +510,7 @@ twine upload dist/*
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pypi-account">5.1. PyPI Account</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pypi-api-token">5.2. PyPI API Token</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pypi-upload">5.3. PyPI Upload</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pypi-upload-1">5.3. PyPI Upload </a></li>
 </ul>
   </nav></div>
 
