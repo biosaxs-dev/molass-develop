@@ -22,7 +22,6 @@ If you encounter a bug, have a question, or want to suggest a new feature, you c
 | Bug Report | Open an issue with template |
 | Feature Request | Open an issue with template | 
 | Blank issue | Open a blank issue |
-| Community Support | Navigate to the Discussion Forum |
 
 4. **Describe the Issue:**
    - For issue templates, provide the required details in the template fields. The template will guide you on what information to include.
