@@ -7,13 +7,20 @@ This page is in preparation to be publicly available in May, 2025.
 ## PyPI Account
 
 
+
 ## PyPI API Token
 
 
-## PyPI Upload [^1]
 
-[^1]: This step is planned to be automated using GitHub Actions.
+## PyPI Upload
 
+### Using the GitHub Actions
+
+1. Go to the `"Actions"` tab in the [Molass Library repository](https://github.com/nshimizu0721/molass-library).
+2. Select `"Manual Upload Python Package to PyPI"` workflow.
+3. Click the "Run workflow" button.
+
+### Using Twine
 To build required files, do as follows in the repository root folder.
 
 ```none
