@@ -392,7 +392,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pypi-account">5.1. PyPI Account</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pypi-api-token">5.2. PyPI API Token</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pypi-upload">5.3. PyPI Upload</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-github-actions">5.3.1. Using the GitHub Actions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-github-actions-1">5.3.1. Using the GitHub Actions </a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-twine">5.3.2. Using Twine</a></li>
 </ul>
 </li>
@@ -421,8 +421,8 @@ document.write(`
 </section>
 <section id="pypi-upload">
 <h2><span class="section-number">5.3. </span>PyPI Upload<a class="headerlink" href="#pypi-upload" title="Link to this heading">#</a></h2>
-<section id="using-the-github-actions">
-<h3><span class="section-number">5.3.1. </span>Using the GitHub Actions<a class="headerlink" href="#using-the-github-actions" title="Link to this heading">#</a></h3>
+<section id="using-the-github-actions-1">
+<h3><span class="section-number">5.3.1. </span>Using the GitHub Actions <a class="footnote-reference brackets" href="#id3" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a><a class="headerlink" href="#using-the-github-actions-1" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Go to the <code class="docutils literal notranslate"><span class="pre">&quot;Actions&quot;</span></code> tab in the <a class="reference external" href="https://github.com/nshimizu0721/molass-library">Molass Library repository</a>.</p></li>
 <li><p>Select <code class="docutils literal notranslate"><span class="pre">&quot;Manual</span> <span class="pre">Upload</span> <span class="pre">Python</span> <span class="pre">Package</span> <span class="pre">to</span> <span class="pre">PyPI&quot;</span></code> workflow.</p></li>
@@ -436,7 +436,7 @@ document.write(`
 </pre></div>
 </div>
 <p>which produces the files in “dist” subfolder.</p>
-<p>To upload them to PyPI, you will be asked to give an API token <a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> to the twine command invoked as follows.</p>
+<p>To upload them to PyPI, you will be asked to give an API token <a class="footnote-reference brackets" href="#id4" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> to the twine command invoked as follows.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>twine upload dist/*
 </pre></div>
 </div>
@@ -446,8 +446,12 @@ document.write(`
 </ul>
 <hr class="footnotes docutils" />
 <aside class="footnote-list brackets">
-<aside class="footnote brackets" id="id2" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">2</a><span class="fn-bracket">]</span></span>
+<aside class="footnote brackets" id="id3" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>This workflow is kept in .github/workflows/upload_to_pypi.yml in the repository.</p>
+</aside>
+<aside class="footnote brackets" id="id4" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
 <p>The API token should be kept safely somewhere.</p>
 </aside>
 </aside>
@@ -522,7 +526,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pypi-account">5.1. PyPI Account</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pypi-api-token">5.2. PyPI API Token</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pypi-upload">5.3. PyPI Upload</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-github-actions">5.3.1. Using the GitHub Actions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-github-actions-1">5.3.1. Using the GitHub Actions </a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-twine">5.3.2. Using Twine</a></li>
 </ul>
 </li>
