@@ -18,7 +18,7 @@ This page is in preparation to be publicly available in May, 2025.
 
 1. Go to the `"Actions"` tab in the [Molass Library repository](https://github.com/nshimizu0721/molass-library).
 2. Select `"Manual Upload Python Package to PyPI"` workflow.
-3. Click the "Run workflow" button.
+3. Click the `"Run workflow"` button.
 
 ### Using Twine
 To build required files, do as follows in the repository root folder.
