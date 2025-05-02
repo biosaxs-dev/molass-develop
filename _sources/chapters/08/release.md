@@ -35,7 +35,7 @@ To upload them to PyPI, you will be asked to give an API token [^2] to the twine
 twine upload dist/*
 ```
 
-[^1]: This workflow is kept in .github/workflows/upload_to_pypi.yml in the repository.
+[^1]: This workflow is kept in `.github/workflows/upload_to_pypi.yml` in the repository.
 
 [^2]: The API token should be kept safely somewhere.
 
