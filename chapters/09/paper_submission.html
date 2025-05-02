@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -366,7 +366,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -382,6 +384,15 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#draft-paper-source-markdown">6.1. Draft Paper Source Markdown</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#draft-paper-pdf">6.2. Draft Paper PDF</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -397,6 +408,21 @@ document.write(`
 <p class="admonition-title">Warning</p>
 <p>This chapter is in preparation.</p>
 </div>
+<section id="draft-paper-source-markdown">
+<h2><span class="section-number">6.1. </span>Draft Paper Source Markdown<a class="headerlink" href="#draft-paper-source-markdown" title="Link to this heading">#</a></h2>
+<p>The source markdown for the paper should live in the <a class="reference external" href="https://github.com/nshimizu0721/molass-library/tree/joss-paper">joss-paper branch</a> of the <a class="reference external" href="https://github.com/nshimizu0721/molass-library">code repository</a>.</p>
+</section>
+<section id="draft-paper-pdf">
+<h2><span class="section-number">6.2. </span>Draft Paper PDF<a class="headerlink" href="#draft-paper-pdf" title="Link to this heading">#</a></h2>
+<p>The PDF will be generated from the above markdown by GitHub Actions workflow named “draft-pdf.yml” <a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> on push to the remote branch. You can retrieve it from the job result.</p>
+<hr class="footnotes docutils" />
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id2" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>“draft-pdf.yml” is located in the .github/workflows folder.</p>
+</aside>
+</aside>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -453,6 +479,22 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#draft-paper-source-markdown">6.1. Draft Paper Source Markdown</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#draft-paper-pdf">6.2. Draft Paper PDF</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
