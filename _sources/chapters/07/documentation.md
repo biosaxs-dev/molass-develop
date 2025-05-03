@@ -123,6 +123,7 @@ To use Sphinx, you need to install the following two packages, which should have
 ```
 pip install sphinx~=7.0 
 pip install sphinx-book-theme
+pip install sphinx-copybutton
 ```
 
 ```{note}
