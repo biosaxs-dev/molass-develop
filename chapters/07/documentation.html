@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -406,6 +406,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modify-rst-files">4.3.6. Modify *.rst files</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#make-html-files">4.3.7. Make HTML files</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deployment">4.3.8. Deployment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#usual-update-routine">4.3.9. Usual Update Routine</a></li>
 </ul>
 </li>
 </ul>
@@ -556,6 +557,7 @@ If you are interested in details of this step, see the <a class="reference exter
 </section>
 <section id="how-to-use-sphinx">
 <h2><span class="section-number">4.3. </span>How to use Sphinx<a class="headerlink" href="#how-to-use-sphinx" title="Link to this heading">#</a></h2>
+<p>If you are just updating existing parts of the document, skip to <a class="reference internal" href="#usual-update-routine"><span class="std std-ref">Usual Update Routine</span></a>.</p>
 <section id="id1">
 <h3><span class="section-number">4.3.1. </span>Tool Package Installation<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <p>To use Sphinx, you need to install the following two packages, which should have been installed if you have already installed packages for Jupyter Book as stated above.</p>
@@ -658,6 +660,14 @@ Namely in docs:</p>
 </div>
 <p>This (re)creates the gh-pages branch both in local and remote repositories, and the web book will be updated in a few minutes.</p>
 </section>
+<section id="usual-update-routine">
+<span id="id2"></span><h3><span class="section-number">4.3.9. </span>Usual Update Routine<a class="headerlink" href="#usual-update-routine" title="Link to this heading">#</a></h3>
+<p>After editing parts of source code, do the following in docs.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">tools</span><span class="o">/</span><span class="n">UsualUpdate</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>See the <a class="reference external" href="https://nshimizu0721.github.io/molass-library/source/UsualUpdate.html#module-UsualUpdate">module documentation</a> for details.</p>
+</section>
 </section>
 </section>
 
@@ -742,6 +752,7 @@ Namely in docs:</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modify-rst-files">4.3.6. Modify *.rst files</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#make-html-files">4.3.7. Make HTML files</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deployment">4.3.8. Deployment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#usual-update-routine">4.3.9. Usual Update Routine</a></li>
 </ul>
 </li>
 </ul>
