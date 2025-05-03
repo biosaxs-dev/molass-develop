@@ -114,6 +114,8 @@ If you are interested in details of this step, see the [README](https://github.c
 
 ## How to use Sphinx
 
+If you are just updating existing parts of the document, skip to [Usual Update Routine](usual_update_routine).
+
 ### Tool Package Installation
 
 To use Sphinx, you need to install the following two packages, which should have been installed if you have already installed packages for Jupyter Book as stated above.
@@ -230,3 +232,14 @@ ghp-import -n -p -f _build/html
 ```
 
 This (re)creates the gh-pages branch both in local and remote repositories, and the web book will be updated in a few minutes.
+
+(usual_update_routine)=
+### Usual Update Routine
+
+After editing parts of source code, do the following in docs. 
+
+```
+python tools/UsualUpdate.py
+```
+
+See the [module documentation](https://nshimizu0721.github.io/molass-library/source/UsualUpdate.html#module-UsualUpdate) for details.
