@@ -8,11 +8,7 @@ AI tools like GitHub Copilot[^1] can greatly enhance productivity, but effective
    - Record important prompts, code snippets, and decisions outside the AI session (e.g., in comments or project notes), since session context is not persistent across restarts or between editor windows.
 
 2. **Engineer Explicit Instructions**
-   - Formulate clear, specific instructions to guide the AI toward relevant and accurate suggestions.
-
-     | Vague Instruction    | Clear, Specific Instruction                                       |
-     |----------------------|-------------------------------------------------------------------|
-     | Write a function.    | Write a Python function that takes a list of numbers and returns the average. |
+   - Formulate clear, specific instructions[^2] to guide the AI toward relevant and accurate suggestions.
 
 3. **Independently Verify AI Output**
    - Critically review all AI-generated code for correctness, security, and adherence to project standards before accepting or merging it.
@@ -63,4 +59,10 @@ Being clear about context changes and the current file helps the AI provide more
 
 For further tips or more detailed guidance, feel free to ask GitHub Copilot directly as you work. This section is intentionally kept simple to encourage direct engagement with AI assistants for further guidance.
 
+```{note}
+The practices and limitations described in this chapter are based on the status of AI tools as of GPT-4 or GPT-4.1. Capabilities and behaviors of AI assistants may change in future versions.
+```
+
 [^1]: We say simply "GitHub Copilot" to mean "GitHub Copilot or another AI assistant" for brevity.
+
+[^2]: In the context of AI, "instruction" is often referred to as a "prompt" and can also mean a question or request given to the AI assistant to guide its response.
