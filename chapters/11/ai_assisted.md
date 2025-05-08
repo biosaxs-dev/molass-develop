@@ -60,7 +60,7 @@ Being clear about context changes and the current file helps the AI provide more
 For further tips or more detailed guidance, feel free to ask GitHub Copilot directly as you work. This section is intentionally kept simple to encourage direct engagement with AI assistants for further guidance.
 
 ```{note}
-The practices and limitations described in this chapter are based on the status of AI tools (such as GPT-4 or GPT-4.1) and Visual Studio Code as of 1.100.0-insider. Capabilities and behaviors of AI assistants and editors may change in future versions.
+The practices and limitations described in this chapter are based on the status of AI tools (such as GPT-4 or GPT-4.1) and Visual Studio Code as of 1.100. Capabilities and behaviors of AI assistants and editors may change in future versions.
 ```
 
 [^1]: We say simply "GitHub Copilot" to mean "GitHub Copilot or another AI assistant" for brevity.
