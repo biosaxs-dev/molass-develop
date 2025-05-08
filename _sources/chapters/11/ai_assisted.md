@@ -15,7 +15,7 @@ AI tools like GitHub Copilot [^1] can greatly enhance productivity, but effectiv
 
 Each of these axioms is fundamental and cannot be derived from the others. By following them, you ensure effective and reliable use of AI in your coding workflow.
 
-### Practical Tip: Saving Your AI Session Context
+## Practical Tip: Saving Your AI Session Context
 
 Since chat and prompt history in VS Code (and similar environments) can be lost when you close a window, change workspaces, update extensions, or restart your machine, it is important to proactively save essential context.
 
@@ -31,7 +31,7 @@ This way, you can easily recover your working context after a restart or when sw
 
 By following this practice, you make your workflow more robust and resilient to interruptions or environment changes. This workflow helps ensure you never lose important context, even if your environment changes.
 
-### How to Recover Context After Restart or Reopening
+## How to Recover Context After Restart or Reopening
 
 When you restart your machine, reopen VS Code, or switch workspaces, you can quickly recover your previous working context by referring to the `COPILOT_CONTEXT.md` file (or your chosen context file) in your project directory.
 
@@ -43,7 +43,7 @@ When you restart your machine, reopen VS Code, or switch workspaces, you can qui
 
 By following this process, you can efficiently resume your workflow with minimal loss of continuity, even after interruptions or environment changes.
 
-### How to Change Context During a Session
+## How to Change Context During a Session
 
 If your goals, requirements, or focus change during an ongoing session, or if you switch to a different file or module, clearly inform the AI assistant of the new context. Many AI assistants, including GitHub Copilot, use the currently open file as a primary source of context for suggestions. To avoid confusion and ensure relevant assistance, be explicit about the change. For example:
 
