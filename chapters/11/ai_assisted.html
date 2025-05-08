@@ -390,8 +390,8 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#axioms-for-effective-ai-assisted-coding">8.1. Axioms for Effective AI-Assisted Coding</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practical-tip-saving-your-ai-session-context">8.2. Practical Tip: Saving Your AI Session Context</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-recover-context-after-restart-or-reopening">8.3. How to Recover Context After Restart or Reopening</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-save-your-ai-session-context">8.2. How to Save Your AI Session Context</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-recover-your-ai-session-context">8.3. How to Recover Your AI Session Context</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-change-context-during-a-session">8.4. How to Change Context During a Session</a></li>
 </ul>
             </nav>
@@ -428,8 +428,8 @@ document.write(`
 </ol>
 <p>Each of these axioms is fundamental and cannot be derived from the others. By following them, you ensure effective and reliable use of AI in your coding workflow.</p>
 </section>
-<section id="practical-tip-saving-your-ai-session-context">
-<h2><span class="section-number">8.2. </span>Practical Tip: Saving Your AI Session Context<a class="headerlink" href="#practical-tip-saving-your-ai-session-context" title="Link to this heading">#</a></h2>
+<section id="how-to-save-your-ai-session-context">
+<h2><span class="section-number">8.2. </span>How to Save Your AI Session Context<a class="headerlink" href="#how-to-save-your-ai-session-context" title="Link to this heading">#</a></h2>
 <p>Since chat and prompt history in VS Code (and similar environments) can be lost when you close a window, change workspaces, update extensions, or restart your machine, it is important to proactively save essential context.</p>
 <p><strong>Recommended Practice:</strong><br />
 After a productive session with GitHub Copilot, ask the AI to summarize the key context, prompts, and decisions from your session. Save this summary in a file named <code class="docutils literal notranslate"><span class="pre">COPILOT_CONTEXT.md</span></code> (or another descriptive name) in your project directory.</p>
@@ -444,14 +444,15 @@ After a productive session with GitHub Copilot, ask the AI to summarize the key 
 </div></blockquote>
 <p>By following this practice, you make your workflow more robust and resilient to interruptions or environment changes. This workflow helps ensure you never lose important context, even if your environment changes.</p>
 </section>
-<section id="how-to-recover-context-after-restart-or-reopening">
-<h2><span class="section-number">8.3. </span>How to Recover Context After Restart or Reopening<a class="headerlink" href="#how-to-recover-context-after-restart-or-reopening" title="Link to this heading">#</a></h2>
+<section id="how-to-recover-your-ai-session-context">
+<h2><span class="section-number">8.3. </span>How to Recover Your AI Session Context<a class="headerlink" href="#how-to-recover-your-ai-session-context" title="Link to this heading">#</a></h2>
 <p>When you restart your machine, reopen VS Code, or switch workspaces, you can quickly recover your previous working context by referring to the <code class="docutils literal notranslate"><span class="pre">COPILOT_CONTEXT.md</span></code> file (or your chosen context file) in your project directory.</p>
 <p><strong>Recommended Steps:</strong></p>
 <ol class="arabic simple">
 <li><p>Open <code class="docutils literal notranslate"><span class="pre">COPILOT_CONTEXT.md</span></code> in your editor.</p></li>
 <li><p>Review the summarized key context, prompts, and decisions from your previous session.</p></li>
-<li><p>If needed, copy relevant prompts or code snippets back into your current AI chat or coding session to re-establish context.</p></li>
+<li><p>In your AI chat or prompt, simply say:<br />
+“Recover the context from <code class="docutils literal notranslate"><span class="pre">COPILOT_CONTEXT.md</span></code>.”</p></li>
 <li><p>Continue your work, updating <code class="docutils literal notranslate"><span class="pre">COPILOT_CONTEXT.md</span></code> as your session progresses.</p></li>
 </ol>
 <p>By following this process, you can efficiently resume your workflow with minimal loss of continuity, even after interruptions or environment changes.</p>
@@ -534,8 +535,8 @@ After a productive session with GitHub Copilot, ask the AI to summarize the key 
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#axioms-for-effective-ai-assisted-coding">8.1. Axioms for Effective AI-Assisted Coding</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practical-tip-saving-your-ai-session-context">8.2. Practical Tip: Saving Your AI Session Context</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-recover-context-after-restart-or-reopening">8.3. How to Recover Context After Restart or Reopening</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-save-your-ai-session-context">8.2. How to Save Your AI Session Context</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-recover-your-ai-session-context">8.3. How to Recover Your AI Session Context</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-change-context-during-a-session">8.4. How to Change Context During a Session</a></li>
 </ul>
   </nav></div>
