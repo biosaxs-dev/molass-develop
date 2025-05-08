@@ -59,6 +59,10 @@ Being clear about context changes and the current file helps the AI provide more
 
 For further tips or more detailed guidance, feel free to ask GitHub Copilot directly as you work. This section is intentionally kept simple to encourage direct engagement with AI assistants for further guidance.
 
+```{note}
+The practices and limitations described in this chapter are based on the status of AI tools as of GPT-4 or GPT-4.1. Capabilities and behaviors of AI assistants may change in future versions.
+```
+
 [^1]: We say simply "GitHub Copilot" to mean "GitHub Copilot or another AI assistant" for brevity.
 
 [^2]: In the context of AI, "instruction" is often referred to as a "prompt" and can also mean a question or request given to the AI assistant to guide its response.
