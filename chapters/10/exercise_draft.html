@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>5. Package Release &#8212; Molass Developpers Handbook</title>
+    <title>Exercise for Collaborators &#8212; Molass Developpers Handbook</title>
   
   
   
@@ -57,12 +57,10 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/08/release';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/10/exercise_draft';</script>
     <link rel="icon" href="../../_static/molamola.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="6. Paper Submission" href="../09/paper_submission.html" />
-    <link rel="prev" title="4. Documentation" href="../07/documentation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -125,6 +123,8 @@
       
       
       
+        
+      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -180,7 +180,7 @@
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../01/environments.html">1. Environments</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../01/coding_env.html">1.1. Coding Environment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../02/python_env.html">1.2. Python Environment</a></li>
@@ -191,9 +191,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../05/coding_style.html">2. Coding Style</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../06/testing.html">3. Testing Conventions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../07/documentation.html">4. Documentation</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">5. Package Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/release.html">5. Package Release</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../09/paper_submission.html">6. Paper Submission</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../10/howto_contribute.html">7. How to Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howto_contribute.html">7. How to Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../11/ai_assisted.html">8. AI Assisted Development</a></li>
 </ul>
 
     </div>
@@ -265,7 +266,7 @@
       
       
       
-      <li><a href="https://github.com/nshimizu0721/molass-develop/issues/new?title=Issue%20on%20page%20%2Fchapters/08/release.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/nshimizu0721/molass-develop/issues/new?title=Issue%20on%20page%20%2Fchapters/10/exercise_draft.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -295,7 +296,7 @@
       
       
       
-      <li><a href="../../_sources/chapters/08/release.md" target="_blank"
+      <li><a href="../../_sources/chapters/10/exercise_draft.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -379,7 +380,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Package Release</h1>
+    <h1>Exercise for Collaborators</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -389,13 +390,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pypi-account">5.1. PyPI Account</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pypi-api-token">5.2. PyPI API Token</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pypi-upload">5.3. PyPI Upload</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-github-actions-1">5.3.1. Using the GitHub Actions </a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-twine">5.3.2. Using Twine</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-accepting-a-contribution-as-a-collaborator">Exercise: Accepting a Contribution as a Collaborator</a></li>
 </ul>
             </nav>
         </div>
@@ -407,55 +402,46 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="package-release">
-<h1><span class="section-number">5. </span>Package Release<a class="headerlink" href="#package-release" title="Link to this heading">#</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This page is in preparation to be publicly available in May, 2025.</p>
-</div>
-<section id="pypi-account">
-<h2><span class="section-number">5.1. </span>PyPI Account<a class="headerlink" href="#pypi-account" title="Link to this heading">#</a></h2>
-</section>
-<section id="pypi-api-token">
-<h2><span class="section-number">5.2. </span>PyPI API Token<a class="headerlink" href="#pypi-api-token" title="Link to this heading">#</a></h2>
-</section>
-<section id="pypi-upload">
-<h2><span class="section-number">5.3. </span>PyPI Upload<a class="headerlink" href="#pypi-upload" title="Link to this heading">#</a></h2>
-<section id="using-the-github-actions-1">
-<h3><span class="section-number">5.3.1. </span>Using the GitHub Actions <a class="footnote-reference brackets" href="#id3" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a><a class="headerlink" href="#using-the-github-actions-1" title="Link to this heading">#</a></h3>
+  <section class="tex2jax_ignore mathjax_ignore" id="exercise-for-collaborators">
+<h1>Exercise for Collaborators<a class="headerlink" href="#exercise-for-collaborators" title="Link to this heading">#</a></h1>
+<section id="exercise-accepting-a-contribution-as-a-collaborator">
+<h2>Exercise: Accepting a Contribution as a Collaborator<a class="headerlink" href="#exercise-accepting-a-contribution-as-a-collaborator" title="Link to this heading">#</a></h2>
+<p>Suppose a contributor has submitted a pull request (PR) that adds a new utility function to the project. As a collaborator, your task is to review and accept this contribution.</p>
+<p><strong>Steps:</strong></p>
 <ol class="arabic simple">
-<li><p>Go to the <code class="docutils literal notranslate"><span class="pre">&quot;Actions&quot;</span></code> tab in the <a class="reference external" href="https://github.com/nshimizu0721/molass-library">Molass Library repository</a>.</p></li>
-<li><p>Select <code class="docutils literal notranslate"><span class="pre">&quot;Manual</span> <span class="pre">Upload</span> <span class="pre">Python</span> <span class="pre">Package</span> <span class="pre">to</span> <span class="pre">PyPI&quot;</span></code> workflow.</p></li>
-<li><p>Click the <code class="docutils literal notranslate"><span class="pre">&quot;Run</span> <span class="pre">workflow&quot;</span></code> button.</p></li>
-</ol>
-</section>
-<section id="using-twine">
-<h3><span class="section-number">5.3.2. </span>Using Twine<a class="headerlink" href="#using-twine" title="Link to this heading">#</a></h3>
-<p>To build required files, do as follows in the repository root folder.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>python -m build
-</pre></div>
-</div>
-<p>which produces the files in “dist” subfolder.</p>
-<p>To upload them to PyPI, you will be asked to give an API token <a class="footnote-reference brackets" href="#id4" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> to the twine command invoked as follows.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>twine upload dist/*
-</pre></div>
-</div>
-<p>See also:</p>
+<li><p><strong>Review the PR:</strong></p>
 <ul class="simple">
-<li><p><a href="https://twine.readthedocs.io/en/stable/">Twine</a></p></li>
+<li><p>Check the code for correctness, clarity, and adherence to the project’s coding style.</p></li>
+<li><p>Ensure the contributor has provided appropriate documentation and tests.</p></li>
 </ul>
-<hr class="footnotes docutils" />
-<aside class="footnote-list brackets">
-<aside class="footnote brackets" id="id3" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
-<p>This workflow is kept in <code class="docutils literal notranslate"><span class="pre">.github/workflows/upload_to_pypi.yml</span></code> in the repository.</p>
-</aside>
-<aside class="footnote brackets" id="id4" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
-<p>The API token should be kept safely somewhere.</p>
-</aside>
-</aside>
-</section>
+</li>
+<li><p><strong>Provide Feedback:</strong></p>
+<ul class="simple">
+<li><p>If improvements are needed, leave constructive comments and request changes.</p></li>
+<li><p>If the code is satisfactory, approve the PR.</p></li>
+</ul>
+</li>
+<li><p><strong>Merge the PR:</strong></p>
+<ul class="simple">
+<li><p>Once all checks pass and you are satisfied, merge the PR into the main branch.</p></li>
+</ul>
+</li>
+</ol>
+<p><strong>Example Scenario:</strong>
+A contributor submits the following function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return the sum of a and b.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Review the function for style and correctness.</p></li>
+<li><p>Check if a similar function already exists.</p></li>
+<li><p>Ensure there is a corresponding test.</p></li>
+<li><p>Approve and merge if everything is in order.</p></li>
+</ul>
+<p><strong>Tip:</strong><br />
+Always thank the contributor for their effort and encourage further contributions!</p>
 </section>
 </section>
 
@@ -472,7 +458,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./chapters\08"
+            path: "./chapters\10"
         },
         predefinedOutput: true
     }
@@ -489,24 +475,6 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="../07/documentation.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">4. </span>Documentation</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="../09/paper_submission.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6. </span>Paper Submission</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -523,13 +491,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pypi-account">5.1. PyPI Account</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pypi-api-token">5.2. PyPI API Token</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pypi-upload">5.3. PyPI Upload</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-github-actions-1">5.3.1. Using the GitHub Actions </a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-twine">5.3.2. Using Twine</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-accepting-a-contribution-as-a-collaborator">Exercise: Accepting a Contribution as a Collaborator</a></li>
 </ul>
   </nav></div>
 
