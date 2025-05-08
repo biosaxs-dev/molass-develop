@@ -65,4 +65,4 @@ The practices and limitations described in this chapter are based on the status 
 
 [^1]: We say simply "GitHub Copilot" to mean "GitHub Copilot or another AI assistant" for brevity.
 
-[^2]: In the context of AI, "instruction" is often referred to as a "prompt" and can also mean a question or request given to the AI assistant to guide its response.
+[^2]: In the context of AI, an "instruction" is often referred to as a "prompt" and can also mean a question or request given to the AI assistant to guide its response.
