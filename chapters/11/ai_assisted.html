@@ -409,15 +409,22 @@ document.write(`
 <p>AI tools like GitHub Copilot<a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> can greatly enhance productivity, but effective use requires a few fundamental practices. The following axioms are essential for reliable and efficient AI-assisted coding.</p>
 <section id="axioms-for-effective-ai-assisted-coding">
 <h2><span class="section-number">8.1. </span>Axioms for Effective AI-Assisted Coding<a class="headerlink" href="#axioms-for-effective-ai-assisted-coding" title="Link to this heading">#</a></h2>
-<ol class="arabic simple">
+<ol class="arabic">
 <li><p><strong>Preserve Essential Context</strong></p>
 <ul class="simple">
 <li><p>Record important prompts, code snippets, and decisions outside the AI session (e.g., in comments or project notes), since session context is not persistent across restarts or between editor windows.</p></li>
 </ul>
 </li>
 <li><p><strong>Engineer Explicit Prompts</strong></p>
-<ul class="simple">
-<li><p>Formulate clear, specific prompts to guide the AI toward relevant and accurate suggestions.</p></li>
+<ul>
+<li><p>Formulate clear, specific prompts to guide the AI toward relevant and accurate suggestions.
+For example, instead of asking:</p>
+<blockquote>
+<div><p>“Write a function.”
+be specific:
+“Write a Python function that takes a list of numbers and returns the average.”</p>
+</div></blockquote>
+</li>
 </ul>
 </li>
 <li><p><strong>Independently Verify AI Output</strong></p>
