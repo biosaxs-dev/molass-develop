@@ -1,6 +1,6 @@
 # AI Assisted Development
 
-AI tools like GitHub Copilot [^1] can greatly enhance productivity, but effective use requires a few fundamental practices. The following axioms are essential for reliable and efficient AI-assisted coding.
+AI tools like GitHub Copilot[^1] can greatly enhance productivity, but effective use requires a few fundamental practices. The following axioms are essential for reliable and efficient AI-assisted coding.
 
 ## Axioms for Effective AI-Assisted Coding
 
@@ -12,6 +12,7 @@ AI tools like GitHub Copilot [^1] can greatly enhance productivity, but effectiv
 
 3. **Independently Verify AI Output**
    - Critically review all AI-generated code for correctness, security, and adherence to project standards before accepting or merging it.
+   - Remember: Copilot can help you write tests, but cannot run them. Always run and check yourself.
 
 Each of these axioms is fundamental and cannot be derived from the others. By following them, you ensure effective and reliable use of AI in your coding workflow.
 
