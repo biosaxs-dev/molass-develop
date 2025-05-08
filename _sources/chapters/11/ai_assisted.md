@@ -48,7 +48,7 @@ By following this process, you can efficiently resume your workflow with minimal
 
 If your goals, requirements, or focus change during an ongoing session, or if you switch to a different file or module, clearly inform the AI assistant of the new context. Many AI assistants, including GitHub Copilot, use the currently open file as a primary source of context for suggestions. To avoid confusion and ensure relevant assistance, be explicit about the change. For example:
 
-> “I am now switching to `utils.py`, which contains utility functions for data processing. Please disregard the previous context.”
+> “I am now switching to `utils.py`. Please disregard the previous context.”
 
 Or, if you want to keep some previous context but add new information:
 
