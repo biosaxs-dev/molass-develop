@@ -29,3 +29,5 @@ chapters:
   title: Paper Submission
 - file: chapters/10/howto_contribute
   title: How to Contribute
+- file: chapters/11/ai_assisted
+  title: AI Assisted Development
