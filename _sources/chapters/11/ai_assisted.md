@@ -7,10 +7,10 @@ AI tools like GitHub Copilot[^1] can greatly enhance productivity, but effective
 1. **Preserve Essential Context**
    - Record important prompts, code snippets, and decisions outside the AI session (e.g., in comments or project notes), since session context is not persistent across restarts or between editor windows.
 
-2. **Engineer Explicit Prompts**
-   - Formulate clear, specific prompts to guide the AI toward relevant and accurate suggestions.
+2. **Engineer Explicit Instructions**
+   - Formulate clear, specific instructions to guide the AI toward relevant and accurate suggestions.
 
-     | Vague Prompt         | Clear, Specific Prompt                                            |
+     | Vague Instruction    | Clear, Specific Instruction                                       |
      |----------------------|-------------------------------------------------------------------|
      | Write a function.    | Write a Python function that takes a list of numbers and returns the average. |
 
