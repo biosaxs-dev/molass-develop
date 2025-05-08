@@ -9,6 +9,10 @@ AI tools like GitHub Copilot[^1] can greatly enhance productivity, but effective
 
 2. **Engineer Explicit Prompts**
    - Formulate clear, specific prompts to guide the AI toward relevant and accurate suggestions.
+     For example, instead of asking:
+     > "Write a function."
+     be specific:
+     > "Write a Python function that takes a list of numbers and returns the average."
 
 3. **Independently Verify AI Output**
    - Critically review all AI-generated code for correctness, security, and adherence to project standards before accepting or merging it.
