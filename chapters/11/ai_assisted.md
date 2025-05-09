@@ -54,7 +54,9 @@ Or, if you want to keep some previous context but add new information:
 
 > “In addition to the previous context, now consider that I am working on a new feature in `main.py`.”
 
-> **Tip:** If a file or task is no longer relevant to your current focus, consider closing it to avoid distractions and maintain a clear working context. In addition to this practice, exercise special caution with the current file, as it may contain essential context or information critical to your workflow.
+```{tip}
+If a file or task is no longer relevant to your current focus, consider closing it to avoid distractions and maintain a clear working context. In addition to this practice, exercise special caution with the **current file**, as it may contain essential context or information critical to your workflow.
+```
 
 Being clear about context changes and the current file helps the AI provide more accurate and relevant suggestions as your work evolves.
 
