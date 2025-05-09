@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>8. AI Assisted Development &#8212; Molass Developpers Handbook</title>
+    <title>Practices for Effective AI-Assisted Coding &#8212; Molass Developpers Handbook</title>
   
   
   
@@ -57,11 +57,10 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/11/ai_assisted';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/11/proposed_practices';</script>
     <link rel="icon" href="../../_static/molamola.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="prev" title="7. How to Contribute" href="../10/howto_contribute.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -124,6 +123,8 @@
       
       
       
+        
+      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -179,7 +180,7 @@
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../01/environments.html">1. Environments</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../01/coding_env.html">1.1. Coding Environment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../02/python_env.html">1.2. Python Environment</a></li>
@@ -193,7 +194,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../08/release.html">5. Package Release</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../09/paper_submission.html">6. Paper Submission</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../10/howto_contribute.html">7. How to Contribute</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">8. AI Assisted Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ai_assisted.html">8. AI Assisted Development</a></li>
 </ul>
 
     </div>
@@ -265,7 +266,7 @@
       
       
       
-      <li><a href="https://github.com/nshimizu0721/molass-develop/issues/new?title=Issue%20on%20page%20%2Fchapters/11/ai_assisted.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/nshimizu0721/molass-develop/issues/new?title=Issue%20on%20page%20%2Fchapters/11/proposed_practices.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -295,7 +296,7 @@
       
       
       
-      <li><a href="../../_sources/chapters/11/ai_assisted.md" target="_blank"
+      <li><a href="../../_sources/chapters/11/proposed_practices.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -379,7 +380,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>AI Assisted Development</h1>
+    <h1>Practices for Effective AI-Assisted Coding</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -389,12 +390,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#core-rules-for-effective-ai-assisted-coding">8.1. Core Rules for Effective AI-Assisted Coding</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-save-your-ai-session-context">8.2. How to Save Your AI Session Context</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-recover-your-ai-session-context">8.3. How to Recover Your AI Session Context</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-change-context-during-a-session">8.4. How to Change Context During a Session</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refining-practices-and-terminology">8.5. Refining Practices and Terminology</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-note3">8.6. Final Note</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#managing-dialog-context">1. <strong>Managing Dialog Context</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#session-independence-across-windows">2. <strong>Session Independence Across Windows</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#documenting-key-interactions">3. <strong>Documenting Key Interactions</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prompt-engineering">4. <strong>Prompt Engineering</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#review-and-verification">5. <strong>Review and Verification</strong></a></li>
 </ul>
             </nav>
         </div>
@@ -406,143 +406,46 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="ai-assisted-development">
-<h1><span class="section-number">8. </span>AI Assisted Development<a class="headerlink" href="#ai-assisted-development" title="Link to this heading">#</a></h1>
-<p>AI tools like GitHub Copilot<a class="footnote-reference brackets" href="#id4" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> can greatly enhance productivity, but effective use requires a few fundamental practices. The following practices are essential for reliable and efficient AI-assisted coding.</p>
-<section id="core-rules-for-effective-ai-assisted-coding">
-<h2><span class="section-number">8.1. </span>Core Rules for Effective AI-Assisted Coding<a class="headerlink" href="#core-rules-for-effective-ai-assisted-coding" title="Link to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p><strong>Preserve Essential Context</strong></p>
+  <section id="practices-for-effective-ai-assisted-coding">
+<h1>Practices for Effective AI-Assisted Coding<a class="headerlink" href="#practices-for-effective-ai-assisted-coding" title="Link to this heading">#</a></h1>
+<p>When working with AI tools like GitHub Copilot or ChatGPT, certain practices can help you get the most out of your coding sessions:</p>
+<section id="managing-dialog-context">
+<h2>1. <strong>Managing Dialog Context</strong><a class="headerlink" href="#managing-dialog-context" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Record important prompts, code snippets, and decisions outside the AI session (e.g., in comments or project notes), since session context is not persistent across restarts or between editor windows.</p></li>
+<li><p>AI assistants often rely on the current session’s context to provide relevant suggestions or answers.</p></li>
+<li><p>If you close and reopen your editor or browser, the context may be lost, and the AI may not “remember” previous interactions.</p></li>
+<li><p>To maintain continuity, consider keeping important prompts, code snippets, or decisions documented in your project notes or comments.</p></li>
 </ul>
-</li>
-<li><p><strong>Engineer Explicit Instructions</strong></p>
-<ul class="simple">
-<li><p>Formulate clear, specific instructions<a class="footnote-reference brackets" href="#id5" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> to guide the AI toward relevant and accurate suggestions.</p></li>
-</ul>
-</li>
-<li><p><strong>Independently Verify AI Output</strong></p>
-<ul class="simple">
-<li><p>Critically review all AI-generated code for correctness, security, and adherence to project standards before accepting or merging it.</p></li>
-<li><p>Remember: Copilot can help you write tests, but cannot run them. Always run and check yourself.</p></li>
-</ul>
-</li>
-</ol>
-<p>Each of these axioms is fundamental and cannot be derived from the others. By following them, you ensure effective and reliable use of AI in your coding workflow.</p>
 </section>
-<section id="how-to-save-your-ai-session-context">
-<h2><span class="section-number">8.2. </span>How to Save Your AI Session Context<a class="headerlink" href="#how-to-save-your-ai-session-context" title="Link to this heading">#</a></h2>
-<p>Since chat and prompt history in VS Code (and similar environments) can be lost when you close a window, change workspaces, update extensions, or restart your machine, it is important to proactively save essential context.</p>
-<p><strong>Recommended Practice:</strong><br />
-After a productive session with GitHub Copilot, ask the AI to summarize the key context, prompts, and decisions from your session. Save this summary in a file named <code class="docutils literal notranslate"><span class="pre">COPILOT_CONTEXT.md</span></code> (or another descriptive name) in your project directory.</p>
-<p>This way, you can easily recover your working context after a restart or when switching between environments, ensuring continuity and minimizing the risk of losing important information.</p>
-<blockquote>
-<div><p><strong>Example:</strong></p>
+<section id="session-independence-across-windows">
+<h2>2. <strong>Session Independence Across Windows</strong><a class="headerlink" href="#session-independence-across-windows" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>At the end of your session, prompt:<br />
-“Summarize the context of this session to ensure the continuity of this chat for the next session.”</p></li>
-<li><p>Save the AI’s summary in <code class="docutils literal notranslate"><span class="pre">COPILOT_CONTEXT.md</span></code>.</p></li>
+<li><p>Each VS Code window or instance maintains its own context with the AI assistant.</p></li>
+<li><p>Dialogs, suggestions, and code completions are independent between windows.</p></li>
+<li><p>Be mindful that switching between windows or projects may result in different AI behavior or suggestions, as the context does not carry over.</p></li>
 </ul>
-</div></blockquote>
-<p>By following this practice, you make your workflow more robust and resilient to interruptions or environment changes. This workflow helps ensure you never lose important context, even if your environment changes.</p>
 </section>
-<section id="how-to-recover-your-ai-session-context">
-<h2><span class="section-number">8.3. </span>How to Recover Your AI Session Context<a class="headerlink" href="#how-to-recover-your-ai-session-context" title="Link to this heading">#</a></h2>
-<p>To resume work after a restart or interruption, use the <code class="docutils literal notranslate"><span class="pre">COPILOT_CONTEXT.md</span></code> file (or another descriptive name) in your project directory to restore your working context.</p>
-<p><strong>Recommended Practice:</strong></p>
-<ol class="arabic">
-<li><p>Open the <code class="docutils literal notranslate"><span class="pre">COPILOT_CONTEXT.md</span></code> file.</p></li>
-<li><p>Review the summarized key context, instructions, and decisions from your previous session.</p></li>
-<li><p>Prompt the AI:</p>
-<blockquote>
-<div><p>“Recover the context from <code class="docutils literal notranslate"><span class="pre">COPILOT_CONTEXT.md</span></code> to ensure the continuity of this chat.”</p>
-</div></blockquote>
-</li>
-</ol>
-<p>By following this process, you can quickly restore your workflow with minimal loss of continuity, even after interruptions or environment changes.</p>
+<section id="documenting-key-interactions">
+<h2>3. <strong>Documenting Key Interactions</strong><a class="headerlink" href="#documenting-key-interactions" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>When an AI assistant provides a particularly useful suggestion or explanation, document it in your code comments or a project log.</p></li>
+<li><p>This helps you and your collaborators understand the reasoning behind certain decisions, especially if the context is lost in future sessions.</p></li>
+</ul>
 </section>
-<section id="how-to-change-context-during-a-session">
-<h2><span class="section-number">8.4. </span>How to Change Context During a Session<a class="headerlink" href="#how-to-change-context-during-a-session" title="Link to this heading">#</a></h2>
-<p>If your goals, requirements, or focus change during an ongoing session, or if you switch to a different file or module, clearly inform the AI assistant of the new context. Many AI assistants, including GitHub Copilot, use the currently open file as a primary source of context for suggestions. To avoid confusion and ensure relevant assistance, be explicit about the change. For example:</p>
-<blockquote>
-<div><p>“I am now switching to <code class="docutils literal notranslate"><span class="pre">utils.py</span></code>. Please disregard the previous context.”</p>
-</div></blockquote>
-<p>Or, if you want to keep some previous context but add new information:</p>
-<blockquote>
-<div><p>“In addition to the previous context, now consider that I am working on a new feature in <code class="docutils literal notranslate"><span class="pre">main.py</span></code>.”</p>
-</div></blockquote>
-<p>Being clear about context changes and the current file helps the AI provide more accurate and relevant suggestions as your work evolves.</p>
-<p>For further tips or more detailed guidance, feel free to ask GitHub Copilot directly as you work. This section is intentionally kept simple to encourage direct engagement with AI assistants for further guidance.</p>
+<section id="prompt-engineering">
+<h2>4. <strong>Prompt Engineering</strong><a class="headerlink" href="#prompt-engineering" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Be specific and clear in your prompts to the AI for better results.</p></li>
+<li><p>If you need to revisit a topic, restate the necessary context in your new prompt.</p></li>
+</ul>
 </section>
-<section id="refining-practices-and-terminology">
-<h2><span class="section-number">8.5. </span>Refining Practices and Terminology<a class="headerlink" href="#refining-practices-and-terminology" title="Link to this heading">#</a></h2>
-<p>This chapter itself demonstrates how to refine practices and terminology collaboratively with an AI assistant. Here’s how the process unfolded about the first section above.</p>
-<blockquote>
-<div><p><strong>Legend:</strong></p>
+<section id="review-and-verification">
+<h2>5. <strong>Review and Verification</strong><a class="headerlink" href="#review-and-verification" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>🧑‍💻 Actions I took during the process.</p></li>
-<li><p>🤖 Contributions made by the AI assistant.</p></li>
+<li><p>Always review AI-generated code for correctness, security, and adherence to your project’s standards.</p></li>
+<li><p>Use AI as a tool to assist, not replace, your own judgment and expertise.</p></li>
 </ul>
-</div></blockquote>
-<ol class="arabic simple">
-<li><p><strong>Start with an Initial Proposal:</strong></p>
-<ul class="simple">
-<li><p>🧑‍💻 I prompted the AI to propose general practices for effective AI-assisted coding wihout any specifics.</p></li>
-<li><p>🤖 The AI generated a list of five practices, including ideas like “managing session context” and “reviewing AI-generated code.”</p></li>
-</ul>
-</li>
-<li><p><strong>Simplify and Structure:</strong></p>
-<ul class="simple">
-<li><p>🧑‍💻 I asked the AI to simplify the proposed practices into a smaller, more fundamental set of principles. To guide this process, I introduced the term “axiomatic” to emphasize the need for foundational and independent rules.</p></li>
-<li><p>🤖 The AI suggested combining the practices into three “axioms,” which were:</p>
-<ol class="arabic simple">
-<li><p>Preserve Essential Context</p></li>
-<li><p>Engineer Explicit Instructions</p></li>
-<li><p>Independently Verify AI Output</p></li>
-</ol>
-</li>
-<li><p>💡 <strong>Tip:</strong> Thoughtful word choice, like starting with “axiomatic,” can significantly enhance clarity and focus during refinement. Choose terms that convey your intent precisely and minimize the need for additional explanation.</p></li>
-</ul>
-</li>
-<li><p><strong>Iterate and Refine:</strong></p>
-<ul class="simple">
-<li><p>🧑‍💻 I reviewed the “axioms” and realized that while the term “axiomatic” effectively conveyed the foundational nature of the rules, it might feel too formal or mathematical for some readers. I consulted the AI to refine the terminology further.</p></li>
-<li><p>🤖 The AI suggested replacing “axioms” with “Core Rules” (including other options) to make the language more familiar and accessible. It also helped rephrase specific rules for clarity and usability.</p>
-<ul>
-<li><p><strong>Example:</strong> The AI suggested clarifying “Preserve Context” as “Save key prompts and decisions in project notes to ensure continuity.”</p></li>
-</ul>
-</li>
-<li><p>💡 <strong>Tip:</strong> Refinement is an iterative process. Be open to revisiting terminology and structure to ensure they resonate with your audience while maintaining precision.</p></li>
-</ul>
-</li>
-</ol>
-</section>
-<section id="final-note3">
-<h2><span class="section-number">8.6. </span>Final Note<a class="footnote-reference brackets" href="#id6" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a><a class="headerlink" href="#final-note3" title="Link to this heading">#</a></h2>
-<p>AI-assisted development is a rapidly evolving field, and the practices outlined in this chapter are designed to help you make the most of current tools like GitHub Copilot. However, as AI tools and development environments continue to improve, it’s important to remain adaptable and open to refining your workflows.</p>
-<p>The collaborative process described in this chapter—generating ideas, simplifying them into actionable principles, and iterating for clarity—can be applied not only to AI-assisted coding but also to other areas of your work. By combining thoughtful human input with the capabilities of AI, you can create workflows that are both efficient and resilient.</p>
-<p>Finally, remember that while AI can assist with many aspects of development, your judgment and expertise remain essential. Use AI as a tool to enhance your productivity, but always verify its output and ensure it aligns with your goals and standards.</p>
-<p>By staying engaged, adaptable, and collaborative, you can continue to refine your practices and make the most of AI-assisted development as the field evolves.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The practices and limitations described in this chapter are based on the status of AI tools (such as GPT-4 or GPT-4.1) and Visual Studio Code as of 1.100. Capabilities and behaviors of AI assistants and editors may change in future versions.</p>
-</div>
-<hr class="footnotes docutils" />
-<aside class="footnote-list brackets">
-<aside class="footnote brackets" id="id4" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
-<p>We say simply “GitHub Copilot” to mean “GitHub Copilot or another AI assistant” for brevity.</p>
-</aside>
-<aside class="footnote brackets" id="id5" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
-<p>In the context of AI, an “instruction” is often referred to as a “prompt” and can also mean a question or request given to the AI assistant to guide its response.</p>
-</aside>
-<aside class="footnote brackets" id="id6" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
-<p>This section was entirely generated by GitHub Copilot left as is without refinement.</p>
-</aside>
-</aside>
+<p>By following these practices, you can make your AI-assisted development more effective, consistent, and reliable.</p>
 </section>
 </section>
 
@@ -576,15 +479,6 @@ After a productive session with GitHub Copilot, ask the AI to summarize the key 
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="../10/howto_contribute.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">7. </span>How to Contribute</p>
-      </div>
-    </a>
 </div>
                 </footer>
               
@@ -601,12 +495,11 @@ After a productive session with GitHub Copilot, ask the AI to summarize the key 
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#core-rules-for-effective-ai-assisted-coding">8.1. Core Rules for Effective AI-Assisted Coding</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-save-your-ai-session-context">8.2. How to Save Your AI Session Context</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-recover-your-ai-session-context">8.3. How to Recover Your AI Session Context</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-change-context-during-a-session">8.4. How to Change Context During a Session</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refining-practices-and-terminology">8.5. Refining Practices and Terminology</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-note3">8.6. Final Note</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#managing-dialog-context">1. <strong>Managing Dialog Context</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#session-independence-across-windows">2. <strong>Session Independence Across Windows</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#documenting-key-interactions">3. <strong>Documenting Key Interactions</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prompt-engineering">4. <strong>Prompt Engineering</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#review-and-verification">5. <strong>Review and Verification</strong></a></li>
 </ul>
   </nav></div>
 
