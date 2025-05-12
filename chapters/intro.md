@@ -1,7 +1,7 @@
 # Molass Developer's Handbook
 
 ```{warning}
-This book is in preparation to be publicly available in July, 2025.
+This book is scheduled to be publicly available in July, 2025.
 ```
 
 ## Introduction
