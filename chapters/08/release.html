@@ -194,6 +194,7 @@
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">5. Package Release</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../09/paper_submission.html">6. Paper Submission</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../10/howto_contribute.html">7. How to Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../11/ai_assisted.html">8. AI Assisted Development</a></li>
 </ul>
 
     </div>
@@ -389,11 +390,23 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pypi-account">5.1. PyPI Account</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pypi-api-token">5.2. PyPI API Token</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pypi-upload">5.3. PyPI Upload</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-github-actions-1">5.3.1. Using the GitHub Actions </a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-twine">5.3.2. Using Twine</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about-pypi">5.1. About PyPI</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pypi-account">5.2. PyPI Account</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-create-a-pypi-account">5.2.1. How to Create a PyPI Account</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pypi-api-token">5.3. PyPI API Token</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-create-a-pypi-api-token">5.3.1. How to Create a PyPI API Token</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#important-notes">5.3.2. Important Notes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pypi-upload">5.4. PyPI Upload</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#default-procedure-using-github-actions-1">5.4.1. Default Procedure: Using GitHub Actions </a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#steps">Steps:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#notes-for-collaborators">Notes for Collaborators:</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alternative-procedure-using-twine">5.4.2. Alternative Procedure: Using Twine</a></li>
 </ul>
 </li>
 </ul>
@@ -411,35 +424,116 @@ document.write(`
 <h1><span class="section-number">5. </span>Package Release<a class="headerlink" href="#package-release" title="Link to this heading">#</a></h1>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This page is in preparation to be publicly available in May, 2025.</p>
+<p>This page is scheduled to be publicly available in June, 2025.</p>
 </div>
+<p>This chapter is intended for collaborators who are responsible for releasing and maintaining Molass packages. It provides concise instructions for managing the package release process.</p>
+<section id="about-pypi">
+<h2><span class="section-number">5.1. </span>About PyPI<a class="headerlink" href="#about-pypi" title="Link to this heading">#</a></h2>
+<p>The Python Package Index (PyPI) is the official repository for Python packages. It allows developers to publish and distribute their Python libraries to a global audience. Users can install these packages using tools like <code class="docutils literal notranslate"><span class="pre">pip</span></code>. For Molass, PyPI serves as the platform for releasing and maintaining its packages, ensuring they are easily accessible to the community.</p>
+</section>
 <section id="pypi-account">
-<h2><span class="section-number">5.1. </span>PyPI Account<a class="headerlink" href="#pypi-account" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">5.2. </span>PyPI Account<a class="headerlink" href="#pypi-account" title="Link to this heading">#</a></h2>
+<p>To publish packages to PyPI, you need a PyPI account. This account is required to authenticate yourself as a trusted maintainer and to manage the packages you release.</p>
+<section id="how-to-create-a-pypi-account">
+<h3><span class="section-number">5.2.1. </span>How to Create a PyPI Account<a class="headerlink" href="#how-to-create-a-pypi-account" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Go to the <a class="reference external" href="https://pypi.org/">PyPI website</a>.</p></li>
+<li><p>Click on the <strong>“Register”</strong> button in the top-right corner.</p></li>
+<li><p>Fill in the required details, including:</p>
+<ul class="simple">
+<li><p><strong>Username:</strong> Choose a unique username.</p></li>
+<li><p><strong>Email Address:</strong> Provide a valid email address for verification and notifications.</p></li>
+<li><p><strong>Password:</strong> Create a strong password.</p></li>
+</ul>
+</li>
+<li><p>Complete the CAPTCHA and click <strong>“Register”</strong>.</p></li>
+<li><p>Verify your email address by clicking the link sent to your inbox.</p></li>
+</ol>
+<p>Once your account is created and verified, you can use it to upload and manage Molass packages on PyPI.</p>
+</section>
 </section>
 <section id="pypi-api-token">
-<h2><span class="section-number">5.2. </span>PyPI API Token<a class="headerlink" href="#pypi-api-token" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">5.3. </span>PyPI API Token<a class="headerlink" href="#pypi-api-token" title="Link to this heading">#</a></h2>
+<p>A <strong>PyPI API token</strong> is a secure way to authenticate yourself when uploading packages to PyPI. Instead of using your username and password, which can be less secure, the API token allows you to perform package uploads while keeping your credentials safe.</p>
+<section id="how-to-create-a-pypi-api-token">
+<h3><span class="section-number">5.3.1. </span>How to Create a PyPI API Token<a class="headerlink" href="#how-to-create-a-pypi-api-token" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Log in to your <a class="reference external" href="https://pypi.org/">PyPI account</a>.</p></li>
+<li><p>Click on your username in the top-right corner and select <strong>“Account settings”</strong>.</p></li>
+<li><p>Scroll down to the <strong>“API tokens”</strong> section and click <strong>“Add API token”</strong>.</p></li>
+<li><p>Provide a name for the token (e.g., “Molass Package Upload”).</p></li>
+<li><p>Under <strong>“Scope”</strong>, select the appropriate option:</p>
+<ul class="simple">
+<li><p><strong>Entire account:</strong> Allows the token to manage all your packages.</p></li>
+<li><p><strong>Specific project:</strong> Restricts the token to a specific package (recommended for security).</p></li>
+</ul>
+</li>
+<li><p>Click <strong>“Add token”</strong>.</p></li>
+<li><p>Copy the generated token and store it securely. You won’t be able to view it again.</p></li>
+</ol>
+</section>
+<section id="important-notes">
+<h3><span class="section-number">5.3.2. </span>Important Notes<a class="headerlink" href="#important-notes" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Keep your API token private and do not share it. If it is compromised, revoke it immediately from your account settings.</p></li>
+<li><p>Use this token when uploading packages to PyPI, as described in the next section.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For the default GitHub Actions procedure, only one PyPI API token is required. This token should be securely stored as a repository secret and will be used by the workflow to authenticate uploads. Collaborators do not need direct access to this token, as it is securely stored in the repository secrets.</p>
+</div>
+</section>
 </section>
 <section id="pypi-upload">
-<h2><span class="section-number">5.3. </span>PyPI Upload<a class="headerlink" href="#pypi-upload" title="Link to this heading">#</a></h2>
-<section id="using-the-github-actions-1">
-<h3><span class="section-number">5.3.1. </span>Using the GitHub Actions <a class="footnote-reference brackets" href="#id3" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a><a class="headerlink" href="#using-the-github-actions-1" title="Link to this heading">#</a></h3>
+<h2><span class="section-number">5.4. </span>PyPI Upload<a class="headerlink" href="#pypi-upload" title="Link to this heading">#</a></h2>
+<section id="default-procedure-using-github-actions-1">
+<h3><span class="section-number">5.4.1. </span>Default Procedure: Using GitHub Actions <a class="footnote-reference brackets" href="#id3" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a><a class="headerlink" href="#default-procedure-using-github-actions-1" title="Link to this heading">#</a></h3>
+<p>The default and recommended procedure for uploading Molass packages to PyPI is through a GitHub Actions workflow. This method ensures consistency, security, and ease of use for all collaborators.</p>
+<section id="steps">
+<h4>Steps:<a class="headerlink" href="#steps" title="Link to this heading">#</a></h4>
 <ol class="arabic simple">
 <li><p>Go to the <code class="docutils literal notranslate"><span class="pre">&quot;Actions&quot;</span></code> tab in the <a class="reference external" href="https://github.com/nshimizu0721/molass-library">Molass Library repository</a>.</p></li>
-<li><p>Select <code class="docutils literal notranslate"><span class="pre">&quot;Manual</span> <span class="pre">Upload</span> <span class="pre">Python</span> <span class="pre">Package</span> <span class="pre">to</span> <span class="pre">PyPI&quot;</span></code> workflow.</p></li>
+<li><p>Select the <code class="docutils literal notranslate"><span class="pre">&quot;Manual</span> <span class="pre">Upload</span> <span class="pre">Python</span> <span class="pre">Package</span> <span class="pre">to</span> <span class="pre">PyPI&quot;</span></code> workflow.</p></li>
 <li><p>Click the <code class="docutils literal notranslate"><span class="pre">&quot;Run</span> <span class="pre">workflow&quot;</span></code> button.</p></li>
 </ol>
 </section>
-<section id="using-twine">
-<h3><span class="section-number">5.3.2. </span>Using Twine<a class="headerlink" href="#using-twine" title="Link to this heading">#</a></h3>
+<section id="notes-for-collaborators">
+<h4>Notes for Collaborators:<a class="headerlink" href="#notes-for-collaborators" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>Permissions:</strong><br />
+Ensure you have <strong>write</strong> or <strong>admin</strong> access to the repository to trigger the workflow.</p></li>
+<li><p><strong>PyPI API Token:</strong><br />
+The workflow uses a PyPI API token stored securely in the repository secrets. Collaborators do not need direct access to the token.</p></li>
+<li><p><strong>Accountability:</strong><br />
+If multiple collaborators are uploading packages, it is recommended that each collaborator has their own PyPI account and API token. These tokens can be added as separate secrets in the repository for better security and traceability.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are a collaborator (e.g., Person B) and encounter issues running the workflow, ensure that:</p>
+<ol class="arabic simple">
+<li><p>You have the necessary permissions in the repository.</p></li>
+<li><p>The workflow is properly configured to allow manual triggering (<code class="docutils literal notranslate"><span class="pre">workflow_dispatch</span></code>).</p></li>
+</ol>
+</div>
+<p>If the GitHub Actions workflow cannot be used, you can manually upload the package using Twine, as described below.</p>
+</section>
+</section>
+<section id="alternative-procedure-using-twine">
+<h3><span class="section-number">5.4.2. </span>Alternative Procedure: Using Twine<a class="headerlink" href="#alternative-procedure-using-twine" title="Link to this heading">#</a></h3>
 <p>To build required files, do as follows in the repository root folder.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>python -m build
 </pre></div>
 </div>
-<p>which produces the files in “dist” subfolder.</p>
-<p>To upload them to PyPI, you will be asked to give an API token <a class="footnote-reference brackets" href="#id4" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> to the twine command invoked as follows.</p>
+<p>This will generate the distribution files in the <code class="docutils literal notranslate"><span class="pre">dist</span></code> subfolder.</p>
+<p>To upload them to PyPI, you will need to provide your API token<a class="footnote-reference brackets" href="#id4" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> to authenticate the upload when running the following <code class="docutils literal notranslate"><span class="pre">twine</span></code> command:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>twine upload dist/*
 </pre></div>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When following this alternative procedure, each collaborator should generate their own API token under their individual PyPI accounts to ensure accountability and security.</p>
+</div>
+<p>By following the steps outlined in this chapter, collaborators can securely and efficiently manage the release of Molass packages to PyPI. The default GitHub Actions workflow ensures consistency and ease of use, while the Twine procedure provides a reliable fallback option when needed.</p>
 <p>See also:</p>
 <ul class="simple">
 <li><p><a href="https://twine.readthedocs.io/en/stable/">Twine</a></p></li>
@@ -452,7 +546,7 @@ document.write(`
 </aside>
 <aside class="footnote brackets" id="id4" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
-<p>The API token should be kept safely somewhere.</p>
+<p>This API token should be kept safely somewhere.</p>
 </aside>
 </aside>
 </section>
@@ -523,11 +617,23 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pypi-account">5.1. PyPI Account</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pypi-api-token">5.2. PyPI API Token</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pypi-upload">5.3. PyPI Upload</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-github-actions-1">5.3.1. Using the GitHub Actions </a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-twine">5.3.2. Using Twine</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about-pypi">5.1. About PyPI</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pypi-account">5.2. PyPI Account</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-create-a-pypi-account">5.2.1. How to Create a PyPI Account</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pypi-api-token">5.3. PyPI API Token</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-create-a-pypi-api-token">5.3.1. How to Create a PyPI API Token</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#important-notes">5.3.2. Important Notes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pypi-upload">5.4. PyPI Upload</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#default-procedure-using-github-actions-1">5.4.1. Default Procedure: Using GitHub Actions </a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#steps">Steps:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#notes-for-collaborators">Notes for Collaborators:</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alternative-procedure-using-twine">5.4.2. Alternative Procedure: Using Twine</a></li>
 </ul>
 </li>
 </ul>
