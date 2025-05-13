@@ -17,6 +17,10 @@ AI tools like GitHub Copilot[^1] can greatly enhance productivity, but effective
 4. **Redirect Context When Necessary**
    - AI tools lack the ability to recognize when a course change is necessary. It is the responsibility of the developer to identify when the current approach is no longer effective or optimal and to redirect the AI accordingly.
 
+```{note}
+While each instance of redirecting context may seem small, the cumulative effect of such deliberate shifts can lead to what Thomas Kuhn described as a "Paradigm Shift"—a fundamental change in approach or perspective. In this sense, redirecting context is not just a practical action but a critical part of driving innovation and progress in development workflows.
+```
+
 Each of these axioms is fundamental and cannot be derived from the others. By following them, you ensure effective and reliable use of AI in your coding workflow.
 
 ## How to Save Your AI Session Context
