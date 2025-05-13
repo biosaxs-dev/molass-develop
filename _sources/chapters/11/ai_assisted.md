@@ -126,6 +126,7 @@ This chapter itself demonstrates how to refine practices and terminology collabo
      1. Preserve Essential Context  
      2. Engineer Explicit Instructions  
      3. Independently Verify AI Output  
+   - 💡 **Note:** At this stage, Rule 4 (**Redirect Context When Necessary**) was not yet included. It was later identified as a missing principle during the refinement process, as described in Step 4.
    - 💡 **Tip:** Thoughtful word choice, like starting with "axiomatic," can significantly enhance clarity and focus during refinement. Choose terms that convey your intent precisely and minimize the need for additional explanation.
 
 3. **Iterate and Refine:**  
@@ -133,6 +134,16 @@ This chapter itself demonstrates how to refine practices and terminology collabo
    - 🤖 The AI suggested replacing "axioms" with "Core Rules" (including other options) to make the language more familiar and accessible. It also helped rephrase specific rules for clarity and usability.  
      - **Example:** The AI suggested clarifying "Preserve Context" as "Save key prompts and decisions in project notes to ensure continuity."  
    - 💡 **Tip:** Refinement is an iterative process. Be open to revisiting terminology and structure to ensure they resonate with your audience while maintaining precision.
+
+4. **Identify Missing Principles:**  
+   - 🧑‍💻 While reviewing the initial three axioms, I realized that they did not address a critical limitation of AI tools: their inability to recognize when a course change is necessary.  
+   - 🤖 The AI assisted in brainstorming how to address this gap, leading to the idea of a new rule focused on **redirecting context** during significant course changes.
+
+5. **Add Rule 4:**  
+   - 🧑‍💻 I added Rule 4, titled **"Redirect Context When Necessary,"** to address this gap. The rule emphasizes the developer's responsibility to identify when the current approach is no longer effective and to guide the AI accordingly.  
+   - 🤖 The AI contributed actionable examples, such as updating prompts and providing additional context, to make the rule practical and easy to apply.
+
+By following this process, the Core Rules evolved into a more comprehensive and balanced framework, addressing both the strengths and limitations of AI tools like GitHub Copilot.
 
 ## Final Note[^4] 
 
