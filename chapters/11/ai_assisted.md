@@ -14,6 +14,9 @@ AI tools like GitHub Copilot[^1] can greatly enhance productivity, but effective
    - Critically review all AI-generated code for correctness, security, and adherence to project standards before accepting or merging it.
    - Remember: Copilot can help you write tests, but cannot run them. Always run and check yourself.
 
+4. **Redirect Context When Necessary**
+   - AI tools lack the ability to recognize when a course change is necessary. It is the responsibility of the developer to identify when the current approach is no longer effective or optimal and to redirect the AI accordingly.
+
 Each of these axioms is fundamental and cannot be derived from the others. By following them, you ensure effective and reliable use of AI in your coding workflow.
 
 ## How to Save Your AI Session Context
@@ -44,14 +47,57 @@ To resume work after a restart or interruption, use the `COPILOT_CONTEXT.md` fil
 
 By following this process, you can quickly restore your workflow with minimal loss of continuity, even after interruptions or environment changes.
 
+## Using Pre-Prepared Context Files
+
+To further simplify the process of saving and recovering context, developers can use pre-prepared context files for common tasks. These files are designed to align with typical workflows and the current capabilities of tools like VS Code and GitHub Copilot.
+
+### How to Use Pre-Prepared Context Files
+
+1. **Choose a Context File**:
+   - Select a context file that matches your current task or goal. The following table provides an overview of the available pre-prepared context files and their purposes:
+
+| **Context File**           | **Purpose**                     | **Availability** |
+|----------------------------|----------------------------------|------------------|
+| `APPLY_CONTEXT.md`         | Simplify applying suggestions.   | Available        |
+| `DEBUGGING_CONTEXT.md`     | Assist with debugging tasks.     | Candidate        |
+| `REFACTORING_CONTEXT.md`   | Guide code refactoring.          | Candidate        |
+| `DOCUMENTATION_CONTEXT.md` | Improve documentation.           | Draft            |
+| `TESTING_CONTEXT.md`       | Support writing tests.           | Candidate        |
+| `NEW_FEATURE_CONTEXT.md`   | Assist with adding features.     | Candidate        |
+
+> **Note:** For more details about each context file, open the file in your project directory.
+
+2. **Remind the AI**:
+   - At the start of your session, remind the AI of the selected context file. For example:
+     > "Please remind yourself of the context from `COPILOT_APPLY_CONTEXT.md` for this session."
+
+3. **Follow the Workflow**:
+   - Use the practices outlined in the selected context file to guide your interactions with Copilot.
+
+4. **Update as Needed**:
+   - If your session involves unique requirements, you can modify the selected context file or create a new one for future use.
+
+### Benefits of Pre-Prepared Context Files
+
+1. **Simplicity**:
+   - Quickly start a session by selecting a context file instead of creating one from scratch.
+2. **Consistency**:
+   - Ensure best practices are applied consistently across sessions and teams.
+3. **Efficiency**:
+   - Save time by using ready-to-use templates for common workflows.
+
+By using pre-prepared context files, developers can streamline their workflows and focus on their tasks without being bogged down by repetitive setup steps.
+
 ## How to Change Context During a Session
 
-If your goals, requirements, or focus change during an ongoing session, or if you switch to a different file or module, clearly inform the AI assistant of the new context. Many AI assistants, including GitHub Copilot, use the currently open file as a primary source of context for suggestions. To avoid confusion and ensure relevant assistance, be explicit about the change. For example:
+If your goals, requirements, or focus change during an ongoing session, or if you realize that the current approach is no longer effective, it is your responsibility to redirect the AI. Many AI assistants, including GitHub Copilot, rely on the current file and prompts for context. To ensure relevant assistance, explicitly guide the AI toward the new direction.
 
+This aligns with the Core Rule: **Redirect Context**, which emphasizes the importance of human expertise in identifying and addressing the need for course changes.
+
+For example:
 > “I am now switching to `utils.py`. Please disregard the previous context.”
 
 Or, if you want to keep some previous context but add new information:
-
 > “In addition to the previous context, now consider that I am working on a new feature in `main.py`.”
 
 ```{tip}
@@ -80,6 +126,7 @@ This chapter itself demonstrates how to refine practices and terminology collabo
      1. Preserve Essential Context  
      2. Engineer Explicit Instructions  
      3. Independently Verify AI Output  
+   - 💡 **Note:** At this stage, Rule 4 (**Redirect Context When Necessary**) was not yet included. It was later identified as a missing principle during the refinement process, as described in Step 4.
    - 💡 **Tip:** Thoughtful word choice, like starting with "axiomatic," can significantly enhance clarity and focus during refinement. Choose terms that convey your intent precisely and minimize the need for additional explanation.
 
 3. **Iterate and Refine:**  
@@ -87,6 +134,16 @@ This chapter itself demonstrates how to refine practices and terminology collabo
    - 🤖 The AI suggested replacing "axioms" with "Core Rules" (including other options) to make the language more familiar and accessible. It also helped rephrase specific rules for clarity and usability.  
      - **Example:** The AI suggested clarifying "Preserve Context" as "Save key prompts and decisions in project notes to ensure continuity."  
    - 💡 **Tip:** Refinement is an iterative process. Be open to revisiting terminology and structure to ensure they resonate with your audience while maintaining precision.
+
+4. **Identify Missing Principles:**  
+   - 🧑‍💻 While reviewing the initial three axioms, I realized that they did not address a critical limitation of AI tools: their inability to recognize when a course change is necessary.  
+   - 🤖 The AI assisted in brainstorming how to address this gap, leading to the idea of a new rule focused on **redirecting context** during significant course changes.
+
+5. **Add Rule 4:**  
+   - 🧑‍💻 I added Rule 4, titled **"Redirect Context When Necessary,"** to address this gap. The rule emphasizes the developer's responsibility to identify when the current approach is no longer effective and to guide the AI accordingly.  
+   - 🤖 The AI contributed actionable examples, such as updating prompts and providing additional context, to make the rule practical and easy to apply.
+
+By following this process, the Core Rules evolved into a more comprehensive and balanced framework, addressing both the strengths and limitations of AI tools like GitHub Copilot.
 
 ## Final Note[^4] 
 
