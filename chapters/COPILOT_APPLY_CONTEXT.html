@@ -2,13 +2,13 @@
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../../" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>6. Paper Submission &#8212; Molass Developpers Handbook</title>
+    <title>Context for Using VS Code and Copilot &#8212; Molass Developpers Handbook</title>
   
   
   
@@ -18,51 +18,49 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/09/paper_submission';</script>
-    <link rel="icon" href="../../_static/molamola.png"/>
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="7. How to Contribute" href="../10/howto_contribute.html" />
-    <link rel="prev" title="5. Package Release" href="../08/release.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/COPILOT_APPLY_CONTEXT';</script>
+    <link rel="icon" href="../_static/molamola.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -94,7 +92,7 @@
     <div class="search-button__overlay"></div>
     <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
-      action="../../search.html"
+      action="../search.html"
       method="get">
   <i class="fa-solid fa-magnifying-glass"></i>
   <input type="search"
@@ -125,6 +123,8 @@
       
       
       
+        
+      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -143,7 +143,7 @@
     
   
 
-<a class="navbar-brand logo" href="../intro.html">
+<a class="navbar-brand logo" href="intro.html">
   
   
   
@@ -154,8 +154,8 @@
       
     
     
-    <img src="../../_static/molamola.png" class="logo__image only-light" alt="Molass Developpers Handbook - Home"/>
-    <script>document.write(`<img src="../../_static/molamola.png" class="logo__image only-dark" alt="Molass Developpers Handbook - Home"/>`);</script>
+    <img src="../_static/molamola.png" class="logo__image only-light" alt="Molass Developpers Handbook - Home"/>
+    <script>document.write(`<img src="../_static/molamola.png" class="logo__image only-dark" alt="Molass Developpers Handbook - Home"/>`);</script>
   
   
 </a></div>
@@ -175,25 +175,26 @@
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="../intro.html">
+                <a class="reference internal" href="intro.html">
                     Molass Developer’s Handbook
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../01/environments.html">1. Environments</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../01/coding_env.html">1.1. Coding Environment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../02/python_env.html">1.2. Python Environment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../03/jupyter_env.html">1.3. Jupyter Environment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../04/git_env.html">1.4. Git Environment</a></li>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="01/environments.html">1. Environments</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="01/coding_env.html">1.1. Coding Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02/python_env.html">1.2. Python Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03/jupyter_env.html">1.3. Jupyter Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04/git_env.html">1.4. Git Environment</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="../05/coding_style.html">2. Coding Style</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../06/testing.html">3. Testing Conventions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../07/documentation.html">4. Documentation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../08/release.html">5. Package Release</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">6. Paper Submission</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../10/howto_contribute.html">7. How to Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05/coding_style.html">2. Coding Style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06/testing.html">3. Testing Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07/documentation.html">4. Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08/release.html">5. Package Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09/paper_submission.html">6. Paper Submission</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10/howto_contribute.html">7. How to Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11/ai_assisted.html">8. AI Assisted Development</a></li>
 </ul>
 
     </div>
@@ -265,7 +266,7 @@
       
       
       
-      <li><a href="https://github.com/nshimizu0721/molass-develop/issues/new?title=Issue%20on%20page%20%2Fchapters/09/paper_submission.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/nshimizu0721/molass-develop/issues/new?title=Issue%20on%20page%20%2Fchapters/COPILOT_APPLY_CONTEXT.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -295,7 +296,7 @@
       
       
       
-      <li><a href="../../_sources/chapters/09/paper_submission.md" target="_blank"
+      <li><a href="../_sources/chapters/COPILOT_APPLY_CONTEXT.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -379,7 +380,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Paper Submission</h1>
+    <h1>Context for Using VS Code and Copilot</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -389,8 +390,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#draft-paper-source-markdown">6.1. Draft Paper Source Markdown</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#draft-paper-pdf">6.2. Draft Paper PDF</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#purpose">Purpose</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assumptions">Assumptions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow">Workflow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expectations">Expectations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practices">Practices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#limitations">Limitations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#goal">Goal</a></li>
 </ul>
             </nav>
         </div>
@@ -402,26 +408,77 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="paper-submission">
-<h1><span class="section-number">6. </span>Paper Submission<a class="headerlink" href="#paper-submission" title="Link to this heading">#</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This chapter is in preparation.</p>
-</div>
-<section id="draft-paper-source-markdown">
-<h2><span class="section-number">6.1. </span>Draft Paper Source Markdown<a class="headerlink" href="#draft-paper-source-markdown" title="Link to this heading">#</a></h2>
-<p>The source markdown for the paper should live in the <a class="reference external" href="https://github.com/nshimizu0721/molass-library/tree/joss-paper">joss-paper branch</a> of the <a class="reference external" href="https://github.com/nshimizu0721/molass-library">code repository</a>.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="context-for-using-vs-code-and-copilot">
+<h1>Context for Using VS Code and Copilot<a class="headerlink" href="#context-for-using-vs-code-and-copilot" title="Link to this heading">#</a></h1>
+<section id="purpose">
+<h2>Purpose<a class="headerlink" href="#purpose" title="Link to this heading">#</a></h2>
+<p>This context file is designed to guide interactions during a session, assuming the current state of Visual Studio Code and GitHub Copilot. The goal is to simplify the “Response → Apply” step in the “Prompt → Response → Apply → Review (Verify)” cycle.</p>
 </section>
-<section id="draft-paper-pdf">
-<h2><span class="section-number">6.2. </span>Draft Paper PDF<a class="headerlink" href="#draft-paper-pdf" title="Link to this heading">#</a></h2>
-<p>The PDF will be generated from the above markdown by GitHub Actions workflow named “draft-pdf.yml” <a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> on push to the remote branch. You can retrieve it from the job result.</p>
-<hr class="footnotes docutils" />
-<aside class="footnote-list brackets">
-<aside class="footnote brackets" id="id2" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
-<p>“draft-pdf.yml” is located in the .github/workflows folder.</p>
-</aside>
-</aside>
+<section id="assumptions">
+<h2>Assumptions<a class="headerlink" href="#assumptions" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>The current state of VS Code and Copilot is used as the basis for all practices.</p></li>
+<li><p>The “Apply” button in the suggestion box is the primary method for applying changes.</p></li>
+<li><p>Updates are typically made to the current file being worked on.</p></li>
+</ol>
+</section>
+<section id="workflow">
+<h2>Workflow<a class="headerlink" href="#workflow" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Prompt</strong>: The user provides instructions to Copilot.</p></li>
+<li><p><strong>Response</strong>: Copilot generates suggestions.</p></li>
+<li><p><strong>Apply</strong>: The user applies the suggestions using the “Apply” button in the suggestion box.</p></li>
+<li><p><strong>Review (Verify)</strong>: The user reviews and verifies the applied changes to ensure correctness and alignment with intent.</p></li>
+</ol>
+</section>
+<section id="expectations">
+<h2>Expectations<a class="headerlink" href="#expectations" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>At the beginning of a session, this context will be reminded to the AI.</p></li>
+<li><p>During the session, unless otherwise stated, the AI will respond in a way that assumes the user will use the “Apply” button to apply changes.</p></li>
+<li><p>The AI will simplify responses to focus on guiding the user to use the “Apply” button effectively.</p></li>
+</ol>
+</section>
+<section id="practices">
+<h2>Practices<a class="headerlink" href="#practices" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Prompting</strong>:</p>
+<ul class="simple">
+<li><p>Provide clear and specific instructions to guide Copilot in generating relevant suggestions.</p></li>
+<li><p>Use comments or partial code snippets to provide context for Copilot.</p></li>
+</ul>
+</li>
+<li><p><strong>Applying Suggestions</strong>:</p>
+<ul class="simple">
+<li><p>Use the “Apply” button in the suggestion box to apply changes directly to the current file.</p></li>
+<li><p>For more control, manually adjust the applied changes as needed.</p></li>
+</ul>
+</li>
+<li><p><strong>Reviewing Changes</strong>:</p>
+<ul class="simple">
+<li><p>Always review the applied changes for correctness, security, and alignment with your intent.</p></li>
+<li><p>Use version control (e.g., Git) to track changes and revert if necessary.</p></li>
+</ul>
+</li>
+<li><p><strong>Managing Context</strong>:</p>
+<ul class="simple">
+<li><p>Save important instructions, decisions, and code snippets in a context file for future reference.</p></li>
+<li><p>Update the context file when switching tasks or files to reflect the new focus.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="limitations">
+<h2>Limitations<a class="headerlink" href="#limitations" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>The “Apply” button applies suggestions as-is and may require manual adjustments for complex changes.</p></li>
+<li><p>Copilot does not currently support advanced features like “Apply to Selected Range” or change previews.</p></li>
+<li><p>User judgment is essential for handling complex or context-sensitive changes.</p></li>
+</ol>
+</section>
+<section id="goal">
+<h2>Goal<a class="headerlink" href="#goal" title="Link to this heading">#</a></h2>
+<p>The goal of this context is to streamline the workflow and make the “Response → Apply” step as simple and efficient as possible, leveraging the current capabilities of VS Code and Copilot.</p>
 </section>
 </section>
 
@@ -438,7 +495,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./chapters\09"
+            path: "./chapters"
         },
         predefinedOutput: true
     }
@@ -455,24 +512,6 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="../08/release.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">5. </span>Package Release</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="../10/howto_contribute.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">7. </span>How to Contribute</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -489,8 +528,13 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#draft-paper-source-markdown">6.1. Draft Paper Source Markdown</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#draft-paper-pdf">6.2. Draft Paper PDF</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#purpose">Purpose</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assumptions">Assumptions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow">Workflow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expectations">Expectations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practices">Practices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#limitations">Limitations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#goal">Goal</a></li>
 </ul>
   </nav></div>
 
@@ -539,8 +583,8 @@ By Molass Community powered by <a href="https://jupyterbook.org">Jupyter Book</a
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

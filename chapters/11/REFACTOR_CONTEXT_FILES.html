@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>6. Paper Submission &#8212; Molass Developpers Handbook</title>
+    <title>Context for Refining and Restructuring Pre-Prepared Context Files &#8212; Molass Developpers Handbook</title>
   
   
   
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -57,12 +57,10 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/09/paper_submission';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/11/REFACTOR_CONTEXT_FILES';</script>
     <link rel="icon" href="../../_static/molamola.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="7. How to Contribute" href="../10/howto_contribute.html" />
-    <link rel="prev" title="5. Package Release" href="../08/release.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -125,6 +123,8 @@
       
       
       
+        
+      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -180,7 +180,7 @@
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../01/environments.html">1. Environments</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../01/coding_env.html">1.1. Coding Environment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../02/python_env.html">1.2. Python Environment</a></li>
@@ -192,8 +192,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../06/testing.html">3. Testing Conventions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../07/documentation.html">4. Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../08/release.html">5. Package Release</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">6. Paper Submission</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09/paper_submission.html">6. Paper Submission</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../10/howto_contribute.html">7. How to Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ai_assisted.html">8. AI Assisted Development</a></li>
 </ul>
 
     </div>
@@ -265,7 +266,7 @@
       
       
       
-      <li><a href="https://github.com/nshimizu0721/molass-develop/issues/new?title=Issue%20on%20page%20%2Fchapters/09/paper_submission.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/nshimizu0721/molass-develop/issues/new?title=Issue%20on%20page%20%2Fchapters/11/REFACTOR_CONTEXT_FILES.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -295,7 +296,7 @@
       
       
       
-      <li><a href="../../_sources/chapters/09/paper_submission.md" target="_blank"
+      <li><a href="../../_sources/chapters/11/REFACTOR_CONTEXT_FILES.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -379,7 +380,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Paper Submission</h1>
+    <h1>Context for Refining and Restructuring Pre-Prepared Context Files</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -389,8 +390,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#draft-paper-source-markdown">6.1. Draft Paper Source Markdown</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#draft-paper-pdf">6.2. Draft Paper PDF</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#purpose">Purpose</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#goals">Goals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow">Workflow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-table-for-refined-context-files">Example Table for Refined Context Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tips-for-refinement">Tips for Refinement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-note">Final Note</a></li>
 </ul>
             </nav>
         </div>
@@ -402,26 +407,139 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="paper-submission">
-<h1><span class="section-number">6. </span>Paper Submission<a class="headerlink" href="#paper-submission" title="Link to this heading">#</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This chapter is in preparation.</p>
-</div>
-<section id="draft-paper-source-markdown">
-<h2><span class="section-number">6.1. </span>Draft Paper Source Markdown<a class="headerlink" href="#draft-paper-source-markdown" title="Link to this heading">#</a></h2>
-<p>The source markdown for the paper should live in the <a class="reference external" href="https://github.com/nshimizu0721/molass-library/tree/joss-paper">joss-paper branch</a> of the <a class="reference external" href="https://github.com/nshimizu0721/molass-library">code repository</a>.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="context-for-refining-and-restructuring-pre-prepared-context-files">
+<h1>Context for Refining and Restructuring Pre-Prepared Context Files<a class="headerlink" href="#context-for-refining-and-restructuring-pre-prepared-context-files" title="Link to this heading">#</a></h1>
+<section id="purpose">
+<h2>Purpose<a class="headerlink" href="#purpose" title="Link to this heading">#</a></h2>
+<p>This file is designed to guide the process of refining and restructuring pre-prepared context files to ensure they are concise, clear, and aligned with foundational principles that serve as axioms for effective AI-assisted development.</p>
 </section>
-<section id="draft-paper-pdf">
-<h2><span class="section-number">6.2. </span>Draft Paper PDF<a class="headerlink" href="#draft-paper-pdf" title="Link to this heading">#</a></h2>
-<p>The PDF will be generated from the above markdown by GitHub Actions workflow named “draft-pdf.yml” <a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> on push to the remote branch. You can retrieve it from the job result.</p>
-<hr class="footnotes docutils" />
-<aside class="footnote-list brackets">
-<aside class="footnote brackets" id="id2" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
-<p>“draft-pdf.yml” is located in the .github/workflows folder.</p>
-</aside>
-</aside>
+<section id="goals">
+<h2>Goals<a class="headerlink" href="#goals" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Simplify and Standardize</strong>:</p>
+<ul class="simple">
+<li><p>Ensure context files have short, intuitive names.</p></li>
+<li><p>Make the purpose of each file concise and actionable.</p></li>
+<li><p>Move detailed explanations into the corresponding context files.</p></li>
+</ul>
+</li>
+<li><p><strong>Align with Core Rules</strong>:</p>
+<ul class="simple">
+<li><p>Ensure all context files adhere to the following principles:</p>
+<ol class="arabic simple">
+<li><p><strong>Preserve Essential Context</strong>: Help developers save and manage task-specific context.</p></li>
+<li><p><strong>Engineer Explicit Instructions</strong>: Guide developers in providing clear prompts to Copilot.</p></li>
+<li><p><strong>Independently Verify AI Output</strong>: Encourage developers to review and validate Copilot’s suggestions.</p></li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p><strong>Provide Clear Selection Mechanism</strong>:</p>
+<ul class="simple">
+<li><p>Create a concise table summarizing the purpose and availability of each context file.</p></li>
+<li><p>Add an “Availability” column to indicate the maturity of each file (e.g., “Available,” “Draft,” “Planned”).</p></li>
+</ul>
+</li>
+<li><p><strong>Iterative Refinement</strong>:</p>
+<ul class="simple">
+<li><p>Treat the context files as living documents that evolve based on feedback and practical use.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="workflow">
+<h2>Workflow<a class="headerlink" href="#workflow" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Review Existing Context Files</strong>:</p>
+<ul class="simple">
+<li><p>Open each pre-prepared context file and evaluate its purpose, structure, and content.</p></li>
+<li><p>Ensure the purpose is clear and concise, and move detailed explanations into the file itself.</p></li>
+</ul>
+</li>
+<li><p><strong>Simplify the Table in the Chapter</strong>:</p>
+<ul class="simple">
+<li><p>Update the table in the “AI Assisted Development” chapter to reflect the refined context files.</p></li>
+<li><p>Ensure each row fits on a single line and includes the file name, purpose, and availability.</p></li>
+</ul>
+</li>
+<li><p><strong>Refine Naming and Structure</strong>:</p>
+<ul class="simple">
+<li><p>Use short, intuitive names for context files (e.g., <code class="docutils literal notranslate"><span class="pre">APPLY_CONTEXT.md</span></code>, <code class="docutils literal notranslate"><span class="pre">DEBUG_CONTEXT.md</span></code>).</p></li>
+<li><p>Ensure the structure of each file is consistent and easy to follow.</p></li>
+</ul>
+</li>
+<li><p><strong>Iterate and Test</strong>:</p>
+<ul class="simple">
+<li><p>Refine the files iteratively based on feedback and practical use.</p></li>
+<li><p>Test the usability of the files by applying them to real-world tasks.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="example-table-for-refined-context-files">
+<h2>Example Table for Refined Context Files<a class="headerlink" href="#example-table-for-refined-context-files" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Context File</strong></p></th>
+<th class="head"><p><strong>Purpose</strong></p></th>
+<th class="head"><p><strong>Availability</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">APPLY_CONTEXT.md</span></code></p></td>
+<td><p>Simplify applying suggestions.</p></td>
+<td><p>Available</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">DEBUG_CONTEXT.md</span></code></p></td>
+<td><p>Assist with debugging tasks.</p></td>
+<td><p>Draft</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">REFACTOR_CONTEXT.md</span></code></p></td>
+<td><p>Guide code refactoring.</p></td>
+<td><p>Planned</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">DOC_CONTEXT.md</span></code></p></td>
+<td><p>Improve documentation.</p></td>
+<td><p>Available</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">TEST_CONTEXT.md</span></code></p></td>
+<td><p>Support writing tests.</p></td>
+<td><p>Draft</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">FEATURE_CONTEXT.md</span></code></p></td>
+<td><p>Assist with adding features.</p></td>
+<td><p>Planned</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="tips-for-refinement">
+<h2>Tips for Refinement<a class="headerlink" href="#tips-for-refinement" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Focus on Clarity</strong>:</p>
+<ul class="simple">
+<li><p>Use simple, precise language to describe the purpose of each file.</p></li>
+<li><p>Avoid unnecessary complexity or jargon.</p></li>
+</ul>
+</li>
+<li><p><strong>Ensure Consistency</strong>:</p>
+<ul class="simple">
+<li><p>Use a consistent structure and naming convention across all context files.</p></li>
+<li><p>Align the files with the Core Rules for effective AI-assisted coding.</p></li>
+</ul>
+</li>
+<li><p><strong>Encourage Feedback</strong>:</p>
+<ul class="simple">
+<li><p>Share the refined files with your team or collaborators for feedback.</p></li>
+<li><p>Incorporate suggestions to improve usability and relevance.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="final-note">
+<h2>Final Note<a class="headerlink" href="#final-note" title="Link to this heading">#</a></h2>
+<p>This context file is intended to guide the refinement and restructuring process. As you work, remember to iterate and adapt based on practical use and feedback. The goal is to create context files that are clear, concise, and aligned with the needs of developers using VS Code and GitHub Copilot.</p>
 </section>
 </section>
 
@@ -438,7 +556,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./chapters\09"
+            path: "./chapters\11"
         },
         predefinedOutput: true
     }
@@ -455,24 +573,6 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="../08/release.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">5. </span>Package Release</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="../10/howto_contribute.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">7. </span>How to Contribute</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -489,8 +589,12 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#draft-paper-source-markdown">6.1. Draft Paper Source Markdown</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#draft-paper-pdf">6.2. Draft Paper PDF</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#purpose">Purpose</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#goals">Goals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow">Workflow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-table-for-refined-context-files">Example Table for Refined Context Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tips-for-refinement">Tips for Refinement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-note">Final Note</a></li>
 </ul>
   </nav></div>
 

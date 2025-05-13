@@ -392,9 +392,14 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#core-rules-for-effective-ai-assisted-coding">8.1. Core Rules for Effective AI-Assisted Coding</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-save-your-ai-session-context">8.2. How to Save Your AI Session Context</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-recover-your-ai-session-context">8.3. How to Recover Your AI Session Context</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-change-context-during-a-session">8.4. How to Change Context During a Session</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refining-practices-and-terminology">8.5. Refining Practices and Terminology</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-note4">8.6. Final Note</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-pre-prepared-context-files">8.4. Using Pre-Prepared Context Files</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use-pre-prepared-context-files">8.4.1. How to Use Pre-Prepared Context Files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#benefits-of-pre-prepared-context-files">8.4.2. Benefits of Pre-Prepared Context Files</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-change-context-during-a-session">8.5. How to Change Context During a Session</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refining-practices-and-terminology">8.6. Refining Practices and Terminology</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-note4">8.7. Final Note</a></li>
 </ul>
             </nav>
         </div>
@@ -426,6 +431,11 @@ document.write(`
 <ul class="simple">
 <li><p>Critically review all AI-generated code for correctness, security, and adherence to project standards before accepting or merging it.</p></li>
 <li><p>Remember: Copilot can help you write tests, but cannot run them. Always run and check yourself.</p></li>
+</ul>
+</li>
+<li><p><strong>Redirect Context When Necessary</strong></p>
+<ul class="simple">
+<li><p>AI tools lack the ability to recognize when a course change is necessary. It is the responsibility of the developer to identify when the current approach is no longer effective or optimal and to redirect the AI accordingly.</p></li>
 </ul>
 </li>
 </ol>
@@ -462,9 +472,105 @@ After a productive session with GitHub Copilot, ask the AI to summarize the key 
 </ol>
 <p>By following this process, you can quickly restore your workflow with minimal loss of continuity, even after interruptions or environment changes.</p>
 </section>
+<section id="using-pre-prepared-context-files">
+<h2><span class="section-number">8.4. </span>Using Pre-Prepared Context Files<a class="headerlink" href="#using-pre-prepared-context-files" title="Link to this heading">#</a></h2>
+<p>To further simplify the process of saving and recovering context, developers can use pre-prepared context files for common tasks. These files are designed to align with typical workflows and the current capabilities of tools like VS Code and GitHub Copilot.</p>
+<section id="how-to-use-pre-prepared-context-files">
+<h3><span class="section-number">8.4.1. </span>How to Use Pre-Prepared Context Files<a class="headerlink" href="#how-to-use-pre-prepared-context-files" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Choose a Context File</strong>:</p>
+<ul class="simple">
+<li><p>Select a context file that matches your current task or goal. The following table provides an overview of the available pre-prepared context files and their purposes:</p></li>
+</ul>
+</li>
+</ol>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Context File</strong></p></th>
+<th class="head"><p><strong>Purpose</strong></p></th>
+<th class="head"><p><strong>Availability</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">APPLY_CONTEXT.md</span></code></p></td>
+<td><p>Simplify applying suggestions.</p></td>
+<td><p>Available</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">DEBUGGING_CONTEXT.md</span></code></p></td>
+<td><p>Assist with debugging tasks.</p></td>
+<td><p>Candidate</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">REFACTORING_CONTEXT.md</span></code></p></td>
+<td><p>Guide code refactoring.</p></td>
+<td><p>Candidate</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">DOCUMENTATION_CONTEXT.md</span></code></p></td>
+<td><p>Improve documentation.</p></td>
+<td><p>Draft</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">TESTING_CONTEXT.md</span></code></p></td>
+<td><p>Support writing tests.</p></td>
+<td><p>Candidate</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">NEW_FEATURE_CONTEXT.md</span></code></p></td>
+<td><p>Assist with adding features.</p></td>
+<td><p>Candidate</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<div><p><strong>Note:</strong> For more details about each context file, open the file in your project directory.</p>
+</div></blockquote>
+<ol class="arabic" start="2">
+<li><p><strong>Remind the AI</strong>:</p>
+<ul>
+<li><p>At the start of your session, remind the AI of the selected context file. For example:</p>
+<blockquote>
+<div><p>“Please remind yourself of the context from <code class="docutils literal notranslate"><span class="pre">COPILOT_APPLY_CONTEXT.md</span></code> for this session.”</p>
+</div></blockquote>
+</li>
+</ul>
+</li>
+<li><p><strong>Follow the Workflow</strong>:</p>
+<ul class="simple">
+<li><p>Use the practices outlined in the selected context file to guide your interactions with Copilot.</p></li>
+</ul>
+</li>
+<li><p><strong>Update as Needed</strong>:</p>
+<ul class="simple">
+<li><p>If your session involves unique requirements, you can modify the selected context file or create a new one for future use.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="benefits-of-pre-prepared-context-files">
+<h3><span class="section-number">8.4.2. </span>Benefits of Pre-Prepared Context Files<a class="headerlink" href="#benefits-of-pre-prepared-context-files" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Simplicity</strong>:</p>
+<ul class="simple">
+<li><p>Quickly start a session by selecting a context file instead of creating one from scratch.</p></li>
+</ul>
+</li>
+<li><p><strong>Consistency</strong>:</p>
+<ul class="simple">
+<li><p>Ensure best practices are applied consistently across sessions and teams.</p></li>
+</ul>
+</li>
+<li><p><strong>Efficiency</strong>:</p>
+<ul class="simple">
+<li><p>Save time by using ready-to-use templates for common workflows.</p></li>
+</ul>
+</li>
+</ol>
+<p>By using pre-prepared context files, developers can streamline their workflows and focus on their tasks without being bogged down by repetitive setup steps.</p>
+</section>
+</section>
 <section id="how-to-change-context-during-a-session">
-<h2><span class="section-number">8.4. </span>How to Change Context During a Session<a class="headerlink" href="#how-to-change-context-during-a-session" title="Link to this heading">#</a></h2>
-<p>If your goals, requirements, or focus change during an ongoing session, or if you switch to a different file or module, clearly inform the AI assistant of the new context. Many AI assistants, including GitHub Copilot, use the currently open file as a primary source of context for suggestions. To avoid confusion and ensure relevant assistance, be explicit about the change. For example:</p>
+<h2><span class="section-number">8.5. </span>How to Change Context During a Session<a class="headerlink" href="#how-to-change-context-during-a-session" title="Link to this heading">#</a></h2>
+<p>If your goals, requirements, or focus change during an ongoing session, or if you realize that the current approach is no longer effective, it is your responsibility to redirect the AI. Many AI assistants, including GitHub Copilot, rely on the current file and prompts for context. To ensure relevant assistance, explicitly guide the AI toward the new direction.</p>
+<p>This aligns with the Core Rule: <strong>Redirect Context</strong>, which emphasizes the importance of human expertise in identifying and addressing the need for course changes.</p>
+<p>For example:</p>
 <blockquote>
 <div><p>“I am now switching to <code class="docutils literal notranslate"><span class="pre">utils.py</span></code>. Please disregard the previous context.”</p>
 </div></blockquote>
@@ -480,7 +586,7 @@ After a productive session with GitHub Copilot, ask the AI to summarize the key 
 <p>For further tips or more detailed guidance, feel free to ask GitHub Copilot directly as you work. This section is intentionally kept simple to encourage direct engagement with AI assistants for further guidance.</p>
 </section>
 <section id="refining-practices-and-terminology">
-<h2><span class="section-number">8.5. </span>Refining Practices and Terminology<a class="headerlink" href="#refining-practices-and-terminology" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">8.6. </span>Refining Practices and Terminology<a class="headerlink" href="#refining-practices-and-terminology" title="Link to this heading">#</a></h2>
 <p>This chapter itself demonstrates how to refine practices and terminology collaboratively with an AI assistant. Here’s how the process unfolded about the first section above.<a class="footnote-reference brackets" href="#id7" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></p>
 <blockquote>
 <div><p><strong>Legend:</strong></p>
@@ -523,7 +629,7 @@ After a productive session with GitHub Copilot, ask the AI to summarize the key 
 </ol>
 </section>
 <section id="final-note4">
-<h2><span class="section-number">8.6. </span>Final Note<a class="footnote-reference brackets" href="#id8" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a><a class="headerlink" href="#final-note4" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">8.7. </span>Final Note<a class="footnote-reference brackets" href="#id8" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a><a class="headerlink" href="#final-note4" title="Link to this heading">#</a></h2>
 <p>AI-assisted development is a rapidly evolving field, and the practices outlined in this chapter are designed to help you make the most of current tools like GitHub Copilot. However, as AI tools and development environments continue to improve, it’s important to remain adaptable while asserting your preferences and goals without compromising easily.</p>
 <p>The collaborative process described in this chapter—generating ideas, simplifying them into actionable principles, and iterating for clarity—can be applied not only to AI-assisted coding but also to other areas of your work. By combining thoughtful human input with the capabilities of AI, you can create workflows that are both efficient and resilient.</p>
 <p>Finally, remember that while AI can assist with many aspects of development, your judgment and expertise remain essential. Use AI as a tool to enhance your productivity, but always verify its output and ensure it aligns with your goals and standards.</p>
@@ -612,9 +718,14 @@ After a productive session with GitHub Copilot, ask the AI to summarize the key 
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#core-rules-for-effective-ai-assisted-coding">8.1. Core Rules for Effective AI-Assisted Coding</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-save-your-ai-session-context">8.2. How to Save Your AI Session Context</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-recover-your-ai-session-context">8.3. How to Recover Your AI Session Context</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-change-context-during-a-session">8.4. How to Change Context During a Session</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refining-practices-and-terminology">8.5. Refining Practices and Terminology</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-note4">8.6. Final Note</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-pre-prepared-context-files">8.4. Using Pre-Prepared Context Files</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use-pre-prepared-context-files">8.4.1. How to Use Pre-Prepared Context Files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#benefits-of-pre-prepared-context-files">8.4.2. Benefits of Pre-Prepared Context Files</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-change-context-during-a-session">8.5. How to Change Context During a Session</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refining-practices-and-terminology">8.6. Refining Practices and Terminology</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-note4">8.7. Final Note</a></li>
 </ul>
   </nav></div>
 
