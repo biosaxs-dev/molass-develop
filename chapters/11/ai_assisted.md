@@ -96,9 +96,7 @@ By using pre-prepared context files, developers can streamline their workflows a
 
 If your goals, requirements, or focus change during an ongoing session, or if you realize that the current approach is no longer effective, it is your responsibility to redirect the AI. Many AI assistants, including GitHub Copilot, rely on the current file and prompts for context. To ensure relevant assistance, explicitly guide the AI toward the new direction.
 
-This aligns with the Core Rule: **Redirect Context**, which emphasizes the importance of human expertise in identifying and addressing the need for course changes.
-
-For example:
+This section focuses on **general context changes**, such as switching files or adding new information to the current session. For example:
 > “I am now switching to `utils.py`. Please disregard the previous context.”
 
 Or, if you want to keep some previous context but add new information:
@@ -108,9 +106,53 @@ Or, if you want to keep some previous context but add new information:
 If a file or task is no longer relevant to your current focus, consider closing it to avoid distractions and maintain a clear working context. In addition, pay special attention to the **current file**, because it is treated in a special way as mentioned above.
 ```
 
+While this section addresses general context changes, **Rule 4: Redirect Context When Necessary** focuses on specific scenarios where deliberate redirection is required to address limitations in the AI's approach. These scenarios often arise unexpectedly and require the developer's judgment to intervene. For more details, see the section **"Necessary Context Redirection under Rule 4."**
+
 Being clear about context changes and the current file helps the AI provide more accurate and relevant suggestions as your work evolves.
 
 For further tips or more detailed guidance, feel free to ask GitHub Copilot directly as you work. This section is intentionally kept simple to encourage direct engagement with AI assistants for further guidance.
+
+## Necessary Context Redirection under Rule 4
+
+While general context changes are common during development, Rule 4 (**Redirect Context When Necessary**) addresses specific scenarios where the need for redirection often arises unexpectedly. AI tools, like GitHub Copilot, may persist in iterating on an ineffective approach, attempting to refine a solution even after repeated failures. 
+
+In such cases, it is the developer's responsibility to recognize when the current approach is no longer viable and to intervene by redirecting the AI toward a more effective path. This process is not always anticipated in advance but requires awareness and judgment to identify when a shift in focus or strategy is necessary.
+
+### Common Scenarios for Context Redirection
+
+1. **Switching to Library Utilization**:
+   - **When to Redirect**: If you start with a basic implementation (e.g., using plain HTML/CSS) but later realize that a library (e.g., D3.js) would be more efficient or powerful.
+   - **How to Redirect**:
+     - Ask the AI for recommendations on libraries that align with your goals. The AI often has a broader knowledge of available tools and can suggest candidates you might not be familiar with.
+     - Once you’ve identified a suitable library, inform the AI about your choice and its purpose.
+     - Provide relevant documentation or examples to guide the AI in generating solutions using the library.
+   - **Example Prompts**:
+     - To explore library options:  
+       > "What JavaScript libraries are available for creating interactive data visualizations? Please suggest some options and briefly describe their strengths."
+     - To redirect after choosing a library:  
+       > "I want to switch to using D3.js for this task. Please disregard the previous plain HTML/CSS approach and focus on generating D3.js-based solutions."
+
+2. **Introducing Unit Testing**:
+   - **When to Redirect**: During development, if the AI struggles to handle complex code changes or repeatedly fails to make progress, it may be necessary to simplify the problem and verify the approach through unit testing or a minimal example. This redirection is required because the work is ongoing and cannot proceed effectively without intervention.
+   - **How to Redirect**:
+     - Clearly state the need to simplify the problem or focus on testing specific scenarios.
+     - Suggest creating a simplified version of the code to verify the AI's understanding and approach.
+     - Once the simplified code works as expected, ask the AI to apply the solution to the original, more complex code.
+   - **Example Prompts**:
+     - To focus on testing:  
+       > "The current implementation is incomplete. Let’s write unit tests for the key scenarios to verify the logic before proceeding further."
+     - To simplify a complex problem:  
+       > "The current code is too complex for this change. Let’s create a simplified version of the function to verify the logic. Once it works, we’ll apply it to the original code."
+     - To apply the simplified solution:  
+       > "Now that the simplified version works, please use it as a reference to update the original, more complex code."
+
+3. **Dividing and Ordering Focus**:
+   - **When to Redirect**: If a task becomes too complex, it may be necessary to break it into smaller, more manageable parts and address them sequentially.
+   - **How to Redirect**:
+     - Define the specific subtask you want to focus on first.
+     - Clearly communicate the order of priorities to the AI.
+     - Example Prompt:  
+       > "Let’s focus on implementing the data parsing logic first. Once that’s complete, we’ll move on to the visualization component."
 
 ## Refining Practices and Terminology
 
