@@ -398,8 +398,12 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-change-context-during-a-session">8.5. How to Change Context During a Session</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refining-practices-and-terminology">8.6. Refining Practices and Terminology</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-note4">8.7. Final Note</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#necessary-context-redirection-under-rule-4">8.6. Necessary Context Redirection under Rule 4</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-scenarios-for-context-redirection">8.6.1. Common Scenarios for Context Redirection</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refining-practices-and-terminology">8.7. Refining Practices and Terminology</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-note4">8.8. Final Note</a></li>
 </ul>
             </nav>
         </div>
@@ -573,8 +577,7 @@ After a productive session with GitHub Copilot, ask the AI to summarize the key 
 <section id="how-to-change-context-during-a-session">
 <h2><span class="section-number">8.5. </span>How to Change Context During a Session<a class="headerlink" href="#how-to-change-context-during-a-session" title="Link to this heading">#</a></h2>
 <p>If your goals, requirements, or focus change during an ongoing session, or if you realize that the current approach is no longer effective, it is your responsibility to redirect the AI. Many AI assistants, including GitHub Copilot, rely on the current file and prompts for context. To ensure relevant assistance, explicitly guide the AI toward the new direction.</p>
-<p>This aligns with the Core Rule: <strong>Redirect Context</strong>, which emphasizes the importance of human expertise in identifying and addressing the need for course changes.</p>
-<p>For example:</p>
+<p>This section focuses on <strong>general context changes</strong>, such as switching files or adding new information to the current session. For example:</p>
 <blockquote>
 <div><p>“I am now switching to <code class="docutils literal notranslate"><span class="pre">utils.py</span></code>. Please disregard the previous context.”</p>
 </div></blockquote>
@@ -586,11 +589,95 @@ After a productive session with GitHub Copilot, ask the AI to summarize the key 
 <p class="admonition-title">Tip</p>
 <p>If a file or task is no longer relevant to your current focus, consider closing it to avoid distractions and maintain a clear working context. In addition, pay special attention to the <strong>current file</strong>, because it is treated in a special way as mentioned above.</p>
 </div>
+<p>While this section addresses general context changes, <strong>Rule 4: Redirect Context When Necessary</strong> focuses on specific scenarios where deliberate redirection is required to address limitations in the AI’s approach. These scenarios often arise unexpectedly and require the developer’s judgment to intervene. For more details, see the section <strong>“Necessary Context Redirection under Rule 4.”</strong></p>
 <p>Being clear about context changes and the current file helps the AI provide more accurate and relevant suggestions as your work evolves.</p>
 <p>For further tips or more detailed guidance, feel free to ask GitHub Copilot directly as you work. This section is intentionally kept simple to encourage direct engagement with AI assistants for further guidance.</p>
 </section>
+<section id="necessary-context-redirection-under-rule-4">
+<h2><span class="section-number">8.6. </span>Necessary Context Redirection under Rule 4<a class="headerlink" href="#necessary-context-redirection-under-rule-4" title="Link to this heading">#</a></h2>
+<p>While general context changes are common during development, Rule 4 (<strong>Redirect Context When Necessary</strong>) addresses specific scenarios where the need for redirection often arises unexpectedly. AI tools, like GitHub Copilot, may persist in iterating on an ineffective approach, attempting to refine a solution even after repeated failures.</p>
+<p>In such cases, it is the developer’s responsibility to recognize when the current approach is no longer viable and to intervene by redirecting the AI toward a more effective path. This process is not always anticipated in advance but requires awareness and judgment to identify when a shift in focus or strategy is necessary.</p>
+<section id="common-scenarios-for-context-redirection">
+<h3><span class="section-number">8.6.1. </span>Common Scenarios for Context Redirection<a class="headerlink" href="#common-scenarios-for-context-redirection" title="Link to this heading">#</a></h3>
+<ol class="arabic">
+<li><p><strong>Switching to Library Utilization</strong>:</p>
+<ul>
+<li><p><strong>When to Redirect</strong>: If you start with a basic implementation (e.g., using plain HTML/CSS) but later realize that a library (e.g., D3.js) would be more efficient or powerful.</p></li>
+<li><p><strong>How to Redirect</strong>:</p>
+<ul class="simple">
+<li><p>Ask the AI for recommendations on libraries that align with your goals. The AI often has a broader knowledge of available tools and can suggest candidates you might not be familiar with.</p></li>
+<li><p>Once you’ve identified a suitable library, inform the AI about your choice and its purpose.</p></li>
+<li><p>Provide relevant documentation or examples to guide the AI in generating solutions using the library.</p></li>
+</ul>
+</li>
+<li><p><strong>Example Prompts</strong>:</p>
+<ul>
+<li><p>To explore library options:</p>
+<blockquote>
+<div><p>“What JavaScript libraries are available for creating interactive data visualizations? Please suggest some options and briefly describe their strengths.”</p>
+</div></blockquote>
+</li>
+<li><p>To redirect after choosing a library:</p>
+<blockquote>
+<div><p>“I want to switch to using D3.js for this task. Please disregard the previous plain HTML/CSS approach and focus on generating D3.js-based solutions.”</p>
+</div></blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Introducing Unit Testing</strong>:</p>
+<ul>
+<li><p><strong>When to Redirect</strong>: During development, if the AI struggles to handle complex code changes or repeatedly fails to make progress, it may be necessary to simplify the problem and verify the approach through unit testing or a minimal example. This redirection is required because the work is ongoing and cannot proceed effectively without intervention.</p></li>
+<li><p><strong>How to Redirect</strong>:</p>
+<ul class="simple">
+<li><p>Clearly state the need to simplify the problem or focus on testing specific scenarios.</p></li>
+<li><p>Suggest creating a simplified version of the code to verify the AI’s understanding and approach.</p></li>
+<li><p>Once the simplified code works as expected, ask the AI to apply the solution to the original, more complex code.</p></li>
+</ul>
+</li>
+<li><p><strong>Example Prompts</strong>:</p>
+<ul>
+<li><p>To focus on testing:</p>
+<blockquote>
+<div><p>“The current implementation is incomplete. Let’s write unit tests for the key scenarios to verify the logic before proceeding further.”</p>
+</div></blockquote>
+</li>
+<li><p>To simplify a complex problem:</p>
+<blockquote>
+<div><p>“The current code is too complex for this change. Let’s create a simplified version of the function to verify the logic. Once it works, we’ll apply it to the original code.”</p>
+</div></blockquote>
+</li>
+<li><p>To apply the simplified solution:</p>
+<blockquote>
+<div><p>“Now that the simplified version works, please use it as a reference to update the original, more complex code.”</p>
+</div></blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Dividing and Ordering Focus</strong>:</p>
+<ul>
+<li><p><strong>When to Redirect</strong>: If a task becomes too complex, it may be necessary to break it into smaller, more manageable parts and address them sequentially.</p></li>
+<li><p><strong>How to Redirect</strong>:</p>
+<ul>
+<li><p>Define the specific subtask you want to focus on first.</p></li>
+<li><p>Clearly communicate the order of priorities to the AI.</p></li>
+<li><p>Example Prompt:</p>
+<blockquote>
+<div><p>“Let’s focus on implementing the data parsing logic first. Once that’s complete, we’ll move on to the visualization component.”</p>
+</div></blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</section>
+</section>
 <section id="refining-practices-and-terminology">
-<h2><span class="section-number">8.6. </span>Refining Practices and Terminology<a class="headerlink" href="#refining-practices-and-terminology" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">8.7. </span>Refining Practices and Terminology<a class="headerlink" href="#refining-practices-and-terminology" title="Link to this heading">#</a></h2>
 <p>This chapter itself demonstrates how to refine practices and terminology collaboratively with an AI assistant. Here’s how the process unfolded about the first section above.<a class="footnote-reference brackets" href="#id7" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></p>
 <blockquote>
 <div><p><strong>Legend:</strong></p>
@@ -654,7 +741,7 @@ After a productive session with GitHub Copilot, ask the AI to summarize the key 
 <p>By following this process, the Core Rules evolved into a more comprehensive and balanced framework, addressing both the strengths and limitations of AI tools like GitHub Copilot.</p>
 </section>
 <section id="final-note4">
-<h2><span class="section-number">8.7. </span>Final Note<a class="footnote-reference brackets" href="#id8" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a><a class="headerlink" href="#final-note4" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">8.8. </span>Final Note<a class="footnote-reference brackets" href="#id8" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a><a class="headerlink" href="#final-note4" title="Link to this heading">#</a></h2>
 <p>AI-assisted development is a rapidly evolving field, and the practices outlined in this chapter are designed to help you make the most of current tools like GitHub Copilot. However, as AI tools and development environments continue to improve, it’s important to remain adaptable while asserting your preferences and goals without compromising easily.</p>
 <p>The collaborative process described in this chapter—generating ideas, simplifying them into actionable principles, and iterating for clarity—can be applied not only to AI-assisted coding but also to other areas of your work. By combining thoughtful human input with the capabilities of AI, you can create workflows that are both efficient and resilient.</p>
 <p>Finally, remember that while AI can assist with many aspects of development, your judgment and expertise remain essential. Use AI as a tool to enhance your productivity, but always verify its output and ensure it aligns with your goals and standards.</p>
@@ -749,8 +836,12 @@ After a productive session with GitHub Copilot, ask the AI to summarize the key 
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-change-context-during-a-session">8.5. How to Change Context During a Session</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refining-practices-and-terminology">8.6. Refining Practices and Terminology</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-note4">8.7. Final Note</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#necessary-context-redirection-under-rule-4">8.6. Necessary Context Redirection under Rule 4</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-scenarios-for-context-redirection">8.6.1. Common Scenarios for Context Redirection</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refining-practices-and-terminology">8.7. Refining Practices and Terminology</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-note4">8.8. Final Note</a></li>
 </ul>
   </nav></div>
 
