@@ -51,46 +51,43 @@ To resume work after a restart or interruption, use the `COPILOT_CONTEXT.md` fil
 
 By following this process, you can quickly restore your workflow with minimal loss of continuity, even after interruptions or environment changes.
 
-## Using Pre-Prepared Context Files
+## Managing Formatting Inconveniences in the VS Code Chat Pane
 
-To further simplify the process of saving and recovering context, developers can use pre-prepared context files for common tasks. These files are designed to align with typical workflows and the current capabilities of tools like VS Code and GitHub Copilot.
+### Recognizing the Inconvenience
 
-### How to Use Pre-Prepared Context Files
+When working with GitHub Copilot in the VS Code chat pane, you may encounter formatting issues—such as broken or split code blocks, misrendered markdown, or incomplete responses. These problems often arise when sharing code, markdown, or quoted text, making it difficult to copy, reuse, or understand Copilot’s suggestions.
 
-1. **Choose a Context File**:
-   - Select a context file that matches your current task or goal. The following table provides an overview of the available pre-prepared context files and their purposes:
+### Why These Issues Occur
 
-| **Context File**           | **Purpose**                     | **Availability** |
-|----------------------------|----------------------------------|------------------|
-| `APPLY_CONTEXT.md`         | Simplify applying suggestions.   | Available        |
-| `DEBUGGING_CONTEXT.md`     | Assist with debugging tasks.     | Candidate        |
-| `REFACTORING_CONTEXT.md`   | Guide code refactoring.          | Candidate        |
-| `DOCUMENTATION_CONTEXT.md` | Improve documentation.           | Draft            |
-| `TESTING_CONTEXT.md`       | Support writing tests.           | Candidate        |
-| `NEW_FEATURE_CONTEXT.md`   | Assist with adding features.     | Candidate        |
+GitHub Copilot does not have direct access to how its responses are rendered in your VS Code editor. It cannot see if a code block is broken or if markdown is misinterpreted. Instead, Copilot relies on your instructions and its training data. As a result, formatting issues can persist until you explicitly point them out or set clear preferences.
 
-> **Note:** For more details about each context file, open the file in your project directory.
+### Using RESPONSE_PREFERENCES.md to Avoid Issues
 
-2. **Remind the AI**:
-   - At the start of your session, remind the AI of the selected context file. For example:
-     > "Please remind yourself of the context from `COPILOT_APPLY_CONTEXT.md` for this session."
+To minimize these inconveniences, you can create and maintain a `RESPONSE_PREFERENCES.md` file in your project. This file should clearly state your formatting preferences and any known issues to avoid. For example, you might specify:
 
-3. **Follow the Workflow**:
-   - Use the practices outlined in the selected context file to guide your interactions with Copilot.
+- Always provide code or markdown in a **single code block** using four backticks and the appropriate language tag.
+- Do not split suggestions into multiple blocks unless explicitly requested.
+- Place explanations after the code block.
+- Include file paths as comments when relevant.
 
-4. **Update as Needed**:
-   - If your session involves unique requirements, you can modify the selected context file or create a new one for future use.
+By reminding Copilot of these preferences at the start of each session (or when issues arise), you help ensure more consistent and usable responses in VS Code.
 
-### Benefits of Pre-Prepared Context Files
+### Resetting Preferences to Defaults
 
-1. **Simplicity**:
-   - Quickly start a session by selecting a context file instead of creating one from scratch.
-2. **Consistency**:
-   - Ensure best practices are applied consistently across sessions and teams.
-3. **Efficiency**:
-   - Save time by using ready-to-use templates for common workflows.
+GitHub Copilot does not automatically detect or use the contents of `RESPONSE_PREFERENCES.md` unless you explicitly instruct it to do so in your prompt. If you want to return to the default Copilot response style, you should clearly state your intention in your prompt. For example:
 
-By using pre-prepared context files, developers can streamline their workflows and focus on their tasks without being bogged down by repetitive setup steps.
+- “Please ignore the RESPONSE_PREFERENCES file and use your default response style from now on.”
+- “Reset to default response preferences.”
+
+Removing or renaming the `RESPONSE_PREFERENCES.md` file alone has no effect unless you also update your instructions to Copilot. Always be explicit in your prompts when you want to change or reset response preferences.
+
+---
+
+By proactively managing your response preferences, you can avoid many common formatting issues and make your Copilot-assisted workflow in VS Code smoother and more productive.
+
+```{note}
+The use of a context reminder file (such as `RESPONSE_PREFERENCES.md`) is a practical approach that can be generalized to address other types of recurring inconveniences in AI-assisted workflows. Given the current state of tools, it is necessary to explicitly remind the AI of your preferences or known issues, as so-called "feedback" provided in conversation is not persistently respected or remembered by the AI. Always use clear, explicit instructions and context files to ensure your preferences are followed.
+```
 
 ## How to Change Context During a Session
 
