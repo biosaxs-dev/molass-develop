@@ -12,6 +12,7 @@ AI tools like GitHub Copilot[^1] can greatly enhance productivity, but effective
 
 3. **Independently Verify AI Output**
    - Critically review all AI-generated code for correctness, security, and adherence to project standards before accepting or merging it.
+   - *Independently* here means verifying the output yourself, without relying on (or being unconsciously influenced by) the AI’s own assurances or using the AI to check its own work.
    - Remember: Copilot can help you write tests, but cannot run them. Always run and check yourself.
 
 4. **Redirect Context When Necessary**
