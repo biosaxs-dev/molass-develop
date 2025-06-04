@@ -6,6 +6,21 @@ This page is scheduled to be publicly available in June, 2025.
 
 This chapter is intended for collaborators who are responsible for releasing and maintaining Molass packages. It provides concise instructions for managing the package release process.
 
+## Packages to be managed
+
+There are the following Python packages to be managed. 
+
+|No | Package Name | GitHub Repository              | Description              |
+|:-:|:-------------|:-------------------------------|:-------------------------|
+| 1 |molass_legacy | [reesemt/molass-legacy](https://github.com/freesemt/molass-legacy) | Molass GUI application |
+| 2 |molass        | [nshimizu0721/molass-library](https://github.com/nshimizu0721/molass-library)  | Molass Library |    
+| 3 |molass_data   | [freesemt/molass-data](https://github.com/freesemt/molass-data) | data for Molass Tutorial |
+
+## Package Management Specification
+
+Management of the above packages is specified in the `pyproject.toml` file in each repository.
+Especially, the package names as PyPI project names, used in the above table, are defined in the respective `pyproject.toml` files.
+
 ## About PyPI
 
 The Python Package Index (PyPI) is the official repository for Python packages. It allows developers to publish and distribute their Python libraries to a global audience. Users can install these packages using tools like `pip`. For Molass, PyPI serves as the platform for releasing and maintaining its packages, ensuring they are easily accessible to the community.
@@ -41,13 +56,8 @@ A **PyPI API token** is a secure way to authenticate yourself when uploading pac
 6. Click **"Add token"**.
 7. Copy the generated token and store it securely. You won’t be able to view it again.
 
-### Important Notes
-- Keep your API token private and do not share it. If it is compromised, revoke it immediately from your account settings.
-- Use this token when uploading packages to PyPI, as described in the next section.
-
-```{note}
+### How to keep PyPI API Token
 For the default GitHub Actions procedure, only one PyPI API token is required. This token should be securely stored as a repository secret and will be used by the workflow to authenticate uploads. Collaborators do not need direct access to this token, as it is securely stored in the repository secrets.
-```
 
 ## PyPI Upload
 
