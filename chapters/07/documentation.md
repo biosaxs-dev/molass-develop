@@ -1,8 +1,6 @@
 # Documentation
 
-```{warning}
-This page is in preparation to be publicly available in May, 2025.
-```
+This chapter describes how the documents have been made and how to maintain them.
 
 ## Documents to be maintained
 
