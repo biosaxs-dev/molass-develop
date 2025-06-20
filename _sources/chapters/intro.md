@@ -1,9 +1,5 @@
 # Molass Developer's Handbook
 
-```{warning}
-This book is scheduled to be publicly available in July, 2025.
-```
-
 ## Introduction
 
 The Molass Comunity welcomes anyone interested in SEC-SAXS data analysis. Feel free to contribute by opening issues using the ![github icon](../images/mark-github.svg) button at the upper right corner of any page.

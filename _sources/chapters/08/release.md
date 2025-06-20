@@ -1,9 +1,5 @@
 # Package Release
 
-```{warning}
-This page is scheduled to be publicly available in June, 2025.
-```
-
 This chapter is intended for collaborators who are responsible for releasing and maintaining Molass packages. It provides concise instructions for managing the package release process.
 
 ## Packages to be managed
