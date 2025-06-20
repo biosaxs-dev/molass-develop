@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -423,10 +423,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="documentation">
 <h1><span class="section-number">4. </span>Documentation<a class="headerlink" href="#documentation" title="Link to this heading">#</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This page is in preparation to be publicly available in May, 2025.</p>
-</div>
+<p>This chapter describes how the documents have been made and how to maintain them.</p>
 <section id="documents-to-be-maintained">
 <h2><span class="section-number">4.1. </span>Documents to be maintained<a class="headerlink" href="#documents-to-be-maintained" title="Link to this heading">#</a></h2>
 <p>We have the following documents, including this book, to maintain.</p>
@@ -608,6 +605,10 @@ Namely in docs:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sphinx</span><span class="o">-</span><span class="n">apidoc</span> <span class="o">--</span><span class="n">output</span><span class="o">-</span><span class="nb">dir</span> <span class="n">source</span> <span class="o">../</span><span class="n">molass</span> <span class="o">--</span><span class="n">separate</span> <span class="o">--</span><span class="n">module</span><span class="o">-</span><span class="n">first</span>
 </pre></div>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For <a class="reference external" href="https://freesemt.github.io/molass-legacy/">Molass Legacy Reference</a>, replace <code class="docutils literal notranslate"><span class="pre">molass</span></code> with <code class="docutils literal notranslate"><span class="pre">molass_legacy</span></code>.</p>
+</div>
 <p>After this generation, the folder tree will look as follows.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">molass</span><span class="o">-</span><span class="n">library</span><span class="o">/</span>
         <span class="n">docs</span><span class="o">/</span>
@@ -622,10 +623,6 @@ Namely in docs:</p>
 </pre></div>
 </div>
 <p>We confined *.rst files into the “source” subfolder to make it clear that they should be generated from the python source codes in “molass” folder, and as such, they should be ignored in version control of Git. (See <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> to confirm this)</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>For <a class="reference external" href="https://freesemt.github.io/molass-legacy/">Molass Legacy Reference</a>, replace <code class="docutils literal notranslate"><span class="pre">molass</span></code> with <code class="docutils literal notranslate"><span class="pre">molass_legacy</span></code>.</p>
-</div>
 </section>
 <section id="edit-index-rst">
 <h3><span class="section-number">4.3.5. </span>Edit <code class="docutils literal notranslate"><span class="pre">index.rst</span></code><a class="headerlink" href="#edit-index-rst" title="Link to this heading">#</a></h3>

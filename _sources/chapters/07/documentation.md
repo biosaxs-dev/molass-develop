@@ -1,8 +1,6 @@
 # Documentation
 
-```{warning}
-This page is in preparation to be publicly available in May, 2025.
-```
+This chapter describes how the documents have been made and how to maintain them.
 
 ## Documents to be maintained
 
@@ -169,6 +167,10 @@ Namely in docs:
 sphinx-apidoc --output-dir source ../molass --separate --module-first
 ```
 
+```{note}
+For [Molass Legacy Reference](https://freesemt.github.io/molass-legacy/), replace `molass` with `molass_legacy`.
+```
+
 After this generation, the folder tree will look as follows.
 
 ```
@@ -185,10 +187,6 @@ After this generation, the folder tree will look as follows.
 ```
 
 We confined *.rst files into the "source" subfolder to make it clear that they should be generated from the python source codes in "molass" folder, and as such, they should be ignored in version control of Git. (See `.gitignore` to confirm this)
-
-```{note}
-For [Molass Legacy Reference](https://freesemt.github.io/molass-legacy/), replace `molass` with `molass_legacy`.
-```
 
 ### Edit `index.rst`
 
