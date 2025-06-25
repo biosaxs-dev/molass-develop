@@ -6,8 +6,8 @@ root: chapters/intro
 options:
   numbered: 3
 chapters:
-- file: chapters/01/environments
-  title: Environments
+- file: chapters/01/environment
+  title: Environment
   sections:
   - file: chapters/01/coding_env
     title: Coding Environment
