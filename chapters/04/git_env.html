@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -392,11 +392,6 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github">1.4.1. GitHub</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#git">1.4.2. Git</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#git-large-file-storage">1.4.3. Git Large File Storage</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-git-lfs">Install Git LFS</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#track-settings">Track Settings</a></li>
-</ul>
-</li>
 </ul>
             </nav>
         </div>
@@ -426,39 +421,6 @@ git config --global user.email johndoe@example.com
 <ul class="simple">
 <li><p><a href="https://code.visualstudio.com/docs/sourcecontrol/overview">Using Git source control in VS Code</a></p></li>
 </ul>
-</section>
-<section id="git-large-file-storage">
-<h2><span class="section-number">1.4.3. </span>Git Large File Storage<a class="headerlink" href="#git-large-file-storage" title="Link to this heading">#</a></h2>
-<p>For large files larger than 50MB, it is recommended to use Git Large File Storage (LFS).</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Skip this section unless you need or plan to inculde large files.</p>
-</div>
-<section id="install-git-lfs">
-<h3>Install Git LFS<a class="headerlink" href="#install-git-lfs" title="Link to this heading">#</a></h3>
-<p>This install command, which sets up Git LFS hooks globally, needs to be run once per machine.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git lfs install
-</pre></div>
-</div>
-<p>The following steps are required to track files in a repository.</p>
-</section>
-<section id="track-settings">
-<h3>Track Settings<a class="headerlink" href="#track-settings" title="Link to this heading">#</a></h3>
-<p>Add tracking info in Command Prompt:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git lfs track &quot;sec_simulation.ipynb&quot;
-</pre></div>
-</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git add .gitattributes
-git add chapters\81\sec_simulation.ipynb
-</pre></div>
-</div>
-<p>Synchronize in Command Prompt:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git commit -m &quot;Track sec_simulation.ipynb with Git LFS&quot;
-git push origin main
-</pre></div>
-</div>
-<p>Or do it in VS Code.</p>
-</section>
 </section>
 </section>
 
@@ -528,11 +490,6 @@ git push origin main
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github">1.4.1. GitHub</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#git">1.4.2. Git</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#git-large-file-storage">1.4.3. Git Large File Storage</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-git-lfs">Install Git LFS</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#track-settings">Track Settings</a></li>
-</ul>
-</li>
 </ul>
   </nav></div>
 
