@@ -1,21 +1,10 @@
 # Package Release
 
+```{warning}
+This page is scheduled to be publicly available in June, 2025.
+```
+
 This chapter is intended for collaborators who are responsible for releasing and maintaining Molass packages. It provides concise instructions for managing the package release process.
-
-## Packages to be managed
-
-There are the following Python packages to be managed. 
-
-|No | Package Name | GitHub Repository              | Description              |
-|:-:|:-------------|:-------------------------------|:-------------------------|
-| 1 |molass_legacy | [reesemt/molass-legacy](https://github.com/freesemt/molass-legacy) | Molass GUI application |
-| 2 |molass        | [nshimizu0721/molass-library](https://github.com/nshimizu0721/molass-library)  | Molass Library |    
-| 3 |molass_data   | [freesemt/molass-data](https://github.com/freesemt/molass-data) | data for Molass Tutorial |
-
-## Package Management Specification
-
-Management of the above packages is specified in the `pyproject.toml` file in each repository.
-Especially, the package names as PyPI project names, used in the above table, are defined in the respective `pyproject.toml` files.
 
 ## About PyPI
 
@@ -52,8 +41,13 @@ A **PyPI API token** is a secure way to authenticate yourself when uploading pac
 6. Click **"Add token"**.
 7. Copy the generated token and store it securely. You won’t be able to view it again.
 
-### How to keep PyPI API Token
+### Important Notes
+- Keep your API token private and do not share it. If it is compromised, revoke it immediately from your account settings.
+- Use this token when uploading packages to PyPI, as described in the next section.
+
+```{note}
 For the default GitHub Actions procedure, only one PyPI API token is required. This token should be securely stored as a repository secret and will be used by the workflow to authenticate uploads. Collaborators do not need direct access to this token, as it is securely stored in the repository secrets.
+```
 
 ## PyPI Upload
 
@@ -65,6 +59,12 @@ The default and recommended procedure for uploading Molass packages to PyPI is t
 1. Go to the `"Actions"` tab in the [Molass Library repository](https://github.com/nshimizu0721/molass-library).
 2. Select the `"Manual Upload Python Package to PyPI"` workflow.
 3. Click the `"Run workflow"` button.
+
+```{note}
+This workflow script is placed in .github/workflows/upload_to_pypi.yml.
+
+It also includes a step to add a version tag to the repository to ensure the existance of corresponding tags.
+```
 
 #### Notes for Collaborators:
 - **Permissions:**  
