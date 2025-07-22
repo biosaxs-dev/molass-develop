@@ -23,6 +23,8 @@ chapters:
   title: Testing Conventions
 - file: chapters/07/documentation
   title: Documentation
+- file: chapters/07/cleaning_bookrepo
+  title: Cleaning Book Repositories
 - file: chapters/08/release
   title: Package Release
 - file: chapters/09/paper_submission
