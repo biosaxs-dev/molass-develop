@@ -23,8 +23,8 @@ chapters:
   title: Testing Conventions
 - file: chapters/07/documentation
   title: Documentation
-- file: chapters/07/cleaning_bookrepo
-  title: Cleaning Book Repositories
+- file: chapters/07/cleaning_repo
+  title: Cleaning Repositories
 - file: chapters/08/release
   title: Package Release
 - file: chapters/09/paper_submission
@@ -33,3 +33,5 @@ chapters:
   title: How to Contribute
 - file: chapters/11/ai_assisted
   title: AI Assisted Development
+- file: chapters/12/miscellaneous
+  title: Miscellaneous
