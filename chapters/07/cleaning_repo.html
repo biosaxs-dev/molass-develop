@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Practices for Effective AI-Assisted Coding &#8212; Molass Developpers Handbook</title>
+    <title>5. Cleaning Book Repositories &#8212; Molass Developpers Handbook</title>
   
   
   
@@ -57,10 +57,12 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/11/proposed_practices';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/07/cleaning_repo';</script>
     <link rel="icon" href="../../_static/molamola.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="6. Package Release" href="../08/release.html" />
+    <link rel="prev" title="4. Documentation" href="documentation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -123,8 +125,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -180,7 +180,7 @@
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../01/environment.html">1. Environment</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../01/coding_env.html">1.1. Coding Environment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../02/python_env.html">1.2. Python Environment</a></li>
@@ -190,12 +190,12 @@
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../05/coding_style.html">2. Coding Style</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../06/testing.html">3. Testing Conventions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../07/documentation.html">4. Documentation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../07/cleaning_repo.html">5. Cleaning Repositories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="documentation.html">4. Documentation</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">5. Cleaning Repositories</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../08/release.html">6. Package Release</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../09/paper_submission.html">7. Paper Submission</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../10/howto_contribute.html">8. How to Contribute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ai_assisted.html">9. AI Assisted Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../11/ai_assisted.html">9. AI Assisted Development</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../12/miscellaneous.html">10. Miscellaneous</a></li>
 </ul>
 
@@ -268,7 +268,7 @@
       
       
       
-      <li><a href="https://github.com/nshimizu0721/molass-develop/issues/new?title=Issue%20on%20page%20%2Fchapters/11/proposed_practices.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/nshimizu0721/molass-develop/issues/new?title=Issue%20on%20page%20%2Fchapters/07/cleaning_repo.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -298,7 +298,7 @@
       
       
       
-      <li><a href="../../_sources/chapters/11/proposed_practices.md" target="_blank"
+      <li><a href="../../_sources/chapters/07/cleaning_repo.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -369,9 +369,7 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -382,23 +380,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Practices for Effective AI-Assisted Coding</h1>
+    <h1>Cleaning Book Repositories</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#managing-dialog-context">1. <strong>Managing Dialog Context</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#session-independence-across-windows">2. <strong>Session Independence Across Windows</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#documenting-key-interactions">3. <strong>Documenting Key Interactions</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prompt-engineering">4. <strong>Prompt Engineering</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#review-and-verification">5. <strong>Review and Verification</strong></a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -408,47 +394,12 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="practices-for-effective-ai-assisted-coding">
-<h1>Practices for Effective AI-Assisted Coding<a class="headerlink" href="#practices-for-effective-ai-assisted-coding" title="Link to this heading">#</a></h1>
-<p>When working with AI tools like GitHub Copilot or ChatGPT, certain practices can help you get the most out of your coding sessions:</p>
-<section id="managing-dialog-context">
-<h2>1. <strong>Managing Dialog Context</strong><a class="headerlink" href="#managing-dialog-context" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>AI assistants often rely on the current session’s context to provide relevant suggestions or answers.</p></li>
-<li><p>If you close and reopen your editor or browser, the context may be lost, and the AI may not “remember” previous interactions.</p></li>
-<li><p>To maintain continuity, consider keeping important prompts, code snippets, or decisions documented in your project notes or comments.</p></li>
-</ul>
-</section>
-<section id="session-independence-across-windows">
-<h2>2. <strong>Session Independence Across Windows</strong><a class="headerlink" href="#session-independence-across-windows" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Each VS Code window or instance maintains its own context with the AI assistant.</p></li>
-<li><p>Dialogs, suggestions, and code completions are independent between windows.</p></li>
-<li><p>Be mindful that switching between windows or projects may result in different AI behavior or suggestions, as the context does not carry over.</p></li>
-</ul>
-</section>
-<section id="documenting-key-interactions">
-<h2>3. <strong>Documenting Key Interactions</strong><a class="headerlink" href="#documenting-key-interactions" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>When an AI assistant provides a particularly useful suggestion or explanation, document it in your code comments or a project log.</p></li>
-<li><p>This helps you and your collaborators understand the reasoning behind certain decisions, especially if the context is lost in future sessions.</p></li>
-</ul>
-</section>
-<section id="prompt-engineering">
-<h2>4. <strong>Prompt Engineering</strong><a class="headerlink" href="#prompt-engineering" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Be specific and clear in your prompts to the AI for better results.</p></li>
-<li><p>If you need to revisit a topic, restate the necessary context in your new prompt.</p></li>
-</ul>
-</section>
-<section id="review-and-verification">
-<h2>5. <strong>Review and Verification</strong><a class="headerlink" href="#review-and-verification" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Always review AI-generated code for correctness, security, and adherence to your project’s standards.</p></li>
-<li><p>Use AI as a tool to assist, not replace, your own judgment and expertise.</p></li>
-</ul>
-<p>By following these practices, you can make your AI-assisted development more effective, consistent, and reliable.</p>
-</section>
+  <section class="tex2jax_ignore mathjax_ignore" id="cleaning-book-repositories">
+<h1><span class="section-number">5. </span>Cleaning Book Repositories<a class="headerlink" href="#cleaning-book-repositories" title="Link to this heading">#</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This chapter is planned.</p>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -464,7 +415,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./chapters\11"
+            path: "./chapters\07"
         },
         predefinedOutput: true
     }
@@ -481,31 +432,30 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="documentation.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Documentation</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../08/release.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Package Release</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#managing-dialog-context">1. <strong>Managing Dialog Context</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#session-independence-across-windows">2. <strong>Session Independence Across Windows</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#documenting-key-interactions">3. <strong>Documenting Key Interactions</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prompt-engineering">4. <strong>Prompt Engineering</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#review-and-verification">5. <strong>Review and Verification</strong></a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>8. AI Assisted Development &#8212; Molass Developpers Handbook</title>
+    <title>9. AI Assisted Development &#8212; Molass Developpers Handbook</title>
   
   
   
@@ -61,7 +61,8 @@
     <link rel="icon" href="../../_static/molamola.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="prev" title="7. How to Contribute" href="../10/howto_contribute.html" />
+    <link rel="next" title="10. Miscellaneous" href="../12/miscellaneous.html" />
+    <link rel="prev" title="8. How to Contribute" href="../10/howto_contribute.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -190,10 +191,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../05/coding_style.html">2. Coding Style</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../06/testing.html">3. Testing Conventions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../07/documentation.html">4. Documentation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../08/release.html">5. Package Release</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../09/paper_submission.html">6. Paper Submission</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../10/howto_contribute.html">7. How to Contribute</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">8. AI Assisted Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../07/cleaning_repo.html">5. Cleaning Repositories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/release.html">6. Package Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09/paper_submission.html">7. Paper Submission</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../10/howto_contribute.html">8. How to Contribute</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">9. AI Assisted Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../12/miscellaneous.html">10. Miscellaneous</a></li>
 </ul>
 
     </div>
@@ -389,23 +392,23 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#core-rules-for-effective-ai-assisted-coding">8.1. Core Rules for Effective AI-Assisted Coding</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-save-your-ai-session-context">8.2. How to Save Your AI Session Context</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-recover-your-ai-session-context">8.3. How to Recover Your AI Session Context</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#managing-formatting-inconveniences-in-the-vs-code-chat-pane">8.4. Managing Formatting Inconveniences in the VS Code Chat Pane</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recognizing-the-inconvenience">8.4.1. Recognizing the Inconvenience</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-these-issues-occur">8.4.2. Why These Issues Occur</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-response-preferences-md-to-avoid-issues">8.4.3. Using RESPONSE_PREFERENCES.md to Avoid Issues</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resetting-preferences-to-defaults">8.4.4. Resetting Preferences to Defaults</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#core-rules-for-effective-ai-assisted-coding">9.1. Core Rules for Effective AI-Assisted Coding</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-save-your-ai-session-context">9.2. How to Save Your AI Session Context</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-recover-your-ai-session-context">9.3. How to Recover Your AI Session Context</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#managing-formatting-inconveniences-in-the-vs-code-chat-pane">9.4. Managing Formatting Inconveniences in the VS Code Chat Pane</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recognizing-the-inconvenience">9.4.1. Recognizing the Inconvenience</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-these-issues-occur">9.4.2. Why These Issues Occur</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-response-preferences-md-to-avoid-issues">9.4.3. Using RESPONSE_PREFERENCES.md to Avoid Issues</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resetting-preferences-to-defaults">9.4.4. Resetting Preferences to Defaults</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-change-context-during-a-session">8.5. How to Change Context During a Session</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#necessary-context-redirection-under-rule-4">8.6. Necessary Context Redirection under Rule 4</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-scenarios-for-context-redirection">8.6.1. Common Scenarios for Context Redirection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-change-context-during-a-session">9.5. How to Change Context During a Session</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#necessary-context-redirection-under-rule-4">9.6. Necessary Context Redirection under Rule 4</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-scenarios-for-context-redirection">9.6.1. Common Scenarios for Context Redirection</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refining-practices-and-terminology">8.7. Refining Practices and Terminology</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-note4">8.8. Final Note</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refining-practices-and-terminology">9.7. Refining Practices and Terminology</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-note4">9.8. Final Note</a></li>
 </ul>
             </nav>
         </div>
@@ -418,10 +421,10 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="ai-assisted-development">
-<h1><span class="section-number">8. </span>AI Assisted Development<a class="headerlink" href="#ai-assisted-development" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">9. </span>AI Assisted Development<a class="headerlink" href="#ai-assisted-development" title="Link to this heading">#</a></h1>
 <p>AI tools like GitHub Copilot<a class="footnote-reference brackets" href="#id5" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> can greatly enhance productivity, but effective use requires a few fundamental practices. The following practices are essential for reliable and efficient AI-assisted coding.</p>
 <section id="core-rules-for-effective-ai-assisted-coding">
-<h2><span class="section-number">8.1. </span>Core Rules for Effective AI-Assisted Coding<a class="headerlink" href="#core-rules-for-effective-ai-assisted-coding" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">9.1. </span>Core Rules for Effective AI-Assisted Coding<a class="headerlink" href="#core-rules-for-effective-ai-assisted-coding" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p><strong>Preserve Essential Context</strong></p>
 <ul class="simple">
@@ -453,7 +456,7 @@ document.write(`
 <p>Each of these axioms is fundamental and cannot be derived from the others. By following them, you ensure effective and reliable use of AI in your coding workflow.</p>
 </section>
 <section id="how-to-save-your-ai-session-context">
-<h2><span class="section-number">8.2. </span>How to Save Your AI Session Context<a class="headerlink" href="#how-to-save-your-ai-session-context" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">9.2. </span>How to Save Your AI Session Context<a class="headerlink" href="#how-to-save-your-ai-session-context" title="Link to this heading">#</a></h2>
 <p>Since chat and prompt history in VS Code (and similar environments) can be lost when you close a window, change workspaces, update extensions, or restart your machine, it is important to proactively save essential context.</p>
 <p><strong>Recommended Practice:</strong><br />
 After a productive session with GitHub Copilot, ask the AI to summarize the key context, prompts, and decisions from your session. Save this summary in a file named <code class="docutils literal notranslate"><span class="pre">COPILOT_CONTEXT.md</span></code> (or another descriptive name) in your project directory.</p>
@@ -469,7 +472,7 @@ After a productive session with GitHub Copilot, ask the AI to summarize the key 
 <p>By following this practice, you make your workflow more robust and resilient to interruptions or environment changes. This workflow helps ensure you never lose important context, even if your environment changes.</p>
 </section>
 <section id="how-to-recover-your-ai-session-context">
-<h2><span class="section-number">8.3. </span>How to Recover Your AI Session Context<a class="headerlink" href="#how-to-recover-your-ai-session-context" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">9.3. </span>How to Recover Your AI Session Context<a class="headerlink" href="#how-to-recover-your-ai-session-context" title="Link to this heading">#</a></h2>
 <p>To resume work after a restart or interruption, use the <code class="docutils literal notranslate"><span class="pre">COPILOT_CONTEXT.md</span></code> file (or another descriptive name) in your project directory to restore your working context.</p>
 <p><strong>Recommended Practice:</strong></p>
 <ol class="arabic">
@@ -484,17 +487,17 @@ After a productive session with GitHub Copilot, ask the AI to summarize the key 
 <p>By following this process, you can quickly restore your workflow with minimal loss of continuity, even after interruptions or environment changes.</p>
 </section>
 <section id="managing-formatting-inconveniences-in-the-vs-code-chat-pane">
-<h2><span class="section-number">8.4. </span>Managing Formatting Inconveniences in the VS Code Chat Pane<a class="headerlink" href="#managing-formatting-inconveniences-in-the-vs-code-chat-pane" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">9.4. </span>Managing Formatting Inconveniences in the VS Code Chat Pane<a class="headerlink" href="#managing-formatting-inconveniences-in-the-vs-code-chat-pane" title="Link to this heading">#</a></h2>
 <section id="recognizing-the-inconvenience">
-<h3><span class="section-number">8.4.1. </span>Recognizing the Inconvenience<a class="headerlink" href="#recognizing-the-inconvenience" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">9.4.1. </span>Recognizing the Inconvenience<a class="headerlink" href="#recognizing-the-inconvenience" title="Link to this heading">#</a></h3>
 <p>When working with GitHub Copilot in the VS Code chat pane, you may encounter formatting issues—such as broken or split code blocks, misrendered markdown, or incomplete responses. These problems often arise when sharing code, markdown, or quoted text, making it difficult to copy, reuse, or understand Copilot’s suggestions.</p>
 </section>
 <section id="why-these-issues-occur">
-<h3><span class="section-number">8.4.2. </span>Why These Issues Occur<a class="headerlink" href="#why-these-issues-occur" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">9.4.2. </span>Why These Issues Occur<a class="headerlink" href="#why-these-issues-occur" title="Link to this heading">#</a></h3>
 <p>GitHub Copilot does not have direct access to how its responses are rendered in your VS Code editor. It cannot see if a code block is broken or if markdown is misinterpreted. Instead, Copilot relies on your instructions and its training data. As a result, formatting issues can persist until you explicitly point them out or set clear preferences.</p>
 </section>
 <section id="using-response-preferences-md-to-avoid-issues">
-<h3><span class="section-number">8.4.3. </span>Using RESPONSE_PREFERENCES.md to Avoid Issues<a class="headerlink" href="#using-response-preferences-md-to-avoid-issues" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">9.4.3. </span>Using RESPONSE_PREFERENCES.md to Avoid Issues<a class="headerlink" href="#using-response-preferences-md-to-avoid-issues" title="Link to this heading">#</a></h3>
 <p>To minimize these inconveniences, you can create and maintain a <code class="docutils literal notranslate"><span class="pre">RESPONSE_PREFERENCES.md</span></code> file in your project. This file should clearly state your formatting preferences and any known issues to avoid. For example, you might specify:</p>
 <ul class="simple">
 <li><p>Always provide code or markdown in a <strong>single code block</strong> using four backticks and the appropriate language tag.</p></li>
@@ -505,7 +508,7 @@ After a productive session with GitHub Copilot, ask the AI to summarize the key 
 <p>By reminding Copilot of these preferences at the start of each session (or when issues arise), you help ensure more consistent and usable responses in VS Code.</p>
 </section>
 <section id="resetting-preferences-to-defaults">
-<h3><span class="section-number">8.4.4. </span>Resetting Preferences to Defaults<a class="headerlink" href="#resetting-preferences-to-defaults" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">9.4.4. </span>Resetting Preferences to Defaults<a class="headerlink" href="#resetting-preferences-to-defaults" title="Link to this heading">#</a></h3>
 <p>GitHub Copilot does not automatically detect or use the contents of <code class="docutils literal notranslate"><span class="pre">RESPONSE_PREFERENCES.md</span></code> unless you explicitly instruct it to do so in your prompt. If you want to return to the default Copilot response style, you should clearly state your intention in your prompt. For example:</p>
 <ul class="simple">
 <li><p>“Please ignore the RESPONSE_PREFERENCES file and use your default response style from now on.”</p></li>
@@ -521,7 +524,7 @@ After a productive session with GitHub Copilot, ask the AI to summarize the key 
 </section>
 </section>
 <section id="how-to-change-context-during-a-session">
-<h2><span class="section-number">8.5. </span>How to Change Context During a Session<a class="headerlink" href="#how-to-change-context-during-a-session" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">9.5. </span>How to Change Context During a Session<a class="headerlink" href="#how-to-change-context-during-a-session" title="Link to this heading">#</a></h2>
 <p>If your goals, requirements, or focus change during an ongoing session, or if you realize that the current approach is no longer effective, it is your responsibility to redirect the AI. Many AI assistants, including GitHub Copilot, rely on the current file and prompts for context. To ensure relevant assistance, explicitly guide the AI toward the new direction.</p>
 <p>This section focuses on <strong>general context changes</strong>, such as switching files or adding new information to the current session. For example:</p>
 <blockquote>
@@ -540,11 +543,11 @@ After a productive session with GitHub Copilot, ask the AI to summarize the key 
 <p>For further tips or more detailed guidance, feel free to ask GitHub Copilot directly as you work. This section is intentionally kept simple to encourage direct engagement with AI assistants for further guidance.</p>
 </section>
 <section id="necessary-context-redirection-under-rule-4">
-<h2><span class="section-number">8.6. </span>Necessary Context Redirection under Rule 4<a class="headerlink" href="#necessary-context-redirection-under-rule-4" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">9.6. </span>Necessary Context Redirection under Rule 4<a class="headerlink" href="#necessary-context-redirection-under-rule-4" title="Link to this heading">#</a></h2>
 <p>While general context changes are common during development, Rule 4 (<strong>Redirect Context When Necessary</strong>) addresses specific scenarios where the need for redirection often arises unexpectedly. AI tools, like GitHub Copilot, may persist in iterating on an ineffective approach, attempting to refine a solution even after repeated failures.</p>
 <p>In such cases, it is the developer’s responsibility to recognize when the current approach is no longer viable and to intervene by redirecting the AI toward a more effective path. This process is not always anticipated in advance but requires awareness and judgment to identify when a shift in focus or strategy is necessary.</p>
 <section id="common-scenarios-for-context-redirection">
-<h3><span class="section-number">8.6.1. </span>Common Scenarios for Context Redirection<a class="headerlink" href="#common-scenarios-for-context-redirection" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">9.6.1. </span>Common Scenarios for Context Redirection<a class="headerlink" href="#common-scenarios-for-context-redirection" title="Link to this heading">#</a></h3>
 <ol class="arabic">
 <li><p><strong>Switching to Library Utilization</strong>:</p>
 <ul>
@@ -623,7 +626,7 @@ After a productive session with GitHub Copilot, ask the AI to summarize the key 
 </section>
 </section>
 <section id="refining-practices-and-terminology">
-<h2><span class="section-number">8.7. </span>Refining Practices and Terminology<a class="headerlink" href="#refining-practices-and-terminology" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">9.7. </span>Refining Practices and Terminology<a class="headerlink" href="#refining-practices-and-terminology" title="Link to this heading">#</a></h2>
 <p>This chapter itself demonstrates how to refine practices and terminology collaboratively with an AI assistant. Here’s how the process unfolded about the first section above.<a class="footnote-reference brackets" href="#id7" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></p>
 <blockquote>
 <div><p><strong>Legend:</strong></p>
@@ -687,7 +690,7 @@ After a productive session with GitHub Copilot, ask the AI to summarize the key 
 <p>By following this process, the Core Rules evolved into a more comprehensive and balanced framework, addressing both the strengths and limitations of AI tools like GitHub Copilot.</p>
 </section>
 <section id="final-note4">
-<h2><span class="section-number">8.8. </span>Final Note<a class="footnote-reference brackets" href="#id8" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a><a class="headerlink" href="#final-note4" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">9.8. </span>Final Note<a class="footnote-reference brackets" href="#id8" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a><a class="headerlink" href="#final-note4" title="Link to this heading">#</a></h2>
 <p>AI-assisted development is a rapidly evolving field, and the practices outlined in this chapter are designed to help you make the most of current tools like GitHub Copilot. However, as AI tools and development environments continue to improve, it’s important to remain adaptable while asserting your preferences and goals without compromising easily.</p>
 <p>The collaborative process described in this chapter—generating ideas, simplifying them into actionable principles, and iterating for clarity—can be applied not only to AI-assisted coding but also to other areas of your work. By combining thoughtful human input with the capabilities of AI, you can create workflows that are both efficient and resilient.</p>
 <p>Finally, remember that while AI can assist with many aspects of development, your judgment and expertise remain essential. Use AI as a tool to enhance your productivity, but always verify its output and ensure it aligns with your goals and standards.</p>
@@ -754,8 +757,17 @@ After a productive session with GitHub Copilot, ask the AI to summarize the key 
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">7. </span>How to Contribute</p>
+        <p class="prev-next-title"><span class="section-number">8. </span>How to Contribute</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="../12/miscellaneous.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">10. </span>Miscellaneous</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -773,23 +785,23 @@ After a productive session with GitHub Copilot, ask the AI to summarize the key 
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#core-rules-for-effective-ai-assisted-coding">8.1. Core Rules for Effective AI-Assisted Coding</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-save-your-ai-session-context">8.2. How to Save Your AI Session Context</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-recover-your-ai-session-context">8.3. How to Recover Your AI Session Context</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#managing-formatting-inconveniences-in-the-vs-code-chat-pane">8.4. Managing Formatting Inconveniences in the VS Code Chat Pane</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recognizing-the-inconvenience">8.4.1. Recognizing the Inconvenience</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-these-issues-occur">8.4.2. Why These Issues Occur</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-response-preferences-md-to-avoid-issues">8.4.3. Using RESPONSE_PREFERENCES.md to Avoid Issues</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resetting-preferences-to-defaults">8.4.4. Resetting Preferences to Defaults</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#core-rules-for-effective-ai-assisted-coding">9.1. Core Rules for Effective AI-Assisted Coding</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-save-your-ai-session-context">9.2. How to Save Your AI Session Context</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-recover-your-ai-session-context">9.3. How to Recover Your AI Session Context</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#managing-formatting-inconveniences-in-the-vs-code-chat-pane">9.4. Managing Formatting Inconveniences in the VS Code Chat Pane</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recognizing-the-inconvenience">9.4.1. Recognizing the Inconvenience</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-these-issues-occur">9.4.2. Why These Issues Occur</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-response-preferences-md-to-avoid-issues">9.4.3. Using RESPONSE_PREFERENCES.md to Avoid Issues</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resetting-preferences-to-defaults">9.4.4. Resetting Preferences to Defaults</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-change-context-during-a-session">8.5. How to Change Context During a Session</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#necessary-context-redirection-under-rule-4">8.6. Necessary Context Redirection under Rule 4</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-scenarios-for-context-redirection">8.6.1. Common Scenarios for Context Redirection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-change-context-during-a-session">9.5. How to Change Context During a Session</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#necessary-context-redirection-under-rule-4">9.6. Necessary Context Redirection under Rule 4</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-scenarios-for-context-redirection">9.6.1. Common Scenarios for Context Redirection</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refining-practices-and-terminology">8.7. Refining Practices and Terminology</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-note4">8.8. Final Note</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refining-practices-and-terminology">9.7. Refining Practices and Terminology</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-note4">9.8. Final Note</a></li>
 </ul>
   </nav></div>
 
