@@ -56,7 +56,7 @@ For the default GitHub Actions procedure, only one PyPI API token is required. T
 The default and recommended procedure for uploading Molass packages to PyPI is through a GitHub Actions workflow. This method ensures consistency, security, and ease of use for all collaborators.
 
 #### Steps:
-1. Go to the `"Actions"` tab in the [Molass Library repository](https://github.com/nshimizu0721/molass-library).
+1. Go to the `"Actions"` tab in the [Molass Library repository](https://github.com/molass-saxs/molass-library).
 2. Select the `"Manual Upload Python Package to PyPI"` workflow.
 3. Click the `"Run workflow"` button.
 

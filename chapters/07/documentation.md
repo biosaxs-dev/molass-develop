@@ -9,11 +9,11 @@ We have the following documents, including this book, to maintain.
 |No |   Book Name           | Book License | Used Tool |
 |:-:|:--------------------------|:--------|:-----------|
 | 1 |[Molass Legacy Reference](https://freesemt.github.io/molass-legacy/) |GPL-3.0 |Sphinx |
-| 2 |[Molass Libray Reference](https://nshimizu0721.github.io/molass-library/)|GPL-3.0 |Sphinx |
-| 3 |[Molass Libray Essence](https://nshimizu0721.github.io/molass-essence/)  |CC BY 4.0|Jupyter Book|
-| 4 |[Molass Libray Tutorial](https://nshimizu0721.github.io/molass-tutorial/)|CC BY 4.0|Jupyter Book|
+| 2 |[Molass Libray Reference](https://molass-saxs.github.io/molass-library/)|GPL-3.0 |Sphinx |
+| 3 |[Molass Libray Essence](https://molass-saxs.github.io/molass-essence/)  |CC BY 4.0|Jupyter Book|
+| 4 |[Molass Libray Tutorial](https://molass-saxs.github.io/molass-tutorial/)|CC BY 4.0|Jupyter Book|
 | 5 |[Molass Technical Report](https://freesemt.github.io/molass-technical/)|CC BY 4.0|Jupyter Book|
-| 6 |[Molass Developer's Handbook](https://nshimizu0721.github.io/molass-develop/)|CC BY 4.0|Jupyter Book|
+| 6 |[Molass Developer's Handbook](https://molass-saxs.github.io/molass-develop/)|CC BY 4.0|Jupyter Book|
 
 For the first two reference books, we use [Sphinx](https://github.com/sphinx-doc/sphinx) directly to generate function documents from their [docstrings](https://peps.python.org/pep-0257/). For others, [Jupyter Book](https://github.com/jupyter-book/jupyter-book), which depends on Sphinx, is used.
 
@@ -242,4 +242,4 @@ After editing parts of source code, do the following in docs.
 python tools/UsualUpdate.py
 ```
 
-See the [module documentation](https://nshimizu0721.github.io/molass-library/source/UsualUpdate.html#module-UsualUpdate) for details.
+See the [module documentation](https://molass-saxs.github.io/molass-library/source/UsualUpdate.html#module-UsualUpdate) for details.
