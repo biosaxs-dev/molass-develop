@@ -61,7 +61,7 @@ Depending on the category, used data will vary as shown below.
 | test folder      | tests/generic | tests/specific |
 :::
 
-The data names above are partly the same as those referenced in [Local Settings](https://nshimizu0721.github.io/molass-tutorial/chapters/00/prepare.html#local-settings) of the [Tutorial](https://nshimizu0721.github.io/molass-tutorial/), the locations of which you should specify in the `local_settings.py` script as stated there. It would look something like the following code.
+The data names above are partly the same as those referenced in [Local Settings](https://molass-saxs.github.io/molass-tutorial/chapters/00/prepare.html#local-settings) of the [Tutorial](https://molass-saxs.github.io/molass-tutorial/), the locations of which you should specify in the `local_settings.py` script as stated there. It would look something like the following code.
 
 ```python
 LocalSettings = dict(
