@@ -47,31 +47,32 @@ Three-digit numbers are just for ordering in the following sense.
 ## Running Tests
 ### Test Data Settings
 
+Since we have introduced data package `molass_data` for the [Tutorial](https://molass-saxs.github.io/molass-tutorial/), we also use those data sets for basic tests.
 Depending on the category, used data will vary as shown below.
 
 :::{table} Data Usage depending on Test Category
 :widths: auto
 :align: center
 
-| Data Name / test folder| generic tests usage | specific tests usage |
+| Data Name / test folder| generic test usage | specific test usage |
 | :---             |:---:|:---:|
-| ORIGINAL_DATA    | Yes | Yes |
-| TUTORIAL_DATA    | Yes | Yes |
+| SAMPLE1    | Yes | No |
+| SAMPLE2    | Yes | No |
+| SAMPLE3    | Yes | No |
+| SAMPLE4    | Yes | No |
 | DATA_ROOT_FOLDER | No  | Yes |
 | test folder      | tests/generic | tests/specific |
 :::
 
-The data names above are partly the same as those referenced in [Local Settings](https://molass-saxs.github.io/molass-tutorial/chapters/00/prepare.html#local-settings) of the [Tutorial](https://molass-saxs.github.io/molass-tutorial/), the locations of which you should specify in the `local_settings.py` script as stated there. It would look something like the following code.
+The data sets named `SAMPLE*` are included in the data package `molass_data`. For specific tests, prepare `local_settings.py` like shown below, as explained at [Local](https://molass-saxs.github.io/molass-library/source/molass.Local.html) module reference.
 
 ```python
 LocalSettings = dict(
-    TUTORIAL_DATA=r"D:\MolassData\tutorial_data",
-    ORIGINAL_DATA=r"D:\MolassData\original_data",
     DATA_ROOT_FOLDER=r"D:\AllExperimentData",
 )
 ```
 
-Data sets for `DATA_ROOT_FOLDER` is currently not provided for download from the book pages. If you need them, let us know by opening an issue using the ![github icon](../../images/mark-github.svg) button at upper right corner of this page.
+Data sets for `DATA_ROOT_FOLDER` is currently not provided for download. If you need them, let us know by opening an issue using the ![github icon](../../images/mark-github.svg) button at upper right corner of this page.
 
 ### Command Lines
 To run generic tests only, do as follows in command prompt:
@@ -103,7 +104,8 @@ The python path in this execution is ensured to be set as the current repositoy 
 ```
 [tool.pytest.ini_options]
 pythonpath = [
-  "."
+  ".",
+  "../molass-legacy",  
 ]
 ```
 :::
@@ -128,6 +130,44 @@ pytest path/to/test_file.py::test_function_name
 More broadly, you can ask `GitHub Copilot`:
 
 "I use pytest to run all tests, which is great for checking overall software quality. But when developing a new feature, I need quick checks for specific parts of the code. Any advice on how to do this efficiently?"
+
+### Matplotlib Control for Testing
+
+Note the following requirements when running tests that generate matplotlib plots:
+- **Interactive mode** is needed for manual inspection and verification
+- **Batch mode** is required for automated testing, CI/CD pipelines, and headless environments
+- **Saving plots** is useful for debugging and documentation purposes
+
+To address these conflicting requirements, utility script `run_tests.py` is provided which offers four distinct modes to handle matplotlib figures:
+
+| Mode         | Plots Shown | Plots Saved | Use Case                           |
+|--------------|-------------|-------------|------------------------------------|
+| `batch`      | No          | No          | Fast automated testing, CI/CD      |
+| `save`       | No          | Yes         | Debugging, headless documentation  |
+| `interactive`| Yes         | No          | Manual verification, development   |
+| `both`       | Yes         | Yes         | Comprehensive testing and archival |
+
+Usage syntax is as follows.
+
+```
+python run_tests.py [--mode MODE] [--test TEST_PATH] [--plot-dir PLOT_DIR]
+```
+
+Examples:
+
+* Run all tests in batch mode (default):
+
+```
+python run_tests.py
+```
+
+* Test specific folder with interactive plots:
+
+```
+python run_tests.py --mode interactive --test tests/generic/
+```
+
+Test script example `example_test.py` is given to implement the above control.
 
 ### Attribution
 
