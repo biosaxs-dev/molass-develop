@@ -2,11 +2,13 @@
 
 ## Test Tools
 
-We use pytest with coverage reports. Install the following packages for testing.
+We use pytest with coverage reports and some other extensions. Install the following packages for testing.
 
 ```
 pip install -U pytest
 pip install -U pytest-cov
+pip install -U pytest-env
+pip install -U pytest-order
 ```
 
 ## Test Scripts Organizing
