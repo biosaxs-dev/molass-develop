@@ -480,7 +480,7 @@ document.write(`
             <span class="mi">01</span><span class="o">-</span><span class="n">quicK_start</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
-<p>As shown in the abobe table, tests are first classified by the two target types, namely the Molass Library itself and the codes included in the Jupyter Book documents.</p>
+<p>As shown in the above table, tests are first classified by the two target types, namely the Molass Library itself and the codes included in the Jupyter Book documents.</p>
 <p>One of the reasons for dividing the library tests into the two categories “generic” and “specific” is as follows.</p>
 <p>The generic folder should be kept relatively simple by excluding site-specific tests such as “FlowChange”, which arises only from unique experiment practice at some SAXS beamlines in <a class="reference external" href="https://www2.kek.jp/imss/pf/eng/">Photon Factory</a>, Japan and often includes complex issues irrelevant to generic cases.</p>
 <div class="admonition note">
@@ -496,7 +496,7 @@ document.write(`
 <h2><span class="section-number">3.3. </span>Running Tests<a class="headerlink" href="#running-tests" title="Link to this heading">#</a></h2>
 <section id="test-data-settings">
 <h3><span class="section-number">3.3.1. </span>Test Data Settings<a class="headerlink" href="#test-data-settings" title="Link to this heading">#</a></h3>
-<p>Since we have introduced data package <code class="docutils literal notranslate"><span class="pre">molass_data</span></code> for the document notebooks like <a class="reference external" href="https://molass-saxs.github.io/molass-tutorial/">Tutorial</a>, we also use those data sets for basic tests.</p>
+<p>For basic tests, we also use data package <code class="docutils literal notranslate"><span class="pre">molass_data</span></code>, which was introduced for the document notebooks like <a class="reference external" href="https://molass-saxs.github.io/molass-tutorial/">Tutorial</a>.</p>
 <p>The data sets named <code class="docutils literal notranslate"><span class="pre">SAMPLE*</span></code> are included in the data package <code class="docutils literal notranslate"><span class="pre">molass_data</span></code>. For extra tests, prepare <code class="docutils literal notranslate"><span class="pre">local_settings.py</span></code> like shown below, as explained at <a class="reference external" href="https://molass-saxs.github.io/molass-library/source/molass.Local.html">Local</a> module reference.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">LocalSettings</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
     <span class="n">DATA_ROOT_FOLDER</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;D:\AllExperimentData&quot;</span><span class="p">,</span>

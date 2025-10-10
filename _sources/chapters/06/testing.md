@@ -51,7 +51,7 @@ molass-library/
         tutorial/
             01-quicK_start.py
 ```
-As shown in the abobe table, tests are first classified by the two target types, namely the Molass Library itself and the codes included in the Jupyter Book documents.
+As shown in the above table, tests are first classified by the two target types, namely the Molass Library itself and the codes included in the Jupyter Book documents.
 
 One of the reasons for dividing the library tests into the two categories "generic" and "specific" is as follows.
 
@@ -68,7 +68,7 @@ Three-digit numbers are just for ordering in the following sense.
 ## Running Tests
 ### Test Data Settings
 
-Since we have introduced data package `molass_data` for the document notebooks like [Tutorial](https://molass-saxs.github.io/molass-tutorial/), we also use those data sets for basic tests.
+For basic tests, we also use data package `molass_data`, which was introduced for the document notebooks like [Tutorial](https://molass-saxs.github.io/molass-tutorial/).
 
 The data sets named `SAMPLE*` are included in the data package `molass_data`. For extra tests, prepare `local_settings.py` like shown below, as explained at [Local](https://molass-saxs.github.io/molass-library/source/molass.Local.html) module reference.
 
