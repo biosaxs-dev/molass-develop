@@ -6,10 +6,10 @@ If you encounter a bug, have a question, or want to suggest a new feature, you c
 
 1. **Go to the Issues Tab:**
    - Navigate to one of the GitHub repositories below and click on the **Issues** tab.
-      - [molass-library](https://github.com/molass-saxs/molass-library) for the library codes or their function reference,
-      - [molass-develop](https://github.com/molass-saxs/molass-develop) for the contents of this book,
-      - [molass-tutorial](https://github.com/molass-saxs/molass-tutorial) for the contents of its book,  
-      - [molass-essence](https://github.com/molass-saxs/molass-essence) for the contents of its book.
+      - [molass-library](https://github.com/biosaxs-dev/molass-library) for the library codes or their function reference,
+      - [molass-develop](https://github.com/biosaxs-dev/molass-develop) for the contents of this book,
+      - [molass-tutorial](https://github.com/biosaxs-dev/molass-tutorial) for the contents of its book,  
+      - [molass-essence](https://github.com/biosaxs-dev/molass-essence) for the contents of its book.
 
 2. **Check for Existing Issues:**
    - Search the existing issues to see if someone else has already reported the same problem or made a similar suggestion.

@@ -68,9 +68,9 @@ Three-digit numbers are just for ordering in the following sense.
 ## Running Tests
 ### Test Data Settings
 
-For basic tests, we also use data package `molass_data`, which was introduced for the document notebooks like [Tutorial](https://molass-saxs.github.io/molass-tutorial/).
+For basic tests, we also use data package `molass_data`, which was introduced for the document notebooks like [Tutorial](https://biosaxs-dev.github.io/molass-tutorial/).
 
-The data sets named `SAMPLE*` are included in the data package `molass_data`. For extra tests, prepare `local_settings.py` like shown below, as explained at [Local](https://molass-saxs.github.io/molass-library/source/molass.Local.html) module reference.
+The data sets named `SAMPLE*` are included in the data package `molass_data`. For extra tests, prepare `local_settings.py` like shown below, as explained at [Local](https://biosaxs-dev.github.io/molass-library/source/molass.Local.html) module reference.
 
 ```python
 LocalSettings = dict(

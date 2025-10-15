@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -251,7 +251,7 @@
       
       
       
-      <li><a href="https://github.com/molass-saxs/molass-develop" target="_blank"
+      <li><a href="https://github.com/biosaxs-dev/molass-develop" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -268,7 +268,7 @@
       
       
       
-      <li><a href="https://github.com/molass-saxs/molass-develop/issues/new?title=Issue%20on%20page%20%2Fchapters/06/testing.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/biosaxs-dev/molass-develop/issues/new?title=Issue%20on%20page%20%2Fchapters/06/testing.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -496,8 +496,8 @@ document.write(`
 <h2><span class="section-number">3.3. </span>Running Tests<a class="headerlink" href="#running-tests" title="Link to this heading">#</a></h2>
 <section id="test-data-settings">
 <h3><span class="section-number">3.3.1. </span>Test Data Settings<a class="headerlink" href="#test-data-settings" title="Link to this heading">#</a></h3>
-<p>For basic tests, we also use data package <code class="docutils literal notranslate"><span class="pre">molass_data</span></code>, which was introduced for the document notebooks like <a class="reference external" href="https://molass-saxs.github.io/molass-tutorial/">Tutorial</a>.</p>
-<p>The data sets named <code class="docutils literal notranslate"><span class="pre">SAMPLE*</span></code> are included in the data package <code class="docutils literal notranslate"><span class="pre">molass_data</span></code>. For extra tests, prepare <code class="docutils literal notranslate"><span class="pre">local_settings.py</span></code> like shown below, as explained at <a class="reference external" href="https://molass-saxs.github.io/molass-library/source/molass.Local.html">Local</a> module reference.</p>
+<p>For basic tests, we also use data package <code class="docutils literal notranslate"><span class="pre">molass_data</span></code>, which was introduced for the document notebooks like <a class="reference external" href="https://biosaxs-dev.github.io/molass-tutorial/">Tutorial</a>.</p>
+<p>The data sets named <code class="docutils literal notranslate"><span class="pre">SAMPLE*</span></code> are included in the data package <code class="docutils literal notranslate"><span class="pre">molass_data</span></code>. For extra tests, prepare <code class="docutils literal notranslate"><span class="pre">local_settings.py</span></code> like shown below, as explained at <a class="reference external" href="https://biosaxs-dev.github.io/molass-library/source/molass.Local.html">Local</a> module reference.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">LocalSettings</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
     <span class="n">DATA_ROOT_FOLDER</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;D:\AllExperimentData&quot;</span><span class="p">,</span>
 <span class="p">)</span>
