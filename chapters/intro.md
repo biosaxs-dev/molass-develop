@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The Molass Comunity welcomes anyone interested in SEC-SAXS data analysis. Feel free to contribute by opening issues using the ![github icon](../images/mark-github.svg) button at the upper right corner of any page.
+The Molass Community welcomes anyone interested in SEC-SAXS data analysis. Feel free to contribute by opening issues using the ![github icon](../images/mark-github.svg) button at the upper right corner of any page.
 
 This book is intended to help contributors to the project.
 
