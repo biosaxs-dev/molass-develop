@@ -8,6 +8,8 @@ The coding style for Molass Library is designed to be researcher-friendly, makin
 
 > Please follow the Copilot guidelines in this project for all advice and responses.
 
+This magic phrase instructs Copilot to apply the specific rules and recommendations documented in the project's guidelines, such as those found in [Copilot/copilot-guidelines.md](https://github.com/biosaxs-dev/molass-library/blob/master/Copilot/copilot-guidelines.md) in the [molass-library](https://github.com/biosaxs-dev/molass-library) code repository. For details on these rules, refer to the guidelines file directly.
+
 This helps maintain consistency and ensures Copilot recommendations are aligned with project standards.
 
 ## Key Principles
