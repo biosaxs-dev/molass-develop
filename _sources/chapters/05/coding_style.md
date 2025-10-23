@@ -1,46 +1,56 @@
-(coding_style)=
 # Coding Style
 
-## Key Points
-We state here what style, we believe, is desirable in coding `Molass Library`. Stated in mottos:
+## Purpose
 
-* Be researcher friendly
-* Namely, for example, avoid certain advanced language features
-* Why-oriented docstring documentation
+The coding style for Molass Library is designed to be researcher-friendly, making it easy for both researchers and programmers to read, maintain, and contribute to the codebase. All style guidelines support inclusivity and clarity, prioritizing scientific users who may not be professional programmers.
 
-## Elaboration with GitHub Copilot
-Here are some hints to explain above points from chats with GitHub Copilot.
+**Note:** To ensure Copilot's advice and code suggestions follow these guidelines, start your chat session with the following magic phrase:
 
-`Molass Author`: If I say "why-oriented docstring documentation" to suggest our coding style, does that make any sense to you?
+> Please follow the Copilot guidelines in this project for all advice and responses.
 
-`GitHub Copilot`: Yes, "why-oriented docstring documentation" makes sense as a coding style concept. It suggests that your docstrings should focus on explaining why a piece of code exists or behaves a certain way, rather than just describing what it does or how it works. This approach can be particularly helpful for researchers or developers who need to understand the reasoning behind decisions in the code, which is often more valuable than just understanding the mechanics.
+This helps maintain consistency and ensures Copilot recommendations are aligned with project standards.
 
-Example: Linear Search Instead of Binary Search
+## Key Principles
 
-```python
-def find_element(elements, target):
-    """
-    Finds the index of the target element in the list using linear search.
+1. **Researcher-Friendly Code**  
+   - Avoid advanced language features that may confuse non-programmers.
+   - Prefer clear, simple constructs over clever or complex solutions.
+   - Write code that is easy to understand, modify, and extend.
 
-    This function uses linear search instead of binary search because the input
-    list is expected to be small and unsorted. Sorting the list for binary search
-    would add unnecessary overhead in this specific use case.
-    """
-    for i, element in enumerate(elements):
-        if element == target:
-            return i
-    return -1
-```
+2. **Why-Oriented Documentation**  
+   - Docstrings and comments should explain the reasoning behind design decisions, not just what the code does.
+   - Example:
+     ```python
+     def find_element(elements, target):
+         """
+         Finds the index of the target element in the list using linear search.
 
-This approach provides context and rationale, making the code more understandable and maintainable.
+         Linear search is used because the input list is expected to be small and unsorted.
+         Sorting for binary search would add unnecessary overhead in this use case.
+         """
+         for i, element in enumerate(elements):
+             if element == target:
+                 return i
+         return -1
+     ```
 
-End of chat quote. Some other questions to ask GitHub Copilot:
+3. **Consistent Style**  
+   - Follow established formatting and naming conventions.
+   - Use clear, descriptive names for variables, functions, and classes.
+   - Keep line lengths reasonable and code blocks focused.
 
-`Molass Author`: Do you have any other advice for making our coding style researcher-friendly?
+4. **Copilot Guidelines Integration**  
+   - When seeking advice or code suggestions, always refer to the Copilot guidelines.
+   - Prefer solutions and examples that are already part of the Molass Library or documented in the Copilot folder.
+   - If a new best practice or rule emerges, propose its addition to the guidelines.
 
-`Molass Author`: I mean researcher-friendly here that you should be aware of the fact that the developers or maintainers may be researchers, and not necessarily professional programmers. In this sense, I think we should avoid some advanced language features. Do you agree? If so, I would appreciate it if you could give a few examples of such features to avoid.
+## Practical Advice
 
-To the above questions, `GitHub Copilot` would give several more suggestions, which we omit here, implying you can ask anytime if you know what to ask. 
+- Avoid features such as metaclasses, decorators with complex logic, or advanced type annotations unless necessary.
+- Use standard library modules and well-known patterns.
+- Document not only how but why code is written a certain way.
+- When in doubt, prioritize clarity and maintainability.
 
-Acknowledgement to:
-Suggestions provided by GitHub Copilot, an AI programming assistant.
+## Attribution
+
+These coding style guidelines were developed in collaboration with GitHub Copilot (GPT-4.1) and are periodically reviewed to ensure alignment with project goals and user needs.
