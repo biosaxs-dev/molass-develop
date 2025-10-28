@@ -99,7 +99,7 @@ We have developed a utility script `run_tests.py` which has the following basic 
 * Flexible targeting: Single files, directories, ranges (--range 1-3)
 * Interactive plotting: Proper matplotlib GUI display
 
-I also has the following capabilities.
+It also has the following capabilities.
 
 * Systematic matplotlib control with @control_matplotlib_plot
 * Numerical warning suppression with @suppress_numerical_warnings
@@ -159,17 +159,16 @@ filterwarnings = [
 ```
 :::
 
-```{note}
-Test coverage support for run_tests.py like below is planned.
+
+## Test Coverage
+
+To measure code coverage, use the `--coverage` option with `run_tests.py`, for example:
+
+```
+python run_tests.py --test tests/tutorial --coverage
 ```
 
-For detailed tests coverage, execute as follows:
-
-```
-pytest --cov=molass --cov-report=html
-```
-
-and check the results in `test_folder/htmlcov/index.html` with your browser, where `test_folder` is one of `tests/generic`, `tests/specific` or `tests` depending on how you ran the tests.
+This will run the tests and generate an HTML coverage report in the `htmlcov` directory. Open `htmlcov/index.html` in your browser to view detailed coverage results.
 
 ### Attribution
 
