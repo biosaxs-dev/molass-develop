@@ -99,7 +99,7 @@ We have developed a utility script `run_tests.py` which has the following basic 
 * Flexible targeting: Single files, directories, ranges (--range 1-3)
 * Interactive plotting: Proper matplotlib GUI display
 
-I also has the following capabilities.
+It also has the following capabilities.
 
 * Systematic matplotlib control with @control_matplotlib_plot
 * Numerical warning suppression with @suppress_numerical_warnings
