@@ -11,6 +11,18 @@ pip install -U pytest-env
 pip install -U pytest-order
 ```
 
+## Minimal Test in molass-library repository
+
+If you have installed the above packages, the minimal way to test it is as follows.
+
+In the repository root:
+
+```
+python run_tests.py --test tests/tutorial 
+```
+
+This will run the test scripts which test example codes in the [tutorial](https://biosaxs-dev.github.io/molass-tutorial/) using minimal data provided by `molass_data` package. Other advanced ways for testing will be described below. 
+
 ## Test Scripts Organizing
 
 Test scripts are classified as shown in the following table and located under "tests" folder.
@@ -108,7 +120,10 @@ python run_tests.py --test tests/generic --mode batch
 # Save plots for documentation
 python run_tests.py --test tests/tutorial --mode save --plot-dir documentation-plots
 ```
-
+```{note}
+**What is CI/CD?**  
+CI/CD stands for Continuous Integration and Continuous Deployment (or Delivery). It refers to automated processes that build, test, and deploy code changes, ensuring software quality and rapid delivery.
+```
 The matplotlib control modes are summarized below.
 
 | Mode         | Plots Shown | Plots Saved | Use Case                           |

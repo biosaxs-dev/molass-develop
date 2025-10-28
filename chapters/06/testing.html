@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -393,11 +393,12 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-tools">3.1. Test Tools</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-scripts-organizing">3.2. Test Scripts Organizing</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-tests">3.3. Running Tests</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-data-settings">3.3.1. Test Data Settings</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-utility">3.3.2. Test Utility</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attribution">3.3.3. Attribution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#minimal-test-in-molass-library-repository">3.2. Minimal Test in molass-library repository</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-scripts-organizing">3.3. Test Scripts Organizing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-tests">3.4. Running Tests</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-data-settings">3.4.1. Test Data Settings</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-utility">3.4.2. Test Utility</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attribution">3.4.3. Attribution</a></li>
 </ul>
 </li>
 </ul>
@@ -423,8 +424,17 @@ document.write(`
 </pre></div>
 </div>
 </section>
+<section id="minimal-test-in-molass-library-repository">
+<h2><span class="section-number">3.2. </span>Minimal Test in molass-library repository<a class="headerlink" href="#minimal-test-in-molass-library-repository" title="Link to this heading">#</a></h2>
+<p>If you have installed the above packages, the minimal way to test it is as follows.</p>
+<p>In the repository root:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">run_tests</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">test</span> <span class="n">tests</span><span class="o">/</span><span class="n">tutorial</span> 
+</pre></div>
+</div>
+<p>This will run the test scripts which test example codes in the <a class="reference external" href="https://biosaxs-dev.github.io/molass-tutorial/">tutorial</a> using minimal data provided by <code class="docutils literal notranslate"><span class="pre">molass_data</span></code> package. Other advanced ways for testing will be described below.</p>
+</section>
 <section id="test-scripts-organizing">
-<h2><span class="section-number">3.2. </span>Test Scripts Organizing<a class="headerlink" href="#test-scripts-organizing" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">3.3. </span>Test Scripts Organizing<a class="headerlink" href="#test-scripts-organizing" title="Link to this heading">#</a></h2>
 <p>Test scripts are classified as shown in the following table and located under “tests” folder.</p>
 <div class="pst-scrollable-table-container"><table class="table table-center" id="id1">
 <caption><span class="caption-number">Table 3.1 </span><span class="caption-text">TestScipt Classification and Folder Naming</span><a class="headerlink" href="#id1" title="Link to this table">#</a></caption>
@@ -493,9 +503,9 @@ document.write(`
 </div>
 </section>
 <section id="running-tests">
-<h2><span class="section-number">3.3. </span>Running Tests<a class="headerlink" href="#running-tests" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">3.4. </span>Running Tests<a class="headerlink" href="#running-tests" title="Link to this heading">#</a></h2>
 <section id="test-data-settings">
-<h3><span class="section-number">3.3.1. </span>Test Data Settings<a class="headerlink" href="#test-data-settings" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">3.4.1. </span>Test Data Settings<a class="headerlink" href="#test-data-settings" title="Link to this heading">#</a></h3>
 <p>For basic tests, we also use data package <code class="docutils literal notranslate"><span class="pre">molass_data</span></code>, which was introduced for the document notebooks like <a class="reference external" href="https://biosaxs-dev.github.io/molass-tutorial/">Tutorial</a>.</p>
 <p>The data sets named <code class="docutils literal notranslate"><span class="pre">SAMPLE*</span></code> are included in the data package <code class="docutils literal notranslate"><span class="pre">molass_data</span></code>. For extra tests, prepare <code class="docutils literal notranslate"><span class="pre">local_settings.py</span></code> like shown below, as explained at <a class="reference external" href="https://biosaxs-dev.github.io/molass-library/source/molass.Local.html">Local</a> module reference.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">LocalSettings</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
@@ -506,7 +516,7 @@ document.write(`
 <p>Data sets for <code class="docutils literal notranslate"><span class="pre">DATA_ROOT_FOLDER</span></code> is currently not provided for download. If you need them, let us know by opening an issue using the <img alt="github icon" src="../../_images/mark-github.svg" /> button at upper right corner of this page.</p>
 </section>
 <section id="test-utility">
-<h3><span class="section-number">3.3.2. </span>Test Utility<a class="headerlink" href="#test-utility" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">3.4.2. </span>Test Utility<a class="headerlink" href="#test-utility" title="Link to this heading">#</a></h3>
 <p>We have developed a utility script <code class="docutils literal notranslate"><span class="pre">run_tests.py</span></code> which has the following basic features.</p>
 <ul class="simple">
 <li><p>Multiple modes: batch, save, interactive, both</p></li>
@@ -532,6 +542,11 @@ document.write(`
 <span class="c1"># Save plots for documentation</span>
 <span class="n">python</span> <span class="n">run_tests</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">test</span> <span class="n">tests</span><span class="o">/</span><span class="n">tutorial</span> <span class="o">--</span><span class="n">mode</span> <span class="n">save</span> <span class="o">--</span><span class="n">plot</span><span class="o">-</span><span class="nb">dir</span> <span class="n">documentation</span><span class="o">-</span><span class="n">plots</span>
 </pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>What is CI/CD?</strong><br />
+CI/CD stands for Continuous Integration and Continuous Deployment (or Delivery). It refers to automated processes that build, test, and deploy code changes, ensuring software quality and rapid delivery.</p>
 </div>
 <p>The matplotlib control modes are summarized below.</p>
 <div class="pst-scrollable-table-container"><table class="table">
@@ -599,7 +614,7 @@ document.write(`
 <p>and check the results in <code class="docutils literal notranslate"><span class="pre">test_folder/htmlcov/index.html</span></code> with your browser, where <code class="docutils literal notranslate"><span class="pre">test_folder</span></code> is one of <code class="docutils literal notranslate"><span class="pre">tests/generic</span></code>, <code class="docutils literal notranslate"><span class="pre">tests/specific</span></code> or <code class="docutils literal notranslate"><span class="pre">tests</span></code> depending on how you ran the tests.</p>
 </section>
 <section id="attribution">
-<h3><span class="section-number">3.3.3. </span>Attribution<a class="headerlink" href="#attribution" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">3.4.3. </span>Attribution<a class="headerlink" href="#attribution" title="Link to this heading">#</a></h3>
 <p>Some of the insights and suggestions in this chapter were generated with the assistance of <code class="docutils literal notranslate"><span class="pre">GitHub</span> <span class="pre">Copilot</span></code>, an AI programming assistant. Its contributions helped refine the content and provide practical examples for testing workflows.</p>
 </section>
 </section>
@@ -670,11 +685,12 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-tools">3.1. Test Tools</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-scripts-organizing">3.2. Test Scripts Organizing</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-tests">3.3. Running Tests</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-data-settings">3.3.1. Test Data Settings</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-utility">3.3.2. Test Utility</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attribution">3.3.3. Attribution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#minimal-test-in-molass-library-repository">3.2. Minimal Test in molass-library repository</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-scripts-organizing">3.3. Test Scripts Organizing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-tests">3.4. Running Tests</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-data-settings">3.4.1. Test Data Settings</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-utility">3.4.2. Test Utility</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attribution">3.4.3. Attribution</a></li>
 </ul>
 </li>
 </ul>
