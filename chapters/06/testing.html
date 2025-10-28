@@ -398,7 +398,10 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-tests">3.4. Running Tests</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-data-settings">3.4.1. Test Data Settings</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-utility">3.4.2. Test Utility</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attribution">3.4.3. Attribution</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-coverage">3.5. Test Coverage</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attribution">3.5.1. Attribution</a></li>
 </ul>
 </li>
 </ul>
@@ -603,18 +606,17 @@ CI/CD stands for Continuous Integration and Continuous Deployment (or Delivery).
 </pre></div>
 </div>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Test coverage support for run_tests.py like below is planned.</p>
-</div>
-<p>For detailed tests coverage, execute as follows:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pytest</span> <span class="o">--</span><span class="n">cov</span><span class="o">=</span><span class="n">molass</span> <span class="o">--</span><span class="n">cov</span><span class="o">-</span><span class="n">report</span><span class="o">=</span><span class="n">html</span>
+</section>
+</section>
+<section id="test-coverage">
+<h2><span class="section-number">3.5. </span>Test Coverage<a class="headerlink" href="#test-coverage" title="Link to this heading">#</a></h2>
+<p>To measure code coverage, use the <code class="docutils literal notranslate"><span class="pre">--coverage</span></code> option with <code class="docutils literal notranslate"><span class="pre">run_tests.py</span></code>, for example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">run_tests</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">test</span> <span class="n">tests</span><span class="o">/</span><span class="n">tutorial</span> <span class="o">--</span><span class="n">coverage</span>
 </pre></div>
 </div>
-<p>and check the results in <code class="docutils literal notranslate"><span class="pre">test_folder/htmlcov/index.html</span></code> with your browser, where <code class="docutils literal notranslate"><span class="pre">test_folder</span></code> is one of <code class="docutils literal notranslate"><span class="pre">tests/generic</span></code>, <code class="docutils literal notranslate"><span class="pre">tests/specific</span></code> or <code class="docutils literal notranslate"><span class="pre">tests</span></code> depending on how you ran the tests.</p>
-</section>
+<p>This will run the tests and generate an HTML coverage report in the <code class="docutils literal notranslate"><span class="pre">htmlcov</span></code> directory. Open <code class="docutils literal notranslate"><span class="pre">htmlcov/index.html</span></code> in your browser to view detailed coverage results.</p>
 <section id="attribution">
-<h3><span class="section-number">3.4.3. </span>Attribution<a class="headerlink" href="#attribution" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">3.5.1. </span>Attribution<a class="headerlink" href="#attribution" title="Link to this heading">#</a></h3>
 <p>Some of the insights and suggestions in this chapter were generated with the assistance of <code class="docutils literal notranslate"><span class="pre">GitHub</span> <span class="pre">Copilot</span></code>, an AI programming assistant. Its contributions helped refine the content and provide practical examples for testing workflows.</p>
 </section>
 </section>
@@ -690,7 +692,10 @@ CI/CD stands for Continuous Integration and Continuous Deployment (or Delivery).
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-tests">3.4. Running Tests</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-data-settings">3.4.1. Test Data Settings</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-utility">3.4.2. Test Utility</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attribution">3.4.3. Attribution</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-coverage">3.5. Test Coverage</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attribution">3.5.1. Attribution</a></li>
 </ul>
 </li>
 </ul>
