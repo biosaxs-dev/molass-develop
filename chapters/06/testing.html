@@ -539,6 +539,9 @@ document.write(`
 <span class="c1"># Run specific test with range</span>
 <span class="n">python</span> <span class="n">run_tests</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">test</span> <span class="n">tests</span><span class="o">/</span><span class="n">generic</span><span class="o">/</span><span class="mi">810</span><span class="n">_VoxelSpace</span><span class="o">/</span><span class="n">test_010_shapes</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="nb">range</span> <span class="mi">1</span><span class="o">-</span><span class="mi">2</span> <span class="o">--</span><span class="n">mode</span> <span class="n">interactive</span>
 
+<span class="c1"># Run only a specific test function in a file</span>
+<span class="n">python</span> <span class="n">run_tests</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">test</span> <span class="n">tests</span><span class="o">/</span><span class="n">specific</span><span class="o">/</span><span class="mi">110</span><span class="n">_Trimming</span><span class="o">/</span><span class="n">test_010_Trimming</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">function</span> <span class="n">test_020_20180605_Backsub3</span> <span class="o">--</span><span class="n">mode</span> <span class="n">interactive</span>
+
 <span class="c1"># Batch testing for CI/CD</span>
 <span class="n">python</span> <span class="n">run_tests</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">test</span> <span class="n">tests</span><span class="o">/</span><span class="n">generic</span> <span class="o">--</span><span class="n">mode</span> <span class="n">batch</span>
 
@@ -551,6 +554,7 @@ document.write(`
 <p><strong>What is CI/CD?</strong><br />
 CI/CD stands for Continuous Integration and Continuous Deployment (or Delivery). It refers to automated processes that build, test, and deploy code changes, ensuring software quality and rapid delivery.</p>
 </div>
+<p>You can use the <code class="docutils literal notranslate"><span class="pre">--function</span></code> argument to run only a specific test function (or method) within a test script. This is especially useful for debugging or developing a single test interactively. The function name should match exactly as defined in the script (e.g., <code class="docutils literal notranslate"><span class="pre">test_foo</span></code> or <code class="docutils literal notranslate"><span class="pre">TestClass::test_method</span></code>).</p>
 <p>The matplotlib control modes are summarized below.</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
