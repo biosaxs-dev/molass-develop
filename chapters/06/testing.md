@@ -114,6 +114,9 @@ python run_tests.py --test tests/tutorial --mode interactive
 # Run specific test with range
 python run_tests.py --test tests/generic/810_VoxelSpace/test_010_shapes.py --range 1-2 --mode interactive
 
+# Run only a specific test function in a file
+python run_tests.py --test tests/specific/110_Trimming/test_010_Trimming.py --function test_020_20180605_Backsub3 --mode interactive
+
 # Batch testing for CI/CD
 python run_tests.py --test tests/generic --mode batch
 
@@ -124,6 +127,9 @@ python run_tests.py --test tests/tutorial --mode save --plot-dir documentation-p
 **What is CI/CD?**  
 CI/CD stands for Continuous Integration and Continuous Deployment (or Delivery). It refers to automated processes that build, test, and deploy code changes, ensuring software quality and rapid delivery.
 ```
+
+You can use the `--function` argument to run only a specific test function (or method) within a test script. This is especially useful for debugging or developing a single test interactively. The function name should match exactly as defined in the script (e.g., `test_foo` or `TestClass::test_method`).
+
 The matplotlib control modes are summarized below.
 
 | Mode         | Plots Shown | Plots Saved | Use Case                           |
