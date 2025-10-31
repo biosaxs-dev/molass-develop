@@ -398,12 +398,11 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-tests">3.4. Running Tests</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-data-settings">3.4.1. Test Data Settings</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-utility">3.4.2. Test Utility</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-path-handling-and-imports">3.4.3. Python Path Handling and Imports</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-coverage">3.5. Test Coverage</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attribution">3.5.1. Attribution</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-coverage">3.5. Test Coverage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attribution">3.6. Attribution</a></li>
 </ul>
             </nav>
         </div>
@@ -590,26 +589,30 @@ CI/CD stands for Continuous Integration and Continuous Deployment (or Delivery).
 </div>
 <p>Test script example <code class="docutils literal notranslate"><span class="pre">example_test.py</span></code> is given to implement the above control.</p>
 <div class="tip admonition">
-<p class="admonition-title">A note on the python path of this pytest execution</p>
-<p>The python path in this execution is ensured to be set as the current repositoy root by the following specification in pyproject.toml with some other settings.</p>
+<p class="admonition-title">Python import path for testing</p>
+<p>The Python import path for all test runs is controlled by the <code class="docutils literal notranslate"><span class="pre">pythonpath</span></code> setting in your <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code>. This is respected by both pytest and the <code class="docutils literal notranslate"><span class="pre">run_tests.py</span></code> utility (including interactive mode), so your imports will always work as expected. Just update <code class="docutils literal notranslate"><span class="pre">pythonpath</span></code> in one place to control test imports for your whole project.</p>
+</div>
+</section>
+<section id="python-path-handling-and-imports">
+<h3><span class="section-number">3.4.3. </span>Python Path Handling and Imports<a class="headerlink" href="#python-path-handling-and-imports" title="Link to this heading">#</a></h3>
+<p>Both pytest and the <code class="docutils literal notranslate"><span class="pre">run_tests.py</span></code> utility respect the <code class="docutils literal notranslate"><span class="pre">pythonpath</span></code> setting in your <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> under <code class="docutils literal notranslate"><span class="pre">[tool.pytest.ini_options]</span></code>. This setting ensures that your test scripts and modules are imported consistently, regardless of whether you use pytest directly or the custom runner (including interactive mode).</p>
+<p>For example, in your <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">tool</span><span class="o">.</span><span class="n">pytest</span><span class="o">.</span><span class="n">ini_options</span><span class="p">]</span>
 <span class="n">python_files</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;test_*.py&quot;</span><span class="p">,</span> <span class="s2">&quot;*_test.py&quot;</span><span class="p">,</span> <span class="s2">&quot;*.py&quot;</span><span class="p">]</span>
 <span class="n">pythonpath</span> <span class="o">=</span> <span class="p">[</span>
-  <span class="s2">&quot;.&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;../molass-legacy&quot;</span><span class="p">,</span>
-<span class="p">]</span>
-<span class="n">env</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="s2">&quot;MOLASS_ENABLE_PLOTS=false&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;MOLASS_SAVE_PLOTS=false&quot;</span>
-<span class="p">]</span>
-<span class="n">filterwarnings</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="s2">&quot;ignore::SyntaxWarning&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;ignore::DeprecationWarning&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;ignore:.*non-interactive.*:UserWarning&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;.&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;../molass-legacy&quot;</span><span class="p">,</span>
 <span class="p">]</span>
 </pre></div>
 </div>
-</div>
+<p>This means that both the repository root and the <code class="docutils literal notranslate"><span class="pre">../molass-legacy</span></code> directory are added to the Python import path (<code class="docutils literal notranslate"><span class="pre">sys.path</span></code>) for all test runs. The <code class="docutils literal notranslate"><span class="pre">run_tests.py</span></code> script and its interactive subprocesses automatically read and apply this setting, so you do not need to manually adjust your environment or <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code>.</p>
+<p><strong>Why is this important?</strong></p>
+<ul class="simple">
+<li><p>It ensures that imports work the same way in all test modes (batch, interactive, save, both).</p></li>
+<li><p>It matches the behavior of pytest, so you get consistent results and avoid confusing import errors.</p></li>
+<li><p>It makes your test environment more robust and portable for all contributors.</p></li>
+</ul>
+<p>If you add new directories to your test code or dependencies, just update the <code class="docutils literal notranslate"><span class="pre">pythonpath</span></code> list in <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code>—no other changes are needed.</p>
 </section>
 </section>
 <section id="test-coverage">
@@ -619,10 +622,10 @@ CI/CD stands for Continuous Integration and Continuous Deployment (or Delivery).
 </pre></div>
 </div>
 <p>This will run the tests and generate an HTML coverage report in the <code class="docutils literal notranslate"><span class="pre">htmlcov</span></code> directory. Open <code class="docutils literal notranslate"><span class="pre">htmlcov/index.html</span></code> in your browser to view detailed coverage results.</p>
-<section id="attribution">
-<h3><span class="section-number">3.5.1. </span>Attribution<a class="headerlink" href="#attribution" title="Link to this heading">#</a></h3>
-<p>Some of the insights and suggestions in this chapter were generated with the assistance of <code class="docutils literal notranslate"><span class="pre">GitHub</span> <span class="pre">Copilot</span></code>, an AI programming assistant. Its contributions helped refine the content and provide practical examples for testing workflows.</p>
 </section>
+<section id="attribution">
+<h2><span class="section-number">3.6. </span>Attribution<a class="headerlink" href="#attribution" title="Link to this heading">#</a></h2>
+<p>Some of the insights and suggestions in this chapter were generated with the assistance of <code class="docutils literal notranslate"><span class="pre">GitHub</span> <span class="pre">Copilot</span></code>, an AI programming assistant. Its contributions helped refine the content and provide practical examples for testing workflows.</p>
 </section>
 </section>
 
@@ -696,12 +699,11 @@ CI/CD stands for Continuous Integration and Continuous Deployment (or Delivery).
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-tests">3.4. Running Tests</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-data-settings">3.4.1. Test Data Settings</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-utility">3.4.2. Test Utility</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-path-handling-and-imports">3.4.3. Python Path Handling and Imports</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-coverage">3.5. Test Coverage</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attribution">3.5.1. Attribution</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-coverage">3.5. Test Coverage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attribution">3.6. Attribution</a></li>
 </ul>
   </nav></div>
 
