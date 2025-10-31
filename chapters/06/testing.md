@@ -141,30 +141,36 @@ The matplotlib control modes are summarized below.
 
 Test script example `example_test.py` is given to implement the above control.
 
-:::{admonition} A note on the python path of this pytest execution
+:::{admonition} Python import path for testing
 :class: tip
 
-The python path in this execution is ensured to be set as the current repositoy root by the following specification in pyproject.toml with some other settings.
+The Python import path for all test runs is controlled by the `pythonpath` setting in your `pyproject.toml`. This is respected by both pytest and the `run_tests.py` utility (including interactive mode), so your imports will always work as expected. Just update `pythonpath` in one place to control test imports for your whole project.
+:::
+
+### Python Path Handling and Imports
+
+Both pytest and the `run_tests.py` utility respect the `pythonpath` setting in your `pyproject.toml` under `[tool.pytest.ini_options]`. This setting ensures that your test scripts and modules are imported consistently, regardless of whether you use pytest directly or the custom runner (including interactive mode).
+
+For example, in your `pyproject.toml`:
 
 ```
 [tool.pytest.ini_options]
 python_files = ["test_*.py", "*_test.py", "*.py"]
 pythonpath = [
-  ".",
-  "../molass-legacy",
-]
-env = [
-    "MOLASS_ENABLE_PLOTS=false",
-    "MOLASS_SAVE_PLOTS=false"
-]
-filterwarnings = [
-    "ignore::SyntaxWarning",
-    "ignore::DeprecationWarning",
-    "ignore:.*non-interactive.*:UserWarning",
+    ".",
+    "../molass-legacy",
 ]
 ```
-:::
 
+This means that both the repository root and the `../molass-legacy` directory are added to the Python import path (`sys.path`) for all test runs. The `run_tests.py` script and its interactive subprocesses automatically read and apply this setting, so you do not need to manually adjust your environment or `PYTHONPATH`.
+
+**Why is this important?**
+
+- It ensures that imports work the same way in all test modes (batch, interactive, save, both).
+- It matches the behavior of pytest, so you get consistent results and avoid confusing import errors.
+- It makes your test environment more robust and portable for all contributors.
+
+If you add new directories to your test code or dependencies, just update the `pythonpath` list in `pyproject.toml`—no other changes are needed.
 
 ## Test Coverage
 
@@ -176,6 +182,6 @@ python run_tests.py --test tests/tutorial --coverage
 
 This will run the tests and generate an HTML coverage report in the `htmlcov` directory. Open `htmlcov/index.html` in your browser to view detailed coverage results.
 
-### Attribution
+## Attribution
 
 Some of the insights and suggestions in this chapter were generated with the assistance of `GitHub Copilot`, an AI programming assistant. Its contributions helped refine the content and provide practical examples for testing workflows.
