@@ -28,11 +28,11 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -251,7 +251,7 @@
       
       
       
-      <li><a href="https://github.com/biosaxs-dev/molass-develop" target="_blank"
+      <li><a href="https://github.com/molass-saxs/molass-develop" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -268,7 +268,7 @@
       
       
       
-      <li><a href="https://github.com/biosaxs-dev/molass-develop/issues/new?title=Issue%20on%20page%20%2Fchapters/06/testing.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/molass-saxs/molass-develop/issues/new?title=Issue%20on%20page%20%2Fchapters/06/testing.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -393,16 +393,15 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-tools">3.1. Test Tools</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#minimal-test-in-molass-library-repository">3.2. Minimal Test in molass-library repository</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-scripts-organizing">3.3. Test Scripts Organizing</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-tests">3.4. Running Tests</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-data-settings">3.4.1. Test Data Settings</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-utility">3.4.2. Test Utility</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-path-handling-and-imports">3.4.3. Python Path Handling and Imports</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-scripts-organizing">3.2. Test Scripts Organizing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-tests">3.3. Running Tests</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-data-settings">3.3.1. Test Data Settings</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#command-lines">3.3.2. Command Lines</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#efficient-testing-during-development">3.3.3. Efficient Testing During Development</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matplotlib-control-for-testing">3.3.4. Matplotlib Control for Testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attribution">3.3.5. Attribution</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-coverage">3.5. Test Coverage</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attribution">3.6. Attribution</a></li>
 </ul>
             </nav>
         </div>
@@ -426,51 +425,9 @@ document.write(`
 </pre></div>
 </div>
 </section>
-<section id="minimal-test-in-molass-library-repository">
-<h2><span class="section-number">3.2. </span>Minimal Test in molass-library repository<a class="headerlink" href="#minimal-test-in-molass-library-repository" title="Link to this heading">#</a></h2>
-<p>If you have installed the above packages, the minimal way to test it is as follows.</p>
-<p>In the repository root:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">run_tests</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">test</span> <span class="n">tests</span><span class="o">/</span><span class="n">tutorial</span> 
-</pre></div>
-</div>
-<p>This will run the test scripts which test example codes in the <a class="reference external" href="https://biosaxs-dev.github.io/molass-tutorial/">tutorial</a> using minimal data provided by <code class="docutils literal notranslate"><span class="pre">molass_data</span></code> package. Other advanced ways for testing will be described below.</p>
-</section>
 <section id="test-scripts-organizing">
-<h2><span class="section-number">3.3. </span>Test Scripts Organizing<a class="headerlink" href="#test-scripts-organizing" title="Link to this heading">#</a></h2>
-<p>Test scripts are classified as shown in the following table and located under “tests” folder.</p>
-<div class="pst-scrollable-table-container"><table class="table table-center" id="id1">
-<caption><span class="caption-number">Table 3.1 </span><span class="caption-text">TestScipt Classification and Folder Naming</span><a class="headerlink" href="#id1" title="Link to this table">#</a></caption>
-<thead>
-<tr class="row-odd"><th class="head text-left"><p>Target Type</p></th>
-<th class="head text-left"><p>Folder Name</p></th>
-<th class="head text-left"><p>Remark</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-left"><p>Library</p></td>
-<td class="text-left"><p>generic</p></td>
-<td class="text-left"><p>for common features</p></td>
-</tr>
-<tr class="row-odd"><td class="text-left"><p></p></td>
-<td class="text-left"><p>specific</p></td>
-<td class="text-left"><p>for PF-specific features like flowchange, etc.</p></td>
-</tr>
-<tr class="row-even"><td class="text-left"><p>Notebook document</p></td>
-<td class="text-left"><p>tutorial</p></td>
-<td class="text-left"><p>for the tutorial book</p></td>
-</tr>
-<tr class="row-odd"><td class="text-left"><p></p></td>
-<td class="text-left"><p>essence</p></td>
-<td class="text-left"><p>for the essence book</p></td>
-</tr>
-<tr class="row-even"><td class="text-left"><p></p></td>
-<td class="text-left"><p>technical</p></td>
-<td class="text-left"><p>for the technical report book</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Subfoldes and script files should be named and placed roughly as suggested below.</p>
+<h2><span class="section-number">3.2. </span>Test Scripts Organizing<a class="headerlink" href="#test-scripts-organizing" title="Link to this heading">#</a></h2>
+<p>Test scripts should be named and placed as suggested in the following way.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">molass</span><span class="o">-</span><span class="n">library</span><span class="o">/</span>
     <span class="n">tests</span><span class="o">/</span>
         <span class="n">generic</span><span class="o">/</span>
@@ -488,12 +445,9 @@ document.write(`
             <span class="mi">020</span><span class="n">_FlowChange</span><span class="o">/</span>
                 <span class="n">test_010_FlowChange</span><span class="o">.</span><span class="n">py</span>
 
-        <span class="n">tutorial</span><span class="o">/</span>
-            <span class="mi">01</span><span class="o">-</span><span class="n">quicK_start</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
-<p>As shown in the above table, tests are first classified by the two target types, namely the Molass Library itself and the codes included in the Jupyter Book documents.</p>
-<p>One of the reasons for dividing the library tests into the two categories “generic” and “specific” is as follows.</p>
+<p>One reason for dividing tests into the two categories, namely “generic” and “specific”, is as follows.</p>
 <p>The generic folder should be kept relatively simple by excluding site-specific tests such as “FlowChange”, which arises only from unique experiment practice at some SAXS beamlines in <a class="reference external" href="https://www2.kek.jp/imss/pf/eng/">Photon Factory</a>, Japan and often includes complex issues irrelevant to generic cases.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -505,11 +459,48 @@ document.write(`
 </div>
 </section>
 <section id="running-tests">
-<h2><span class="section-number">3.4. </span>Running Tests<a class="headerlink" href="#running-tests" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">3.3. </span>Running Tests<a class="headerlink" href="#running-tests" title="Link to this heading">#</a></h2>
 <section id="test-data-settings">
-<h3><span class="section-number">3.4.1. </span>Test Data Settings<a class="headerlink" href="#test-data-settings" title="Link to this heading">#</a></h3>
-<p>For basic tests, we also use data package <code class="docutils literal notranslate"><span class="pre">molass_data</span></code>, which was introduced for the document notebooks like <a class="reference external" href="https://biosaxs-dev.github.io/molass-tutorial/">Tutorial</a>.</p>
-<p>The data sets named <code class="docutils literal notranslate"><span class="pre">SAMPLE*</span></code> are included in the data package <code class="docutils literal notranslate"><span class="pre">molass_data</span></code>. For extra tests, prepare <code class="docutils literal notranslate"><span class="pre">local_settings.py</span></code> like shown below, as explained at <a class="reference external" href="https://biosaxs-dev.github.io/molass-library/source/molass.Local.html">Local</a> module reference.</p>
+<h3><span class="section-number">3.3.1. </span>Test Data Settings<a class="headerlink" href="#test-data-settings" title="Link to this heading">#</a></h3>
+<p>Since we have introduced data package <code class="docutils literal notranslate"><span class="pre">molass_data</span></code> for the <a class="reference external" href="https://molass-saxs.github.io/molass-tutorial/">Tutorial</a>, we also use those data sets for basic tests.
+Depending on the category, used data will vary as shown below.</p>
+<div class="pst-scrollable-table-container"><table class="table table-center" id="id1">
+<caption><span class="caption-number">Table 3.1 </span><span class="caption-text">Data Usage depending on Test Category</span><a class="headerlink" href="#id1" title="Link to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Data Name / test folder</p></th>
+<th class="head text-center"><p>generic test usage</p></th>
+<th class="head text-center"><p>specific test usage</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>SAMPLE1</p></td>
+<td class="text-center"><p>Yes</p></td>
+<td class="text-center"><p>No</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>SAMPLE2</p></td>
+<td class="text-center"><p>Yes</p></td>
+<td class="text-center"><p>No</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>SAMPLE3</p></td>
+<td class="text-center"><p>Yes</p></td>
+<td class="text-center"><p>No</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>SAMPLE4</p></td>
+<td class="text-center"><p>Yes</p></td>
+<td class="text-center"><p>No</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>DATA_ROOT_FOLDER</p></td>
+<td class="text-center"><p>No</p></td>
+<td class="text-center"><p>Yes</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>test folder</p></td>
+<td class="text-center"><p>tests/generic</p></td>
+<td class="text-center"><p>tests/specific</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The data sets named <code class="docutils literal notranslate"><span class="pre">SAMPLE*</span></code> are included in the data package <code class="docutils literal notranslate"><span class="pre">molass_data</span></code>. For specific tests, prepare <code class="docutils literal notranslate"><span class="pre">local_settings.py</span></code> like shown below, as explained at <a class="reference external" href="https://molass-saxs.github.io/molass-library/source/molass.Local.html">Local</a> module reference.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">LocalSettings</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
     <span class="n">DATA_ROOT_FOLDER</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;D:\AllExperimentData&quot;</span><span class="p">,</span>
 <span class="p">)</span>
@@ -517,44 +508,59 @@ document.write(`
 </div>
 <p>Data sets for <code class="docutils literal notranslate"><span class="pre">DATA_ROOT_FOLDER</span></code> is currently not provided for download. If you need them, let us know by opening an issue using the <img alt="github icon" src="../../_images/mark-github.svg" /> button at upper right corner of this page.</p>
 </section>
-<section id="test-utility">
-<h3><span class="section-number">3.4.2. </span>Test Utility<a class="headerlink" href="#test-utility" title="Link to this heading">#</a></h3>
-<p>We have developed a utility script <code class="docutils literal notranslate"><span class="pre">run_tests.py</span></code> which has the following basic features.</p>
-<ul class="simple">
-<li><p>Multiple modes: batch, save, interactive, both</p></li>
-<li><p>Flexible targeting: Single files, directories, ranges (–range 1-3)</p></li>
-<li><p>Interactive plotting: Proper matplotlib GUI display</p></li>
-</ul>
-<p>It also has the following capabilities.</p>
-<ul class="simple">
-<li><p>Systematic matplotlib control with &#64;control_matplotlib_plot</p></li>
-<li><p>Numerical warning suppression with &#64;suppress_numerical_warnings</p></li>
-<li><p>Ordered test execution with pytest-order support</p></li>
-</ul>
-<p>Here are some usage examples.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run all tutorial tests interactively</span>
-<span class="n">python</span> <span class="n">run_tests</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">test</span> <span class="n">tests</span><span class="o">/</span><span class="n">tutorial</span> <span class="o">--</span><span class="n">mode</span> <span class="n">interactive</span>
-
-<span class="c1"># Run specific test with range</span>
-<span class="n">python</span> <span class="n">run_tests</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">test</span> <span class="n">tests</span><span class="o">/</span><span class="n">generic</span><span class="o">/</span><span class="mi">810</span><span class="n">_VoxelSpace</span><span class="o">/</span><span class="n">test_010_shapes</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="nb">range</span> <span class="mi">1</span><span class="o">-</span><span class="mi">2</span> <span class="o">--</span><span class="n">mode</span> <span class="n">interactive</span>
-
-<span class="c1"># Run only a specific test function in a file</span>
-<span class="n">python</span> <span class="n">run_tests</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">test</span> <span class="n">tests</span><span class="o">/</span><span class="n">specific</span><span class="o">/</span><span class="mi">110</span><span class="n">_Trimming</span><span class="o">/</span><span class="n">test_010_Trimming</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">function</span> <span class="n">test_020_20180605_Backsub3</span> <span class="o">--</span><span class="n">mode</span> <span class="n">interactive</span>
-
-<span class="c1"># Batch testing for CI/CD</span>
-<span class="n">python</span> <span class="n">run_tests</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">test</span> <span class="n">tests</span><span class="o">/</span><span class="n">generic</span> <span class="o">--</span><span class="n">mode</span> <span class="n">batch</span>
-
-<span class="c1"># Save plots for documentation</span>
-<span class="n">python</span> <span class="n">run_tests</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">test</span> <span class="n">tests</span><span class="o">/</span><span class="n">tutorial</span> <span class="o">--</span><span class="n">mode</span> <span class="n">save</span> <span class="o">--</span><span class="n">plot</span><span class="o">-</span><span class="nb">dir</span> <span class="n">documentation</span><span class="o">-</span><span class="n">plots</span>
+<section id="command-lines">
+<h3><span class="section-number">3.3.2. </span>Command Lines<a class="headerlink" href="#command-lines" title="Link to this heading">#</a></h3>
+<p>To run generic tests only, do as follows in command prompt:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">tests</span><span class="o">/</span><span class="n">generic</span>
+<span class="n">pytest</span> <span class="o">--</span><span class="n">cov</span><span class="o">=</span><span class="n">molass</span>
 </pre></div>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><strong>What is CI/CD?</strong><br />
-CI/CD stands for Continuous Integration and Continuous Deployment (or Delivery). It refers to automated processes that build, test, and deploy code changes, ensuring software quality and rapid delivery.</p>
+<p>To run specic tests only, do as follows in command prompt:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">tests</span><span class="o">/</span><span class="n">specific</span>
+<span class="n">pytest</span> <span class="o">--</span><span class="n">cov</span><span class="o">=</span><span class="n">molass</span>
+</pre></div>
 </div>
-<p>You can use the <code class="docutils literal notranslate"><span class="pre">--function</span></code> argument to run only a specific test function (or method) within a test script. This is especially useful for debugging or developing a single test interactively. The function name should match exactly as defined in the script (e.g., <code class="docutils literal notranslate"><span class="pre">test_foo</span></code> or <code class="docutils literal notranslate"><span class="pre">TestClass::test_method</span></code>).</p>
-<p>The matplotlib control modes are summarized below.</p>
+<p>To run all tests, do as follows in command prompt:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">tests</span>
+<span class="n">pytest</span> <span class="o">--</span><span class="n">cov</span><span class="o">=</span><span class="n">molass</span>
+</pre></div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">A note on the python path of this pytest execution</p>
+<p>The python path in this execution is ensured to be set as the current repositoy root by the following specification in pyproject.toml.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">tool</span><span class="o">.</span><span class="n">pytest</span><span class="o">.</span><span class="n">ini_options</span><span class="p">]</span>
+<span class="n">pythonpath</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="s2">&quot;.&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;../molass-legacy&quot;</span><span class="p">,</span>  
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<p>For detailed tests coverage, execute as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pytest</span> <span class="o">--</span><span class="n">cov</span><span class="o">=</span><span class="n">molass</span> <span class="o">--</span><span class="n">cov</span><span class="o">-</span><span class="n">report</span><span class="o">=</span><span class="n">html</span>
+</pre></div>
+</div>
+<p>and check the results in <code class="docutils literal notranslate"><span class="pre">test_folder/htmlcov/index.html</span></code> with your browser, where <code class="docutils literal notranslate"><span class="pre">test_folder</span></code> is one of <code class="docutils literal notranslate"><span class="pre">tests/generic</span></code>, <code class="docutils literal notranslate"><span class="pre">tests/specific</span></code> or <code class="docutils literal notranslate"><span class="pre">tests</span></code> depending on how you ran the tests.</p>
+</section>
+<section id="efficient-testing-during-development">
+<h3><span class="section-number">3.3.3. </span>Efficient Testing During Development<a class="headerlink" href="#efficient-testing-during-development" title="Link to this heading">#</a></h3>
+<p>When developing new features, running all tests can be time-consuming. For quick checks, you can simply run a specific test file or function using pytest. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pytest</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">test_file</span><span class="o">.</span><span class="n">py</span>
+<span class="n">pytest</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">test_file</span><span class="o">.</span><span class="n">py</span><span class="p">::</span><span class="n">test_function_name</span>
+</pre></div>
+</div>
+<p>More broadly, you can ask <code class="docutils literal notranslate"><span class="pre">GitHub</span> <span class="pre">Copilot</span></code>:</p>
+<p>“I use pytest to run all tests, which is great for checking overall software quality. But when developing a new feature, I need quick checks for specific parts of the code. Any advice on how to do this efficiently?”</p>
+</section>
+<section id="matplotlib-control-for-testing">
+<h3><span class="section-number">3.3.4. </span>Matplotlib Control for Testing<a class="headerlink" href="#matplotlib-control-for-testing" title="Link to this heading">#</a></h3>
+<p>Note the following requirements when running tests that generate matplotlib plots:</p>
+<ul class="simple">
+<li><p><strong>Interactive mode</strong> is needed for manual inspection and verification</p></li>
+<li><p><strong>Batch mode</strong> is required for automated testing, CI/CD pipelines, and headless environments</p></li>
+<li><p><strong>Saving plots</strong> is useful for debugging and documentation purposes</p></li>
+</ul>
+<p>To address these conflicting requirements, utility script <code class="docutils literal notranslate"><span class="pre">run_tests.py</span></code> is provided which offers four distinct modes to handle matplotlib figures:</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Mode</p></th>
@@ -567,7 +573,7 @@ CI/CD stands for Continuous Integration and Continuous Deployment (or Delivery).
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">batch</span></code></p></td>
 <td><p>No</p></td>
 <td><p>No</p></td>
-<td><p>(Default) Fast automated testing, CI/CD</p></td>
+<td><p>Fast automated testing, CI/CD</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">save</span></code></p></td>
 <td><p>No</p></td>
@@ -587,45 +593,29 @@ CI/CD stands for Continuous Integration and Continuous Deployment (or Delivery).
 </tbody>
 </table>
 </div>
-<p>Test script example <code class="docutils literal notranslate"><span class="pre">example_test.py</span></code> is given to implement the above control.</p>
-<div class="tip admonition">
-<p class="admonition-title">Python import path for testing</p>
-<p>The Python import path for all test runs is controlled by the <code class="docutils literal notranslate"><span class="pre">pythonpath</span></code> setting in your <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code>. This is respected by both pytest and the <code class="docutils literal notranslate"><span class="pre">run_tests.py</span></code> utility (including interactive mode), so your imports will always work as expected. Just update <code class="docutils literal notranslate"><span class="pre">pythonpath</span></code> in one place to control test imports for your whole project.</p>
-</div>
-</section>
-<section id="python-path-handling-and-imports">
-<h3><span class="section-number">3.4.3. </span>Python Path Handling and Imports<a class="headerlink" href="#python-path-handling-and-imports" title="Link to this heading">#</a></h3>
-<p>Both pytest and the <code class="docutils literal notranslate"><span class="pre">run_tests.py</span></code> utility respect the <code class="docutils literal notranslate"><span class="pre">pythonpath</span></code> setting in your <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> under <code class="docutils literal notranslate"><span class="pre">[tool.pytest.ini_options]</span></code>. This setting ensures that your test scripts and modules are imported consistently, regardless of whether you use pytest directly or the custom runner (including interactive mode).</p>
-<p>For example, in your <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">tool</span><span class="o">.</span><span class="n">pytest</span><span class="o">.</span><span class="n">ini_options</span><span class="p">]</span>
-<span class="n">python_files</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;test_*.py&quot;</span><span class="p">,</span> <span class="s2">&quot;*_test.py&quot;</span><span class="p">,</span> <span class="s2">&quot;*.py&quot;</span><span class="p">]</span>
-<span class="n">pythonpath</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="s2">&quot;.&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;../molass-legacy&quot;</span><span class="p">,</span>
-<span class="p">]</span>
+<p>Usage syntax is as follows.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">run_tests</span><span class="o">.</span><span class="n">py</span> <span class="p">[</span><span class="o">--</span><span class="n">mode</span> <span class="n">MODE</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">test</span> <span class="n">TEST_PATH</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">plot</span><span class="o">-</span><span class="nb">dir</span> <span class="n">PLOT_DIR</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>This means that both the repository root and the <code class="docutils literal notranslate"><span class="pre">../molass-legacy</span></code> directory are added to the Python import path (<code class="docutils literal notranslate"><span class="pre">sys.path</span></code>) for all test runs. The <code class="docutils literal notranslate"><span class="pre">run_tests.py</span></code> script and its interactive subprocesses automatically read and apply this setting, so you do not need to manually adjust your environment or <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code>.</p>
-<p><strong>Why is this important?</strong></p>
+<p>Examples:</p>
 <ul class="simple">
-<li><p>It ensures that imports work the same way in all test modes (batch, interactive, save, both).</p></li>
-<li><p>It matches the behavior of pytest, so you get consistent results and avoid confusing import errors.</p></li>
-<li><p>It makes your test environment more robust and portable for all contributors.</p></li>
+<li><p>Run all tests in batch mode (default):</p></li>
 </ul>
-<p>If you add new directories to your test code or dependencies, just update the <code class="docutils literal notranslate"><span class="pre">pythonpath</span></code> list in <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code>—no other changes are needed.</p>
-</section>
-</section>
-<section id="test-coverage">
-<h2><span class="section-number">3.5. </span>Test Coverage<a class="headerlink" href="#test-coverage" title="Link to this heading">#</a></h2>
-<p>To measure code coverage, use the <code class="docutils literal notranslate"><span class="pre">--coverage</span></code> option with <code class="docutils literal notranslate"><span class="pre">run_tests.py</span></code>, for example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">run_tests</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">test</span> <span class="n">tests</span><span class="o">/</span><span class="n">tutorial</span> <span class="o">--</span><span class="n">coverage</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">run_tests</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
-<p>This will run the tests and generate an HTML coverage report in the <code class="docutils literal notranslate"><span class="pre">htmlcov</span></code> directory. Open <code class="docutils literal notranslate"><span class="pre">htmlcov/index.html</span></code> in your browser to view detailed coverage results.</p>
+<ul class="simple">
+<li><p>Test specific folder with interactive plots:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">run_tests</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">mode</span> <span class="n">interactive</span> <span class="o">--</span><span class="n">test</span> <span class="n">tests</span><span class="o">/</span><span class="n">generic</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>Test script example <code class="docutils literal notranslate"><span class="pre">example_test.py</span></code> is given to implement the above control.</p>
 </section>
 <section id="attribution">
-<h2><span class="section-number">3.6. </span>Attribution<a class="headerlink" href="#attribution" title="Link to this heading">#</a></h2>
+<h3><span class="section-number">3.3.5. </span>Attribution<a class="headerlink" href="#attribution" title="Link to this heading">#</a></h3>
 <p>Some of the insights and suggestions in this chapter were generated with the assistance of <code class="docutils literal notranslate"><span class="pre">GitHub</span> <span class="pre">Copilot</span></code>, an AI programming assistant. Its contributions helped refine the content and provide practical examples for testing workflows.</p>
+</section>
 </section>
 </section>
 
@@ -694,16 +684,15 @@ CI/CD stands for Continuous Integration and Continuous Deployment (or Delivery).
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-tools">3.1. Test Tools</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#minimal-test-in-molass-library-repository">3.2. Minimal Test in molass-library repository</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-scripts-organizing">3.3. Test Scripts Organizing</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-tests">3.4. Running Tests</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-data-settings">3.4.1. Test Data Settings</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-utility">3.4.2. Test Utility</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-path-handling-and-imports">3.4.3. Python Path Handling and Imports</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-scripts-organizing">3.2. Test Scripts Organizing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-tests">3.3. Running Tests</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-data-settings">3.3.1. Test Data Settings</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#command-lines">3.3.2. Command Lines</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#efficient-testing-during-development">3.3.3. Efficient Testing During Development</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matplotlib-control-for-testing">3.3.4. Matplotlib Control for Testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attribution">3.3.5. Attribution</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-coverage">3.5. Test Coverage</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attribution">3.6. Attribution</a></li>
 </ul>
   </nav></div>
 

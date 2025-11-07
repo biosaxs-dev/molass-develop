@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The Molass Community welcomes anyone interested in SEC-SAXS data analysis. Feel free to contribute by opening issues using the ![github icon](../images/mark-github.svg) button at the upper right corner of any page.
+The Molass Comunity welcomes anyone interested in SEC-SAXS data analysis. Feel free to contribute by opening issues using the ![github icon](../images/mark-github.svg) button at the upper right corner of any page.
 
 This book is intended to help contributors to the project.
 
@@ -18,4 +18,4 @@ This section serves as a general assertion and will not be repeated verbosely th
 
 [^2]: That is, we do not need to include such details in this book. Instead, it will suffice to state only the key points, without omitting a minimal description to avoid the loss of clarity. With some hints on what to ask or how to ask, which we will not omit, further details, which we will omit, can be left to the assistant, who can help in your need.
 
-[^3]: See [Coding Style](coding_style) and [AI Assisted Development](ai_assisted_development) for such style of description.
+[^3]: See [Coding Style](coding_style) for such style of description.

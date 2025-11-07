@@ -1,4 +1,3 @@
-(ai_assisted_development)=
 # AI Assisted Development
 
 AI tools like GitHub Copilot[^1] can greatly enhance productivity, but effective use requires a few fundamental practices. The following practices are essential for reliable and efficient AI-assisted coding.
