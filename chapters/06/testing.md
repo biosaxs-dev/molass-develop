@@ -9,6 +9,7 @@ pip install -U pytest
 pip install -U pytest-cov
 pip install -U pytest-env
 pip install -U pytest-order
+pip install -U molass_data
 ```
 
 ## Test Scripts Organizing

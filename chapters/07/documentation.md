@@ -28,8 +28,12 @@ Do not confuse "Jupyter Notebook" and "Jupyter Book". The former is a file for p
 To use Jupyter Book, you need to install the following two packages.
 
 ```
-pip install -U jupyter-book
+pip install jupyter-book==1.0.4.post1
 pip install -U ghp-import
+```
+
+```{note}
+The latest version of jupyter-book will be later than version 2.0.0, which is incompatible with the existing contents of the repository created with jupyter-book version 1. 
 ```
 
 ### Initial Book
