@@ -12,9 +12,36 @@ pip install -U pytest-order
 pip install -U molass_data
 ```
 
+## Minimal Test in molass-library repository
+
+If you have installed the above packages, the minimal way to test it is as follows.
+
+In the repository root:
+
+```
+python run_tests.py --test tests/tutorial 
+```
+
+This will run the test scripts which test example codes in the [tutorial](https://biosaxs-dev.github.io/molass-tutorial/) using minimal data provided by `molass_data` package. Other advanced ways for testing will be described below. 
+
 ## Test Scripts Organizing
 
-Test scripts should be named and placed as suggested in the following way.
+Test scripts are classified as shown in the following table and located under "tests" folder.
+
+:::{table} TestScipt Classification and Folder Naming
+:widths: auto
+:align: center
+
+| Target Type   | Folder Name  | Remark |
+| :------- | :------- | :-------|
+| Library | generic | for common features |
+|         | specific | for PF-specific features like flowchange, etc. |
+| Notebook document | tutorial | for the tutorial book |
+|          | essence  | for the essence book |
+|          | technical | for the technical report book |
+:::
+
+Subfoldes and script files should be named and placed roughly as suggested below.
 
 ```
 molass-library/
@@ -34,11 +61,15 @@ molass-library/
             020_FlowChange/
                 test_010_FlowChange.py
 
+        tutorial/
+            01-quicK_start.py
 ```
+As shown in the above table, tests are first classified by the two target types, namely the Molass Library itself and the codes included in the Jupyter Book documents.
 
-One reason for dividing tests into the two categories, namely "generic" and "specific", is as follows.
+One of the reasons for dividing the library tests into the two categories "generic" and "specific" is as follows.
 
 The generic folder should be kept relatively simple by excluding site-specific tests such as "FlowChange", which arises only from unique experiment practice at some SAXS beamlines in [Photon Factory](https://www2.kek.jp/imss/pf/eng/), Japan and often includes complex issues irrelevant to generic cases.
+
 
 ```{note}
 Three-digit numbers are just for ordering in the following sense.
@@ -50,24 +81,9 @@ Three-digit numbers are just for ordering in the following sense.
 ## Running Tests
 ### Test Data Settings
 
-Since we have introduced data package `molass_data` for the [Tutorial](https://molass-saxs.github.io/molass-tutorial/), we also use those data sets for basic tests.
-Depending on the category, used data will vary as shown below.
+For basic tests, we also use data package `molass_data`, which was introduced for the document notebooks like [Tutorial](https://biosaxs-dev.github.io/molass-tutorial/).
 
-:::{table} Data Usage depending on Test Category
-:widths: auto
-:align: center
-
-| Data Name / test folder| generic test usage | specific test usage |
-| :---             |:---:|:---:|
-| SAMPLE1    | Yes | No |
-| SAMPLE2    | Yes | No |
-| SAMPLE3    | Yes | No |
-| SAMPLE4    | Yes | No |
-| DATA_ROOT_FOLDER | No  | Yes |
-| test folder      | tests/generic | tests/specific |
-:::
-
-The data sets named `SAMPLE*` are included in the data package `molass_data`. For specific tests, prepare `local_settings.py` like shown below, as explained at [Local](https://molass-saxs.github.io/molass-library/source/molass.Local.html) module reference.
+The data sets named `SAMPLE*` are included in the data package `molass_data`. For extra tests, prepare `local_settings.py` like shown below, as explained at [Local](https://biosaxs-dev.github.io/molass-library/source/molass.Local.html) module reference.
 
 ```python
 LocalSettings = dict(
@@ -77,101 +93,96 @@ LocalSettings = dict(
 
 Data sets for `DATA_ROOT_FOLDER` is currently not provided for download. If you need them, let us know by opening an issue using the ![github icon](../../images/mark-github.svg) button at upper right corner of this page.
 
-### Command Lines
-To run generic tests only, do as follows in command prompt:
+### Test Utility
+We have developed a utility script `run_tests.py` which has the following basic features.
+
+* Multiple modes: batch, save, interactive, both
+* Flexible targeting: Single files, directories, ranges (--range 1-3)
+* Interactive plotting: Proper matplotlib GUI display
+
+It also has the following capabilities.
+
+* Systematic matplotlib control with @control_matplotlib_plot
+* Numerical warning suppression with @suppress_numerical_warnings
+* Ordered test execution with pytest-order support
+
+Here are some usage examples. 
 
 ```
-cd tests/generic
-pytest --cov=molass
+# Run all tutorial tests interactively
+python run_tests.py --test tests/tutorial --mode interactive
+
+# Run specific test with range
+python run_tests.py --test tests/generic/810_VoxelSpace/test_010_shapes.py --range 1-2 --mode interactive
+
+# Run only a specific test function in a file
+python run_tests.py --test tests/specific/110_Trimming/test_010_Trimming.py --function test_020_20180605_Backsub3 --mode interactive
+
+# Batch testing for CI/CD
+python run_tests.py --test tests/generic --mode batch
+
+# Save plots for documentation
+python run_tests.py --test tests/tutorial --mode save --plot-dir documentation-plots
+```
+```{note}
+**What is CI/CD?**  
+CI/CD stands for Continuous Integration and Continuous Deployment (or Delivery). It refers to automated processes that build, test, and deploy code changes, ensuring software quality and rapid delivery.
 ```
 
-To run specic tests only, do as follows in command prompt:
+You can use the `--function` argument to run only a specific test function (or method) within a test script. This is especially useful for debugging or developing a single test interactively. The function name should match exactly as defined in the script (e.g., `test_foo` or `TestClass::test_method`).
 
-```
-cd tests/specific
-pytest --cov=molass
-```
-
-To run all tests, do as follows in command prompt:
-
-```
-cd tests
-pytest --cov=molass
-```
-
-:::{admonition} A note on the python path of this pytest execution
-:class: tip
-
-The python path in this execution is ensured to be set as the current repositoy root by the following specification in pyproject.toml.
-
-```
-[tool.pytest.ini_options]
-pythonpath = [
-  ".",
-  "../molass-legacy",  
-]
-```
-:::
-
-For detailed tests coverage, execute as follows:
-
-```
-pytest --cov=molass --cov-report=html
-```
-
-and check the results in `test_folder/htmlcov/index.html` with your browser, where `test_folder` is one of `tests/generic`, `tests/specific` or `tests` depending on how you ran the tests.
-
-### Efficient Testing During Development
-
-When developing new features, running all tests can be time-consuming. For quick checks, you can simply run a specific test file or function using pytest. For example:
-
-```
-pytest path/to/test_file.py
-pytest path/to/test_file.py::test_function_name
-```
-
-More broadly, you can ask `GitHub Copilot`:
-
-"I use pytest to run all tests, which is great for checking overall software quality. But when developing a new feature, I need quick checks for specific parts of the code. Any advice on how to do this efficiently?"
-
-### Matplotlib Control for Testing
-
-Note the following requirements when running tests that generate matplotlib plots:
-- **Interactive mode** is needed for manual inspection and verification
-- **Batch mode** is required for automated testing, CI/CD pipelines, and headless environments
-- **Saving plots** is useful for debugging and documentation purposes
-
-To address these conflicting requirements, utility script `run_tests.py` is provided which offers four distinct modes to handle matplotlib figures:
+The matplotlib control modes are summarized below.
 
 | Mode         | Plots Shown | Plots Saved | Use Case                           |
 |--------------|-------------|-------------|------------------------------------|
-| `batch`      | No          | No          | Fast automated testing, CI/CD      |
+| `batch`      | No          | No          | (Default) Fast automated testing, CI/CD      |
 | `save`       | No          | Yes         | Debugging, headless documentation  |
 | `interactive`| Yes         | No          | Manual verification, development   |
 | `both`       | Yes         | Yes         | Comprehensive testing and archival |
 
-Usage syntax is as follows.
-
-```
-python run_tests.py [--mode MODE] [--test TEST_PATH] [--plot-dir PLOT_DIR]
-```
-
-Examples:
-
-* Run all tests in batch mode (default):
-
-```
-python run_tests.py
-```
-
-* Test specific folder with interactive plots:
-
-```
-python run_tests.py --mode interactive --test tests/generic/
-```
-
 Test script example `example_test.py` is given to implement the above control.
 
-### Attribution
+:::{admonition} Python import path for testing
+:class: tip
+
+The Python import path for all test runs is controlled by the `pythonpath` setting in your `pyproject.toml`. This is respected by both pytest and the `run_tests.py` utility (including interactive mode), so your imports will always work as expected. Just update `pythonpath` in one place to control test imports for your whole project.
+:::
+
+### Python Path Handling and Imports
+
+Both pytest and the `run_tests.py` utility respect the `pythonpath` setting in your `pyproject.toml` under `[tool.pytest.ini_options]`. This setting ensures that your test scripts and modules are imported consistently, regardless of whether you use pytest directly or the custom runner (including interactive mode).
+
+For example, in your `pyproject.toml`:
+
+```
+[tool.pytest.ini_options]
+python_files = ["test_*.py", "*_test.py", "*.py"]
+pythonpath = [
+    ".",
+    "../molass-legacy",
+]
+```
+
+This means that both the repository root and the `../molass-legacy` directory are added to the Python import path (`sys.path`) for all test runs. The `run_tests.py` script and its interactive subprocesses automatically read and apply this setting, so you do not need to manually adjust your environment or `PYTHONPATH`.
+
+**Why is this important?**
+
+- It ensures that imports work the same way in all test modes (batch, interactive, save, both).
+- It matches the behavior of pytest, so you get consistent results and avoid confusing import errors.
+- It makes your test environment more robust and portable for all contributors.
+
+If you add new directories to your test code or dependencies, just update the `pythonpath` list in `pyproject.toml`—no other changes are needed.
+
+## Test Coverage
+
+To measure code coverage, use the `--coverage` option with `run_tests.py`, for example:
+
+```
+python run_tests.py --test tests/tutorial --coverage
+```
+
+This will run the tests and generate an HTML coverage report in the `htmlcov` directory. Open `htmlcov/index.html` in your browser to view detailed coverage results.
+
+## Attribution
 
 Some of the insights and suggestions in this chapter were generated with the assistance of `GitHub Copilot`, an AI programming assistant. Its contributions helped refine the content and provide practical examples for testing workflows.
