@@ -251,7 +251,7 @@
       
       
       
-      <li><a href="https://github.com/molass-saxs/molass-develop" target="_blank"
+      <li><a href="https://github.com/biosaxs-dev/molass-develop" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -268,7 +268,7 @@
       
       
       
-      <li><a href="https://github.com/molass-saxs/molass-develop/issues/new?title=Issue%20on%20page%20%2Fchapters/05/coding_style.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/biosaxs-dev/molass-develop/issues/new?title=Issue%20on%20page%20%2Fchapters/05/coding_style.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -392,8 +392,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-points">2.1. Key Points</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elaboration-with-github-copilot">2.2. Elaboration with GitHub Copilot</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#purpose">2.1. Purpose</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-principles">2.2. Key Principles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practical-advice">2.3. Practical Advice</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attribution">2.4. Attribution</a></li>
 </ul>
             </nav>
         </div>
@@ -407,28 +409,36 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="coding-style">
 <span id="id1"></span><h1><span class="section-number">2. </span>Coding Style<a class="headerlink" href="#coding-style" title="Link to this heading">#</a></h1>
-<section id="key-points">
-<h2><span class="section-number">2.1. </span>Key Points<a class="headerlink" href="#key-points" title="Link to this heading">#</a></h2>
-<p>We state here what style, we believe, is desirable in coding <code class="docutils literal notranslate"><span class="pre">Molass</span> <span class="pre">Library</span></code>. Stated in mottos:</p>
-<ul class="simple">
-<li><p>Be researcher friendly</p></li>
-<li><p>Namely, for example, avoid certain advanced language features</p></li>
-<li><p>Why-oriented docstring documentation</p></li>
-</ul>
+<section id="purpose">
+<h2><span class="section-number">2.1. </span>Purpose<a class="headerlink" href="#purpose" title="Link to this heading">#</a></h2>
+<p>The coding style for Molass Library is designed to be researcher-friendly, making it easy for both researchers and programmers to read, maintain, and contribute to the codebase. All style guidelines support inclusivity and clarity, prioritizing scientific users who may not be professional programmers.</p>
+<p><strong>Note:</strong> To ensure Copilot’s advice and code suggestions follow these guidelines, start your chat session with the following magic phrase:</p>
+<blockquote>
+<div><p>Please follow the Copilot guidelines in this project for all advice and responses.</p>
+</div></blockquote>
+<p>This magic phrase instructs Copilot to apply the specific rules and recommendations documented in the project’s guidelines, such as those found in <a class="reference external" href="https://github.com/biosaxs-dev/molass-library/blob/master/Copilot/copilot-guidelines.md">Copilot/copilot-guidelines.md</a> in the <a class="reference external" href="https://github.com/biosaxs-dev/molass-library">molass-library</a> code repository. For details on these rules, refer to the guidelines file directly.</p>
+<p>This helps maintain consistency and ensures Copilot recommendations are aligned with project standards.</p>
 </section>
-<section id="elaboration-with-github-copilot">
-<h2><span class="section-number">2.2. </span>Elaboration with GitHub Copilot<a class="headerlink" href="#elaboration-with-github-copilot" title="Link to this heading">#</a></h2>
-<p>Here are some hints to explain above points from chats with GitHub Copilot.</p>
-<p><code class="docutils literal notranslate"><span class="pre">Molass</span> <span class="pre">Author</span></code>: If I say “why-oriented docstring documentation” to suggest our coding style, does that make any sense to you?</p>
-<p><code class="docutils literal notranslate"><span class="pre">GitHub</span> <span class="pre">Copilot</span></code>: Yes, “why-oriented docstring documentation” makes sense as a coding style concept. It suggests that your docstrings should focus on explaining why a piece of code exists or behaves a certain way, rather than just describing what it does or how it works. This approach can be particularly helpful for researchers or developers who need to understand the reasoning behind decisions in the code, which is often more valuable than just understanding the mechanics.</p>
-<p>Example: Linear Search Instead of Binary Search</p>
+<section id="key-principles">
+<h2><span class="section-number">2.2. </span>Key Principles<a class="headerlink" href="#key-principles" title="Link to this heading">#</a></h2>
+<ol class="arabic">
+<li><p><strong>Researcher-Friendly Code</strong></p>
+<ul class="simple">
+<li><p>Avoid advanced language features that may confuse non-programmers.</p></li>
+<li><p>Prefer clear, simple constructs over clever or complex solutions.</p></li>
+<li><p>Write code that is easy to understand, modify, and extend.</p></li>
+</ul>
+</li>
+<li><p><strong>Why-Oriented Documentation</strong></p>
+<ul>
+<li><p>Docstrings and comments should explain the reasoning behind design decisions, not just what the code does.</p></li>
+<li><p>Example:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">find_element</span><span class="p">(</span><span class="n">elements</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Finds the index of the target element in the list using linear search.</span>
 
-<span class="sd">    This function uses linear search instead of binary search because the input</span>
-<span class="sd">    list is expected to be small and unsorted. Sorting the list for binary search</span>
-<span class="sd">    would add unnecessary overhead in this specific use case.</span>
+<span class="sd">    Linear search is used because the input list is expected to be small and unsorted.</span>
+<span class="sd">    Sorting for binary search would add unnecessary overhead in this use case.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">element</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">elements</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">element</span> <span class="o">==</span> <span class="n">target</span><span class="p">:</span>
@@ -436,13 +446,37 @@ document.write(`
     <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
 </pre></div>
 </div>
-<p>This approach provides context and rationale, making the code more understandable and maintainable.</p>
-<p>End of chat quote. Some other questions to ask GitHub Copilot:</p>
-<p><code class="docutils literal notranslate"><span class="pre">Molass</span> <span class="pre">Author</span></code>: Do you have any other advice for making our coding style researcher-friendly?</p>
-<p><code class="docutils literal notranslate"><span class="pre">Molass</span> <span class="pre">Author</span></code>: I mean researcher-friendly here that you should be aware of the fact that the developers or maintainers may be researchers, and not necessarily professional programmers. In this sense, I think we should avoid some advanced language features. Do you agree? If so, I would appreciate it if you could give a few examples of such features to avoid.</p>
-<p>To the above questions, <code class="docutils literal notranslate"><span class="pre">GitHub</span> <span class="pre">Copilot</span></code> would give several more suggestions, which we omit here, implying you can ask anytime if you know what to ask.</p>
-<p>Acknowledgement to:
-Suggestions provided by GitHub Copilot, an AI programming assistant.</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Consistent Style</strong></p>
+<ul class="simple">
+<li><p>Follow established formatting and naming conventions.</p></li>
+<li><p>Use clear, descriptive names for variables, functions, and classes.</p></li>
+<li><p>Keep line lengths reasonable and code blocks focused.</p></li>
+</ul>
+</li>
+<li><p><strong>Copilot Guidelines Integration</strong></p>
+<ul class="simple">
+<li><p>When seeking advice or code suggestions, always refer to the Copilot guidelines.</p></li>
+<li><p>Prefer solutions and examples that are already part of the Molass Library or documented in the Copilot folder.</p></li>
+<li><p>If a new best practice or rule emerges, propose its addition to the guidelines.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="practical-advice">
+<h2><span class="section-number">2.3. </span>Practical Advice<a class="headerlink" href="#practical-advice" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Avoid features such as metaclasses, decorators with complex logic, or advanced type annotations unless necessary.</p></li>
+<li><p>Use standard library modules and well-known patterns.</p></li>
+<li><p>Document not only how but why code is written a certain way.</p></li>
+<li><p>When in doubt, prioritize clarity and maintainability.</p></li>
+</ul>
+</section>
+<section id="attribution">
+<h2><span class="section-number">2.4. </span>Attribution<a class="headerlink" href="#attribution" title="Link to this heading">#</a></h2>
+<p>These coding style guidelines were developed in collaboration with GitHub Copilot (GPT-4.1) and are periodically reviewed to ensure alignment with project goals and user needs.</p>
 </section>
 </section>
 
@@ -510,8 +544,10 @@ Suggestions provided by GitHub Copilot, an AI programming assistant.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-points">2.1. Key Points</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elaboration-with-github-copilot">2.2. Elaboration with GitHub Copilot</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#purpose">2.1. Purpose</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-principles">2.2. Key Principles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practical-advice">2.3. Practical Advice</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attribution">2.4. Attribution</a></li>
 </ul>
   </nav></div>
 

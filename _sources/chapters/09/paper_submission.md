@@ -6,7 +6,7 @@ Here in this chapter, we will briefly describe how we follow [Submitting a paper
 
 ## Markdown Source Text
 
-The draft paper is supposed to be prepared as a markdown source text, named "paper.md", which should be placed in the [joss-paper branch](https://github.com/molass-saxs/molass-library/tree/joss-paper) of the [code repository](https://github.com/molass-saxs/molass-library). It should follow [JOSS Paper Format](https://joss.readthedocs.io/en/latest/paper.html).
+The draft paper is supposed to be prepared as a markdown source text, named "paper.md", which should be placed in the [joss-paper branch](https://github.com/biosaxs-dev/molass-library/tree/joss-paper) of the [code repository](https://github.com/biosaxs-dev/molass-library). It should follow [JOSS Paper Format](https://joss.readthedocs.io/en/latest/paper.html).
 
 ## PDF Compilation
 
