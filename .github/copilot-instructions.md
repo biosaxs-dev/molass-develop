@@ -1,4 +1,4 @@
-<!-- AI Context Standard v0.7 - Adopted: 2026-03-24 -->
+<!-- AI Context Standard v0.8 - Adopted: 2026-03-25 -->
 # AI Assistant Initialization Guide — molass-develop
 
 **Purpose**: Initialize AI context for working in this repository  
@@ -64,4 +64,5 @@ Output goes to `_build/html/`.
 
 ## 🔄 Updates
 
-**Latest**: March 24, 2026 — Created `.github/copilot-instructions.md` (AI Context Standard v0.7)
+**Latest**: March 25, 2026 — Updated to AI Context Standard v0.8; added `init.prompt.md` and `vscode-version.txt`  
+**Previous**: March 24, 2026 — Created `.github/copilot-instructions.md` (AI Context Standard v0.7)
