@@ -5,7 +5,12 @@ title: Molass Developpers Handbook
 author: Molass Community powered by <a href="https://jupyterbook.org">Jupyter Book</a>
 copyright: "2025"
 logo: images/molamola.png
-exclude_patterns: ["README.md"]
+exclude_patterns: 
+  - README.md
+  - _build
+  - .git
+  - .github
+  - "**.ipynb_checkpoints"
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -21,7 +26,7 @@ latex:
 repository:
   url: https://github.com/biosaxs-dev/molass-develop  # Online location of your book
   path_to_book: docs  # Optional path to your book, relative to the repository root
-  branch: master  # Which branch of the repository should be used when creating links (optional)
+  branch: main  # Which branch of the repository should be used when creating links (optional)
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository

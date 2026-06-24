@@ -3,8 +3,6 @@
 
 format: jb-book
 root: chapters/intro
-options:
-  numbered: 3
 chapters:
 - file: chapters/01/environment
   title: Environment

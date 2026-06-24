@@ -117,7 +117,7 @@ If you are interested in details of this step, see the [README](https://github.c
 
 ## How to use Sphinx
 
-If you are just updating existing parts of the document, skip to [Usual Update Routine](usual_update_routine).
+If you are just updating existing parts of the document, skip to [Usual Update Routine](#usual_update_routine).
 
 ### Tool Package Installation
 
@@ -135,7 +135,7 @@ The version specification ~=7.0 to shpinx comes from Jupyter Book's dependecy co
 
 ### Initial Generation
 
-When you are updating, skip to [Gererate *.rst files](generate_rst_files).
+When you are updating, skip to [Gererate *.rst files](#generate_rst_files).
 
 To generate a set of initial examples, execute commands as follows in the repository root.
 

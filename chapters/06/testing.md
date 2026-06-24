@@ -5,11 +5,7 @@
 We use pytest with coverage reports and some other extensions. Install the following packages for testing.
 
 ```
-pip install -U pytest
-pip install -U pytest-cov
-pip install -U pytest-env
-pip install -U pytest-order
-pip install -U molass_data
+pip install -U pytest pytest-cov pytest-env pytest-order molass_data
 ```
 
 ## Minimal Test in molass-library repository
@@ -29,7 +25,6 @@ This will run the test scripts which test example codes in the [tutorial](https:
 Test scripts are classified as shown in the following table and located under "tests" folder.
 
 :::{table} TestScipt Classification and Folder Naming
-:widths: auto
 :align: center
 
 | Target Type   | Folder Name  | Remark |
