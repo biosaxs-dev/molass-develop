@@ -153,16 +153,16 @@ If you are just updating existing parts of the document, skip to [Usual Update R
 
 ### Tool Package Installation
 
-To use Sphinx, you need to install the following two packages, which should have been installed if you have already installed packages for Jupyter Book as stated above.
+To use Sphinx for API documentation, install the following packages:
 
 ```
-pip install sphinx~=7.0 
+pip install sphinx
 pip install sphinx-book-theme
 pip install sphinx-copybutton
 ```
 
 ```{note}
-The version specification ~=7.0 to shpinx comes from Jupyter Book's dependecy constraints. Later versions than this would cause troubles with Jupyter Book as of April, 2025.
+**Sphinx is used only for API documentation** (molass-library, molass-legacy), not for the documentation books. The books now use MyST v2, which has no Sphinx dependency. The version constraint from Jupyter Book v1 no longer applies.
 ```
 
 ### Initial Generation
