@@ -93,6 +93,21 @@ cd book-repo
 myst build --html
 ```
 
+For testing with the GitHub Pages base URL (to match production), use:
+
+**Windows PowerShell:**
+```
+$env:BASE_URL = "/repo-name"
+myst build --html
+```
+
+**Linux/macOS:**
+```
+BASE_URL=/repo-name myst build --html
+```
+
+Replace `repo-name` with the actual repository name (e.g., `/molass-tutorial`). This ensures asset links work correctly when deployed to GitHub Pages at `https://biosaxs-dev.github.io/repo-name/`.
+
 After generation, check the generated local output in `_build/html` with your browser. Re-edit as needed until you are satisfied.
 
 :::{admonition} Clean builds
