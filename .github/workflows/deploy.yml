@@ -25,6 +25,10 @@ jobs:
         run: |
           pip install mystmd
       
+      - name: Initialize MyST (download templates)
+        run: |
+          myst init --yes || true
+          
       - name: Build book
         run: myst build --html
       
