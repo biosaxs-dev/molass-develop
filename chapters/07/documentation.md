@@ -147,6 +147,44 @@ ghp-import -n -p -f _build/html
 
 The web page will be updated in a few minutes. However, **GitHub Actions deployment is preferred** as it ensures consistency and handles the build environment automatically.
 
+### Common Issues and Troubleshooting
+
+#### Duplicate Titles in Notebooks
+
+**Problem**: A notebook page shows duplicate titles (e.g., "Installation" appearing twice on the same page)
+
+**Root cause**: MyST derives the page title from the **first H2 heading** if no explicit title is set. For example:
+
+```markdown
+# Quick Start
+## Installation
+```
+
+MyST ignores the H1, uses "Installation" as the page title, AND renders "## Installation" as content → duplication.
+
+**Solution**: Add MyST frontmatter to the **first markdown cell** of the notebook:
+
+````markdown
+---
+title: Quick Start
+---
+
+# Quick Start
+## Installation
+...
+````
+
+This explicitly sets the page title, preventing MyST from deriving it from the first H2 heading.
+
+**Testing locally**:
+1. Save the notebook
+2. `myst start` → opens server at http://localhost:3000
+3. Navigate to the affected page
+4. Verify no duplication
+5. Ctrl+C to stop server
+
+**Reference**: Fixed in molass-tutorial commit dd4da49 (2026-06-29)
+
 ## How to use Sphinx
 
 If you are just updating existing parts of the document, skip to [Usual Update Routine](#usual_update_routine).
