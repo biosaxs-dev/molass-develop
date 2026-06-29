@@ -159,10 +159,11 @@ To use Sphinx for API documentation, install the following packages:
 pip install sphinx
 pip install sphinx-book-theme
 pip install sphinx-copybutton
+pip install myst-parser
 ```
 
 ```{note}
-**Sphinx is used only for API documentation** (molass-library, molass-legacy), not for the documentation books. The books now use MyST v2, which has no Sphinx dependency. The version constraint from Jupyter Book v1 no longer applies.
+**Sphinx is used only for API documentation** (molass-library, molass-legacy), not for the documentation books. The books now use MyST v2 (`mystmd`), which has no Sphinx dependency. The `myst-parser` package is the Sphinx extension for parsing MyST markdown in API docs.
 ```
 
 ### Initial Generation
