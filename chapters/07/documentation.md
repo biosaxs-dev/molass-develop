@@ -6,66 +6,71 @@ This chapter describes how the documents have been made and how to maintain them
 
 We have the following documents, including this book, to maintain.
 
-|No |   Book Name           | Book License | Used Tool |
-|:-:|:--------------------------|:--------|:-----------|
-| 1 |[Molass Legacy Reference](https://biosaxs-dev.github.io/molass-legacy/) |GPL-3.0 |Sphinx |
-| 2 |[Molass Libray Reference](https://biosaxs-dev.github.io/molass-library/)|GPL-3.0 |Sphinx |
-| 3 |[Molass Libray Essence](https://biosaxs-dev.github.io/molass-essence/)  |CC BY 4.0|Jupyter Book|
-| 4 |[Molass Libray Tutorial](https://biosaxs-dev.github.io/molass-tutorial/)|CC BY 4.0|Jupyter Book|
-| 5 |[Molass Technical Report](https://biosaxs-dev.github.io/molass-technical/)|CC BY 4.0|Jupyter Book|
-| 6 |[Molass Developer's Handbook](https://biosaxs-dev.github.io/molass-develop/)|CC BY 4.0|Jupyter Book|
+|No |   Book Name           | Book License | Used Tool | Version |
+|:-:|:--------------------------|:--------|:-----------|:---------|
+| 1 |[Molass Legacy Reference](https://biosaxs-dev.github.io/molass-legacy/) |GPL-3.0 |Sphinx | - |
+| 2 |[Molass Libray Reference](https://biosaxs-dev.github.io/molass-library/)|GPL-3.0 |Sphinx | - |
+| 3 |[Molass Libray Essence](https://biosaxs-dev.github.io/molass-essence/)  |CC BY 4.0|Jupyter Book| v2 (MyST) |
+| 4 |[Molass Libray Tutorial](https://biosaxs-dev.github.io/molass-tutorial/)|CC BY 4.0|Jupyter Book| v2 (MyST) |
+| 5 |[Molass Technical Report](https://biosaxs-dev.github.io/molass-technical/)|CC BY 4.0|Jupyter Book| v2 (MyST) |
+| 6 |[Molass Developer's Handbook](https://biosaxs-dev.github.io/molass-develop/)|CC BY 4.0|Jupyter Book| v2 (MyST) |
 
-For the first two reference books, we use [Sphinx](https://github.com/sphinx-doc/sphinx) directly to generate function documents from their [docstrings](https://peps.python.org/pep-0257/). For others, [Jupyter Book](https://github.com/jupyter-book/jupyter-book), which depends on Sphinx, is used.
+For the first two reference books, we use [Sphinx](https://github.com/sphinx-doc/sphinx) directly to generate function documents from their [docstrings](https://peps.python.org/pep-0257/). For others, [Jupyter Book v2 (MyST)](https://mystmd.org/) is used.
 
-## How to use Jupyter Book
+## How to use Jupyter Book v2 (MyST)
 
 ```{note}
-Do not confuse "Jupyter Notebook" and "Jupyter Book". The former is a file for programming, while the latter is a tool for publishing.
+Do not confuse "Jupyter Notebook" and "Jupyter Book". The former is a file for programming, while the latter is a tool for publishing. As of 2026, we use **Jupyter Book v2**, which is based on MyST (Markedly Structured Text) and uses the `myst` command-line tool.
 ```
 
 ### Tool Package Installation
 
-To use Jupyter Book, you need to install the following two packages.
+To use Jupyter Book v2 (MyST), you need to install the following package.
 
 ```
-pip install jupyter-book==1.0.4.post1
-pip install -U ghp-import
+pip install mystmd
 ```
 
 ```{note}
-The latest version of jupyter-book will be later than version 2.0.0, which is incompatible with the existing contents of the repository created with jupyter-book version 1. 
+Jupyter Book v2 uses MyST (Markedly Structured Text) as its core engine. The command-line tool is `myst` rather than `jupyter-book`. Books created with v1 need migration (see the GitHub Actions workflows in each repository for automated deployment).
 ```
 
 ### Initial Book
 
 Each initial book was created as follows.
 
-    ・ jupyter-book create example-repo
+    ・ myst init --yes
     ・ create an empty repository for book-repo on GitHub
     ・ git clone book-repo
-    ・ copy the contents of example-repo to book-repo
+    ・ copy the generated files to book-repo
+    ・ create myst.yml with project title, GitHub link, and template settings
 
 ```{note}
-You need this procedure only when you create a new book. In case of need, see [Create your first book](https://jupyterbook.org/en/stable/start/your-first-book.html) for details.
+You need this procedure only when you create a new book. For v2 details, see [MyST documentation](https://mystmd.org/guide). The `myst init` command creates a basic project structure.
 ```
 
 ### Manual Book Edit
 
-When you begin to edit source files manually, to be attended first are the following two.
+When you begin to edit source files manually, the main configuration file is:
 
-    ・ _config.yml
-    ・ _toc.yml
+    ・ myst.yml
 
-These files are usually placed either at the root of repository or a sub folder named like "docs". Compare them with those of an existing book you already have, then you will get to know which source files to edit. As you edit the source file, which is either a markdown text file like "coding_style.md" or a Jupyter notebook like "prepare.ipynb", you should be well acquainted with the syntax summarized in [MyST syntax cheat sheet](https://jupyterbook.org/en/stable/reference/cheatsheet.html).
+For compatibility, you may also have:
+
+    ・ _config.yml (legacy, v1)
+    ・ _toc.yml (legacy, v1)
+
+The `myst.yml` file is the primary configuration for v2. It defines the project metadata, site template, and build options. As you edit the source file, which is either a markdown text file like "coding_style.md" or a Jupyter notebook like "prepare.ipynb", you should be well acquainted with the syntax summarized in [MyST syntax guide](https://mystmd.org/guide/syntax-overview).
 
 ```{note}
-Syntaxes of markdown texts differ slightly denending on the tools they are processed with. Be sure to follow the `MyST syntax` here. On the other hand for GitHub texts like `README.md`, follow [Basic writing and formatting syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+Syntaxes of markdown texts differ slightly depending on the tools they are processed with. Be sure to follow the `MyST syntax` here. On the other hand for GitHub texts like `README.md`, follow [Basic writing and formatting syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
 ```
 
 See also as you proceed:
 
-* [Create your first book](https://jupyterbook.org/en/stable/start/your-first-book)
-* [MyST syntax cheat sheet](https://jupyterbook.org/en/stable/reference/cheatsheet.html)
+* [MyST Documentation](https://mystmd.org/guide)
+* [MyST Syntax Overview](https://mystmd.org/guide/syntax-overview)
+* [Jupyter Book v1 to v2 migration notes](https://mystmd.org/)
 
 ### Book Update Cycle
 
@@ -78,42 +83,54 @@ we repeat the following cycle to update, brief descriptions of which will follow
     ・ deploy gh-pages branch
 
 ```{note}
-For maintenance of the web book, the two branches, namely master and gh-pages, are involved. The former keeps the source and the latter the generated book. Instead of the word "master", "main" might be used depending on how the repository was created. Anycase, be sure to use the word consistently. We use the name "master" here in this chapter.
+For maintenance of the web book, the two branches, namely main and gh-pages, are involved. The former keeps the source and the latter the generated book. With GitHub Actions deployment, the gh-pages branch is managed automatically. We use the name "main" for the primary branch.
 ```
 
 After manual edit, local generation should be achieved as follows in Command Prompt:
 
 ```
 cd book-repo
-jupyter-book build .
+myst build --html
 ```
 
-After generation, check the generated local output in _build/html with your browser. Re-edit as needed until you are satisfied.
+After generation, check the generated local output in `_build/html` with your browser. Re-edit as needed until you are satisfied.
 
-:::{admonition} A note on page caching
+:::{admonition} Clean builds
 :class: tip
-Sometimes, you may need `--all` option. That is,
+If you need to force a clean rebuild, delete the `_build` directory first:
 
 ```
-jupyter-book build --all .
+rm -rf _build
+myst build --html
 ```
 
-See [a note on page caching](https://jupyterbook.org/en/stable/start/build.html#aside-source-vs-build-files) for details.
+MyST v2 handles caching differently than v1. Clean builds are rarely needed.
 :::
 
-Synchronization of the master branches, local and remote, should be achieved as follows in VS Code:
+Synchronization of the main branches, local and remote, should be achieved as follows in VS Code:
 
     ・ commit in VS Code
     ・ synchronize with GitHub in VS Code
 
-(Re)creation and synchronization of the gh-pages branches, local and remote, should be achienved as follows in Command Prompt:
+### Deployment via GitHub Actions
+
+All Jupyter Book repositories now use **automated deployment via GitHub Actions**. When you push to the main branch, the workflow automatically:
+
+1. Installs `mystmd`
+2. Runs `myst build --html`
+3. Deploys to GitHub Pages
+
+See `.github/workflows/deploy.yml` in each repository for the workflow configuration.
+
+### Manual deployment (alternative)
+
+If you need to deploy manually, you can still use `ghp-import`:
 
 ```
 ghp-import -n -p -f _build/html
 ```
 
-The web page will be updated in a few minutes, as a result of automatic deployment of GitHub Pages.
-If you are interested in details of this step, see the [README](https://github.com/c-w/ghp-import) of ghp-import.
+The web page will be updated in a few minutes. However, **GitHub Actions deployment is preferred** as it ensures consistency and handles the build environment automatically.
 
 ## How to use Sphinx
 
