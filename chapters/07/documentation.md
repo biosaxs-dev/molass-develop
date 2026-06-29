@@ -72,6 +72,10 @@ See also as you proceed:
 * [MyST Syntax Overview](https://mystmd.org/guide/syntax-overview)
 * [Jupyter Book v1 to v2 migration notes](https://mystmd.org/)
 
+```{tip}
+For common issues like duplicate titles in notebooks, see [Common Issues and Troubleshooting](#common-issues-and-troubleshooting) below.
+```
+
 ### Book Update Cycle
 
 So far, we have described the intial procudure required only once when you create a new book. Atfer that,
