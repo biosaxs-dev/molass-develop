@@ -6,7 +6,7 @@ AI tools like GitHub Copilot[^1] can greatly enhance productivity, but effective
 ```{warning}
 **Historical Context & Rapid Evolution**
 
-This chapter was written in early 2026 and reflects practices developed for standalone AI coding assistants without persistent context. Since then, AI-assisted development has evolved rapidly:
+This chapter was written in early 2025 and reflects practices developed for standalone AI coding assistants without persistent context. Since then, AI-assisted development has evolved rapidly:
 
 - **Persistent context is now standard**: The [AI Context Standard](https://github.com/freesemt/ai-context-standard) (v0.10.0) provides systematic solutions for context management through repository-based instruction files (`.github/copilot-instructions.md`, `PROJECT_STATUS.md`, etc.)
 - **Tools have matured significantly**: Custom extensions ([ai-context-vscode](https://github.com/freesemt/ai-context-vscode)), specialized CLI tools ([ai-context-tools](https://github.com/freesemt/ai-context-tools)), and integrated workflows now handle many challenges this chapter addresses manually
