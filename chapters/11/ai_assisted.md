@@ -3,6 +3,22 @@
 
 AI tools like GitHub Copilot[^1] can greatly enhance productivity, but effective use requires a few fundamental practices. The following practices are essential for reliable and efficient AI-assisted coding.
 
+```{warning}
+**Historical Context & Rapid Evolution**
+
+This chapter was written in early 2026 and reflects practices developed for standalone AI coding assistants without persistent context. Since then, AI-assisted development has evolved rapidly:
+
+- **Persistent context is now standard**: The [AI Context Standard](https://github.com/freesemt/ai-context-standard) (v0.10.0) provides systematic solutions for context management through repository-based instruction files (`.github/copilot-instructions.md`, `PROJECT_STATUS.md`, etc.)
+- **Tools have matured significantly**: Custom extensions ([ai-context-vscode](https://github.com/freesemt/ai-context-vscode)), specialized CLI tools ([ai-context-tools](https://github.com/freesemt/ai-context-tools)), and integrated workflows now handle many challenges this chapter addresses manually
+
+**How to use this chapter today:**
+- The **core principles** (explicit instructions, independent verification, redirection) remain valid
+- The **specific techniques** (saving context to COPILOT_CONTEXT.md, manually managing preferences) are now largely superseded by systematic approaches
+- For current best practices, see other chapters in this handbook and the AI Context Standard documentation
+
+Consider this chapter a record of how AI-assisted development practices were discovered and refined, useful for understanding the "why" behind current conventions.
+```
+
 ## Core Rules for Effective AI-Assisted Coding
 
 1. **Preserve Essential Context**
