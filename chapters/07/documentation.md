@@ -277,6 +277,14 @@ Without frontmatter, MyST may derive the page title from the first H2 heading, c
 | Speed | Fast incremental | Slower full build |
 | Use case | Writing/editing | Final verification |
 
+**⚠️ Important**: Both build and dev server use **stored outputs** from the `.ipynb` file - they do **not** re-execute cells. If you add `%%capture` (or other output-suppressing magic) to a cell that already has outputs:
+
+1. The old outputs remain in the file until you re-run the cell
+2. The built HTML will still show the old outputs
+3. You must **re-run the cell** (or clear its outputs) before committing
+
+**Example**: molass-tutorial DENSS page (2026-07-01) - adding `%%capture` wasn't enough; we had to clear the 19,863 lines of stored DENSS output for the fix to appear in the deployed page (commit 6c0bd57).
+
 #### Tool Choice for Notebook Editing
 
 **When notebook is open in VS Code**:
