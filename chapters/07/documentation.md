@@ -189,6 +189,107 @@ This explicitly sets the page title, preventing MyST from deriving it from the f
 
 **Reference**: Fixed in molass-tutorial commit dd4da49 (2026-06-29)
 
+### Writing Notebooks for Documentation
+
+This section covers conventions for authoring Jupyter notebooks that will be built into documentation books (tutorial, essence, technical, develop).
+
+#### MyST Development Workflow
+
+**Start development server**:
+```
+cd book-repo
+myst start
+```
+
+Opens at http://localhost:3000 (or another port if 3000 is busy). MyST **automatically rebuilds** when it detects notebook or markdown file changes. Just refresh the browser to see updates.
+
+**If auto-rebuild fails**:
+```
+myst clean --all
+myst start
+```
+
+#### Suppressing Long Outputs
+
+Problem: Optimization loops, DENSS reconstructions, or iterative algorithms print thousands of lines in notebook output, making the built HTML page unreadable.
+
+**Solutions** (in preference order):
+
+**1. `%%capture` cell magic** (cleanest)
+```python
+%%capture
+run_denss(...)  # All stdout/stderr suppressed
+```
+
+**2. Redirect stdout** (when you need selective printing)
+```python
+import io, sys
+from contextlib import redirect_stdout
+
+with redirect_stdout(io.StringIO()):
+    run_denss(...)
+print("Optimization completed")
+```
+
+**3. `%%script false`** (show code but don't execute)
+```python
+%%script false
+run_expensive_operation()  # Cell doesn't run
+```
+
+**4. Manual output clearing** (last resort)
+- Run cell → Edit → Clear Outputs (for that cell) → Save
+- Requires manual intervention; use only when programmatic suppression isn't feasible
+
+**Reference**: molass-tutorial DENSS output fix (2026-07-01, commit 3ee3a83)
+
+#### Notebook Frontmatter
+
+MyST requires frontmatter in the **first markdown cell** to avoid title duplication:
+
+````markdown
+---
+title: Page Title
+---
+
+# Page Title
+## Section content
+````
+
+Without frontmatter, MyST may derive the page title from the first H2 heading, causing duplication.
+
+#### Common Cell Magics
+
+| Magic | Effect | Use Case |
+|-------|--------|----------|
+| `%%capture` | Suppress all stdout/stderr | Long optimization output |
+| `%%time` | Show execution time only | Performance demos |
+| `%%script false` | Don't execute, show code | Placeholder examples |
+| `%matplotlib inline` | Static plots in HTML | Default for docs |
+| `%matplotlib widget` | Interactive plots | May not work in built HTML |
+
+#### Build vs Dev Server
+
+| Aspect | `myst start` (dev) | `myst build --html` |
+|--------|-------------------|---------------------|
+| Auto-rebuild | Yes | No (manual rebuild) |
+| Preview | Live in browser | Check `_build/html/` |
+| Speed | Fast incremental | Slower full build |
+| Use case | Writing/editing | Final verification |
+
+#### Tool Choice for Notebook Editing
+
+**When notebook is open in VS Code**:
+- Copilot: Use `aicEditNotebookCell` or `edit_notebook_file`
+- Human: Edit directly in VS Code notebook editor
+
+**When notebook is closed**:
+- Use `edit_notebook_file`
+
+**Never use** for notebooks:
+- `replace_string_in_file` (JSON escaping mismatch)
+- PowerShell text operations (UTF-8 BOM injection risk)
+
 ## How to use Sphinx
 
 If you are just updating existing parts of the document, skip to [Usual Update Routine](#usual_update_routine).
